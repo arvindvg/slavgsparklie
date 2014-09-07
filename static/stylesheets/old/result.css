@@ -1,0 +1,278 @@
+body
+{
+color:#b2b2b2;
+}
+
+.wrapper
+{
+position:relative;
+margin:20px auto;
+width:1000px;
+
+}
+
+.titleplace
+{
+margin:15px 0px 0px 50px;
+}
+
+#titlefont
+{
+color:#F2F2F2;
+font-size:150%;
+letter-spacing:1px;
+font-weight:bold;
+}
+
+.preference_container
+{
+position:relative;
+height:40px;
+padding:10px 0px 0px 10px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+
+.whitebox
+{
+
+margin:5px auto;
+width:900px;
+min-height:520px;
+background-color:#F8F8F8;
+border-style:solid;
+border-color:#0E0E0E;
+border-width:1px;
+border-radius:5px;
+}
+
+#whiteboxfont
+{
+color:#000000;
+}
+
+
+.top_container
+{
+position:relative;
+height:250px;
+left:50px;
+}
+
+
+#container_left, #container_mid, #container_right, #r1, #r2, #r3
+{
+position:absolute;
+}
+
+#container_left
+{
+width:120px;
+top:50px;
+left:25px;
+}
+
+#container_mid
+{
+width:300px;
+left:150px;
+}
+
+
+#container_right
+{
+width:350px;
+left:470px;
+}
+
+
+#r1
+{
+width:100px;
+}
+
+#r2
+{
+left:100px;
+width:100px;
+}
+
+#r3
+{
+left:260px;
+width:100px;
+padding: 5px 0px;
+}
+
+/* bottom container */
+
+.bottom_container
+{
+position:relative;
+left:0px;
+
+
+}
+
+#hide1,#hide2, #hide3, #hide4, #hide5
+{
+/*text-align:right;*/
+}
+
+#box1, #box2, #box3, #box4, #box5
+{
+position:relative;
+height:350px;
+width:100%;
+text-align:left;
+display:none;
+}
+
+#box5
+{
+top:15px;
+left:5px;
+}
+#hor1, #hor2, #hor3, #hor4
+{
+position:absolute;
+width:160px;
+}
+
+#hor1
+{
+left:0px;
+}
+
+#hor2
+{
+left:180px;
+}
+
+#hor3
+{
+left:360px;
+}
+
+#hor4
+{
+left:540px;
+}
+
+footer
+{
+font-size:85%;
+text-align:center;
+}
+
+
+
+
+
+
+.image
+{
+padding:2px;
+text-align:center;
+}
+
+a.hide:focus + .show { display: inline; }
+a.hide:focus { display: none; }
+@media print {.hide, .show  { display: none; } }
+
+
+/* font css */
+h3
+{
+text-align:center;
+}
+.highlightfont
+{
+color:#FFD92A;
+}
+
+.text
+{
+position:absolute;
+top:0;
+left:5px;
+width:425px;
+}
+
+.img
+{
+position:absolute;
+top:75px;
+right:0;
+}
+
+/* Star css */
+
+.stars
+{
+	left:20px;
+	position:relative;
+	top:2px;
+}
+span.stars, span.stars span {
+    display: inline-block;
+    background: url('/images/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 17px;
+	title: hi;
+	
+	
+}
+
+span.stars span {
+    background-position: 0 0;
+	
+}
+
+/* button */
+.buttonplace
+{
+position:relative;
+text-align:right;
+right:50px;
+}
+form{
+display: inline;
+}
+
+.button, .select, .linkselect
+{
+width:100px;
+padding:5px 10px 6px 7px;
+background-color:#FFD92A;
+border:0px solid #dedede;
+border:0px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-size:100%;
+line-height:130%;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+.select
+{
+width:160px;
+}
+
+
+.linkselect 
+{
+    text-decoration: none;
+    display: inline-block;
+	width:160px;
+	margin: 3px 0;
+	text-align:center;
+    
+    
+}
+
+

@@ -1,0 +1,165 @@
+html {
+	font-family: 'Lato', sans-serif !important;
+}
+
+body {
+	color:#000000;
+}
+
+
+.jumbotron {
+	padding: 30px;
+	margin-bottom: 30px;
+	font-size: 21px;
+	font-weight: 200;
+	line-height: 2.1428571435;
+	color: #ffffff;
+	background-color:#46DBC2;
+	background-position:top; 
+	height:430px;
+}
+
+.jumbotron h1 {
+  text-align:center;
+  padding:25px;
+  font-size: 55px;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.jumbotron h3{
+	text-align:left;
+	font-size:28px;
+	padding: 0px 128px;
+	}
+
+.btn-clear {
+  color: #ffffff;
+  background-color: #46DBC2;
+  border-color: #A2F4E6;
+  border-radius: 0px;
+}
+
+.btn-clear:hover,
+.btn-clear:focus,
+.btn-clear:active,
+.btn-clear.active,
+.open .dropdown-toggle.btn-default {
+  color: #ffffff;
+  background-color: #00BA9B;
+  border-color: #A2F4E6;
+}
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-45deg);
+
+/* Firefox */
+-moz-transform: rotate(-45deg);
+
+/* IE */
+-ms-transform: rotate(-45deg);
+
+/* Opera */
+-o-transform: rotate(-45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+
+/* This is the color section for the button*/
+.btn-primary {
+  color: #ffffff;
+  background-color: #F1664B;
+  border-color: #EF715F;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #EF715F;
+  border-color: #F1664B;
+}
+
+/* This is the color section for the nav bar*/
+
+.navbar-inverse .navbar-text {
+  color: #D1D1D1;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #D1D1D1;
+}
+
+.navbar-inverse {
+  background-color: #231F20;
+  border-color: #000000;
+}
+
+/* The navbar becomes detached from the top, so we round the corners */
+.navbar-wrapper .navbar {
+border-radius: 4px;
+}
+
+  
+h1, h2, h3 {
+font-family: 'Lato', sans-serif !important;
+}
+
+h2{
+text-align:center;
+}
+
+
+
+p.icon
+{
+text-align:center;
+font-size:60px;
+color:grey;
+}
+
+
+p.howitworks
+{
+padding:0 15px;
+font-size:18px;
+line-height:175%;
+text-align:center;
+}
+
+
+p.story, p.pull-right
+{
+font-size:18px;
+line-height:240%;
+}
+
+
+.box
+{
+position:absolute;
+width:23px;
+height:23px;
+background-color:grey;
+border-radius:100px;
+text-align:center;
+padding:1px 0 0 0;
+color:white;
+}
+
+.boxtext
+{
+position:relative;
+top:1px;
+/*left:30px;*/
+font-size:22px;
+text-align:center;
+}
+

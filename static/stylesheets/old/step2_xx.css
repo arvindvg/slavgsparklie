@@ -1,0 +1,139 @@
+/* Laptop screens ----------- */
+@media only screen and (min-width : 780px) {
+/* Styles */
+#content_phone, #tagline_phone, #imagebartext_phone, #getstarted_phone
+{
+display:none;
+}
+/*#header, #navigation*/
+/*#content3*/
+{
+border-width:1px;
+border-color:red;
+border-style:solid;
+}
+
+#wrapper
+{
+position:relative;
+margin:0 auto;
+width:960px;
+}
+
+#header
+{
+background-color:black;
+}
+
+#navigation 
+{
+padding:5px 20px;
+}
+
+span#title
+{
+font-size:28px;
+font-weight:800;
+letter-spacing:2px;
+color:white;
+display:inline;
+}
+
+ul#nav1 
+{
+float:right;
+padding:15px 0;
+display:inline-block;
+}
+
+li.nav1
+{
+font-weight:600;
+color:white;
+display:inline-block;
+}
+
+/*This is the first part of the content*/
+
+#content
+{
+position:relative;
+min-height:500px;
+}
+
+#question
+{
+text-align:center;
+font-size:26px;
+letter-spacing:2px;
+font-weight:800;
+padding:25px 0;
+}
+
+#answers_wrapper
+{
+position:relative;
+margin: 0 auto;
+width:80%;
+text-align:center;
+display:inline-block;
+}
+
+#back, #forward
+{
+width:10px;
+display:inline-block;
+
+}
+
+#slider-range
+{
+width:200px;
+border-color:black;
+}
+
+a.normal
+{
+color: #000000; 
+text-decoration:none;
+font-size:30px;
+}
+a.normal:hover
+{
+color: #b5651d;
+}
+
+#answers
+{
+width:68%;
+display:inline-block;
+}
+
+
+
+/* This is the footer section */
+
+#footer
+{
+background-color:black;
+}
+
+#footer_wrapper
+{
+padding:10px 25px;
+font-size:12px;
+color:#b2b2b2;
+}
+
+#leftfooter, #rightfooter
+{
+display:inline-block;
+}
+
+#rightfooter
+{
+padding: 0 0 0 580px;
+}
+
+}
+

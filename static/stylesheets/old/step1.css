@@ -1,0 +1,453 @@
+/* Laptop screens ----------- */
+@media only screen and (min-width : 780px) {
+/* Styles */
+#content_phone, #tagline_phone, #imagebartext_phone, #getstarted_phone
+{
+display:none;
+}
+/*#header, #navigation*/
+/*#content3*/
+{
+border-width:1px;
+border-color:red;
+border-style:solid;
+}
+
+#wrapper
+{
+position:relative;
+margin:0 auto;
+width:960px;
+}
+
+#header
+{
+background-color:black;
+}
+
+#navigation 
+{
+padding:5px 20px;
+}
+
+span#title
+{
+font-size:28px;
+font-weight:800;
+letter-spacing:2px;
+color:white;
+display:inline;
+}
+
+ul#nav1 
+{
+float:right;
+padding:15px 0;
+display:inline-block;
+}
+
+li.nav1
+{
+font-weight:600;
+color:white;
+display:inline-block;
+}
+
+/*This is the first part of the content*/
+
+#content1
+{
+background-image:url('/images/bg/white.png'); 
+background-repeat:no-repeat;
+min-height:480px;
+}
+
+#tagline
+{
+font-size:30px;
+color:black;
+}
+
+#imagebartext
+{
+position:absolute;
+top:200px;
+left:550px;
+}
+
+#getstarted
+{
+background-color:#65c8c6;
+padding:13px 5px 5px 44px;
+margin:20px 0 0 0;
+width:300px;
+height:50px;
+color:white;
+border-radius:4px;
+font-size:140%;
+letter-spacing:4px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/*This is the first part of the content about how this service works*/
+
+#content2
+{
+position:relative;
+background-color:white;
+height:280px;
+}
+
+.content_title
+{
+height:100px;
+font-size:28px;
+padding:30px 0 0 0;
+letter-spacing:4px;
+text-align:center;
+}
+
+#howitworks_wrapper
+{
+margin: 0 auto;
+width:95%;
+}
+
+#left, #middle, #right
+{
+width:33%;
+display:inline-block;
+}
+
+.box
+{
+position:absolute;
+width:23px;
+height:23px;
+background-color:grey;
+border-radius:100px;
+text-align:center;
+padding:3px 0 0 0;
+color:white;
+}
+
+.boxtext
+{
+position:relative;
+top:3px;
+left:30px;
+font-size:17px;
+}
+
+p.howitworks
+{
+padding:0 0 0 30px;
+font-size:16px;
+line-height:175%;
+}
+
+/*This is the third part of the content, OUR STORY */
+
+#content3
+{
+position:relative;
+background-color:#dfe4de;
+padding:0px 10px 10px 10px;
+}
+
+#ourstory_wrapper
+{
+}
+
+#leftstory
+{
+width:440px;
+vertical-align:top;
+display:inline-block;
+padding:0 0 0 15px;
+}
+
+#rightstory
+{
+float:right;
+margin:15px 0 0 0;
+padding:0;
+background-image:url('/images/bg/story.png');
+background-repeat:no-repeat;
+width:450px;
+height:500px;
+
+}
+
+p.story
+{
+font-size:23px;
+line-height:190%;
+}
+
+/* This is the footer section */
+
+#footer
+{
+background-color:black;
+}
+
+#footer_wrapper
+{
+padding:25px 25px 25px 25px;
+font-size:12px;
+color:#b2b2b2;
+}
+
+#leftfooter, #rightfooter
+{
+display:inline-block;
+}
+
+#rightfooter
+{
+padding: 0 0 0 580px;
+}
+
+}
+
+/* Zoom screens ----------- */
+@media only screen and (max-width : 780px) {
+#content1, #tagline, #imagebartext, #getstarted
+{
+display:none;
+}
+
+#wrapper
+{
+position:relative;
+margin:0 auto;
+width:99%;
+}
+
+#header
+{
+background-color:black;
+}
+
+#navigation 
+{
+padding:5px 20px;
+text-align:center;
+}
+
+span#title
+{
+font-size:28px;
+font-weight:800;
+letter-spacing:2px;
+color:white;
+display:inline;
+
+}
+
+li.nav1, ul#nav1 
+{
+display:none;
+}
+
+li.nav1
+{
+font-weight:600;
+color:white;
+}
+
+/*This is the first part of the content*/
+
+#content1
+{
+background-image:url('/images/bg/white.png'); 
+background-repeat:no-repeat;
+max-height:100px;
+}
+
+#tagline
+{
+font-size:30px;
+color:black;
+}
+
+#imagebartext
+{
+position:relative;
+top:200px;
+left:550px;
+}
+
+#getstarted
+{
+background-color:#65c8c6;
+padding:13px 5px 5px 44px;
+margin:20px 0 0 0;
+width:300px;
+height:50px;
+color:white;
+border-radius:4px;
+font-size:140%;
+letter-spacing:4px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/*This is the phone part of the content*/
+
+#content_phone
+{
+}
+
+#imagebartext_phone
+{
+background-image:url('/images/bg/white.png'); 
+background-repeat:no-repeat;
+height:180px;
+}
+
+#tagline_phone
+{
+font-size:30px;
+color:black;
+margin:10px 0;
+text-align:center;
+}
+
+
+
+#getstarted_phone
+{
+background-color:#65c8c6;
+padding:15px 0px;
+text-align:center;
+margin:25px auto;
+margin:25px auto;
+width:300px;
+height:50px;
+color:white;
+border-radius:4px;
+font-size:140%;
+letter-spacing:4px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/*This is the first part of the content about how this service works*/
+
+#content2
+{
+background-color:#dfe4de;
+height:100%;
+}
+
+.content_title
+{
+height:100px;
+font-size:28px;
+padding:30px 0 0 0;
+letter-spacing:4px;
+text-align:center;
+}
+
+#howitworks_wrapper
+{
+width:100%;
+}
+
+#left, #middle, #right
+{
+margin: 0 auto;
+width:93%;
+display:block;
+padding:20px 0;
+}
+
+.box
+{
+position:absolute;
+width:23px;
+height:23px;
+background-color:grey;
+border-radius:100px;
+text-align:center;
+padding:3px 0 0 0;
+color:white;
+}
+
+.boxtext
+{
+position:relative;
+top:3px;
+left:30px;
+font-size:17px;
+}
+
+p.howitworks
+{
+padding:0 0 0 30px;
+font-size:16px;
+line-height:175%;
+}
+
+/*This is the third part of the content, OUR STORY */
+
+#content3
+{
+position:relative;
+background-color:white;
+padding:25px 25px 25px 25px;
+}
+
+#ourstory_wrapper
+{
+}
+
+#leftstory
+{
+vertical-align:top;
+display:inline-block;
+}
+
+#rightstory
+{
+float:right;
+margin:15px 0 0 0;
+padding:0;
+background-image:url ("/images/bg/story.png");
+display:none:
+}
+
+p.story
+{
+font-size:23px;
+line-height:190%;
+}
+
+/* This is the footer section */
+
+#footer
+{
+background-color:black;
+}
+
+#footer_wrapper
+{
+padding:25px 25px 25px 25px;
+font-size:12px;
+color:#b2b2b2;
+}
+
+#leftfooter, #rightfooter
+{
+display:inline-block;
+}
+
+#rightfooter
+{
+
+}
+
+}

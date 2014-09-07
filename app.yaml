@@ -1,0 +1,84 @@
+application: s~slavgsparklie
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /slider
+  static_dir: static/slider
+
+- url: /slider
+  static_files: static/slider
+  upload: static/slider/(.*)   
+
+- url: /bootstrap
+  static_dir: static/bootstrap
+  
+- url: /jquery-ui-1.11.1
+  static_dir: static/jquery-ui-1.11.1
+  
+- url: /jquery-ui-1.11.1.custom
+  static_dir: static/jquery-ui-1.11.1.custom
+
+- url: /jQRangeSlider-5.7.0
+  static_dir: static/jQRangeSlider-5.7.0  
+  
+- url: /jquery-cookie-master/src
+  static_dir: static/jquery-cookie-master/src
+  
+- url: /bootstrap
+  static_files: static/bootstrap
+  upload: static/bootstrap/(.*)   
+
+- url: /stylesheets
+  static_dir: static/stylesheets
+
+- url: /stylesheets
+  static_files: static/stylesheets
+  upload: static/stylesheets/(.*)   
+
+- url: /jQRangeSlider-5.7.0/css
+  static_files: static/jQRangeSlider-5.7.0/css
+  upload: static/jQRangeSlider-5.7.0/css/(.*)
+  
+- url: /javascript
+  static_dir: static/javascript
+
+- url: /javascript
+  static_files: static/javascript
+  upload: static/javascript/(.*)   
+
+- url: /images
+  static_dir: static/images
+ 
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
+  
+- url: /images/(.*)
+  static_files: static/images/\1
+  upload: static/images/(.*)  
+  
+- url: /html
+  static_dir: static/html
+  
+- url: /html
+  static_files: static/html
+  upload: static/html/(.*)  
+
+- url: .*
+  script: main1.application
+  
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+  
+builtins:
+- appstats: on
+- remote_api: on
+
+inbound_services:
+- channel_presence

@@ -1,0 +1,62 @@
+Wish List - Features
+
+1. Product catalogue by merchant / designer 
+	Ability to see a list of all the merchant / designers to be selected so you can go to the product catalogue for the individual merchant
+	Ability to see the yelp rating for the merchant
+	Ability to switch between product catalogues for different merchants 
+	Ability to filter products within a merchant by ring type, metal type, setting type, etc. 
+	Ability for individual see more details about the individual product
+	Ability to show the price and simple product description
+2. Individual product showcase (normal and discounted products, highlighting discounted products)
+	Ability to add products to shopping cart
+	Ability to checkout and purchase the product direction (capture payment, capture shipping information, capture billing information, capture phone number)
+		Payment via credit and debit card
+		Payment via ACH
+	Ability to select different images of the product to view
+	Ability to go to the merchant product catalogue from the individual product showcase page
+	Ability to show/recommend similar products on the product showcase page
+	Instead of making a purchase, schedule a merchant store visit to see the product in person 
+		Capture the time and date when the consumer wants to see the merchant
+		Capture the name, email address, and phone number of the consumer
+		Allow user to make any comments to the merchants
+		Display a confirmation message saying the merchant will reach out to confirm the meeting time
+3. Ability for people who are buying products to contact customer support via chat or phone
+4. Capture the consumer's preferences via a set of questionnaire
+	Ask about ring setting
+	Ask about ring metal
+	Ask about diamond shape
+	Ask about diamond preference type (how to compare among different diamond characteristics)
+	Final recommendation page recommending rings to consumer based on preferences and available inventory
+5. Info page: Page explaining to the consumer how sparklie makes money (showing pricing transparency)
+	What are the shipping fees and how we charge for shipping
+	What are the return fees and how we charge for returns (what is the return period)
+	What data we collect and how we use the information
+7. Info page: About us 
+8. Info page: FAQ
+9. Track packages for orders and handle returns
+	Ability for user to enter a tracking number where tracking information will be retrieved
+	Ability for user to contact us to handle returns (no automated returns for now)
+10. Ability for user to determine the ring size by printing out a piece of paper (example: http://www.overstock.com/downloads/pdf/2010_RingSizing.pdf)
+11. Ability to show terms and conditions & privacy policy, as required by law
+12. Ability for user to go visit our blog
+13. A landing page that describes the service (product catalogue and recommendation service)
+	Ability to user to subscribe to the blog, service updates, or other notes
+14. A contact us page (information could also be included in the about us page)	
+	If consumers have questions, they can contact us (this is a form with different subjects)
+15. Account profile page
+	Allow users to create an account page by logging in via Facebook or Google
+	After user logs in, allow users to add products to wishlist
+	Account page should allow user to add shipping information, billing information, and card information
+	Account page should show product purchase and returned
+	
+
+Target consumer
+-Male
+-Income: 50-80K
+-Age: 25-29
+-Lives in urban city
+-Shops online using desktop/tablet
+-Intended to propose in 1 month
+-Education: college
+
+

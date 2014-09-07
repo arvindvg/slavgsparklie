@@ -1,0 +1,112 @@
+html {
+	font-family: 'Lato';
+}
+
+.jumbotron {
+	color: #ffffff;
+	background-color:#46DBC2;
+}
+
+
+.btn-clear {
+  color: #ffffff;
+  background-color: #46DBC2;
+  border-color: #ffffff;
+  border-radius: 0px;
+}
+
+.btn-clear:hover,
+.btn-clear:focus,
+.btn-clear:active,
+.btn-clear.active,
+.open .dropdown-toggle.btn-default {
+  color: #ffffff;
+  background-color: #00BA9B;
+  border-color: #ffffff;
+}
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-45deg);
+
+/* Firefox */
+-moz-transform: rotate(-45deg);
+
+/* IE */
+-ms-transform: rotate(-45deg);
+
+/* Opera */
+-o-transform: rotate(-45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+
+}
+
+
+.content-shadow{
+	-moz-box-shadow: -5px 5px 10px #46DBC2;
+	-webkit-box-shadow: -5px 5px 10px #46DBC2;
+	box-shadow: -5px 5px 10px #46DBC2;
+}
+
+/*Below are the code for the various facebook, twitter, and pinterest images for sharing. */
+.share {
+background-image: url("/images/share.png");
+background-repeat: no-repeat;
+
+}
+
+.share-facebook{
+background-position: 0 0px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+.share-twitter{
+background-position: 0 -160px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+.share-pinterest{
+background-position: 0 -80px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+/* This is to control the left and right button */
+#next
+{
+
+font-size:50px;
+text-align:right;
+cursor:pointer;
+}
+
+#back
+{
+
+font-size:50px;
+text-align:left;
+cursor:pointer;
+display:none;
+}
+
+/*schedule modal width*/
+.modal-dialog-schedule {
+
+width:80%;
+}
+
+@media (min-width: 768px): {
+#test1
+{
+	padding: 550px 50px;
+}
+}
+/

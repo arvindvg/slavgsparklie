@@ -1,0 +1,278 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--user-scalable=no disables zooming on mobile devices-->
+    <meta name="description" content="The website to find and buy your perfect diamond engagement ring.">
+    <meta name="author" content="Arvind & shaw">
+    <link rel="shortcut icon" href="/images/diamond-icon.png">
+
+    <title>Sparklie - Find your perfect ring.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/step2.css" rel="stylesheet">
+	<link href="/stylesheets/indicators.css" rel="stylesheet">
+	<link href="/stylesheets/sticky-footer.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+	<div id="wrap">
+		<div class="navbar-wrapper">
+			<div class="container">
+				<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				  <div class="container">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="/" style="color:white;">SPARKLIE</a>
+					</div>
+					<div class="collapse navbar-collapse navbar-right">
+					  <ul class="nav navbar-nav">
+						<li><a href="/step2">START OVER</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container"> 
+		<!--Beginning of the placeholder for the dots -->
+			<div class="row">
+				<div class="col-md-12 height70">
+					<ol class="carousel-indicators">
+						<li></li>
+						<li class="active"> </li>
+						<li></li>
+						<li></li>
+						<li></li>
+					
+					</ol>
+				</div>
+			</div>
+		
+
+		
+		<!--Beginning of the questionnaire title question -->
+			<div class="row">	
+				<div class="col-md-1">
+					<div id="back">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</div>
+				
+				</div>
+				<div class="col-md-10" style="text-align:center;font-size:28px;font-weight:600px;">
+					What type of ring setting would you like?
+				</div>
+				<div class="col-md-1">
+					<div id="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</div>
+				
+				</div>
+			</div>
+		</div>		
+
+		<!-- This is the beginning of the content container-->
+		<div class="container">	
+			<div class="row">
+			
+			<!-- Warning content -->
+				<div class="col-md-3"></div>
+				
+				<div class="col-md-6 padding15">
+					<div id="formAlert" class="alert alert-warning">	
+							<strong>Sorry!</strong> You didn't select a ring setting. 
+					</div>
+				</div>
+				
+				<div class="col-md-3"></div>
+			</div>	
+			<div class="row">	
+			
+				
+	
+				
+			<!--Beginning of the answer section -->			
+				<div class="col-md-6">
+					<div  class="shape2 clicks" id="prong">
+					<input name="setting" type="hidden" value="">
+					<label>PRONG</label><br/>
+					<img src="/images/prong.jpg" alt="prong setting"  class="img-rounded height2" />		
+					</input>
+					</div>
+				</div>
+				
+				
+			<div class="col-md-6">
+					<div class="shape2 clicks" id="bezel">
+					<input name="setting" type="hidden" value="">
+					<label>BEZEL</label><br/>
+					<img src="/images/bezel.jpg" alt="bezel setting"   class="img-rounded height2"/>		
+					</input>
+					</div>
+				</div>
+				
+				
+			
+			
+			
+			</div>
+		</div>
+			
+
+		<div class="container">
+			<div class="row">
+				<!-- Tip Placeholder-->
+					<div id="bar" class="col-md-12" style="display:none;">
+						<hr style="border-color:#D1D1D1;">
+					</div>	
+					
+					
+				<!-- First div just to holder everything -->
+					
+				<!-- Tip Prong -->
+				<div id="tip1x" class="col-md-12">
+					<div id="tip1" class="tipspace">
+					 <p>Prong setting is a classic, elegant setting. It lets in the most light, maximizing the diamond's sparkle.  
+					</p> 
+				 </div>
+				 </div>
+				 <!-- Tip Bezel -->
+				  <div id="tip2x" class="col-md-12">
+					<div id="tip2" class="tipspace">
+				<p>
+				 Bezel setting is a traditional setting, offering more protection for the diamond. 
+				 </p>
+				 </div>
+				 </div>
+				 
+			</div>	
+		</div>
+	</div>
+<!-- Foot note container starts here -->	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<hr>
+			</div>	
+			<div class="col-md-12">
+				
+			  <footer>
+				<p>&copy; Copyright Sparklie 2013. All Rights Reserved.</p>
+			  </footer>
+			</div>
+		</div>
+	</div> 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>window.jQuery || document.write("<script src='/javascript/jquery-ui-1.10.3/jquery-1.9.1.js'>\x3C/script>")</script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script scr="/javascript/js/holder.js"></script>
+	<script type="text/javascript" src="/javascript/jquery.hoverIntent.js"></script>
+	<script>
+	$(document).ready(function(){
+
+		$("#prong").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#prong").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("input").val('prong'),
+				$("#tip1x").css('display','block'),
+				$("#tip1").css('display','table'),
+				$("#tip2x").css('display','none'),
+				$("#bar").css('display','block'),
+				$("#bezel").css('background-color','white')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+			
+		$("#bezel").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#bezel").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("input").val('bezel'),
+				$("#tip2x").css('display','block'),
+				$("#tip2").css('display','table'),
+				$("#tip1x").css('display','none'),
+				$("#bar").css('display','block'),
+				$("#prong").css('background-color','white')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+			
+		
+		$('#back').click(function(){
+			window.location.replace('/step2')
+			});	
+			
+		$('#next').click(function(){
+			if ($("[name='setting']").val() == "")
+				{
+					$("#formAlert").slideDown('slow');
+				}
+			else
+				{
+					$.post("/step3", {setting: $("[name='setting']").val()}).done(function(data){
+						window.location.href ='/step4'
+						});
+				}
+			});
+		
+		$('#formAlert').bind('closed.bs.alert', function (){
+			$("#formAlert").css('display','none')
+			});	
+
+	
+	});
+	
+	
+	</script>
+  </body>
+</html>

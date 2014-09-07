@@ -1,0 +1,32 @@
+1. How does product catalog fit into this flow?
+2. Why did you pick vertical vs. horizontal scrolling?
+3. First slide -> we're okay with a context photo. 
+3a). There needs to be arrows or someway to demonstrate to the user that there's more stuff below the content; 
+3b). We still want a call to action button to push down to content if the person doesn't want to read all the content;
+3c). We'll take the action item to refine the content to determine what exactly is our message'
+3d). On this page with all this space; what needs to be done besides just text, if anything
+4. We definitely need to add the setting question to this page:
+4a). We need to add the question of the type of setting you'd like
+4b). We need to add the question about ring metal
+5). The questions as currently posed assumes the user understands and knows precisely what they want which is probably not true. The questions needs to posed in a manner that teases out their preferences and importance of the individual factor without them having to a make a specific educated choice
+one option is to collapse the questions 2 - 5 into one page where the user is able to select preference among the four criteria and display to the user how those choices would affect their product price 
+6). On the budget screen, we're okay with the design, but there needs to be a way to limit the user from selecting a budget that's basically
+from zero to the max. That defeats the purpose of a budget.  Another way to title this question is to ask for a budget range. 
+7). The budget range question needs to be before the preferences question on number 5. We've thought about this considerably, but 
+we need to know how much you're willing to spending to move it up. It shouldn't be the first question, but should be question just before preferences. 
+8). What happens when we show more products, is it endless scrolling?
+9) We get rid of the big sharing button the top
+Note. We don't understand why you have this flow rather than the current flow we have. 
+Note2: Ask about hours used so we can track. 
+Sharing: There should be a button that allows you to select a ring; then a button shows up on the side that says something like; add 4 more and share with friends for feedback
+People not have friends to share (feedback loop), vote on different rings (yes / no)
+- Show on product page a thumbup/thumb down feature where thumb up is active , you are capped at thumb down below x numbers (initially don't need to thumb up or thumb down
+- We could use our initial rating star to be used for thumbup/thumbdown (hover to explain this concept of other people rating rings)
+-Get feedback from friends
+usual coffee place 6pm
+who's it for (optional - user write over it!) -This should all be handled in the modal
+collect email ->
+name of the user buying the ring (first/last name)
+name of person getting feedback
+there's needs to be a script written and editable by the user on what the friend/family will see (included and body text)
+a copy will be sent to the user

@@ -1,0 +1,76 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar-brand {
+	font-size: 28px;
+	
+	letter-spacing:2px;
+	
+}
+/*
+.container{
+border-width:1px;
+border-color:red;
+border-style:solid;
+}*/
+
+
+#tagline
+{
+padding:0 0 0 65%;
+display:inline-block;
+}
+
+.jumbotron{
+background-image:url('/images/bg/white.png'); 
+background-repeat:no-repeat;
+min-height:500px;
+background-position:top; 
+}
+
+p.howitworks
+{
+padding:0 0 30px 30px;
+font-size:16px;
+line-height:175%;
+}
+
+p.story
+{
+font-size:23px;
+line-height:190%;
+}
+
+.box
+{
+position:absolute;
+width:23px;
+height:23px;
+background-color:grey;
+border-radius:100px;
+text-align:center;
+padding:3px 0 0 0;
+color:white;
+}
+
+.boxtext
+{
+position:relative;
+top:3px;
+left:30px;
+font-size:17px;
+}
+
+#picture
+{
+margin:10px 0;
+width:450px;
+height:500px;
+background-image:url("/images/bg/story.png");
+background-repeat:no-repeat;
+background-position:center; 
+display:inline-block;
+}

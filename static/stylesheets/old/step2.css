@@ -1,0 +1,170 @@
+body
+{
+color:#b2b2b2;
+
+}
+
+.wrapper
+{
+position:relative;
+margin:20px auto;
+width:1000px;
+
+}
+
+.highlightfont
+{
+color:#FFD92A;
+}
+
+.titleplace
+{
+margin:15px 0px 0px 50px;
+
+}
+
+#titlefont
+{
+
+color:#F2F2F2;
+font-size:150%;
+letter-spacing:1px;
+font-weight:bold;
+}
+
+.whitebox
+{
+margin:5px auto;
+width:900px;
+height:450px;
+background-color:#F8F8F8;
+border-style:solid;
+border-color:#0E0E0E;
+border-width:1px;
+border-radius:5px;
+}
+
+#whiteboxfont
+{
+color:#000000;
+}
+
+
+.top_container
+{
+position:relative;
+height:270px;
+margin: 10px 0 0 0;
+}
+
+#left_q
+{
+position:absolute;
+left:25px;
+top:25px;
+
+}
+
+#right_q
+{
+position:absolute;
+left:450px;
+top:25px;
+}
+
+.bottom_container
+{
+}
+
+.buttonplace
+{
+position:relative;
+text-align:right;
+right:50px;
+}
+
+.button
+{
+width:100px;
+padding:5px 10px 6px 7px;
+background-color:#FFD92A;
+border:0px solid #dedede;
+border:0px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-size:100%;
+line-height:130%;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+footer
+{
+font-size:85%;
+text-align:center;
+}
+
+#price_info, #ring_info, #guide1, #guide2, #guide3, #guide4, #guide5, #guide6, #guide7, #guide8, #gold, #wgold, #plat
+{
+position:absolute;
+top:80px;
+width:160px;
+padding:5px 10px;
+background-color:#ffffff;
+border-style:solid;
+border-width:1px;
+border-color:#C2C2C2;
+border-radius:15px;
+visibility:hidden;
+font-size:75%;
+}
+
+#price_info, #guide1, #guide2, #guide3, #guide4, #guide5, #guide6, #guide7, #guide8
+{
+left:220px;
+}
+
+#ring_info, #gold, #wgold, #plat
+{
+left:660px;
+}
+
+
+input[type="radio"]
+{
+display:none;
+}
+ 
+.radio + label
+{
+position:relative;
+border-style:solid;
+border-width:2px;
+border-color:#cacece;
+border-radius:10px;
+margin:0px 0px -2px 0px;
+padding:5px;
+display:inline-block;
+}
+ 
+.radio:checked + label
+{
+background-color: #e9ecee;
+border-color:#adb8c0;
+color:#99a1a7;
+}
+ 
+.radio:checked + label:after 
+{
+position:absolute;
+top:2px;
+left:2px;
+width:6px;
+height:6px;
+border-radius:10px;
+content:'';
+background-color:#99a1a7;
+}
+

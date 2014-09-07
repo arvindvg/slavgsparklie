@@ -1,0 +1,381 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+html {
+font-family: 'Lato', sans-serif !important;
+}
+
+body {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  font-family: 'Lato', sans-serif !important;
+  font-size:15px;
+  
+}
+/* This is the color section for the button*/
+.btn-primary {
+  color: #ffffff;
+  background-color: #F1664B;
+  border-color: #EF715F;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #EF715F;
+  border-color: #F1664B;
+}
+
+/* This is the color section for the nav bar*/
+
+.navbar-inverse .navbar-text {
+  color: #D1D1D1;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #D1D1D1;
+}
+
+.navbar-inverse {
+  background-color: #231F20;
+  border-color: #000000;
+}
+
+/* The navbar becomes detached from the top, so we round the corners */
+.navbar-wrapper .navbar {
+border-radius: 4px;
+}
+
+/*This is the padding for the warning box*/
+.padding15
+{
+padding-top:10px;
+padding-bottom:5px;
+}
+
+.alert-warning, .alert-danger{
+display:none;
+text-align:center;
+}
+
+
+/*This is to adjust the slider in Step 5 HTML */
+
+
+  
+.slider-selection {
+    background: #EF715F;	
+	opacity: 0.7;
+}
+
+.slider-handle{
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: #F1664B;
+
+}
+
+.slider-track {
+  background-color: #EEEEEE;
+  border-color:#D1D1D1;
+  display:inline-block;
+  }
+
+.wcolor {
+  background-color: #7DC7C7;
+  
+}
+
+.slider.slider-horizontal .slider-handle {
+  margin-left: -10px;
+  margin-top: -3px;
+ }
+ 
+.slider.slider-vertical  {
+   height:100px;
+}
+
+/*This is for the padding on Step 2*/
+
+.shape, .shape2, .shape3{
+padding-top:10px;
+text-align:center;
+height:190px;
+}
+
+.border-bar{
+border-right:solid;
+border-width:2px;
+border-color:#EEEEEE;
+}
+
+.shape2 {
+height:210px;
+}
+
+.shape3{
+height:350px;
+}
+
+
+/*This section is the high of the images in the questionnaire  */
+
+.height {
+max-height:130px;
+border:none;
+}
+
+.height2{
+height:150px;
+}
+
+
+/* This is the height for the indicator spacing*/
+.height70{
+height:70px;
+}
+
+.center, .center2
+{
+text-align:center;
+font-weight:bold;
+}
+
+.center2{
+font-weight:normal;
+line-height:0px;
+}
+
+
+
+input[type="radio"] 
+{
+
+margin-right:3px;
+}
+
+/* This is to control the left and right button */
+#next
+{
+height:0px;
+font-size:50px;
+text-align:right;
+cursor:pointer;
+}
+
+#back
+{
+height:0px;
+font-size:50px;
+text-align:left;
+cursor:pointer;
+display:none;
+}
+
+
+/* This this the css for tips, to make it center, and give it green text */
+.tipspace
+{
+height:100px;
+width:100%;
+display:none;
+color:#ffffff;
+background-color:#65C8C6;
+padding: 0 15px;
+
+}
+
+.tipspace p
+{
+text-align:center;
+vertical-align: middle; 
+font-size:20px;
+display:table-cell;
+}
+
+/* This is the code for page 6 to help with the labels for the bar graphs */
+
+.bar-label{
+width:8px;
+height:8px;
+display:inline-block;
+margin-right:1px;
+background-color:#b3cde3;
+}
+
+/* This is the code for the button-middle size on page 7 */
+
+.btn-md{
+width:95%;
+}
+
+/* Below is the section for Page 6 loading screen 
+
+
+#loading
+{
+	position: absolute;
+    top:-25px;
+	display: none;
+	z-index: 500;
+    width: 100%;
+    height: 102.5773195876289%;
+	background-color:#323232;
+	opacity:0.8;
+	padding-top: 0px;
+}
+
+#box_loading 
+{	
+	position: absolute;
+	opacity: 1;
+	display:none;
+	margin: 330px 33.333333333333%;
+	width: 34%;
+    height: 100px;
+	background-color:#F8F8F8;
+	border-style:solid;
+	border-radius:5px;
+	border-width:1px;
+	border-color:#323232;
+	z-index: 5005;
+	color:black;
+    cursor: wait;
+	text-align:center;
+	padding: 30px 0;
+	font-size:18px;
+
+}
+*/
+/* Below are the css for the stars */
+
+.stars, .stars2
+{
+position:relative;
+left:5px;
+top:2px;
+
+}
+span.stars, span.stars span, span.stars2, span.stars2 span
+ {
+display: inline-block;
+background: url('/images/stars.png') 0 -16px repeat-x;
+width: 80px;
+height: 16px;
+title: hi;
+}
+
+span.stars span, span.stars2 span 
+{
+background-position: 0 0;
+}
+/* Below is the align right for the price text */
+
+.flt_right
+{
+float:right;
+padding-right:5px;
+}
+
+
+/*modal edits original - This is applicable when the purchase button when to a form to capture input from Craigslist*/
+
+/*.modal-body {
+padding-top:40px;
+}
+
+
+.modal-dialog {
+padding-top:250px;
+width:350px;
+}
+*/
+.modal-dialog-temp {
+padding-top:250px;
+width:350px;
+}
+
+/*
+.well-side {
+
+padding: 8px 9px;
+}
+*/
+
+/*Below are the code for the various facebook, twitter, and pinterest images for sharing. */
+.share {
+background-image: url("/images/share.png");
+background-repeat: no-repeat;
+
+}
+
+.share-facebook{
+background-position: 0 0px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+.share-twitter{
+background-position: 0 -160px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+.share-pinterest{
+background-position: 0 -80px;
+height: 16px;
+width: 16px;
+display: inline-block;
+}
+
+.progress-bar {
+  -webkit-transition: width 5s linear; 
+     -moz-transition: width 5s linear; 
+		-ms-transition: width 5s linear;
+       -o-transition: width 5s linear; 
+          transition: width 5s linear; 
+}
+
+.barp{
+  margin:0px;
+  height:3px;
+  background-color: #D1D1D1;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.step6_info {
+display:inline-block;
+position:absolute;
+right:15px;
+top:2px;
+color:#D1D1D1;
+
+}
+
+/* How to remove Firefox button outline */
+
+
+a:focus { 
+    outline: none; 
+}
+
+@media (max-width: 768px){
+
+	#next, #back
+	{
+	display:none;
+	}
+
+}
+
+#slider-container2 {
+    width:350px;
+    margin-left:30px;
+}
+

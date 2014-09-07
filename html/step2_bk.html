@@ -1,0 +1,396 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--user-scalable=no disables zooming on mobile devices-->
+    <meta name="description" content="Answer a few questions to see what diamond shape you like.">
+    <meta name="author" content="Arvind & Shaw">
+    <link rel="shortcut icon" href="/images/diamond-icon.png">
+
+    <title>Find the best diamond shape | Sparklie.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/step2.css" rel="stylesheet">
+	<link href="/stylesheets/indicators.css" rel="stylesheet">
+	<link href="/stylesheets/sticky-footer.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+ <body>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-temp">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+        <h4 class="modal-title" style="text-align:center;">Warm Greetings!</h4>
+      </div>
+      <div class="modal-body" style="padding-top:10px;">
+			<p>Welcome to Sparklie and thank you for visiting. This is an alpha demo site still under development. We hope you'll play around, but please recognize that some functionality
+			and features may not be functional.  When you're done, give us some feedback or send us an email . </p>
+			<br/>
+			<p class="pull-right">Thanks again,<br/>
+			<em>Arvind and Shaw</em></p><br/><br/>
+		<button type="type" data-dismiss="modal" aria-hidden="true" class="btn btn-primary" id="okay">Okay</button>
+		
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  
+  
+	 <div id="wrap">
+		<div class="navbar-wrapper">
+			<div class="container">
+				<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				  <div class="container">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="/" style="color:white;">SPARKLIE</a>
+					</div>
+					<div class="collapse navbar-collapse  navbar-right">
+					  <ul class="nav navbar-nav">
+						<li ><a href="#">START OVER</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Beginning of the questionnaire container -->
+		<div class="container"> 
+			<!--Beginning of the placeholder for the dots -->
+			<div class="row">
+				<div class="col-md-12 height70">
+					<ol class="carousel-indicators">
+						<li class="active"> </li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						
+					</ol>
+				</div>
+			</div>
+		
+		
+		
+			<!--Beginning of the questionnaire title question -->
+			<div class="row">	
+				<div class="col-md-1">
+					<!--<div id="back">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</div>-->
+				</div>
+				<div class="col-md-10" style="text-align:center;font-size:28px;font-weight:600px;">
+					Answer a few questions to help us find the right ring for you.<br/>
+					Which diamond shape do you like?
+				</div>
+				<div class="col-md-1">
+					<div id="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- This is the beginning of the content container-->
+		<div class="container">
+			<div class="row">
+			
+			<!-- Warning content -->
+				<div class="col-md-3"></div>
+				
+				<div class="col-md-6 padding15">
+					<div id="formAlert" class="alert alert-warning">	
+							<strong>Sorry!</strong> You didn't select a ring shape. 
+					</div>
+				</div>
+			
+				<div class="col-md-3"></div>
+				
+			</div>		
+			<div class="row">
+
+				
+				
+			<!--Beginning of the answer section -->
+			
+				<div class="col-md-3" style="padding:0 0 0 15px;">
+					<div id="round" class="shape2 clicks">
+					<input name="shape" type="hidden" value="">
+					<label>ROUND</label><br/>
+					<img src="/images/bg/detail_secondary_round.jpg" alt="round"  class="img-thumbnail height"/>
+					</input>
+					</div>
+				</div>
+				
+				<div class="col-md-3" style="padding:0;">
+					<div  id="princess" class="shape2 clicks">
+					<input name="shape" type="hidden" value="">
+					<label>PRINCESS</label><br/>
+					<img src="/images/bg/detail_secondary_princess.jpg" alt="princess"  class="img-thumbnail height"/>		
+					</input>
+					</div>
+				</div>
+				
+				<div class="col-md-3"style="padding:0;">
+					<div  id="emerald"  class="shape2 clicks">
+					<input name="shape" type="hidden" value="">
+					<label>EMERALD</label ><br/>
+					<img src="/images/bg/detail_secondary_emerald.jpg" alt="emerald" class="img-thumbnail height"/>
+					</input>
+					</div>
+				</div>
+				
+				<div class="col-md-3" style="padding:0 15px 0 0;">
+					<div  id="oval"  class="shape2 clicks">
+					<input name="shape" type="hidden" value="">
+					<label>OVAL</label><br/>
+					<img src="/images/bg/detail_secondary_oval.jpg" alt="oval"  height="90px" class="img-thumbnail height"/>
+					</input>
+					</div>
+				</div>
+				
+			
+			
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<!-- Tip Placeholder-->
+					<div id="bar" class="col-md-12" style="display:none;">
+						<hr style="border-color:#D1D1D1;">
+					</div>	
+				<!-- First div just to holder everything -->
+					
+					<!-- Tip Round -->
+					<div id="tip1x" class="col-md-12">
+					<div id="tip1" class="tipspace">
+					 <p> Round is the most popular shape. Its is cut based on a precise formula to achieve maximum sparkle.</p>
+					 </div>
+					 </div>
+					 
+				 <!-- Tip Princess -->
+					 
+					 <div id="tip2x" class="col-md-12">
+					<div id="tip2" class="tipspace">
+					 <p> Princess is square shaped with pointed corners. Created in the 1980's, it is the second most popular. </p>
+					 </div>
+					 </div>
+					 
+				 <!-- Tip Emerald -->
+				 
+					 <div id="tip3x" class="col-md-12">
+					 <div id="tip3" class="tipspace">
+					 <p> Emerald is rectangular shaped with step-cut / beveled corners. Its smooth beveled corners add a unique visual look.</p>
+					</div>
+					</div>
+
+				<!-- Tip Oval -->
+
+				<div id="tip4x"class="col-md-12">
+				<div id="tip4" class="tipspace">
+				<p>The first mention of oval shaped diamonds occurred in 1304; the famous Koh-I-Noor. The elongated shape can accentuate those with long fingers.  </p>
+				</div>
+				</div>
+				
+			</div>	
+		</div>
+	</div>
+	<!-- Foot note container starts here -->	
+	<div class="container">
+		<div class="row">
+		
+			<div class="col-md-12" >
+				<hr>
+			</div>	
+			<div class="col-md-12">
+				
+			  <footer>
+				<p>&copy; Copyright Sparklie 2013. All Rights Reserved.</p>
+			  </footer>
+			</div>
+		</div>
+	</div> 
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>window.jQuery || document.write("<script src='/javascript/jquery-ui-1.10.3/jquery-1.9.1.js'>\x3C/script>")</script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script scr="/javascript/js/holder.js"></script>
+	<script type="text/javascript" src="/javascript/jquery.hoverIntent.js"></script>
+	<script>
+	$(document).ready(function(){
+		
+		if ({{count}} <1 || {{internalCounter}} == 0){
+		$('#myModal').modal({
+			keyboard : true,
+			backdrop: true,
+					})};
+					
+		//if ($("#round").css('background-color') == "rgba(0, 0, 0, 0)")  //rgba value pulled from css has an extra space between the different rgb values
+		//if (1 == 1)
+
+
+
+		
+		var count = 0	
+		
+		$("#round").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#round").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("#tip1x").css('display','block'),
+				$("#tip1").css('display','table'),
+				$("input").val('round'),
+				$("#bar").css('display','block'),
+				$("#tip2x,#tip3x,#tip4x").css('display','none'),
+				$("#princess,#emerald,#oval").css('background-color','white').addClass('clicks')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+			
+		$("#princess").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#princess").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("input").val('princess'),
+				$("#tip2x").css('display','block'),
+				$("#tip2").css('display','table'),
+				$("#bar").css('display','block'),
+				$("#tip1x,#tip3x,#tip4x").css('display','none'),
+				$("#round,#emerald,#oval").css('background-color','white').addClass('clicks')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+			
+		$("#emerald").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#emerald").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("input").val('emerald'),
+				$("#tip3x").css('display','block'),
+				$("#tip3").css('display','table'),
+				$("#bar").css('display','block'),
+				$("#tip2x,#tip1x,#tip4x").css('display','none'),
+				$("#princess,#round,#oval").css('background-color','white').addClass('clicks')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+			
+		$("#oval").on({
+			click: function(){
+				$(this).removeClass('clicks'),
+				$("#oval").css('background-color','#C8F5F5'),
+				$("#formAlert").slideUp('slow'),
+				$("input").val('oval'),
+				$("#tip4x").css('display','block'),
+				$("#tip4").css('display','table'),
+				$("#bar").css('display','block'),
+				$("#tip2x,#tip3x,#tip1x").css('display','none'),
+				$("#princess,#emerald,#round").css('background-color','white').addClass('clicks')
+			},
+
+			mouseenter: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','rgba(200,245,245,0.5)');
+					} 
+				},
+			mouseleave: function(){
+				if ($(this).hasClass('clicks'))
+					{
+					$(this).css('background-color','white');
+					}
+				}
+			});
+		
+		$('#back').click(function(){
+			window.location.replace('/step1')
+			});	
+			
+		$('#next').click(function(){
+			if ($("[name='shape']").val() == "")
+				{
+					$("#formAlert").slideDown('slow');
+				}
+			else
+				{
+					$.post("/step2", {shape: $("[name='shape']").val(), internalCounter:1}).done(function(data){
+						window.location.href = "/step3"}
+					)}	;
+					
+						
+				
+			});
+		
+		$('#formAlert').bind('closed.bs.alert', function (){
+			$("#formAlert").css('display','none')
+			});
+	});
+
+	
+	</script>
+  </body>
+</html>
