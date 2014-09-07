@@ -458,17 +458,26 @@ class Step7(webapp2.RequestHandler):
         try :
             
             template_values['main_ring_image_url1'] = image_url1[ring_selection]
-            image_count = image_count + 1
+            if template_values['main_ring_image_url1'] == "":
+                image_count = image_count
+            else:
+                image_count = image_count + 1
         except:
             print "no Image found"
         try:
             template_values['main_ring_image_url2'] = image_url2[ring_selection]
-            image_count = image_count + 1
+            if template_values['main_ring_image_url2'] == "":
+                image_count = image_count
+            else:
+                image_count = image_count + 1
         except:
             print "no second image"
         try:
             template_values['main_ring_image_url3'] = image_url3[ring_selection]
-            image_count = image_count + 1
+            if template_values['main_ring_image_url3'] == "":
+                image_count = image_count
+            else:
+                image_count = image_count + 1
         except:
               print "no third image"
         template_values['image_count'] = image_count
