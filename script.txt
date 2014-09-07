@@ -1,6 +1,6 @@
 
 Data Upload to App Server::
-appcfg.py --email=sparklie3@gmail.com upload_data --config=bulkloader2.yaml --kind=sample_inventory_v2 --filename=C:\Users\Laptop\Desktop\oldsparklie\data\sample_inventory_v4.csv --url=http://1.slavgsparklie.appspot.com/_ah/remote_api 
+appcfg.py --oauth2 upload_data --config=bulkloader2.yaml --kind=new_inventory --filename=C:\Users\Laptop\Desktop\oldsparklie\data\new_inventory_david.csv --url=http://1.slavgsparklie.appspot.com/_ah/remote_api 
 
 Data Download from App Server::[NOTE: DELETIONS ARE CONSIDERED WRITE OPERATIONS]
 appcfg.py --email=sparklie3@gmail.com download_data --kind=email2_db --url=http://1.slavgsparklie.appspot.com/_ah/remote_api --filename=C:\Users\Laptop\Desktop\slavgsparklie\data{}
@@ -12,7 +12,9 @@ Directory File::
 cd c:\Program Files (x86)\Google\google_appengine
 
 Starting Dev Server
-dev_appserver.py --datastore_path=C:\Users\Laptop\Desktop\slavgsparklie\database\databased C:\Users\Laptop\Desktop\slavgsparklie
+dev_appserver.py --datastore_path=C:\Users\Laptop\Desktop\oldsparklie\database\databased C:\Users\Laptop\Desktop\slavgsparklie
+
+dev_appserver.py --smtp_host=smtp.gmail.com --smtp_port=587 --smtp_user=sparklie3@gmail.com --smtp_password="" --datastore_path=C:\Users\Laptop\Desktop\oldsparklie\database\databased C:\Users\Laptop\Desktop\slavgsparklie
 [clear the datastore]: --clear_datastore=yes
 dev_appserver.py C:\Users\Laptop\Desktop\Blobstore
 
@@ -29,7 +31,7 @@ appcfg.py --email=sparklie3@gmail.com upload_data --config=bulkloader2.yaml --ur
 appcfg.py --email=sparklie3@gmail.com upload_data --config=bulkloader2.yaml --url http://localhost:8080/_ah/remote_api --kind=cluster_db --filename=C:\Users\Laptop\Desktop\oldsparklie\data\cluster_stats_v9.csv --application=dev~s~slavgsparklie
 [bulkloader spacing issue does not allow tabbing as in python...use spacebar]
 
-
+appcfg.py --email=sparklie3@gmail.com upload_data --config=bulkloader2.yaml --url http://localhost:8080/_ah/remote_api --kind=new_inventory --filename=C:\Users\Laptop\Desktop\oldsparklie\data\new_inventory_david.csv --application=dev~s~slavgsparklie
 appcfg.py --email=sparklie3@gmail.com upload_data --config=bulkloader2.yaml --url http://localhost:8080/_ah/remote_api --kind=sample_inventory_v2 --filename=C:\Users\Laptop\Desktop\oldsparklie\data\sample_inventory_v6.csv --application=dev~s~slavgsparklie
 
 

@@ -24,6 +24,12 @@ handlers:
 - url: /jQRangeSlider-5.7.0
   static_dir: static/jQRangeSlider-5.7.0  
   
+- url: /eternicode-bootstrap-datepicker-37db99f
+  static_dir: static/eternicode-bootstrap-datepicker-37db99f
+  
+- url: /bootstrap-datetimepicker-0.0.11
+  static_dir: static/bootstrap-datetimepicker-0.0.11    
+  
 - url: /jquery-cookie-master/src
   static_dir: static/jquery-cookie-master/src
   
@@ -41,6 +47,14 @@ handlers:
 - url: /jQRangeSlider-5.7.0/css
   static_files: static/jQRangeSlider-5.7.0/css
   upload: static/jQRangeSlider-5.7.0/css/(.*)
+  
+- url: /bootstrap-datetimepicker-0.0.11/css
+  static_files: static/bootstrap-datetimepicker-0.0.11/css
+  upload: static/bootstrap-datetimepicker-0.0.11/css/(.*)  
+  
+- url: /eternicode-bootstrap-datepicker-37db99f/css
+  static_files: static/eternicode-bootstrap-datepicker-37db99f/css
+  upload: static/eternicode-bootstrap-datepicker-37db99f/css/(.*)    
   
 - url: /javascript
   static_dir: static/javascript

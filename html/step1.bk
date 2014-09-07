@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--user-scalable=no disables zooming on mobile devices-->
+    <meta name="description" content="#1 Diamond engagement ring recommendation site to help you find the perfect ring.">
+    <meta name="author" content="Arvind & Shaw">
+    <link rel="shortcut icon" href="/images/diamond-icon.png">
+
+    <title>Sparklie - Helping you find the perfect diamond engagement ring.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Font Awesome CSS -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/step1.css" rel="stylesheet">
+	<!-- Slider stylesheet -->
+	
+	<link href="/jQRangeSlider-5.7.0/css/iThing.css" rel="stylesheet">
+	<!--<link href="/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" rel="stylesheet">-->
+	<link href="/eternicode-bootstrap-datepicker-37db99f/css/datepicker3.css" rel="stylesheet">
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>-->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+		<!-- This is the modal for the terms and conditions message -->
+		<div class="modal fade" id="myModal_terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Sparklie Terms and Conditions ("Agreement")</h4>
+				    </div>
+				    <div class="modal-body" style="padding-top:10px;">
+						<p>This Agreement was last modified on March 21, 2014.</p>
+						<p>Please read these Terms and Conditions ("Agreement", "Terms and Conditions") carefully before using http://www.sparklie.net ("the Site") operated by Sparklie, Inc. ("us", "we", or "our"). This Agreement sets forth the legally binding terms and conditions for your use of the Site at http://www.sparklie.net.</p>
+						<p>By accessing or using the Site in any manner, including, but not limited to, visiting or browsing the Site or contributing content or other materials to the Site, you agree to be bound by these Terms and Conditions. Capitalized terms are defined in this Agreement.</p>
+						<p>Your  access  to  and  use  of  Sparklie, Inc. is  subject exclusively to these Terms and Conditions. You will not use the Site for any purpose that is unlawful or prohibited by these Terms and Conditions. By using  the  Site  you  are  fully  accepting  the  terms,  conditions  and disclaimers contained in this notice. If you do not accept these Terms and Conditions you must immediately stop accessing or using the Site.</p>
+
+						<p><strong>Intellectual Property</strong></p>
+						<p>The Site and its original content, features and functionality are owned by Sparklie, Inc. and are protected by international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.</p>
+
+						<p><strong>Disclaimers and Limitation of Liability </strong></p>
+						<p>The Site is provided on an AS IS and AS AVAILABLE basis without any representation or endorsement made and without warranty of any kind whether express or implied, including but not limited to the implied warranties of satisfactory quality, fitness for a particular purpose, non-infringement, compatibility, security and accuracy. To the extent permitted by law, Sparklie, Inc. will not be liable for any indirect or consequential loss or damage whatever (including without limitation loss of business, opportunity, data, profits) arising out of or in connection with the use of the Site. Sparklie, Inc. makes no warranty that the functionality of the Site will be uninterrupted or error free, that defects will be corrected or that the Site or the server that makes it available are free of viruses or anything else which may be harmful or destructive. </p>
+
+						<p><strong>Indemnity</strong></p>
+						<p>You agree to indemnify and hold Sparklie, Inc. and its directors, officers, employees and agents harmless from and against all liabilities, legal fees, damages, losses, costs and other expenses in relation to any claims or actions brought against Sparklie, Inc. arising out of any breach by you of these Terms and Conditions or other liabilities arising out of your use of this Site.</p>
+
+						<p><strong>Severance</strong></p>
+						<p>If any of these Terms and Conditions should be determined to be invalid, illegal or unenforceable for any reason by any court of competent jurisdiction then such Term or Condition shall be severed and the remaining Terms and Conditions shall survive and remain in full force and effect and continue to be binding and enforceable.</p>
+
+						<p><strong>Governing Law</strong></p>
+						<p>This Agreement (and any further rules, polices, or guidelines incorporated by reference) shall be governed and construed in accordance with the laws of Delaware, United States, without giving effect to any principles of conflicts of law.</p>
+
+						<p><strong>Termination</strong></p>
+						<p>We may terminate your access to the Site, without cause or notice, which may result in the forfeiture and destruction of all information associated with you. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+
+						<p><strong>Links To Third Party Websites</strong></p>
+						<p>Our Site may contain links to third-party sites that are not owned or controlled by Sparklie, Inc..</p>
+						<p>Sparklie, Inc. has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party sites or services. Any link to other websites is not an endorsement of such websites and you acknowledge and agree that we are not responsible for the content or availability of any such sites. We strongly advise you to read the terms and conditions and privacy policy of any third-party site that you visit.</p>
+
+						<p><strong>Changes To This Agreement</strong></p>
+						<p>We reserve the right, at our sole discretion, to modify or replace these Terms and Conditions by posting the updated terms on the Site. Your continued use of the Site after any such changes constitutes your acceptance of the new Terms and Conditions.</p>
+						<p>Please review this Agreement periodically for changes. If you do not agree to any of this Agreement or any changes to this Agreement, do not use, access or continue to access the Site or discontinue any use of the Site immediately.</p>
+
+						<p><strong>Contact Us</strong></p>
+						<p>If you have any question about this Agreement, please contact us at <br/>
+						Sparklie, Inc.,<br/>
+						510 Stockton St. Apt 9<br/>
+						San Francisco, CA, 94018<br/>
+						Phone: 415-409-9683<br/>
+						<a href='mailto:shaw@sparklie.net'>Email</a></p>
+						
+
+						<!--<p class="pull-right" style="font-size:14px;">Thanks for reading,<br/>
+						<em>Arvind and Shaw</em></p><br/><br/><br/><br/>
+						<button type="type" data-dismiss="modal" aria-hidden="true" class="btn btn-primary" id="okay">Okay</button>-->
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
+		<!-- This is the modal for the privacy policy message -->
+		<div class="modal fade" id="myModal_privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Sparklie Privacy Policy ("Policy")</h4>
+					</div>
+					<div class="modal-body" style="padding-top:10px;">
+						<p>This Policy was last modified on March 21, 2014.</p>
+
+						<p><strong>Definitions and legal references</strong></p>
+						
+						<p><strong>Personal Data (or Data)</strong>: Any information regarding a natural person, a legal person, an institution or an association, which is, or can be, identified, even indirectly, by reference to any other information, including a personal identification number.
+						</p>
+						
+						<p><strong>Usage Data</strong>: Information collected automatically from this Site (or third party services employed in this Site ), which can include: the IP addresses or domain names of the computers utilized by the Users who use this Site, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilized to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server's answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilized by the User, the various time details per visit (e.g., the time spent on each page within the Site) and the details about the path followed within the Site with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User's IT environment.
+						</p>
+						
+						<p><strong>User</strong>: The individual using this Site, which must coincide with or be authorized by the Data Subject, to whom the Personal Data refer.
+						</p>
+						
+						<p><strong>Data Subject</strong>: The legal or natural person to whom the Personal Data refers to.
+						</p>
+						
+						<p><strong>Data Processor</strong>: The natural person, legal person, public administration or any other body, association or organization authorized by the Data Controller to process the Personal Data in compliance with this privacy policy.
+						</p>
+						
+						<p><strong>Data Controller (or Site Owner, or Owner)</strong>: The natural person, legal person, public administration or any other body, association or organization with the right, also jointly with another Data Controller, to make decisions regarding the purposes, and the methods of processing of Personal Data and the means used, including the security measures concerning the operation and use of this Site. The Data Controller, unless otherwise specified, is Sparklie, Inc.
+						</p>
+						
+						<p><strong>This Site</strong>: http://www.sparklie.net
+						</p>
+						
+						<p><strong>Types of Data collected</strong></p>
+						<p>The Personal Data may be freely provided by the User, or collected automatically when using this Site.
+						Any use of Cookies - or of other tracking tools - by this Site or by the owners of third party services used by this Site, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User.
+						Failure to provide certain Personal Data may make it impossible for this Site to provide its services. The User assumes responsibility for the Personal Data of third parties published or shared through this Site and declares to have the right to communicate or broadcast them, thus relieving the Data Controller of all responsibility.
+						</p>
+						
+						<p><strong>Method of processing</strong>: The Data Controller processes the Data of Users in proper manner and shall take appropriate security measures to prevent unauthorized access, disclosure, modification or unauthorized destruction of the Data.
+						The Data processing is carried out using computers and/or IT enabled tools, following organizational procedures and modes strictly related to the purposes indicated. In addition to the Data Controller, in some cases, the Data may be accessible to certain types of persons in charge, involved with the operation of the site (administration, sales, marketing, legal, system administration) or external parties (such as third party technical service providers, mail carriers, hosting providers, IT companies, communications agencies) appointed, if necessary, as Data Processors by the Owner. The updated list of these parties may be requested from the Data Controller at any time.
+						More details concerning the collection or processing of Personal Data may be requested from the Data Controller at any time at its contact information.
+						</p>
+						
+						<p><strong>Place</strong>: The Data is processed at the Data Controller's operating offices and in any other places where the parties involved with the processing are located. For further information, please contact the Data Controller.
+						</p>
+						
+						<p><strong>Conservation Time</strong>: The Data is kept for the time necessary to provide the service requested by the User, or stated by the purposes outlined in this document, and the User can always request the Data Controller for their suspension or removal.
+						</p>
+						
+						<p><strong>Legal Action</strong>: The User's Personal Data may be used for legal purposes by the Data Controller, in Court or in the stages leading to possible legal action arising from improper use of this Site or the related services.
+						In addition to the information in this privacy policy, this Site may provide the User with contextual information concerning particular services or the collection and processing of Personal Data.
+						</p>
+						
+						<p><strong>System Logs and Maintenance</strong>: For operation and maintenance purposes, this Site and any third party services may collect files that record interaction with this Site (System Logs) or use for this purpose other Personal Data (such as IP Address).
+						
+						<p><strong>The rights of Users</strong>: Users have the right, at any time, to know whether their Personal Data has been stored and can consult the Data Controller to learn about their contents and origin, to verify their accuracy or to ask for them to be supplemented, cancelled, updated or corrected, or for their transformation into anonymous format or to block any data held in violation of the law, as well as to oppose their treatment for any and all legitimate reasons. Requests should be sent to the Data Controller at the contact information set out above.
+						</p>
+					
+						<p><strong>"Do not track" Requests</strong>: This Site does not support “do not track” requests. To understand if any of the third party services it uses honor the “do not track” requests, please read their privacy policies.
+						</p>
+						
+						<p><strong>Changes to this privacy policy</strong>: The Data Controller reserves the right to make changes to this privacy policy at any time by giving notice to its Users on this page. It is strongly recommended to check this page often, referring to the date of the last modification listed at the bottom. If a User objects to any of the changes to the Policy, the User must cease using this Site and can request the Data Controller to erase the Personal Data. Unless stated otherwise, the then-current privacy policy applies to all Personal Data the Data Controller has about Users.
+						</p>
+
+						<p><strong>Contact Us</strong></p>
+						<p>If you have any question about this Policy, please contact us at <br/>
+						Sparklie, Inc.,<br/>
+						510 Stockton St. Apt 9<br/>
+						San Francisco, CA, 94018<br/>
+						Phone: 415-409-9683<br/>
+						<a href='mailto:shaw@sparklie.net'>Email</a></p>
+						
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
+	  
+		<!-- This is the modal for the schedule an appointment -->
+		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-schedule">
+				<div class="modal-content">
+					<!--<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Sparklie Privacy Policy ("Policy")</h4>
+					</div>-->
+					<div class="modal-body" style="padding-top:10px;">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<div class="row">
+							<div class="col-sm-12" >
+								<div style="text-align:center;">
+								<i class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Schedule an Appointment</h2>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-8">
+							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
+							
+							</div>
+							
+							
+							<form role="form" id="send_email">
+
+
+							  <div class="form-group col-lg-6" style="padding:0px;">
+								
+								<div class="col-lg-12">
+								<label for="First">First Name</label>
+								<input type="text" class="form-control" id="first_name" placeholder="First Name"  style="border-radius:0px" required>
+								</div>
+							</div>
+								<div class="form-group col-lg-6" style="padding:0px;">
+								
+								
+								
+								
+							
+								<div class="col-lg-12">
+								<label for="Last">Last Name</label>
+								<input type="text" class="form-control" id="last_name" placeholder="Last Name (optional)"  style="border-radius:0px">
+								</div>
+							  </div>
+							  
+							  <div class="form-group col-sm-12">
+							  
+								<label for="Email">Email address</label>
+								<input type="email" class="form-control" id="email" placeholder="Enter email"  style="border-radius:0px" required>
+							
+							  </div>
+							  <div class="form-group col-sm-12">
+								<label for="Phone">Phone</label>
+								<input type="tel" class="form-control" id="phone_number" placeholder="XXX-XXX-XXXX (optional)" style="border-radius:0px">
+							  </div>
+							  
+							  <div class="form-group col-sm-12">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" id="subject" value="I'd like to schedule time for a viewing" style="border-radius:0px" required>
+								
+							  </div>
+							  
+							<div class="form-group col-sm-12" style="padding:0px;">
+								<div class="col-sm-6">
+								<label for="date">Visit Date</label>
+										
+
+
+										<div class="input-group">
+										<div class="input-group-addon"  style="border-radius:0px;"><span id="date"><span  class="glyphicon glyphicon-calendar" style="cursor:pointer;"></span></span></div>
+										<input id="date_show" class="form-control" type="date" style="border-radius:0px" placeholder="MM/DD/YY" required>
+										
+										
+										</div>	
+										
+							  </div>
+							  </div>						  
+
+							<!--<div class="form-group col-sm-12" style="padding:0px;">
+								<div class="col-sm-6">
+								<label for="date">Visit Date</label>
+										
+										<div class="input-group"> 
+										<input id="date" data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" type="text" style="border-radius:0px">
+										<div class="input-group-addon"  style="border-radius:0px;cursor:pointer;"><span class="glyphicon glyphicon-calendar"></span></div>
+										</div>	
+										
+							  </div>
+							  </div>-->
+							  
+							  <div class="form-group col-sm-12">
+								<label for="textarea">Message</label>
+								<textarea class="form-control" id="message" placeholder="Optional, anything you'd like to tell the merchant" value="test" style="border-radius:0px"></textarea>
+								<!--<p class="help-block">Example block-level help text here.</p>-->
+							  </div>
+							  <div class="form-group col-sm-12">
+								<button type="submit" class="btn btn-clear btn-default">Send</button>
+							</div>
+							</form>
+							<div class="col-sm-4">
+							
+							</div>
+							
+							</div>
+						
+							<div class="col-sm-4">
+								<div class="col-sm-12">
+							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
+							
+							</div>
+							
+							<label>Map</label>
+							<img src="https://maps.googleapis.com/maps/api/staticmap?center=41.8818751,-87.6258066&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|41.8818751,-87.6258066" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
+							
+							<div style="padding-top:15px;">
+							<h5>Hakimi Gem Import’s</h5>
+							<p>5 South Wabash Suite 307</p>
+							<p>Chicago, IL 60603</p>
+							</div>
+							</div>
+							</div>
+						<!---->
+						</div>
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  	  
+	  
+		<!-- This is the modal for the schedule an appointment -->
+		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<!--<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Sparklie Privacy Policy ("Policy")</h4>
+					</div>-->
+					<div class="modal-body" style="padding-top:10px;">
+						<div class="row">
+							<div class="col-sm-12" >
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+								<div style="text-align:center;">
+								<h2 style="display:inline;">Thank you</h2>
+								</div>
+							</div>
+						</div>
+						
+						
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  	  
+		
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3><i class="fa fa-gift"></i> Sparklie</h3>
+					</div>
+					<div class="col-sm-12">		
+						<h2 style="text-align:center;line-height:1.4;">Find the perfect diamond ring.<br/> Local jewelers. Hand-selected.</h2>
+						<div style="text-align:center;"><a class="btn btn-clear btn-lg" role="button" id="start" >Start Your Journey</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					<div style="margin:0 auto; width:100%; height:1px; background:grey;"></div>
+					<div style="text-align:center;margin-top:-15px;"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+					
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div style="text-align:center;">
+						<h3>Finding the perfect diamond engagement ring is now easier.</h3>
+						<i class="fa fa-angle-double-down" style="font-size:30px;color:#46DBC2;"></i>
+						<p style="padding:0 10%;line-height:2;">Sparklie helps you by cutting through the clutter. Answer a few questions and we'll recommend you the right ring viewable at high-quality local jewellers. Having helped our friends and family, we know we can help you!</p>
+						<i class="fa fa-angle-double-down" style="font-size:30px;color:#46DBC2;padding-bottom:10px;"></i>
+					</div>	
+				</div>	
+				<div class="col-sm-1"></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12">
+					<div style="text-align:center;"><a style="border-color:#adadad" class="btn btn-clear btn-lg" role="button" id="start2" >Start Your Journey</a></div>
+				</div>
+			</div>	
+			
+		<!-- THIS IS WHERE THE FIRST BLOCK IS SHOW IF CLICKED UPON-->
+		<div id="section_setting" style="display:block;">	
+		
+			<div class="row">
+				<div class="col-sm-12">
+
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+
+				</div>
+			
+				<div class="col-sm-12">
+
+						<h2 name="start" style="text-align:center;">Type
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-gift fa-stack-1x"></i>
+						</span>
+						</h2>
+				</div>
+			</div>			
+			
+			
+		
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					
+						<h5 style="text-align:center; padding:0px 10% 10px;font-style:italic;">SPARKLIE TIP: Prong setting is a classic. It lets in the most light, maximizing the diamond's sparkle.</h5>
+					
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			
+			<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div class="col-sm-4">
+				
+				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/solitaire_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>		
+						<h3 style="text-align:center;font-weight:900;">Solitaire</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Classic</h4>
+						<p style="text-align:center;font-weight:100;">A single diamond set in the center, usually with four or six prongs.</p>
+						
+						
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
+							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting1" name="setting" data-value_id="solitaire">Select</a>
+						</div>
+					</div>
+					<div id="setting1_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/halo_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>		
+						<h3 style="text-align:center;font-weight:900;">Halo</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Contemporary</h4>
+						<p style="text-align:center;font-weight:100;">A single diamond encircled by smaller diamonds, which visually expands the appearance of the center stone.</p>
+						         
+
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
+							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting2" name="setting" data-value_id="halo">Select</a>
+						</div>
+					</div>
+					<div id="setting2_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>		
+				</div>
+				
+				<div class="col-sm-4">
+					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/threestone_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>		
+						
+						<h3 style="text-align:center;font-weight:900;">Three Stone</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Modern</h4>						
+						<p style="text-align:center;font-weight:100;">Three diamonds placed adjacent to each other. Whether it’s three diamonds or gemstones this look offers a bold look. </p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
+							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting3" name="setting" data-value_id="three_stone">Select</a>
+						</div>
+					</div>
+					<div id="setting3_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>		
+				</div>	
+			</div>	
+			<div class="col-sm-1"></div>	
+			</div>
+		
+		</div>
+		<div id="section_metal" style="display:block;">	
+			<div class="row">
+				<div class="col-sm-12">
+
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+
+				</div>
+			
+				<div class="col-sm-12">
+					
+						<h2 style="text-align:center;">Metal
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-eye fa-stack-1x"></i>
+						</span>
+						</h2>
+				</div>		
+			</div>
+			
+			<div class="row">	
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					
+						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: Platinum and white gold are the two most popular choices. </h5>
+					
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+			
+			<div class="row">				
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				
+				<div class="col-sm-4">
+				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+					<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+							<img src="/images/gold.jpg" alt="yellow gold" class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>								
+							<h3 style="text-align:center;font-weight:900;">Yellow Gold</h3>
+							<h4 style="text-align:center;font-weight:100;font-style:italic;">Traditional</h4>						
+							<p style="text-align:center;font-weight:100;">A  metal used for centuries, gold embodies traditional and harmony. </p>
+							
+						
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="metal1" name="metal" data-value_id="gold">Select</a>
+						</div>
+					</div>
+					<div id="metal1_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>	
+					
+				</div>
+				
+				<div class="col-sm-4">
+					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+							<img src="/images/whitegold.jpg" alt="white gold"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>		
+							<h3 style="text-align:center;font-weight:900;">White Gold</h3>
+							<h4 style="text-align:center;font-weight:100;font-style:italic;">Simple</h4>						
+							<p style="text-align:center;font-weight:100;">A simple twist on the traditional yellow gold, these rings are plated with rhodium to give it its white shine.</p>
+							
+						
+						</div>
+						
+						<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg center-block" role="button" id="metal2" name="metal" data-value_id="white gold">Select</a>
+						</div>
+						</div>
+					
+					<div id="metal2_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>						
+						
+					</div>	
+											
+					
+				</div>
+				
+				
+				<div class="col-sm-4">
+				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						
+						<img src="/images/platinum.jpg" alt="platinum"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:25px;"/>		
+						<h3 style="text-align:center;font-weight:900;">Platinum</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Rare</h4>						
+						<p style="text-align:center;font-weight:100;">Extremely rare and naturally hypoallergenic, platinum latests forever.</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg center-block" role="button" id="metal3" name="metal" data-value_id="platinum">Select</a>
+						</div>
+					</div>							
+					<div id="metal3_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>	
+					
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-sm-1"></div>	
+		</div>
+		
+		<div id="section_shape" style="display:block;">
+			<div class="row">
+				<div class="col-sm-12">
+					
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-12">
+					
+						<h2 style="text-align:center;">Shape
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-heart fa-stack-1x"></i>
+						</span>
+						</h2>
+				</div>
+			</div>
+		
+			<div class="row">	
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					
+						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: Round is the most popular shape. Its is cut based on a precise formula to achieve maximum sparkle.</h5>
+						
+					
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+			
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+			<div class="col-sm-4">
+				
+				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Round</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Classic</h4>						
+						<p style="text-align:center;font-weight:100;">Most popular shape by far. This shape is cut to maximize the sparkle of a diamond.</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="round">Select</a>
+						</div>
+					</div>
+					<div id="shape1_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>	
+				</div>
+				
+				<div class="col-sm-4">
+					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Cushion</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Vintage</h4>						
+						<p style="text-align:center;font-weight:100;">A favourite of traditionalists, the cushion shape blends vintage culture with modern design.</p>
+						
+					</div>
+					
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg" role="button" id="shape2" name="shape" data-value_id="square">Select</a>
+						</div>
+					</div>	
+					<div id="shape2_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+				</div>	
+				</div>
+				<div class="col-sm-4">
+					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
+						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:500px;">
+						<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Princess</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Striking</h4>						
+						<p style="text-align:center;font-weight:100;">Sharp and different. It is a very popular alternative for those that don't want the classical round shape.</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape3" name="shape" data-value_id="princess">Select</a>
+						</div>
+					</div>			
+					<div id="shape3_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
+							<i class="fa fa-check-circle-o"></i>
+					</div>
+					</div>
+				</div>				
+				
+				
+				
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="row" style="margin: 15px 0px;">
+			
+			</div>
+			<!--<div class="row">
+				
+				
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_marquise.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Marquise</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">French</h4>						
+						<p style="text-align:center;font-weight:100;">[TBD}</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="marquise">Select</a>
+						</div>
+					</div>			
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_oval.jpg" alt="prong setting" class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Oval</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Contemporary</h4>						
+						<p style="text-align:center;font-weight:100;">[TBD]</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="oval">Select</a>
+						</div>
+					</div>			
+					
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_pear.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>
+						<h3 style="text-align:center;font-weight:900;">Pear</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Pure</h4>						
+						<p style="text-align:center;font-weight:100;">Like a beautiful water-droplet, the Pear shaped diamond is a unique look that fits many designs. </p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="pear">Select</a>
+						</div>
+					</div>			
+				</div>
+			</div>
+			
+			<div class="row" style="margin: 15px 0px;">
+			
+			</div>
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_emerald.jpg" alt="prong setting" class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>
+						<h3 style="text-align:center;font-weight:900;">Emerald</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Step-cut</h4>						
+						<p style="text-align:center;font-weight:100;">Resembling steps, [TBD] </p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape3" name="shape" data-value_id="princesses">Select</a>
+						</div>
+					</div>	
+				</div>
+				
+
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_radiant.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>		
+						<h3 style="text-align:center;font-weight:900;">Radiant</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">Glowing</h4>						
+						<p style="text-align:center;font-weight:100;">[TBD]</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="radiant">Select</a>
+						</div>
+					</div>			
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 4px solid #adadad;min-height:500px;">
+						<img src="/images/detail_secondary_asscher.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:white;margin-bottom:20px;border-radius:5%;"/>
+						<h3 style="text-align:center;font-weight:900;">Asscher</h3>
+						<h4 style="text-align:center;font-weight:100;font-style:italic;">European</h4>						
+						<p style="text-align:center;font-weight:100;"> Created in 1902 by renowned jeweller Joseph Asscher, the Asscher shape is timeless.</p>
+						
+					</div>
+					<div style="position:relative;">
+						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
+							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="asscher">Select</a>
+						</div>
+					</div>			
+				</div>
+			</div>-->			
+			
+		</div>
+		</div>
+		<div id="section_budget" style="display:block;">
+			<div class="row">
+				<div class="col-sm-12">
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>				
+				</div>
+			</div>		
+			
+			<div class="row">
+				<div class="col-sm-12" style="text-align:center;">
+					
+						
+						<!--<i class="fa fa-usd rotate" style="font-size:50px;color:lightblue;border-radius:0px; border:1px solid grey;margin-top:15px;padding: 5px 13px;background:white;"></i>-->
+						<h2 style="text-align:center;">Budget
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-money fa-stack-1x"></i>
+						</span>
+						</h2>
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4"></div>
+				
+				<div class="col-sm-4">
+					
+						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: The average person spends between $3,000 to $5,000</h5>
+					
+				</div>
+				<div class="col-sm-4"></div>
+			</div>	
+			
+			
+			<div class="row" ><!-- Warning content -->
+				<div class="col-sm-3"></div>
+				
+				<div class="col-sm-6" style="text-align:center;font-weight:800;">
+					<div id="formAlert_danger" class="alert alert-danger" style="display:none;">	
+							Sorry! Let's narrow down your budget range to &#60; $2,500.
+					</div>
+					<!--<div id="formAlert_warning" class="alert alert-warning center-block" style="display:block;">	
+							<span class="glyphicon glyphicon-warning-sign"></span> You didn't select a range. 
+					</div>-->
+				</div>
+				
+				<div class="col-sm-3"></div>
+			</div>	
+		
+			
+			<div class="row">
+				<div class="col-sm-1"></div>
+				
+				<div class="col-sm-10" style="@media (min-width: 768px);">
+					<div id="slider"></div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12"> <button type="submit" style="border-color:#adadad;min-width:150px;margin-top:55px;" class="btn btn-clear btn-lg center-block" id="submit">Next</button></div>
+			</div>
+		</div>	
+
+		<div id="section_preference" style="display:block;">	
+			<div class="row">
+				<div class="col-sm-12">
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+				</div>
+			
+				<div class="col-sm-12">	
+						<h2 style="text-align:center;">Preferences
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-eye fa-stack-1x"></i>
+						</span>
+						</h2>
+				</div>		
+			</div>
+			
+			<!--HIDDEN<div class="row">	
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: People care most about size and sparkle.</h5>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>-->
+			
+		<div class="form-horizontal" role="search" >
+			<div class="row">	
+				<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<div class="form-group" style="padding: 0px;border: 0px solid #adadad;text-align:center;margin:15px;">
+							<label>
+								<h3>You have $100 to spend on a diamond. How would you allocate it across the following diamond traits?</h3>
+								<h5>SPARKLIE TIP: People care most about size and sparkle.</h5>
+							</label>				
+						</div>
+					</div>
+				<div class="col-sm-1"></div>
+			</div>
+			
+				<div class="row">				
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">		
+						<div class="col-sm-3">
+							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:500px;">
+								<img src="/images/clarity.png" alt="yellow gold" class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
+								<h3 style="text-align:center;font-weight:900;">Purity</h3>
+								<h4 style="text-align:center;font-weight:100;font-style:italic;">Clarity</h4>						
+								<div style="text-align:center;font-weight:100;">Ensure no internal flaws. </div>
+							</div>
+
+							<div style="position:relative;">
+								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
+									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="2" placeholder="25" style="border-radius:0px;width:80%;"><br/>
+								</div>
+							</div>									
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:500px;">
+								<img src="/images/color.png" alt="white gold"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparent</h3>
+								<h4 style="text-align:center;font-weight:100;font-style:italic;">Color</h4>						
+								<p style="text-align:center;font-weight:100;">A simple twist on the traditional yellow gold, these rings are plated with rhodium to give it its white shine.</p>
+							</div>
+
+							<div style="position:relative;">
+								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
+									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="4" placeholder="25" style="border-radius:0px;width:80%;"><br/>						
+								</div>
+							</div>			
+						</div>
+						
+						<div class="col-sm-3">	
+							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:500px;">
+								<img src="/images/cut.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Sparkle</h3>
+								<h4 style="text-align:center;font-weight:100;font-style:italic;">Cut</h4>						
+								<p style="text-align:center;font-weight:100;">Maximize size.</p>
+							</div>
+						
+							<div style="position:relative;">
+								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
+									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="3" placeholder="25" style="border-radius:0px;width:80%;"><br/>		
+								</div>
+							</div>												
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:500px;">
+								<img src="/images/carat.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Size</h3>
+								<h4 style="text-align:center;font-weight:100;font-style:italic;">Size</h4>						
+								<p style="text-align:center;font-weight:100;">Extremely rare and naturally hypoallergenic, platinum latests forever.</p>
+							</div>
+
+							<div style="position:relative;">
+								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
+									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="1" placeholder="25" style="border-radius:0px;width:80%;"><br/>						
+								</div>
+							</div>														
+						</div>						
+					</div>
+				
+					<div class="col-sm-1"></div>	
+				</div>
+				
+				<div class="row">	
+					<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<div class="form-group" style="background-color:#A2F4E6;padding: 25px 25px ;border: 2px solid #adadad;text-align:center;margin:15px;">
+								<label   class="col-sm-offset-2 col-sm-4" style="text-align:right;font-size:25px;">Total out of 100</label>
+								<div class="col-sm-offset-1 col-sm-2 disabled"id="sum"><input type="text" min="0" max="100" class="form-control" id="answer" placeholder="100" disabled></div>
+							</div>
+						</div>
+					<div class="col-sm-1"></div>
+				</div>	
+				
+				<div class="row">	
+					<div class="form-group">
+						<div class="col-sm-12"> <button type="submit" style="border-color:#adadad;min-width:150px;"class="btn btn-clear btn-lg center-block" id="final">See My Rings</button></div>				
+					</div>
+				</div>
+		</div>
+		</div>
+		
+		<div id="section_result" style="display:block;">		
+			<div class="row">
+				<div class="col-sm-12">
+						<div style="m	argin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="text-align:center;margin-top:-10px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+				</div>
+			</div>
+
+		
+			<div class="row">
+				<div class="col-sm-2 "></div>
+				<div class="col-sm-6">
+					<h2>Your Perfect Diamond Engagement Ring</h2>
+					<h5>Our Recommendations</h5>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+			
+			<!--	<div class="row">
+					<div class="col-sm-12">
+							<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+					</div>
+				</div>	
+
+				<div class="row">
+					<div class="col-sm-12">
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display 
+								<div class="navbar-header">
+								  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								  </button>
+								  <div class="navbar-brand" style="padding-top:20px;"><i class="fa fa-heart-o "></i></div>
+								</div>
+								
+								<ul class="nav navbar-nav">
+										<li class="dropdown" style="padding-top:10px;">
+										  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting : <span name="setting">All</span> <span class="caret"></span></a>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+													<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Prong</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Bezel</a></li>
+													<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" name="inputDropdown" ></a></li>											
+												</ul>
+										</li>
+
+										<li class="dropdown" style="margin-top:10px;">
+										  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Metal : <span name="metal">All</span> <span class="caret"></span></a>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+												<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Gold</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">White Gold</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Platinum</a></li>
+												</ul>
+										</li>
+										
+										<li class="dropdown"style="padding-top:10px;">
+										  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shape : <span name="shape">All</span> <span class="caret"></span></a>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+													<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Round</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1" name="inputDropdown">Oval</a></li>
+												  </ul>
+										</li>
+
+									
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown">
+											<form class="dropdown-toggle">
+												<div class="input-group">
+													<span class="input-group-addon">Min. Budget</span>
+													<input type="text" class="form-control" value="XX" style="width:50px;">
+												</div>
+											</form>
+										</a>
+									</li>
+
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown">
+											<form class="dropdown-toggle">
+												<div class="input-group">
+													<span class="input-group-addon">Min. Budget</span>
+													<input type="text" class="form-control" value="XX" style="width:50px;">
+												</div>
+											</form>
+										</a>
+									</li>
+										
+									  
+								</ul>
+		
+							
+						
+							</div><!-- /.container-fluid 
+						</nav>	 
+					</div>				
+				</div>
+		
+			-->
+			
+			<div class="row">
+				<div class="col-sm-12">
+						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+				</div>
+			</div>				
+				
+			<div class="row">
+				<div class="col-sm-12">		
+					<div class="col-sm-8 col-sm-push-2" style="Border:2px solid grey;padding:25px 25px;">
+						<div class="col-sm-6">
+							<div>
+								<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="margin-bottom:10px;padding:25px 25px;" id="main_ring_image_url1" width="99%">
+							</div>
+							<div>
+								<img src="" class="img-thumbnail img-responsive"  id="main_ring_image_url2" alt="Responsive image" width="32%">
+								<img src="" class="img-thumbnail" id="main_ring_image_url3" alt="Responsive image" width="32%" id="delete_image">
+							</div>
+						</div>
+						
+						<div class="col-sm-6">
+							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"></p>
+							<p>by <em><span style="font-weight:bold;" id="main_ring_merchant"></span></em></p>
+							<h1 style="color:grey;">Price: $<span id="main_ring_price"></span></h1>
+							<a style="border-color:#adadad;" class="btn btn-clear btn-md hide" value="" id="schedule">Schedule  an appointment</a> 
+							<a href="" style="border-color:#adadad;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Purchase</a> <br/><br/>
+							<div>
+								<h4>Description</h4>
+									<p id="main_ring_ringdesc"></p>
+							</div>
+							<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
+							<i class="fa fa-heart-o"></i> Love It 
+							<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
+							</button>
+								<hr style="margin-top:5px;margin-bottom:13px;"/>
+								
+								<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
+								<!--<a href="#" class="btn btn-default btn-lg disabled">
+									<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
+									Wish List - Coming Soon
+								</a><br/>-->
+								
+								<div style="padding-top:5px;">	
+									<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>
+									
+									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping men find and buy the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
+
+									<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
+									This needs to pull the current page your as assign to url,
+									It needs to pull the image file url
+									and to write a description for the file
+									http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
+									-->
+								</div>
+						</div>
+					</div>	
+					<div class="col-sm-2 col-sm-pull-8" style="Border:0px solid grey;padding:25px 25px;margin:0;">
+						<div id="back" style="display:block;"><span class="glyphicon glyphicon-chevron-left"></span></div>
+					</div>
+					<div class="col-sm-push-2" style="Border:0px solid grey;padding:25px 25px;margin:0;">
+						<div id="next"><span class="glyphicon glyphicon-chevron-right"></span></div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+	
+			<!--<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8" style="min-height:550px;border:2px solid grey;">
+				<div class="row">
+					<div class="col-sm-1" style="min-height:150px;border:2px solid grey;">
+						<img src="/images/solitaire_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:BLACK;margin-bottom:20px;border-radius:25px;"/>		
+
+					</div>
+					<div class="col-sm-5" style="min-height:150px;border:2px solid grey;">	</div>
+					<div class="col-sm-5" style="min-height:150px;border:2px solid grey;">	</div>
+					<div class="col-sm-1" style="min-height:150px;border:2px solid grey;">	</div>
+				</div>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		-->
+	
+
+		
+	
+	</div>	
+	<!-- Foot note container starts here -->	
+     <div style="background-color:#5c787c; width:100%; margin-top: 25px; padding: 20px; min-height:60px; bottom:0px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12" style="padding-top:10px;">
+					<p>&copy; Copyright Sparklie Inc. 2014. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
+				</div>
+			</div>
+		</div>
+	 </div>
+	 
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="/jQRangeSlider-5.7.0/jQAllRangeSliders-withRuler-min.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/javascript/ganalytics_v1.js"></script>
+	<script src="/jquery-cookie-master/src/jquery.cookie.js"></script>
+	<!-- Please call pinit.js only once per page -->
+	<script type="text/javascript" async  data-pin-color="white" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+	<!-- Twitter functionality -->	
+	<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+	<script src="/eternicode-bootstrap-datepicker-37db99f/js/bootstrap-datepicker.js"></script>
+	
+	<script>
+
+	$(document).ready(function(){
+				
+		$("#date_show").datepicker({
+			autoclose: true,
+			startDate: Date()
+		});		
+		
+		$("#send_email").submit(function(event){
+			if ($("#first_name").val() !=	"" &&  $("#email").val() != "" && $("#date_show").val() != "")
+			{
+				event.preventDefault();
+				$.post('/email_message', {
+					first_name: $("#first_name").val(),
+					last_name: $("#last_name").val(),
+					phone_number: $("#phone_number").val(),
+					message: $("#message").val(),
+					email: $("#email").val(),
+					subject: $("#subject").val(),
+					date: $("#date_show").val(),
+					product_url: $("#purchase").attr("href"),
+					image: $("#main_ring_image_url1").attr("src")
+				}).done(function(){
+					$("#myModal_schedule").modal('hide');
+					$("#myModal_thanks").modal('show');	
+				}).error(function(){
+					alert('Opps, something went wrong. Mind sending us an email to let us know? Error #1AX')
+				});
+			}	
+			else
+			{
+				alert('Opps, something went wrong. Mind sending us an email to let us know? Error #1BX')
+			}
+		});
+				
+				
+		$("#vote").click(function(){
+			console.log($("#main_ring_ringname").attr('data'));
+			$.post('/upvotes',{
+				main_ring_id: $("#main_ring_ringname").attr('data')
+			});
+		});			
+				
+		
+		$("#main_ring_image_url2").click(function(){
+			var image1 = $("#main_ring_image_url1").attr('src');
+			console.log(image1);
+			var image2 = $("#main_ring_image_url2").attr('src');
+			$("#main_ring_image_url1").attr('src', image2);
+			$("#main_ring_image_url2").attr('src', image1)
+		});	
+
+		$("#main_ring_image_url3").click(function(){
+			var image1 = $("#main_ring_image_url1").attr('src');
+			var image2 = $("#main_ring_image_url3").attr('src');
+			$("#main_ring_image_url1").attr('src', image2);
+			$("#main_ring_image_url3").attr('src', image1)
+		});
+
+		$("#start").on('click', function(){
+			$("#section_setting").slideDown(3,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 200)
+			});
+		});
+		
+		$("#start2").on('click', function(){
+			$("#section_setting").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)
+			});
+		});				
+				
+		$("#setting1,#setting2,#setting3").on('click', function(){
+			$("#setting1_show,#setting2_show,#setting3_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+			$.post("/step2", {
+				setting: 	$(this).data('value_id')
+				});
+			$("#section_metal").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
+			});
+		});
+		
+		$("#metal1,#metal2,#metal3").on('click', function(){
+			$("#metal1_show,#metal2_show,#metal3_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step3", {
+				ring: $(this).data('value_id')
+				});	
+			$("#section_shape").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
+			});
+		});						
+				
+			
+				
+		$("#shape1,#shape2,#shape3").on('click', function(){
+			$("#shape1_show,#shape2_show,#shape3_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step4", {
+				shape: $(this).data('value_id')
+				});
+				
+			$("#section_budget").slideDown(10,'linear',function(){
+				$("#slider").rangeSlider({
+					arrows: true,
+					bounds: {
+						min:1000,
+						max: 10000
+						},
+					defaultValues: {
+						min:4000,
+						max:6000
+						},
+					formatter:function(val){
+						var value = Math.round(val);
+						
+						return "$" + value.toString();
+						},
+					 
+						// Secondary scale
+						/*{
+						first: function(val){ return val; },
+						next: function(val){
+						if (val % 100 === 99){
+						return val + 2;
+						}
+						return val + 1;
+						},
+						stop: function(val){ return false; },
+						label: function(){ return null; }
+						}*/
+					});
+				$('html,body').animate({ scrollTop: $("#section_budget").offset().top}, 300)				
+				});		
+			});				
+			
+
+				
+				
+		$("#submit").on('click', function(){					
+			var basicValues = $("#slider").rangeSlider("values");
+			if ((basicValues.max-basicValues.min) >2500)
+				{
+				$("#formAlert_danger").slideDown('slow');
+				}
+			else  if (basicValues.max == basicValues.min)
+				{
+					$("#formAlert_warning").slideDown('slow');
+				}
+			else		
+				{
+					$("#formAlert_danger").slideUp('slow');
+					$("#formAlert_warning").slideUp('slow');
+						//console.log(Math.round(basicValues.min) + "," + Math.round(basicValues.max));	
+						//console.log(basicValues);	
+					$.post('/step5', {
+						price: Math.round(basicValues.min).toString()  + "," + Math.round(basicValues.max).toString()
+					});
+					$("#section_preference").slideDown(10,'linear',function(){
+						$('html,body').animate({ scrollTop: $("#section_preference").offset().top}, 300)
+					});
+				};	
+		});		
+
+		var sum = 0;
+		$("input[name=preference]").keyup(function(event){
+			if ((Number($(this).val()) > 100) || (Number($(this).val()) < 0))
+			{
+				console.log($(this).parent());
+				$(this).parent().addClass("has-error");
+			}
+			else
+			{
+				$(this).parent().removeClass("has-error");
+				sum = Number($("#1").val()) + Number($("#2").val()) + Number($("#3").val()) + Number($("#4").val())
+				console.log(sum);
+				$("#answer").val(sum + "/100")
+				if (sum != 100)
+				{
+				$("#answer").parent().removeClass("has-success").addClass("has-error");
+				}
+				else
+				{
+				$("#answer").parent().addClass("has-success").removeClass("has-error");
+				}
+			}	
+		});		
+			
+		
+				
+		$(".contentBox").hover(function(){
+			//console.log('fire'),
+			$(this).toggleClass('content-shadow');
+			
+				
+		});
+		
+		function calculator(){
+			var range = $("#slider").rangeSlider("values");
+			var rangeMin = Math.round(range.min);
+			var rangeMax = Math.round(range.max);
+			console.log(rangeMax-rangeMin);
+			if ((rangeMax - rangeMin) > 2500 ) 
+				{
+					//console.log('slide_down_danger');
+					$("#formAlert_danger").slideDown('slow');
+				}
+			/*else  if (rangeMax == rangeMin)
+				{
+					$("#formAlert_warning").slideDown('slow');
+				}*/
+			else		
+				{
+					$("#formAlert_danger").slideUp('slow');
+					//$("#formAlert_warning").slideUp('slow');
+				};		
+		};
+		
+		$('#slider').on("valuesChanging", function(data){
+			//console.log('slider')
+			calculator(data)
+		});	
+				
+		$("#share_facebook").hover(
+		function(){
+			$(this).css('background-position','0 -16px');
+			}, function(){
+			$(this).css('background-position','0 0px');
+			}
+		);
+			
+		
+		$("#share_twitter").hover(
+		function(){
+			$(this).css('background-position','0 -176px');
+			}, function(){
+			$(this).css('background-position','0 -160px');
+			}
+		);
+			
+		
+		$("#share_pinterest").hover(
+		function(){
+			$(this).css('background-position','0 -96px');
+			}, function(){
+			$(this).css('background-position','0 -80px');
+			}
+			);
+		
+		$("#schedule").click(function(){
+			$('#myModal_schedule').modal({
+						keyboard : true,
+						backdrop: true,
+						});
+		});
+	
+		$("a[name='terms']").on('click',function(){
+				$('#myModal_terms').modal({
+						keyboard : true,
+						backdrop: true,
+						})})
+		
+		$("a[name='privacy']").on('click',function(){
+				$('#myModal_privacy').modal({
+						keyboard : true,
+						backdrop: true,
+						})})	
+						
+		//locks on the back and next buttons (so repeated presses can't happen until the animation has completed
+		window.insideCounter = 1;
+		//var backRunning = false;
+		//var nextRunning = false;
+		
+
+		
+		$("#final").click(function(){
+			//console.log('final');
+			$("#back").css('visibility','visible');
+			var sum = 0;
+			sum = 100
+			//sum = Number($("#1").val()) + Number($("#2").val()) + Number($("#3").val()) + Number($("#4").val());
+			//console.log(sum);
+				
+				if (sum == 100)
+				{
+					//$("#sum").removeClass(has-error);
+					//console.log('final2');
+					$.post('/step6',{
+						/*selection_size: 40,
+						selection_sparklie: 20,
+						selection_purity: 20,
+						selection_transparency: 20*/
+						selection_size: $("#1").val(),
+						selection_sparklie: $("#3").val(),
+						selection_purity: $("#2").val(),
+						selection_transparency: $("#4").val()
+					}).done(function(data){
+						//console.log('done');
+						//console.log(JSON.parse(data));
+						$.ajax({
+							type: "GET",
+							url: "/step7", 
+							data: {pagination_counter: 0},
+							dataType: "html"		
+						}).done(function(data){
+							$.ajax({
+								type: "GET",
+								url: "/step7", 
+								data: {pagination_counter: 1},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter1', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/step7", 
+								data: {pagination_counter: 2},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter2', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/step7", 
+								data: {pagination_counter: 3},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter3', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/step7", 
+								data: {pagination_counter: 4},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter4', data, { expires: 7 });console.log('done')});
+							var json = JSON.parse(data);
+							console.log(json);
+							$.cookie('pagination_counter0', data, { expires: 7 });
+							$.cookie('pagination', json.total_products, { expires: 7 });		
+							$("#ring_votes").empty().append(json.ring_votes);									
+							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant + "0");
+							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+							$("#main_ring_price").empty().append(json.main_ring_price);
+							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+							if (json.image_count == 3)
+								{
+									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+								}
+							else
+								{
+									$("#delete_image").addClass('hide');
+								}
+							}).error(function(){
+							alert('error')
+							});
+							$("#section_result").slideDown(10,'linear',function(){
+								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
+							});
+					});
+				}
+				else
+				{
+					//$("#sum").addClass(has-error);
+					console.log('error');
+				}
+
+		});			
+		
+		
+		
+		$("#back").click(function(){$.fn.back()})
+		
+		$.fn.back = function(){
+		$("#next").css('display','block');
+		window.insideCounter = insideCounter -1;
+				if (insideCounter >=2)
+					{			
+						
+						if (insideCounter == 2) 
+						{
+							console.log(insideCounter);
+							
+							var json = JSON.parse($.cookie('pagination_counter1'));
+							$("#ring_votes").empty().append(json.ring_votes);							
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "1");
+							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+							$("#main_ring_price").empty().append(json.main_ring_price);
+							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+							if (json.image_count == 3)
+							{
+								
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+							}
+							else
+							{
+								$("#delete_image").addClass('hide');
+							}
+						} 
+						else if (insideCounter == 3) 
+						{
+							console.log(insideCounter);
+							
+							var json = JSON.parse($.cookie('pagination_counter2'));
+							$("#ring_votes").empty().append(json.ring_votes);							
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "2");
+							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+							$("#main_ring_price").empty().append(json.main_ring_price);
+							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+							if (json.image_count == 3)
+							{
+								
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+							}
+							else
+							{
+								$("#delete_image").addClass('hide');
+							}
+						} 
+						else if (insideCounter == 4) 
+						{
+							console.log(insideCounter);
+							
+							var json = JSON.parse($.cookie('pagination_counter3'));
+							$("#ring_votes").empty().append(json.ring_votes);							
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "3");
+							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+							$("#main_ring_price").empty().append(json.main_ring_price);
+							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+							if (json.image_count == 3)
+							{
+								
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+							}
+							else
+							{
+								$("#delete_image").addClass('hide');
+							}
+						}
+					}		
+				else
+					{
+						console.log(insideCounter);
+						$("#back").css('visibility','hidden');	
+						var json = JSON.parse($.cookie('pagination_counter0'));
+						$("#ring_votes").empty().append(json.ring_votes);					
+						$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "0");
+						$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+						$("#main_ring_price").empty().append(json.main_ring_price);
+						$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+						$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+						$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+						if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+						if (json.image_count == 3)
+						{
+							
+							$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+						}
+						else
+						{
+							$("#delete_image").addClass('hide');
+						}
+					}
+		};
+		
+		/*$(document).bind('keydown', function(e) {
+			if(e.which ==8)
+			{
+				if(modal_on == false)
+					{
+						$.fn.back()
+					}
+			}
+		});*/
+		
+		
+		$('#next').click(function(){
+			if (insideCounter == 1)
+				{
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					$("#back").css('visibility','visible');
+					var json = JSON.parse($.cookie('pagination_counter1'));
+					if ($.cookie('pagination') <= 2)
+					{
+						$("#next").css('display','none');
+					}
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "1");
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+					}
+					else
+					{
+						$("#delete_image").addClass('hide');
+					}
+				}		
+			else if (insideCounter == 2)
+				{		
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					var json = JSON.parse($.cookie('pagination_counter2'));
+					if ($.cookie('pagination') <= 3)
+					{
+						$("#next").css('display','none');
+					}							
+					$("#ring_votes").empty().append(json.ring_votes);
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant + "2");
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+					}
+					else
+					{
+						$("#delete_image").addClass('hide');
+					}
+					
+				}
+			else if (insideCounter == 3)
+				{
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					var json = JSON.parse($.cookie('pagination_counter3'));
+					if ($.cookie('pagination') <= 4)
+					{
+						$("#next").css('display','none');
+					}							
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "3");
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+					}
+					else
+					{
+						$("#delete_image").addClass('hide');
+					}
+				}
+			else if (insideCounter == 4)	
+				{
+					window.insideCounter = insideCounter + 1;
+					var json = JSON.parse($.cookie('pagination_counter3'));
+					console.log(insideCounter);
+					$("#next").css('display','none');
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "4");
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					if (json.main_ring_merchant == "Hakimi Gem Import's")
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+					}
+					else
+					{
+						$("#delete_image").addClass('hide');
+					}
+				}
+			});
+			
+			
+			
+		
+		
+		
+	});
+	</script>
+  </body>
+</html>
