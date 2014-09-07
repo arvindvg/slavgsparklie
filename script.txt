@@ -6,13 +6,13 @@ Data Download from App Server::[NOTE: DELETIONS ARE CONSIDERED WRITE OPERATIONS]
 appcfg.py --email=sparklie3@gmail.com download_data --kind=email2_db --url=http://1.slavgsparklie.appspot.com/_ah/remote_api --filename=C:\Users\Laptop\Desktop\slavgsparklie\data{}
 
 App Updating::
-appcfg.py --oauth2 update C:\Users\Laptop\Desktop\slavgsparklie
+appcfg.py --oauth2 update C:\Users\Laptop\Primary-Project\slavgsparklie
 
 Directory File::
 cd c:\Program Files (x86)\Google\google_appengine
 
 Starting Dev Server
-dev_appserver.py --datastore_path=C:\Users\Laptop\Desktop\oldsparklie\database\databased C:\Users\Laptop\Desktop\slavgsparklie
+dev_appserver.py --datastore_path=C:\Users\Laptop\Desktop\oldsparklie\database\databased C:\Users\Laptop\Primary-Project\slavgsparklie
 
 dev_appserver.py --smtp_host=smtp.gmail.com --smtp_port=587 --smtp_user=sparklie3@gmail.com --smtp_password="" --datastore_path=C:\Users\Laptop\Desktop\oldsparklie\database\databased C:\Users\Laptop\Desktop\slavgsparklie
 [clear the datastore]: --clear_datastore=yes
