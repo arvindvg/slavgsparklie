@@ -850,8 +850,8 @@
 								<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="margin-bottom:10px;padding:25px 25px;" id="main_ring_image_url1" width="99%">
 							</div>
 							<div>
-								<img src="" class="img-thumbnail img-responsive"  id="main_ring_image_url2" alt="Responsive image" width="32%">
-								<img src="" class="img-thumbnail" id="main_ring_image_url3" alt="Responsive image" width="32%" id="delete_image">
+								<a style="cursor:pointer;" style="text-decoration:none;"><img src="" class="img-thumbnail img-responsive"  id="main_ring_image_url2" alt="Responsive image" width="32%"></a>
+								<a style="cursor:pointer;" style="text-decoration:none;"><img src="" class="img-thumbnail img-responsive" id="main_ring_image_url3" alt="Responsive image" width="32%" ></a>
 							</div>
 						</div>
 						
@@ -977,6 +977,8 @@
 			});
 		});			
 				
+		
+
 		
 		$("#main_ring_image_url2").click(function(){
 			var image1 = $("#main_ring_image_url1").attr('src');
@@ -1275,6 +1277,7 @@
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							console.log(json.image_count);
 							if (json.main_ring_merchant == "Hakimi Gem Import's")
 								{
 									$("#schedule").removeClass('hide')
@@ -1285,11 +1288,18 @@
 								}
 							if (json.image_count == 3)
 								{
-									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+									$("#main_ring_image_url3").css('visibility','visible')
+									
+								}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
 								}
 							else
 								{
-									$("#delete_image").addClass('hide');
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
 								}
 							}).error(function(){
 							alert('error')
@@ -1321,7 +1331,6 @@
 						if (insideCounter == 2) 
 						{
 							console.log(insideCounter);
-							
 							var json = JSON.parse($.cookie('pagination_counter1'));
 							$("#ring_votes").empty().append(json.ring_votes);							
 							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "1");
@@ -1340,13 +1349,18 @@
 								}
 							if (json.image_count == 3)
 							{
-								
-								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+								$("#main_ring_image_url3").css('visibility','visible')
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 							}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
 							else
-							{
-								$("#delete_image").addClass('hide');
-							}
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 						} 
 						else if (insideCounter == 3) 
 						{
@@ -1370,13 +1384,18 @@
 								}
 							if (json.image_count == 3)
 							{
-								
-								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+								$("#main_ring_image_url3").css('visibility','visible')
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 							}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
 							else
-							{
-								$("#delete_image").addClass('hide');
-							}
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 						} 
 						else if (insideCounter == 4) 
 						{
@@ -1400,13 +1419,18 @@
 								}
 							if (json.image_count == 3)
 							{
-								
-								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+								$("#main_ring_image_url3").css('visibility','visible')
+								$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 							}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
 							else
-							{
-								$("#delete_image").addClass('hide');
-							}
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 						}
 					}		
 				else
@@ -1431,13 +1455,20 @@
 								}
 						if (json.image_count == 3)
 						{
-							
-							$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+						$("#main_ring_image_url2").css('visibility','visible')
+						
 						}
-						else
-						{
-							$("#delete_image").addClass('hide');
-						}
+						else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 					}
 		};
 		
@@ -1481,12 +1512,18 @@
 								}
 					if (json.image_count == 3)
 					{
+						$("#main_ring_image_url3").css('visibility','visible')
 						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 					}
-					else
-					{
-						$("#delete_image").addClass('hide');
-					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 				}		
 			else if (insideCounter == 2)
 				{		
@@ -1515,12 +1552,18 @@
 								}
 					if (json.image_count == 3)
 					{
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 					}
-					else
-					{
-						$("#delete_image").addClass('hide');
-					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 					
 				}
 			else if (insideCounter == 3)
@@ -1550,12 +1593,18 @@
 								}
 					if (json.image_count == 3)
 					{
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 					}
-					else
-					{
-						$("#delete_image").addClass('hide');
-					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 				}
 			else if (insideCounter == 4)	
 				{
@@ -1581,12 +1630,18 @@
 								}
 					if (json.image_count == 3)
 					{
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3)
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
 					}
-					else
-					{
-						$("#delete_image").addClass('hide');
-					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
 				}
 			});
 			
