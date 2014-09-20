@@ -284,6 +284,113 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 		
+				<!-- This is the modal for the after scheduling an appointment -->
+		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Sorry</h4>
+					</div>
+					<div class="modal-body" style="padding-top:10px;">
+						<div class="row">
+							<div class="col-sm-12" >
+								<div style="text-align:center;">
+								We couldn't find what you needed. How about changing your preferences or give us a call?
+								</div>
+							</div>
+						</div>
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  	  
+		
+		
+		<!-- This is the modal for contacting us when we don't have what you need. -->
+		<div class="modal fade" id="myModal_sorry_email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-schedule">
+				<div class="modal-content">
+					<div class="modal-body" style="padding-top:10px;">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<div class="row">
+							<div class="col-sm-12" >
+								<div style="text-align:center;">
+								<i class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Sorry, but we couldn't find what you needed.</h2>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;"></div>						
+								
+							
+							
+								<form role="form" id="send_email">
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="First">First Name</label>
+										<input type="text" class="form-control" id="first_name" placeholder="First Name"  style="border-radius:0px" required>
+										</div>
+									</div>
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="Last">Last Name</label>
+										<input type="text" class="form-control" id="last_name" placeholder="Last Name (optional)"  style="border-radius:0px">
+										</div>
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="Email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter email"  style="border-radius:0px" required>
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="Phone">Phone</label>
+										<input type="tel" class="form-control" id="phone_number" placeholder="XXX-XXX-XXXX (optional)" style="border-radius:0px">
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="subject">Subject</label>
+										<input type="text" class="form-control" id="subject" value="Help me find what I need" style="border-radius:0px" required>
+									  </div>
+						  
+									  <div class="form-group col-sm-12">
+										<label for="textarea">Message</label>
+										<textarea class="form-control" id="message" placeholder="Optional, anything you'd like to tell the merchant" value="test" style="border-radius:0px"></textarea>
+									  </div>
+									  
+									  <div class="form-group col-sm-12">
+										<button type="submit" class="btn btn-clear btn-default">Send</button>
+										</div>
+								</form>
+									<div class="col-sm-4"></div>
+							
+							</div>
+						
+							<div class="col-sm-4">
+								<div class="col-sm-12">
+							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
+							
+							</div>
+							
+							<label>Map</label>
+							<img src="https://maps.googleapis.com/maps/api/staticmap?center=41.8818751,-87.6258066&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|41.8818751,-87.6258066" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
+							
+							<div style="padding-top:15px;">
+							<h5>Hakimi Gem Import’s</h5>
+							<p>5 South Wabash Suite 307</p>
+							<p>Chicago, IL 60603</p>
+							</div>
+							</div>
+							</div>
+						</div>
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  	  
+		
+		
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
@@ -1279,7 +1386,7 @@
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
 							console.log(json.image_count);
-							if (json.main_ring_merchant == "Hakimi Gem Import's")
+							if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1302,12 +1409,24 @@
 								{
 									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
 								}
-							}).error(function(){
-							alert('error')
-							});
 							$("#section_result").slideDown(10,'linear',function(){
 								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-							});
+							});	
+							}).error(function(){
+								$('#myModal_sorry').modal({
+								keyboard : true,
+								backdrop: true,
+								});
+								
+								//We can implement an email functionality for the case when we don't have the product
+								
+								//$('#myModal_sorry_email').modal({
+								//keyboard : true,
+								//backdrop: true,
+								//});
+								
+								
+							});	
 							$("#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
 					});
 				}
@@ -1340,7 +1459,7 @@
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-							if (json.main_ring_merchant == "Hakimi Gem Import's")
+							if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1375,7 +1494,7 @@
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-							if (json.main_ring_merchant == "Hakimi Gem Import's")
+							if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1410,7 +1529,7 @@
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-							if (json.main_ring_merchant == "Hakimi Gem Import's")
+							if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1446,7 +1565,7 @@
 						$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 						$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 						$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-						if (json.local_merchant_flag == 0)
+						if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1503,13 +1622,14 @@
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					if (json.main_ring_merchant == "Hakimi Gem Import's")
+					if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
 							else
 								{
 									$("#schedule").addClass('hide')
+									console.log('else')
 								}
 					if (json.image_count == 3)
 					{
@@ -1543,7 +1663,7 @@
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					if (json.main_ring_merchant == "Hakimi Gem Import's")
+					if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1584,7 +1704,7 @@
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					if (json.main_ring_merchant == "Hakimi Gem Import's")
+					if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1621,7 +1741,7 @@
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					if (json.main_ring_merchant == "Hakimi Gem Import's")
+					if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
 								}
