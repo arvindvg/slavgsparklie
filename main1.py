@@ -59,7 +59,8 @@ class new_inventory(ndb.Model):
     image_url3 = ndb.StringProperty(indexed=True)
     votes = ndb.IntegerProperty(indexed=True)
     local_merchant_flag = ndb.IntegerProperty(indexed=True)
-
+    priority_score = ndb.IntegerProperty(indexed=True)
+    
 class user_input_db(ndb.Model):
     #sessionID = ndb.StringProperty(indexed=True)
     price_lower = ndb.IntegerProperty(indexed=True)
@@ -238,7 +239,7 @@ class Step6(webapp2.RequestHandler):
         pred_price = {}
         raw_total = {}
         local_merchant_flag = {}
-        
+        priority_score	= {}
         for result in inventory_query:
                 inventory_size[result.count] = result.Size
                 inventory_sparkle[result.count] = result.Sparkle
@@ -252,7 +253,8 @@ class Step6(webapp2.RequestHandler):
                 image_url[result.count] = result.image_url1	
                 inventory_merchant[result.count] = result.Merchant
                 local_merchant_flag[result.count] = result.local_merchant_flag
-
+                priority_score[result.count] = result.priority_score
+        print priority_score
             # Prediction and optimization variable creation
         for key in inventory_price_actual:
             #Parameter estimates implementation
@@ -322,8 +324,9 @@ class Step6(webapp2.RequestHandler):
             transparency_diff[key] = prop_transparency[key] -  influence_transparency
             purity_diff[key] =prop_purity[key] - influence_purity
             
-            composite_score[key] = abs((influence_size*size_diff[key])) + abs((influence_sparkle*sparkle_diff[key])) + abs((influence_transparency*transparency_diff[key])) +abs((influence_purity*prop_purity[key])) 
-
+            composite_score[key] = abs((influence_size*size_diff[key])) + abs((influence_sparkle*sparkle_diff[key])) + abs((influence_transparency*transparency_diff[key])) +abs((influence_purity*prop_purity[key])) + priority_score[key]
+        print "composite score"
+        print composite_score
         #Scoring System Implementation
         for k,v in inventory_shape.items():
             if v not in user_shape_list[0]:
@@ -435,7 +438,7 @@ class Step7(webapp2.RequestHandler):
                 inventory_ringdesc[result.count] = result.Ring_des			
                 inventory_votes[result.count] = result.votes	
                 local_merchant_flag[result.count] = result.local_merchant_flag
-
+        print inventory_votes
         total_products = len(best_overall)
         pagination_number = self.request.get("pagination_counter")
         pagination_number = int(pagination_number)
@@ -444,8 +447,10 @@ class Step7(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=str(ring_selection))
         input.put()
         try :
+            print ring_selection
             voting_query = voting_db.query(voting_db.product_id == ring_selection).fetch()
             total_upvotes = len(voting_query)
+            print total_upvotes
             template_values['ring_votes'] = inventory_votes[ring_selection] + total_upvotes
         except:
             template_values['ring_votes'] = inventory_votes[ring_selection] 
