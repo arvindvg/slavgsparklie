@@ -58,6 +58,7 @@ class new_inventory(ndb.Model):
     image_url2 = ndb.StringProperty(indexed=True)
     image_url3 = ndb.StringProperty(indexed=True)
     votes = ndb.IntegerProperty(indexed=True)
+    local_merchant_flag = ndb.IntegerProperty(indexed=True)
 
 class user_input_db(ndb.Model):
     #sessionID = ndb.StringProperty(indexed=True)
@@ -236,7 +237,8 @@ class Step6(webapp2.RequestHandler):
         pred_carat_b = {}
         pred_price = {}
         raw_total = {}
-
+        local_merchant_flag = {}
+        
         for result in inventory_query:
                 inventory_size[result.count] = result.Size
                 inventory_sparkle[result.count] = result.Sparkle
@@ -249,6 +251,8 @@ class Step6(webapp2.RequestHandler):
                 product_url[result.count] = result.prod_url1
                 image_url[result.count] = result.image_url1	
                 inventory_merchant[result.count] = result.Merchant
+                local_merchant_flag[result.count] = result.local_merchant_flag
+
             # Prediction and optimization variable creation
         for key in inventory_price_actual:
             #Parameter estimates implementation
@@ -387,7 +391,8 @@ class Step7(webapp2.RequestHandler):
         user_setting_list = []
         user_ring_list = []
         template_values = {}
-
+        local_merchant_flag = {}
+        
         user_setting = session.get('user_setting')
         user_setting = user_setting.upper()
         user_setting_list.append(user_setting)
@@ -429,6 +434,8 @@ class Step7(webapp2.RequestHandler):
                 inventory_ringname[result.count] = result.RingName			
                 inventory_ringdesc[result.count] = result.Ring_des			
                 inventory_votes[result.count] = result.votes	
+                local_merchant_flag[result.count] = result.local_merchant_flag
+
         total_products = len(best_overall)
         pagination_number = self.request.get("pagination_counter")
         pagination_number = int(pagination_number)
@@ -493,6 +500,8 @@ class Step7(webapp2.RequestHandler):
         template_values['user_selection_transparency'] = user_selection_transparency
         template_values['ring_votes'] = inventory_votes[ring_selection] + total_upvotes
         template_values['total_products'] = total_products
+        template_values['local_merchant_flag'] = local_merchant_flag[ring_selection]
+
         #template = jinja_environment.get_template('step7.html')
         self.response.write(json.dumps(template_values))
         #template = jinja_environment.get_template('step7.html')
