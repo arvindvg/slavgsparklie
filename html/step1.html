@@ -934,6 +934,10 @@
 	<script>
 
 	$(document).ready(function(){
+	
+		$("#1,#2, #3, #4").click(function(){
+			$("#1,#2,#3,#4").val("")});
+		
 				
 		$("#date_show").datepicker({
 			autoclose: true,
@@ -995,17 +999,14 @@
 			$("#main_ring_image_url3").attr('src', image1)
 		});
 
-		$("#start").on('click', function(){
-			$("#section_setting").slideDown(3,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 200)
+		$("#start,#start2").on('click', function(){
+		$("#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');		
+		$("#section_setting").slideDown(3,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)
 			});
 		});
 		
-		$("#start2").on('click', function(){
-			$("#section_setting").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)
-			});
-		});				
+		
 				
 		$("#setting1,#setting2,#setting3").on('click', function(){
 			$("#setting1_show,#setting2_show,#setting3_show").removeClass("show").addClass('hide');
@@ -1075,8 +1076,7 @@
 			
 
 				
-				
-		$("#submit").on('click', function(){					
+		$("#submit").on('click', function(){		
 			var basicValues = $("#slider").rangeSlider("values");
 			if ((basicValues.max-basicValues.min) >2500)
 				{
@@ -1212,6 +1212,7 @@
 
 		
 		$("#final").click(function(){
+			$("#start,#start2").empty().append("Change your Answers");
 			//console.log('final');
 			$("#back").css('visibility','visible');
 			var sum = 0;
@@ -1307,7 +1308,7 @@
 							$("#section_result").slideDown(10,'linear',function(){
 								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
 							});
-							$("#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").addClass('hide');
+							$("#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
 					});
 				}
 				else
