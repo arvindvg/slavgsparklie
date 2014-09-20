@@ -1272,7 +1272,7 @@
 							$.cookie('pagination', json.total_products, { expires: 7 });		
 							$("#ring_votes").empty().append(json.ring_votes);									
 							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant + "0");
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 							$("#main_ring_price").empty().append(json.main_ring_price);
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1334,7 +1334,7 @@
 							console.log(insideCounter);
 							var json = JSON.parse($.cookie('pagination_counter1'));
 							$("#ring_votes").empty().append(json.ring_votes);							
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "1");
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 							$("#main_ring_price").empty().append(json.main_ring_price);
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1369,7 +1369,7 @@
 							
 							var json = JSON.parse($.cookie('pagination_counter2'));
 							$("#ring_votes").empty().append(json.ring_votes);							
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "2");
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 							$("#main_ring_price").empty().append(json.main_ring_price);
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1404,7 +1404,7 @@
 							
 							var json = JSON.parse($.cookie('pagination_counter3'));
 							$("#ring_votes").empty().append(json.ring_votes);							
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "3");
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 							$("#main_ring_price").empty().append(json.main_ring_price);
 							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1440,13 +1440,13 @@
 						$("#back").css('visibility','hidden');	
 						var json = JSON.parse($.cookie('pagination_counter0'));
 						$("#ring_votes").empty().append(json.ring_votes);					
-						$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "0");
+						$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 						$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 						$("#main_ring_price").empty().append(json.main_ring_price);
 						$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
 						$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 						$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-						if (json.main_ring_merchant == "Hakimi Gem Import's")
+						if (json.local_merchant_flag == 0)
 								{
 									$("#schedule").removeClass('hide')
 								}
@@ -1497,7 +1497,7 @@
 					}
 					$("#ring_votes").empty().append(json.ring_votes);							
 					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "1");
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 					$("#main_ring_price").empty().append(json.main_ring_price);
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1537,7 +1537,7 @@
 					}							
 					$("#ring_votes").empty().append(json.ring_votes);
 					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant + "2");
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 					$("#main_ring_price").empty().append(json.main_ring_price);
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1578,7 +1578,7 @@
 					}							
 					$("#ring_votes").empty().append(json.ring_votes);							
 					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "3");
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 					$("#main_ring_price").empty().append(json.main_ring_price);
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
@@ -1615,7 +1615,7 @@
 					$("#next").css('display','none');
 					$("#ring_votes").empty().append(json.ring_votes);							
 					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant  + "4");
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
 					$("#main_ring_price").empty().append(json.main_ring_price);
 					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
