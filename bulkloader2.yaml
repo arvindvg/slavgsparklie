@@ -374,6 +374,29 @@ transformers:
     external_name: priority_score
     import_transform: int
 
+- kind: merchant
+  connector: csv
+  property_map:
+  - property: __key__
+    external_name: id
+    import_transform: transform.create_foreign_key('ID')
+    export_transform: transform.key_id_or_name_as_string
+  - property: merchant_name
+    external_name: merchant_name
+    import_transform: db.Text
+  - property: Merchant_id
+    external_name: mrch_id
+    import_transform: int
+  - property: merchant_email
+    external_name: merchant_email
+    import_transform: db.Text
+  - property: merchant_contact
+    external_name: merchant_contact
+    import_transform: db.Text
+  - property: merchant_address
+    external_name: merchant_address
+    import_transform: db.Text
+
 - kind: event_db
   connector: csv
   property_map:

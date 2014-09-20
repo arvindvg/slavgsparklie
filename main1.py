@@ -81,6 +81,15 @@ class appointment_db(ndb.Model):
     message_body = ndb.StringProperty(indexed=True) 
     appointment_time = ndb.StringProperty(indexed=True) 
 
+class merchant(ndb.Model):
+    merchant_name = ndb.StringProperty(indexed=True)
+    date = ndb.DateTimeProperty(auto_now_add=True)
+    Merchant_id = ndb.IntegerProperty(indexed=True)
+    merchant_email = ndb.StringProperty(indexed=True) 
+    merchant_contact = ndb.StringProperty(indexed=True) 
+    merchant_address = ndb.StringProperty(indexed=True) 
+    merchant_phone = ndb.StringProperty(indexed=True) 
+
 class Step1(webapp2.RequestHandler):
 
     def get(self):
@@ -240,6 +249,7 @@ class Step6(webapp2.RequestHandler):
         raw_total = {}
         local_merchant_flag = {}
         priority_score	= {}
+        inventory_merchant_id= {}
         for result in inventory_query:
                 inventory_size[result.count] = result.Size
                 inventory_sparkle[result.count] = result.Sparkle
@@ -254,6 +264,8 @@ class Step6(webapp2.RequestHandler):
                 inventory_merchant[result.count] = result.Merchant
                 local_merchant_flag[result.count] = result.local_merchant_flag
                 priority_score[result.count] = result.priority_score
+                inventory_merchant_id[result.count] = result.Merchant_id
+
         print priority_score
             # Prediction and optimization variable creation
         for key in inventory_price_actual:
@@ -395,7 +407,7 @@ class Step7(webapp2.RequestHandler):
         user_ring_list = []
         template_values = {}
         local_merchant_flag = {}
-        
+        inventory_merchant_id = {}
         user_setting = session.get('user_setting')
         user_setting = user_setting.upper()
         user_setting_list.append(user_setting)
@@ -438,7 +450,7 @@ class Step7(webapp2.RequestHandler):
                 inventory_ringdesc[result.count] = result.Ring_des			
                 inventory_votes[result.count] = result.votes	
                 local_merchant_flag[result.count] = result.local_merchant_flag
-        print inventory_votes
+                inventory_merchant_id[result.count] = result.Merchant_id
         total_products = len(best_overall)
         pagination_number = self.request.get("pagination_counter")
         pagination_number = int(pagination_number)
@@ -506,6 +518,7 @@ class Step7(webapp2.RequestHandler):
         template_values['ring_votes'] = inventory_votes[ring_selection] + total_upvotes
         template_values['total_products'] = total_products
         template_values['local_merchant_flag'] = local_merchant_flag[ring_selection]
+        template_values['merchant_id'] = inventory_merchant_id[ring_selection]
 
         #template = jinja_environment.get_template('step7.html')
         self.response.write(json.dumps(template_values))
@@ -561,6 +574,12 @@ class email_message(webapp2.RequestHandler):
         subject = self.request.get("subject")
         current_product_url = self.request.get("product_url")
         current_product_img1 = self.request.get("image")
+        merchant_id = self.request.get("merchant_id")
+        merchant_query = merchant.query(merchant.Merchant_id == merchant_id).fetch()
+        merchant_email = {}
+        for result in merchant_query:
+                merchant_email[merchant_id] = result.merchant_email
+
         appointment_date = self.request.get("date")
         template_values = {}
         
@@ -588,13 +607,13 @@ class email_message(webapp2.RequestHandler):
         template_values['preference'] = user_preference
         template_values['item'] = current_product_url
         template_values['image'] = current_product_img1
-        template_values['email_merchant'] = "David@hakimisgem.com"
+        template_values['email_merchant'] = merchant_email[merchant_id]
 
         #Message to Merchant
         message_subject_merchant = "Sparklie Appointment: Scheduled for " + appointment_date
         message = mail.EmailMessage()
         message.sender = "<sparklie3@gmail.com>"
-        message.to = "<David@hakimisgem.com>"
+        message.to = "<" + merchant_email[merchant_id] + ">"
         message.bcc = "<shaw@sparklie.net>"
         merchant_template = jinja_environment.get_template('eMerchantCopy.html')
         message.html = merchant_template.render(template_values)
