@@ -575,10 +575,11 @@ class email_message(webapp2.RequestHandler):
         current_product_url = self.request.get("product_url")
         current_product_img1 = self.request.get("image")
         merchant_id = self.request.get("merchant_id")
+        merchant_id = int(merchant_id)
         merchant_query = merchant.query(merchant.Merchant_id == merchant_id).fetch()
         merchant_email = {}
         for result in merchant_query:
-                merchant_email[merchant_id] = result.merchant_email
+                merchant_email[result.Merchant_id] = result.merchant_email
 
         appointment_date = self.request.get("date")
         template_values = {}
