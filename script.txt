@@ -3,7 +3,7 @@ Data Upload to App Server::
 appcfg.py --oauth2 upload_data --config=bulkloader2.yaml --kind=new_inventory --filename=C:\Users\Laptop\Desktop\oldsparklie\data\new_inventory.csv --url=http://1.slavgsparklie.appspot.com/_ah/remote_api 
 
 Data Download from App Server::[NOTE: DELETIONS ARE CONSIDERED WRITE OPERATIONS]
-appcfg.py --email=sparklie3@gmail.com download_data --kind=email2_db --url=http://1.slavgsparklie.appspot.com/_ah/remote_api --filename=C:\Users\Laptop\Desktop\slavgsparklie\data{}
+appcfg.py --email=sparklie3@gmail.com download_data --kind=new_inventory --url=http://1.slavgsparklie.appspot.com/_ah/remote_api --filename=C:\Users\Laptop\Desktop\slavgsparklie\data{}
 
 App Updating::
 appcfg.py --oauth2 update C:\Users\Laptop\Primary-Project\slavgsparklie

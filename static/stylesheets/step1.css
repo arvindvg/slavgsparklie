@@ -5,6 +5,11 @@ html {
 .jumbotron {
 	color: #ffffff;
 	background-color:#46DBC2;
+	height: 600px;
+	background-image: url(/images/background3.jpg);
+	background-position: 0% 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -20,7 +25,7 @@ html {
 .btn-clear:active,
 .btn-clear.active,
 .open .dropdown-toggle.btn-default {
-  color: #ffffff;
+  color: #000000;
   background-color: #00BA9B;
   border-color: #ffffff;
 }
