@@ -1,13 +1,12 @@
 html {
-	font-family: 'Lato';
+	
 }
 
 .jumbotron {
-	color: #ffffff;
-	background-color:#46DBC2;
-	height: 600px;
-	background-image: url(/images/background3.jpg);
-	background-position: 0% 70%;
+	color:#ffffff;
+	height: 700px;
+	background-image: url(/images/background4.jpg);
+	background-position: 50% 40%;
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -616,7 +616,7 @@ class email_message(webapp2.RequestHandler):
         message.sender = "<sparklie3@gmail.com>"
         message.to = "<" + merchant_email[merchant_id] + ">"
         message.bcc = "<shaw@sparklie.net>"
-        merchant_template = jinja_environment.get_template('eMerchantCopy.html')
+        merchant_template = jinja_environment.get_template('eMerchantFinal.html')
         message.html = merchant_template.render(template_values)
         message.subject = message_subject_merchant
         message.send()
@@ -624,11 +624,86 @@ class email_message(webapp2.RequestHandler):
         #Message to Consumer
         message_subject_consumer = "Sparklie Appointment Confirmation: You scheduled an appointment with " + " " + "on " + appointment_date
         message.to = "<" + email_user + ">"
-        consumer_template = jinja_environment.get_template('eConsumerCopy.html')
+        consumer_template = jinja_environment.get_template('eConsumerFinal.html')
         message.html = consumer_template.render(template_values)
         message.subject = message_subject_consumer
         message.send()
         input = appointment_db(email=email_user,first_name=first_name,last_name=last_name,message_body=message_body,phone_number=phone_number,appointment_time=appointment_date)
+        input.put()
+		
+class email_message2(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        user_setting = session.get('user_setting').title()
+        user_shape = session.get('user_shape').title()
+        user_metal = session.get('user_metal').title()
+        user_price_lower = session.get('user_price_lower')
+        user_price_upper = session.get('user_price_upper')
+        user_selection_size = session.get('user_selection_size')
+        user_selection_sparkle = session.get('user_selection_sparkle')
+        user_selection_purity = session.get('user_selection_purity')
+        user_selection_transparency = session.get('user_selection_transparency')
+        user_selection = [user_selection_size,user_selection_sparkle,user_selection_purity,user_selection_transparency]
+        most_important_feature = user_selection.index(max(user_selection))
+        if most_important_feature==0:
+            user_preference = "The consumer indicated that the weight of the diamond was the most important feature that he was looking for"
+        elif most_important_feature==1:
+            user_preference = "The consumer indicated that the sparkle of the diamond was the most important feature that he was looking for"
+        elif most_important_feature==2:
+            user_preference = "The consumer indicated that the purity of the diamond was the most important feature that he was looking for"
+        elif most_important_feature==3:
+            user_preference = "The consumer indicated that the transparency of the diamond was the most important feature that he was looking for"            
+        first_name = self.request.get("first_name").title()
+        last_name = self.request.get("last_name").title()
+        phone_number = self.request.get("phone_number")
+        message_body = self.request.get("message")
+        email_user = self.request.get("email")
+        subject = self.request.get("subject")
+       
+        template_values = {}
+        
+        if last_name == "":
+            last_name = "(user didn't provide a last name)"
+
+        if phone_number == "":
+            phone_number = "(user didn't provider a contact number)"
+
+        if message_body == "":
+            message_body = "(user didn't write a message)"
+
+        template_values['first_name'] = first_name
+        template_values['last_name'] = last_name
+        template_values['email_user'] = email_user
+        template_values['subject'] = subject
+        template_values['message'] = message_body
+        template_values['phone_number'] = phone_number
+        template_values['upper'] =  "{:,}".format(int(user_price_upper))
+        template_values['lower'] =  "{:,}".format(int(user_price_lower))
+        template_values['type'] = user_setting
+        template_values['metal'] = user_metal
+        template_values['shape'] = user_shape
+        template_values['preference'] = user_preference
+        
+
+        #Message to Sparklie
+        message_subject_merchant = "Customer wants to be contacted"
+        message = mail.EmailMessage()
+        message.sender = "<sparklie3@gmail.com>"
+        message.to = "<shaw@sparklie.net>"
+        merchant_template = jinja_environment.get_template('eSparklie.html')
+        message.html = merchant_template.render(template_values)
+        message.subject = message_subject_merchant
+        message.send()
+
+        #Message to Consumer
+        message_subject_consumer = "Thank you for using Sparklie"
+        message.to = "<" + email_user + ">"
+        consumer_template = jinja_environment.get_template('eConsumerContact.html')
+        message.html = consumer_template.render(template_values)
+        message.subject = message_subject_consumer
+        message.send()
+        input = appointment_db(email=email_user,first_name=first_name,last_name=last_name,message_body=message_body,phone_number=phone_number,appointment_time="01/01/2001")
         input.put()
 
 class Search(webapp2.RequestHandler):
@@ -860,5 +935,6 @@ application = webapp2.WSGIApplication([
 ('/braintree', Braintree),
 ('/create_transaction', CreateTransaction),
 ('/email_message', email_message),
+('/email_message2', email_message2),
 ], debug=True)
 #important to write a 404 page response, to have it push to the blog with a contact info about something that went wrong
