@@ -60,6 +60,7 @@ class new_inventory(ndb.Model):
     votes = ndb.IntegerProperty(indexed=True)
     local_merchant_flag = ndb.IntegerProperty(indexed=True)
     priority_score = ndb.IntegerProperty(indexed=True)
+    merchant_city = ndb.StringProperty(indexed=True)
     
 class user_input_db(ndb.Model):
     #sessionID = ndb.StringProperty(indexed=True)
@@ -69,7 +70,8 @@ class user_input_db(ndb.Model):
     setting = ndb.StringProperty(indexed=True)
     ring_metal = ndb.StringProperty(indexed=True)
     cluster_title = ndb.StringProperty(indexed=True) 
-    ring_selection = ndb.IntegerProperty(indexed=True) 
+    ring_selection = ndb.IntegerProperty(indexed=True)
+    selected_city = ndb.StringProperty(indexed=True) 
     date = ndb.DateTimeProperty(auto_now_add=True)
 
 class appointment_db(ndb.Model):
@@ -100,6 +102,20 @@ class Step1(webapp2.RequestHandler):
         template = jinja_environment.get_template('step1.html')
         self.response.out.write(template.render())
         session['unique_id'] = unique_id
+
+class Step_city(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        internalCounter = self.request.get('internalCounter')
+        user_city = self.request.get('city')
+        unique_id = session.get('unique_id')
+        unique_id = str(unique_id)
+        event_type = 'User City'
+        session['user_city'] = user_city
+        session['internalCounter'] = internalCounter
+        input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_city)
+        input.put()
 
 class Step2(webapp2.RequestHandler):
 
@@ -181,9 +197,10 @@ class Step6(webapp2.RequestHandler):
         user_metal = user_metal.upper()
         user_metal_list.append(user_metal)
         event_type1 = 'Selection size'
-        event_type2 = 'Selection sparklie'
+        event_type2 = 'Selection sparkle'
         event_type3 = 'Selection purity'
         event_type4 = 'Selection transparency'
+        user_city = session.get('user_city')
         
         user_selection_size = self.request.get('selection_size')
         user_selection_sparkle = self.request.get('selection_sparklie')
@@ -214,7 +231,7 @@ class Step6(webapp2.RequestHandler):
         influence_purity = user_selection_purity / 100   
         influence_transparency = user_selection_transparency / 100   
 
-        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper).fetch()
+        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==user_city).fetch()
 
         inventory_size={}
         inventory_sparkle = {}
