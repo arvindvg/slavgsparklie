@@ -19,6 +19,8 @@ from collections import defaultdict
 import braintree
 from google.appengine.api import mail
 
+user_city_code = {1 : 'San Francisco',2 : 'Chicago',3:'New York'}
+
 jinja_environment = jinja2.Environment(autoescape=True,
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__),'html')))  #editing the path location of the template files
 
@@ -109,6 +111,7 @@ class Step_city(webapp2.RequestHandler):
         session = get_current_session()
         internalCounter = self.request.get('internalCounter')
         user_city = self.request.get('city')
+        user_city = int(user_city)
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'User City'
@@ -201,6 +204,7 @@ class Step6(webapp2.RequestHandler):
         event_type3 = 'Selection purity'
         event_type4 = 'Selection transparency'
         user_city = session.get('user_city')
+        user_city = int(user_city)
         
         user_selection_size = self.request.get('selection_size')
         user_selection_sparkle = self.request.get('selection_sparklie')
