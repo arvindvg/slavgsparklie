@@ -2,11 +2,14 @@ html {
 	
 }
 
+
+
 .jumbotron {
 	color:#ffffff;
-	height: 700px;
+	height: 600px;
 	background-image: url(/images/background4.jpg);
-	background-position: 50% 40%;
+	background-position: 50% 5%;
+	margin-top:-20px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -107,10 +110,18 @@ display:none;
 width:80%;
 }
 
+/*warning for budget */
+.alert-danger{
+color:rgb(214,140,137);
+background-color:rgb(23,27,38);
+border:0px;
+border-radius:0px;
+
+}
+
 @media (min-width: 768px): {
 #test1
 {
 	padding: 550px 50px;
 }
 }
-/

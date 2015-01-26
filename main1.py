@@ -111,7 +111,7 @@ class Step_city(webapp2.RequestHandler):
         session = get_current_session()
         internalCounter = self.request.get('internalCounter')
         user_city = self.request.get('city')
-        user_city = int(user_city)
+        user_city = str(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'User City'
@@ -957,5 +957,6 @@ application = webapp2.WSGIApplication([
 ('/create_transaction', CreateTransaction),
 ('/email_message', email_message),
 ('/email_message2', email_message2),
+('/Step_city', Step_city),
 ], debug=True)
 #important to write a 404 page response, to have it push to the blog with a contact info about something that went wrong

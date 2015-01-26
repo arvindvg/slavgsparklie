@@ -13,14 +13,15 @@
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!-- Font Awesome CSS -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/stylesheets/step1.css" rel="stylesheet">
 	<!-- Slider stylesheet -->
 	<link href="/jqrangeslider-5.7.0/css/iThing.css" rel="stylesheet">
 	<!--<link href="/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" rel="stylesheet">-->
+	<!-- Datepicker stylesheet -->
 	<link href="/eternicode-bootstrap-datepicker-37db99f/css/datepicker3.css" rel="stylesheet">
-	
+	<!-- Google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!--<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>-->
 
@@ -35,7 +36,48 @@
   </head>
 
   <body>
-		<!-- This is the modal for the terms and conditions message -->
+  
+		<!-- Fixed navbar to top-->
+		<nav class="navbar navbar-default navbar-static-top " style="background-color:rgb(23,27,38);border:0px;">
+		  <div class="container">
+			<div class="navbar-header" >
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <span class="navbar-brand" style="color:white;font-size:200%;font-weight:900;">SPARKLIE</span>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<!--<li><a href="#">HOME</a></li>-->
+				<li><a href="#howitworks">HOW IT WORKS</a></li>
+				<!--<li><a href="#contact">CONTACT US</a></li>-->
+				<!--<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li class="dropdown-header">Nav header</li>
+					<li><a href="#">Separated link</a></li>
+					<li><a href="#">One more separated link</a></li>
+				  </ul>
+				</li>-->
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</nav>
+
+		
+		
+		
+		
+		
+		
+		<!-- Terms and conditions modal -->
 		<div class="modal fade" id="myModal_terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
@@ -92,7 +134,7 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  
 		
-		<!-- This is the modal for the privacy policy message -->
+		<!-- Privacy policy modal -->
 		<div class="modal fade" id="myModal_privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
@@ -167,11 +209,11 @@
 						<a href='mailto:shaw@sparklie.net'>Email</a></p>
 						
 					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  
+				</div>
+			</div>
+		</div>
 		
-		<!-- This is the modal for the schedule an appointment -->
+		<!-- Schedule an appointment Modal-->
 		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-schedule">
 				<div class="modal-content">
@@ -265,7 +307,7 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 	  
-		<!-- This is the modal for thanking you -->
+		<!-- Thank you modal after contact or schedule appointment-->
 		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
@@ -283,7 +325,7 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 		
-		<!-- This is the modal for when we can't find anything -->
+		<!-- Modal for when we can't find anything -->
 		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
@@ -304,7 +346,7 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 		
-		<!-- This is the modal for contacting us -->
+		<!-- Modal for contacting us -->
 		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-schedule">
 				<div class="modal-content">
@@ -387,617 +429,547 @@
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
+
+
+
+
+
+
+
 		
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
 				<div class="row">
-			
-					<div class="col-sm-10 col-sm-offset-1">
-						<h3><i class="fa fa-gift"></i> Sparklie</h3>
-					</div>
-					
 					<div class="col-lg-6 col-lg-offset-3">	
 						<div style="margin-top:42%;"><!-- This might need to by dynamic to the screen size -->
 							<h1 style="text-align:center;line-height:1.4;font-size:250%;font-weight:900;">Helping you find the perfect diamond engagement ring</h1><br/>
-							<p style="text-align:center;line-height:1.4;font-style:italic;font-size:130%;">We remove the stress and guide you ever step of the way</p><br/>
-							<div style="text-align:center;"><a class="btn btn-clear btn-lg btn-group-justified" role="button" id="start" style="background:rgba(255,255,255,.3);color:#FFFFFF;border-width:2px;">FREE - TRY US!</a></div>
+							<p style="text-align:center;line-height:1.4;font-style:italic;font-size:130%;">We reduce the stress and guide you ever step of the way</p><br/>
+							
+							<div class="col-xs-8 col-xs-offset-2">
+								<div style="text-align:center;">
+									<a style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="start">TRY US!</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
 		
-		
-		
-		<div class="container">
-			<div class="row">
-				<!--
+		<!-- How it works -->
+		<div class="container-fluid" style="background-color:rgb(243,243,245);margin-top:-30px;">
+			<!--<div class="row">
+			
 				<div class="col-sm-12">
 					<div style="margin:0 auto; width:100%; height:1px; background:grey;"></div>
 					<div style="text-align:center;margin-top:-15px;"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
 				</div>
-				-->
-				
+			</div>-->
+			<a name="howitworks"></a>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div style="margin-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
+						<h3 style="font-weight:900;">Buying an diamond engagement ring is now easier</h3><br/>
+						
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">1</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">Answer a few simple questions</h3><br/><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our questions guide you through the buying process by narrowing down the right ring for you. We save you time and effort.</p>
+						</div>
+					
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">2</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">Connect with a personal jeweller</h3><br/><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">After reviewing your answers, an experienced jeweller will contact you to review preferences and options. We'll answer all your questions, reducing your stress.</p>
+						</div>
+					
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">3</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">Buy in-person from local jewellers or online</h3><br/><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our experts will recommend specific rings sourced from reputable, local jewellers so you can view in-person or buy online. We'll even go shopping with you, being your wing-man.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<div class="row">
-			
 				<div class="col-sm-10 col-sm-offset-1">
-					<div style="margin-top:10%;"><!-- This might need to by dynamic to the screen size -->
-					
 					<div style="text-align:center;">
-						
-						<h3 style="font-weight:900;">Finding the right diamond engagement ring is now easier.</h3><br/>
-						<!--<i class="fa fa-angle-double-down" style="font-size:30px;color:#46DBC2;"></i>-->
-						
-						
-						<div class="col-sm-4" style="padding-bottom:15px;">
-						<div style="text-align:center;margin-top:45px"><span style="font-size:20px;border-radius:100%; border:3px solid #46DBC2;padding: 5px 10px;background:white;">1</span></div>
-							<h3 style="text-align:center;font-weight:500;">Answer a few simple questions</h3><br/><br/>
-							<p style="text-align:center;font-weight:100;font-size:120%;">Our questions guide you through the buying process by narrowing down the right ring for you. We save you time and effort, great for first time shoppers.</p>
+						<div class="col-lg-8 col-lg-offset-2" style="border:1px solid grey;margin-top:35px;padding: 25px 25px;border-left:0px;border-right: 0px;"> 
+							<div class="col-sm-4"style="padding:0;">
+								<i class="fa fa-check"></i> STREE FREE 
+							</div>
+							
+							<div class="col-sm-4"style="padding:0;">
+								<i class="fa fa-check"></i> NO MINIMUM PURCHASE 
+							</div>
+							
+							<div class="col-sm-4"style="padding:0;">
+							
+								<i class="fa fa-check"></i> LOCAL JEWELLERS
+							</div>
 						</div>
-					
-						<div class="col-sm-4" style="padding-bottom:15px;">
-						<div style="text-align:center;margin-top:45px"><span style="font-size:20px;border-radius:100%; border:3px solid #46DBC2;padding: 5px 10px;background:white;">2</span></div>
-							<h3 style="text-align:center;font-weight:500;">Connect with a personal jeweller</h3><br/><br/>
-							<p style="text-align:center;font-weight:100;font-size:120%;">After reviewing your answers, our experienced jeweller will contact you to review preferences and options. We'll answer all your questions, reducing your stress.</p>
-						</div>
-					
-						<div class="col-sm-4" style="padding-bottom:15px;">
-						<div style="text-align:center;margin-top:45px"><span style="font-size:20px;border-radius:100%; border:3px solid #46DBC2;padding: 5px 10px;background:white;">3</span></div>
-							<h3 style="text-align:center;font-weight:500;">Buy in person from local jewellers or online</h3><br/><br/>
-							<p style="text-align:center;font-weight:100;font-size:120%;">Our experts will recommend specific rings sourced from local jewellers so you can view in person or buy online. We will even go shopping with you in person, being your wing-man.</p>
-						</div>
-					
-					
-					<div class="col-lg-8 col-lg-offset-2" style="border:1px solid grey;margin-top:35px;padding: 15px 15px;border-left:0px;border-right: 0px;"> 
-						<div class="col-sm-4"style="padding:0;">
-							<i class="fa fa-check"></i>STREE FREE SHOPPING 
-						</div>
-						<div class="col-sm-4"style="padding:0;">
-							<i class="fa fa-check"></i>NO MINIMUM PURCHASE 
-						</div>
-						<div class="col-sm-4"style="padding:0;">
-						
-							<i class="fa fa-check"></i>LOCAL JEWELLERS
-						</div>
-					</div>
-					</div>
 					</div>
 				</div>	
 			</div>	
 			
 		
-			
-			
 			<div class="row">
-				<div class="col-sm-12">
-				<div style="margin-top:5%;"><!-- This might need to by dynamic to the screen size -->
-					<div style="text-align:center;"><a style="border-color:#adadad;background:#46DBC2;" class="btn btn-clear btn-lg" role="button" id="start2" >Get Started</a></div>
+				<div class="col-lg-6 col-lg-offset-3">	
+					<div style="margin:5% 0%;"><!-- This might need to by dynamic to the screen size -->
+						<div class="col-sm-8 col-sm-offset-2">
+							<div style="margin-bottom:50px;text-align:center;">
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg btn-group-justified" role="button" id="start2">Get Started</a>
+							</div>
+						</div>
+					</div>	
 				</div>	
-				</div>
-			</div>	
+			</div>
 			
-		<!-- THIS IS WHERE THE FIRST BLOCK IS none IF CLICKED UPON-->
-		<div id="section_city" style="display:none;">	
-		
-			<div class="row">
-				<div class="col-sm-12">
-
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-
-				</div>
-			
-				<div class="col-sm-12">
-
-						<h2 name="start" style="text-align:center;">CITY
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+		</div>	
+	
+		<!-- CITY -->
+		<div id="section_city" style="display:show;">	
+	
+			<div class="container-fluid" style="min-height:600px;"><!-- This might need to by dynamic to the screen size -->
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">CITY
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-building fa-stack-1x"></i>
 						</span>
 						</h2>
-				</div>
-			</div>			
-			
-			
-		
-			<div class="row">
-				<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h5 style="text-align:center; padding:0px 10% 10px;">Note: We're currently only supporting three cities.</h5>
 					</div>
-				<div class="col-sm-1"></div>
-			</div>
-			
-			<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10">
-				<div class="col-sm-4" style="padding-bottom:15px;">
+				</div>			
 				
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:350px;">
-							<img src="/images/chicago.jpg" alt="Chicago"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:25px;"/>		
-							<h3 style="text-align:center;font-weight:900;">Chicago</h3>
-						</div>
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-								<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="city1" name="city" data-value_id="chi">Select</a>
-							</div>
-						</div>
-						<div id="city1_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-						</div>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">Sparklie is currently only available in three cities</p>
 					</div>
-				
 				</div>
 				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:350px;">
-							<img src="/images/nyc.jpg" alt="NYC"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:25px;"/>		
-							<h3 style="text-align:center;font-weight:900;">New York</h3>
-						</div>
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-								<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="city2" name="city" data-value_id="nyc">Select</a>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/chicago.jpg" alt="Chicago"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Chicago</h3>
+							</div>
+								
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city1" name="city" data-value_id="2">Select</a>
+								</div>
+							</div>
+						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="city1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
 							</div>
 						</div>
-						<div id="city2_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-								<i class="fa fa-check-circle-o"></i>
-						</div>
-					</div>		
+						
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/sf.jpg" alt="San Francisco"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>
+								<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
+							</div>
+
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city3" name="city" data-value_id="1">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="city3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/nyc.jpg" alt="NYC"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">New York</h3>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city2" name="city" data-value_id="3">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="city2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+					</div>	
 				</div>
-				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:350px;">
-							<img src="/images/sf.jpg" alt="San Francisco"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:25px;"/>
-							<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
-						</div>
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-								<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="city3" name="city" data-value_id="sfo">Select</a>
-							</div>
-						</div>
-						<div id="city3_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-								<i class="fa fa-check-circle-o"></i>
-						</div>
-					</div>		
-				</div>	
-			</div>	
-			<div class="col-sm-1"></div>	
+			
 			</div>
-		
 		</div>
-		
-		
-		
-		<div id="section_setting" style="display:none;">	
-		
-			<div class="row">
-				<div class="col-sm-12">
-
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-
-				</div>
 			
-				<div class="col-sm-12">
-
-						<h2 name="start" style="text-align:center;">RING TYPE
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+		<!-- SETTING -->
+		<div id="section_setting" style="display:show;">	
+			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:600px;">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">RING TYPE
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-gift fa-stack-1x"></i>
 						</span>
 						</h2>
+					</div>
+				</div>			
+	
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Prong setting is a classic. It lets in the most light, maximizing the diamond's sparkle</p>
+					</div>
 				</div>
-			</div>			
 			
-			
-		
-			<div class="row">
-				<div class="col-sm-1"></div>
-				<div class="col-sm-10">
-					
-						<h5 style="text-align:center; padding:0px 10% 10px;">SPARKLIE TIP: Prong setting is a classic. It lets in the most light, maximizing the diamond's sparkle.</h5>
-					
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-sm-4">
+							<div style="min-height:450px">
+								<img src="/images/solitaire_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Solitaire</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">The classic single diamond set in the center, usually with four or six prongs.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting1" name="setting" data-value_id="solitaire">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="setting1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="col-sm-4">
+							<div style="min-height:450px">
+								<img src="/images/halo_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Halo</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">A single diamond encircled by smaller diamonds, which visually expands the appearance of the center stone.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting2" name="setting" data-value_id="halo">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="setting2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+								
+						</div>
+						
+						<div class="col-sm-4">
+							<div style="min-height:450px">
+								<img src="/images/threestone_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Three Stone</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Three diamonds placed adjacent to each other offering a bold, modern look. </p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting3" name="setting" data-value_id="three_stone">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="setting3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>	
+						</div>	
+					</div>
 				</div>
-				<div class="col-sm-1"></div>
+				
 			</div>
-			
-			<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10">
-				<div class="col-sm-4" style="padding-bottom:15px;">
-				
-				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-						<img src="/images/solitaire_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-						<h3 style="text-align:center;font-weight:900;">Solitaire</h3>
-						
-						<p style="text-align:center;font-weight:100;">The classic single diamond set in the center, usually with four or six prongs.</p>
-						
-						
-						
-					</div>
-					<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting1" name="setting" data-value_id="solitaire">Select</a>
-						</div>
-					</div>
-					<div id="setting1_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-						<img src="/images/halo_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-						<h3 style="text-align:center;font-weight:900;">Halo</h3>
-						
-						<p style="text-align:center;font-weight:100;">A single diamond encircled by smaller diamonds, which visually expands the appearance of the center stone.</p>
-						         
-
-					</div>
-					<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting2" name="setting" data-value_id="halo">Select</a>
-						</div>
-					</div>
-					<div id="setting2_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>
-				</div>		
-				</div>
-				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-						<img src="/images/threestone_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-						
-						<h3 style="text-align:center;font-weight:900;">Three Stone</h3>
-											
-						<p style="text-align:center;font-weight:100;">Three diamonds placed adjacent to each other offering a bold, modern look. </p>
-						
-					</div>
-					<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-							<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg " role="button" id="setting3" name="setting" data-value_id="three_stone">Select</a>
-						</div>
-					</div>
-					<div id="setting3_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>
-				</div>		
-				</div>	
-			</div>	
-			<div class="col-sm-1"></div>	
-			</div>
-		
 		</div>
-		<div id="section_metal" style="display:none;">	
-			<div class="row">
-				<div class="col-sm-12">
-
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-
-				</div>
+		
+		<!-- METAL -->
+		<div id="section_metal" style="display:show;">	
+			<div class="container-fluid">
 			
-				<div class="col-sm-12">
-					
-						<h2 style="text-align:center;">RING METAL
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">RING METAL
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-eye fa-stack-1x"></i>
 						</span>
 						</h2>
-				</div>		
-			</div>
-			
-			<div class="row">	
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					
-						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: Platinum and white gold are the two most popular choices. </h5>
-					
-				</div>
-				<div class="col-sm-2"></div>
-			</div>
-			
-			<div class="row">				
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10">
-				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-					<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-							<img src="/images/gold.jpg" alt="yellow gold" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
-							<h3 style="text-align:center;font-weight:900;">Yellow Gold</h3>
-							
-							<p style="text-align:center;font-weight:100;">A traditional metal used for centuries, gold embodies harmony for life.</p>
-							
-						
-						
-					</div>
-					<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">
-							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="metal1" name="metal" data-value_id="gold">Select</a>
-						</div>
-					</div>
-					<div id="metal1_show" style="color:white;background-color:#F4A460;height:50px;margin: -2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>
-				</div>	
-					
+					</div>		
 				</div>
 				
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-							<img src="/images/whitegold.jpg" alt="white gold"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-							<h3 style="text-align:center;font-weight:900;">White Gold</h3>
-										
-							<p style="text-align:center;font-weight:100;">A modern twist on the traditional yellow gold, these gold rings are plated with rhodium to give it its white shine.</p>
-							
-						
-						</div>
-						
-						<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
-							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg center-block" role="button" id="metal2" name="metal" data-value_id="white gold">Select</a>
-						</div>
-						</div>
-					
-					<div id="metal2_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>						
-						
-					</div>	
-											
-					
+				<div class="row">						
+					<div class="col-sm-8 col-sm-offset-2">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Platinum and white gold are the two most popular choices</p>
+					</div>
 				</div>
 				
-				
-				<div class="col-sm-4">
-				<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-						<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
+				<div class="row">				
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-sm-4">
+							<div style="min-height:400px;">
+								<img src="/images/gold.jpg" alt="yellow gold" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
+								<h3 style="text-align:center;font-weight:900;">Yellow Gold</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">A traditional metal used for centuries, gold embodies harmony for life.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal1" name="metal" data-value_id="gold">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="metal1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+
+						<div class="col-sm-4">
+							<div style="min-height:400px;">
+								<img src="/images/whitegold.jpg" alt="white gold"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">White Gold</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">A modern twist on the traditional yellow gold, these gold rings are plated with rhodium to give it its white shine.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal2" name="metal" data-value_id="white gold">Select</a>
+								</div>
+							</div>
 						
-						<img src="/images/platinum.jpg" alt="platinum"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-						<h3 style="text-align:center;font-weight:900;">Platinum</h3>
-										
-						<p style="text-align:center;font-weight:100;">Extremely rare and naturally hypoallergenic metal, platinum latests forever.</p>
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="metal2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>						
+							</div>
+						</div>	
+
+						<div class="col-sm-4">
+							<div style="min-height:400px;">
+								<img src="/images/platinum.jpg" alt="platinum"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Platinum</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Extremely rare and naturally hypoallergenic metal, platinum latests forever.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal3" name="metal" data-value_id="platinum">Select</a>
+								</div>
+							</div>		
 						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="metal3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
 					</div>
-					<div style="position:relative;">
-						<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
-							<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg center-block" role="button" id="metal3" name="metal" data-value_id="platinum">Select</a>
-						</div>
-					</div>							
-					<div id="metal3_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-							<i class="fa fa-check-circle-o"></i>
-					</div>
-				</div>	
-					
 				</div>
 				
 			</div>
 		</div>
-		<div class="col-sm-1"></div>	
-		</div>
 		
-		<div id="section_shape" style="display:none;">
-			<div class="row">
-				<div class="col-sm-12">
-					
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-				</div>
-			</div>
+		<!-- SHAPE -->
+		<div id="section_shape" style="display:show;">
+			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
 		
-			<div class="row">
-				<div class="col-sm-12">
-					
-						<h2 style="text-align:center;">DIAMOND SHAPE
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">DIAMOND SHAPE
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-heart fa-stack-1x"></i>
 						</span>
 						</h2>
+					</div>
 				</div>
-			</div>
 		
-			<div class="row">	
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					
-						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: Round is the most popular shape. It is cut based on a precise formula to achieve maximum sparkle.</h5>
-						
-					
-				</div>
-				<div class="col-sm-2"></div>
-			</div>
-			
-		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10">
-				<div class="col-sm-4" style="padding-bottom:15px;">
-					
-					<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-							<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-							<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:5%;"/>		
-							<h3 style="text-align:center;font-weight:900;">Round</h3>
-										
-							<p style="text-align:center;font-weight:100;">The most popular shape. Round diamonds are cut to maximize the sparkle.</p>
-							
-						</div>
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
-								<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape1" name="shape" data-value_id="round">Select</a>
-							</div>
-						</div>
-						<div id="shape1_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-								<i class="fa fa-check-circle-o"></i>
-						</div>
-					</div>	
+				<div class="row">	
+					<div class="col-sm-8 col-sm-offset-2">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Round is the most popular shape. It is cut based on a precise formula to achieve maximum sparkle</p>	
 					</div>
 					
-					<div class="col-sm-4" style="padding-bottom:15px;">
-						<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-							<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-							<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:5%;"/>		
-							<h3 style="text-align:center;font-weight:900;">Cushion</h3>
-									
-							<p style="text-align:center;font-weight:100;">The cushion shape blends vintage culture with modern design.</p>
+				</div>
+			
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-sm-4">
+							<div style="min-height:450px;">
+								<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<h3 style="text-align:center;font-weight:900;">Round</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">The most popular shape. Round diamonds are cut to maximize the sparkle.</p>
+							</div>
 							
-						</div>
-						
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
-								<a style="border-radius:5px;width:80%;" class="btn btn-clear btn-lg" role="button" id="shape2" name="shape" data-value_id="square">Select</a>
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape1" name="shape" data-value_id="round">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="shape1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
 							</div>
 						</div>	
-						<div id="shape2_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-								<i class="fa fa-check-circle-o"></i>
-						</div>
-					</div>	
-					</div>
-					<div class="col-sm-4">
-						<div style="background-color:#A2F4E6;border: 2px solid #adadad;" class="contentBox">
-							<div style="background-color:#A2F4E6;padding: 25px 25px;min-height:450px;">
-							<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:5%;"/>		
-							<h3 style="text-align:center;font-weight:900;">Princess</h3>		
-							<p style="text-align:center;font-weight:100;">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
-							
-						</div>
-						<div style="position:relative;">
-							<div class="" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;text-align:center;">	
-								<a style="border-radius:5px;width:80%" class="btn btn-clear btn-lg" role="button" id="shape3" name="shape" data-value_id="princess">Select</a>
+						
+						<div class="col-sm-4">
+							<div style="min-height:450px;">
+								<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<h3 style="text-align:center;font-weight:900;">Cushion</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">The cushion shape blends vintage culture with modern design.</p>
 							</div>
-						</div>			
-						<div id="shape3_show" style="color:white;background-color:#F4A460;height:50px;margin:-2px -2px;font-size:36px;text-align:center;padding:0px;border: 2px solid #B47947;" class="hide">
-								<i class="fa fa-check-circle-o"></i>
-						</div>
-						</div>
-					</div>				
-					
-					
-					
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape2" name="shape" data-value_id="square">Select</a>
+								</div>
+							</div>	
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="shape2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+						
+						<div class="col-sm-4">
+							<div style="min-height:450px;">
+								<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<h3 style="text-align:center;font-weight:900;">Princess</h3>		
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape3" name="shape" data-value_id="princess">Select</a>
+								</div>
+							</div>		
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="shape3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-25px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>				
+					</div>	
 				</div>
-			<div class="col-sm-1"></div>
-		</div>
+				
+			</div>
 		</div>
 		
-		<div id="section_budget" style="display:none;">
-			<div class="row">
-				<div class="col-sm-12">
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>				
-				</div>
-			</div>		
+		<!-- BUDGET -->
+		<div id="section_budget" style="display:show;">	
+			<div class="container-fluid">	
 			
-			<div class="row">
-				<div class="col-sm-12" style="text-align:center;">
-						<h2 style="text-align:center;">BUDGET
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">BUDGET
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-money fa-stack-1x"></i>
 						</span>
 						</h2>
-				</div>
-			</div>
-		
-			<div class="row">
-
-				
-				<div class="col-sm-8 col-sm-offset-2">
-					
-						<h5 style="text-align:center; padding:0px 10% 10px">SPARKLIE TIP: The average person spends between $3,000 to $5,000</h5>
-					
-				</div>
-
-			</div>	
-			
-			<!-- Warning content -->
-			<div class="row" >
-				<div class="col-sm-3"></div>
-				
-				<div class="col-sm-6" style="text-align:center;font-weight:800;">
-					<div id="formAlert_danger" class="alert alert-danger" style="display:none;">	
-							Sorry! Let's narrow down your budget range to &#60; $2,500.
 					</div>
 				</div>
-				
-				<div class="col-sm-3"></div>
-			</div>	
 		
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: The average person spends between $3,000 to $5,000</p>
+					</div>
+
+				</div>	
 			
-			<div class="row">
-				
-				
-				<div class="col-sm-offset-2 col-sm-8">
-					<div id="slider"></div>
-				</div>
-				
-			</div>
-			
-			<div class="row">
-				<div class="col-sm-12"> <button type="submit" style="border-color:#adadad;min-width:150px;margin-top:55px;" class="btn btn-clear btn-lg center-block" id="submit">Next</button></div>
-			</div>
-		</div>	
-		
-		<div id="section_preference" style="display:none;">	
-			<div class="row">
-				<div class="col-sm-12">
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-				</div>
-			
-				<div class="col-sm-12">	
-						<h2 style="text-align:center;">DIAMOND QUALITY PREFERENCE RANKING
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
-						<i class="fa fa-square-o fa-stack-2x"></i>
-						<i class="fa fa-eye fa-stack-1x"></i>
-						</span>
-						</h2>
-				</div>		
-			</div>
-			
-		<div class="form-horizontal" role="search" >
-			<div class="row">	
-				<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<div class="form-group" style="padding: 0px;border: 0px solid #adadad;text-align:center;margin-top:0px;">
-							<label>
-								<h5>SPARKLIE TIP: Most people often rank size as 1 or 2.</h5>
-							</label>				
+				<!-- Warning content -->
+				<div class="row" >
+					<div class="col-sm-6 col-sm-offset-3" style="text-align:center;font-weight:800;">
+						<div id="formAlert_danger" class="alert alert-danger" style="display:none;">	
+							Sorry! Let's narrow down your budget range to &#60; $2,500.
 						</div>
 					</div>
-				<div class="col-sm-1"></div>
-			</div>
+				</div>	
+		
+				<div class="row">
+					<div class="col-sm-offset-2 col-sm-8">
+						<div id="slider"></div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-4"> 
+						<button id="submit" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Next</button>
+					</div>
+				</div>
+				
+			</div>	
+		</div>	
+		
+		<!-- RANKING -->
+		<div id="section_preference" style="display:show;">	
+			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
+				
+				<div class="row">
+					<div class="col-sm-12">	
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">DIAMOND QUALITY RANKING
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-diamond fa-stack-1x"></i>
+						</span>
+						</h2>
+					</div>		
+				</div>
+			
+			<div class="form-horizontal" role="search">
+				<div class="row">	
+					<div class="col-sm-8 col-sm-offset-2">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Size is often the most important characteristic</p>
+					</div>
+				</div>
 			
 			
 				<div class="row">				
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">		
-					
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/carat.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-sm-3">
+							<div style="min-height:450px;">
+								<img src="/images/carat.png" alt="carat"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Size</h3>		
-								<p style="text-align:center;font-weight:100;">Maximize the weight or size of the diamond.</p>
+								<p style="text-align:center;font-weight:100;padding:0 30px;">Maximize the weight or size of the diamond.</p>
 							</div>
 
 							<div style="position:relative;margin-left:30px;">
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
-									  <button class="btn btn-default dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="1">1</span>
+									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
+										Rank: <span class="selection" id="1">1 Highest</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1010,19 +982,20 @@
 								</div>
 								
 							</div>														
-						</div>					
+						</div>
 					
-						<div class="col-sm-3" style="padding-bottom:15px;">	
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/cut.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+
+						<div class="col-sm-3">
+							<div style="min-height:450px;">
+								<img src="/images/cut.png" alt="cut"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Sparkle</h3>				
-								<p style="text-align:center;font-weight:100;">Maximize the brilliance of the diamond in reflecting light.</p>
+								<p style="text-align:center;font-weight:100;padding:0 30px;">Maximize the brilliance of the diamond in reflecting light.</p>
 							</div>
-						
+					
 							<div style="position:relative;margin-left:30px;">
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
-									  <button class="btn btn-default dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
+									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
 										Rank: <span class="selection" id="3">2</span>
 										<span class="caret"></span>
 									  </button>
@@ -1034,23 +1007,20 @@
 									  </ul>
 									</div>
 								</div>
-								
 							</div>												
 						</div>		
 
-						
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/clarity.png" alt="yellow gold" class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
+						<div class="col-sm-3">
+							<div style="min-height:450px;">
+								<img src="/images/clarity.png" alt="clarity" class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>								
 								<h3 style="text-align:center;font-weight:900;">Purity</h3>
-								<div style="text-align:center;font-weight:100;">Minimize internal flaws in the form of tiny impurities.</div>
+								<p style="text-align:center;font-weight:100;padding:0 30px;">Minimize internal flaws in the form of tiny impurities.</p>
 							</div>
 
-						
 							<div style="position:relative;margin-left:30px;">
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
-									  <button class="btn btn-default dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
+									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
 										Rank: <span class="selection" id="2">3</span>
 										<span class="caret"></span>
 									  </button>
@@ -1062,22 +1032,22 @@
 									  </ul>
 									</div>
 								</div>
-								
 							</div>					
 						</div>
-						
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/color.png" alt="white gold"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+					
+					
+						<div class="col-sm-3">
+							<div style="min-height:450px;">
+								<img src="/images/color.png" alt="color"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparent</h3>		
-								<p style="text-align:center;font-weight:100;">Minimize internal flaws that causes the diamond to look hazy or yellow.</p>
+								<p style="text-align:center;font-weight:100;padding:0 30px;">Minimize internal flaws that causes the diamond to look hazy or yellow.</p>
 							</div>
 
 							<div style="position:relative;margin-left:30px;">
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
-									  <button class="btn btn-default dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="4">4</span>
+									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
+										Rank: <span class="selection" id="4">4 Lowest</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1088,151 +1058,34 @@
 									  </ul>
 									</div>
 								</div>
-								
 							</div>		
 						</div>
 						
-
-						
-						
 					</div>
-				
-					<div class="col-sm-1"></div>	
 				</div>
 				
 				<div class="row">	
 					<div class="form-group">
-						<div style="margin-top:3%;"><!-- This might need to by dynamic to the screen size -->
-							<div class="col-sm-12"> <button type="submit" style="border-color:#adadad;min-width:150px;"class="btn btn-clear btn-lg center-block" id="final">See My Rings</button></div>				
+						<div style="margin-top:50px;"><!-- This might need to by dynamic to the screen size -->
+							<div class="col-sm-4 col-sm-offset-4"> 
+								<button id="final" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Last Step</button>
+							</div>				
 						</div>
 					</div>
 				</div>
 				
-		</div>
-		</div>
-		
-		
-		
-		<!--
-		<div id="section_preference" style="display:none;">	
-			<div class="row">
-				<div class="col-sm-12">
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
-				</div>
-			
-				<div class="col-sm-12">	
-						<h2 style="text-align:center;">Preferences
-						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:5px;">
-						<i class="fa fa-square-o fa-stack-2x"></i>
-						<i class="fa fa-eye fa-stack-1x"></i>
-						</span>
-						</h2>
-				</div>		
 			</div>
-			
-		<div class="form-horizontal" role="search" >
-			<div class="row">	
-				<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<div class="form-group" style="padding: 0px;border: 0px solid #adadad;text-align:center;margin-top:0px;">
-							<label>
-								<h3>You have $100 to spend on a diamond. How would you allocate it across the following diamond traits?</h3>
-								<h5>SPARKLIE TIP: People care most about size and sparkle.</h5>
-							</label>				
-						</div>
-					</div>
-				<div class="col-sm-1"></div>
 			</div>
-			
-				<div class="row">				
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">		
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/clarity.png" alt="yellow gold" class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
-								<h3 style="text-align:center;font-weight:900;">Purity</h3>
-								<div style="text-align:center;font-weight:100;">Minimize internal flaws in the form of tiny impurities.</div>
-							</div>
-
-							<div style="position:relative;">
-								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
-									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="2" value="25" style="border-radius:0px;width:80%;"><br/>
-								</div>
-							</div>									
-						</div>
-						
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/color.png" alt="white gold"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparent</h3>		
-								<p style="text-align:center;font-weight:100;">Minimize internal flaws that causes the diamond to look hazy or yellow.</p>
-							</div>
-
-							<div style="position:relative;">
-								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
-									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="4" value="25" style="border-radius:0px;width:80%;"><br/>						
-								</div>
-							</div>			
-						</div>
-						
-						<div class="col-sm-3" style="padding-bottom:15px;">	
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/cut.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-								<h3 style="text-align:center;font-weight:900;">Sparkle</h3>				
-								<p style="text-align:center;font-weight:100;">Maximize the brilliance of the diamond in reflecting light.</p>
-							</div>
-						
-							<div style="position:relative;">
-								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
-									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="3" value="25" style="border-radius:0px;width:80%;"><br/>		
-								</div>
-							</div>												
-						</div>
-						
-						<div class="col-sm-3" style="padding-bottom:15px;">
-							<div class="contentBox" style="background-color:#A2F4E6;padding: 25px 25px;border: 2px solid #adadad;min-height:380px;">
-								<img src="/images/carat.png" alt="platinum"  class="center-block img-responsive" style="padding:0px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
-								<h3 style="text-align:center;font-weight:900;">Size</h3>		
-								<p style="text-align:center;font-weight:100;">Maximize the weight or size of the diamond.</p>
-							</div>
-
-							<div style="position:relative;">
-								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 5px;width:100%;margin-left:10%;">	
-									<input type="number"  min="0" max="100" class="form-control"  name="preference" id="1" value="25" style="border-radius:0px;width:80%;"><br/>						
-								</div>
-							</div>														
-						</div>						
-					</div>
-				
-					<div class="col-sm-1"></div>	
-				</div>
-				
-				<div class="row">	
-					<div class="col-sm-1"></div>
-						<div class="col-sm-10">
-							<div class="form-group" style="background-color:#A2F4E6;padding: 25px 25px ;border: 2px solid #adadad;text-align:center;margin:15px;">
-								<label   class="col-sm-offset-2 col-sm-4" style="text-align:right;font-size:25px;">Total out of 100</label>
-								<div class="col-sm-offset-1 col-sm-2 disabled"id="sum"><input type="text" min="0" max="100" class="form-control" id="answer" placeholder="100" disabled></div>
-							</div>
-						</div>
-					<div class="col-sm-1"></div>
-				</div>	
-				
-				<div class="row">	
-					<div class="form-group">
-						<div class="col-sm-12"> <button type="submit" style="border-color:#adadad;min-width:150px;"class="btn btn-clear btn-lg center-block" id="final">See My Rings</button></div>				
-					</div>
-				</div>
-				
 		</div>
-		</div>
-		-->
+		
+		<!-- RESULTS -->
 		<div id="section_result" style="display:none;">		
 			<div class="row">
 				<div class="col-sm-12">
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-						<div style="text-align:center;margin-top:-45px"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+					<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+					<div style="text-align:center;margin-top:-45px">
+						<i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i>
+					</div>
 				</div>
 			</div>
 		
@@ -1309,18 +1162,21 @@
 				</div>	
 			</div>
 		</div>
-	</div>	
 	
-	<!-- Foot note container starts here -->	
-     <div style="background-color:#5c787c; width:100%; margin-top: 25px; padding: 20px; min-height:60px; bottom:0px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12" style="padding-top:10px;">
-					<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
+	
+	
+	
+	
+		<!-- Foot note container starts here -->	
+		 <div style="background-color:rgb(23,27,38); width:100%; margin-top: 25px; padding: 20px; min-height:60px; bottom:0px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12" style="padding-top:10px;color:white;">
+						<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
+					</div>
 				</div>
 			</div>
-		</div>
-	 </div>
+		 </div>
 	 
     
 
@@ -1450,8 +1306,9 @@
 			$("#city1_show,#city2_show,#city3_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			$.post("/step2", {
-				setting: 	$(this).data('value_id')
+			console.log(parseInt($(this).data('value_id')));
+			$.post("/Step_city", {
+				city: 	$(this).data('value_id')
 				});
 			$("#section_setting").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
