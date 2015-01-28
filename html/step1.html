@@ -215,7 +215,7 @@
 		
 		<!-- Schedule an appointment Modal-->
 		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-schedule">
+			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-body" style="padding-top:10px;">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
@@ -309,7 +309,7 @@
 	  
 		<!-- Thank you modal after contact or schedule appointment-->
 		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-sm">
+			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
@@ -327,7 +327,7 @@
 		
 		<!-- Modal for when we can't find anything -->
 		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-sm">
+			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
@@ -348,14 +348,14 @@
 		
 		<!-- Modal for contacting us -->
 		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-schedule">
+			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-body" style="padding-top:10px;">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 						<div class="row">
 							<div class="col-sm-12" >
 								<div style="text-align:center;">
-								<i class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Last Step So Our Experts Can Contact You.</h2>
+								<h2 style="display:inline;">Last Step: Your Info</h2>
 								</div>
 							</div>
 						</div>
@@ -409,20 +409,17 @@
 							</div>
 						
 							<div class="col-sm-4">
-								<div class="col-sm-12">
-							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
-							
-							</div>
-							
-							<label>Map</label>
-							<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
-							
-							<div style="padding-top:15px;">
-							<h5>Sparklie, Inc.</h5>
-							<p>2120 Mason St.</p>
-							<p>San Francisco, CA 94133</p>
-							</div>
-							</div>
+								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
+									<div class="col-sm-12" >
+									</div>
+								<label>Map</label>
+								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
+									<div style="padding-top:15px;">
+									<h5>Sparklie, Inc.</h5>
+									<p>2120 Mason St.</p>
+									<p>San Francisco, CA 94133</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					 </div>
@@ -536,7 +533,7 @@
 		</div>	
 	
 		<!-- CITY -->
-		<div id="section_city" style="display:show;">	
+		<div id="section_city" style="display:none;">	
 	
 			<div class="container-fluid" style="min-height:600px;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
@@ -622,7 +619,7 @@
 		</div>
 			
 		<!-- SETTING -->
-		<div id="section_setting" style="display:show;">	
+		<div id="section_setting" style="display:none;">	
 			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:600px;">
 				<div class="row">
 					<div class="col-sm-12">
@@ -711,7 +708,7 @@
 		</div>
 		
 		<!-- METAL -->
-		<div id="section_metal" style="display:show;">	
+		<div id="section_metal" style="display:none;">	
 			<div class="container-fluid">
 			
 				<div class="row">
@@ -799,7 +796,7 @@
 		</div>
 		
 		<!-- SHAPE -->
-		<div id="section_shape" style="display:show;">
+		<div id="section_shape" style="display:none;">
 			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
 		
 				<div class="row">
@@ -888,7 +885,7 @@
 		</div>
 		
 		<!-- BUDGET -->
-		<div id="section_budget" style="display:show;">	
+		<div id="section_budget" style="display:none;">	
 			<div class="container-fluid">	
 			
 				<div class="row">
@@ -934,7 +931,7 @@
 		</div>	
 		
 		<!-- RANKING -->
-		<div id="section_preference" style="display:show;">	
+		<div id="section_preference" style="display:none;">	
 			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
 				
 				<div class="row">

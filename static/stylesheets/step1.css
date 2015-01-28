@@ -104,11 +104,6 @@ cursor:pointer;
 display:none;
 }
 
-/*schedule modal width*/
-.modal-dialog-schedule {
-
-width:80%;
-}
 
 /*warning for budget */
 .alert-danger{
