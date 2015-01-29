@@ -1,4 +1,4 @@
-import os
+﻿import os
 import webapp2
 import cgi
 from google.appengine.ext import ndb
@@ -111,7 +111,7 @@ class Step_city(webapp2.RequestHandler):
         session = get_current_session()
         internalCounter = self.request.get('internalCounter')
         user_city = self.request.get('city')
-        user_city = str(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
+        #user_city = str(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'User City'
@@ -235,7 +235,7 @@ class Step6(webapp2.RequestHandler):
         influence_purity = user_selection_purity / 100   
         influence_transparency = user_selection_transparency / 100   
 
-        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==user_city).fetch()
+        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==str(user_city)).fetch()
 
         inventory_size={}
         inventory_sparkle = {}
@@ -668,13 +668,13 @@ class email_message2(webapp2.RequestHandler):
         user_selection = [user_selection_size,user_selection_sparkle,user_selection_purity,user_selection_transparency]
         most_important_feature = user_selection.index(max(user_selection))
         if most_important_feature==0:
-            user_preference = "The consumer indicated that the weight of the diamond was the most important feature that he was looking for"
+            user_preference = "You indicated that the weight of the diamond is the most important feature"
         elif most_important_feature==1:
-            user_preference = "The consumer indicated that the sparkle of the diamond was the most important feature that he was looking for"
+            user_preference = "You indicated that the sparkle of the diamond is the most important feature"
         elif most_important_feature==2:
-            user_preference = "The consumer indicated that the purity of the diamond was the most important feature that he was looking for"
+            user_preference = "You indicated that the purity of the diamond is the most important feature"
         elif most_important_feature==3:
-            user_preference = "The consumer indicated that the transparency of the diamond was the most important feature that he was looking for"            
+            user_preference = "You indicated that the transparency of the diamond is the most important feature"
         first_name = self.request.get("first_name").title()
         last_name = self.request.get("last_name").title()
         phone_number = self.request.get("phone_number")
@@ -705,6 +705,7 @@ class email_message2(webapp2.RequestHandler):
         template_values['metal'] = user_metal
         template_values['shape'] = user_shape
         template_values['preference'] = user_preference
+	template_values['user_selection'] = user_selection
         
 
         #Message to Sparklie

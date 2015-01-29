@@ -123,7 +123,7 @@
 						2120 Mason Street<br/>
 						San Francisco, CA, 94133<br/>
 						Phone: 415-409-9683<br/>
-						<a href='mailto:shaw@sparklie.net'>Email</a></p>
+						<a href='mailto:sparklie3@gmail.com'>Email</a></p>
 						
 
 						<!--<p class="pull-right" style="font-size:14px;">Thanks for reading,<br/>
@@ -206,7 +206,7 @@
 						2120 Mason Street<br/>
 						San Francisco, CA, 94133<br/>
 						Phone: 415-409-9683<br/>
-						<a href='mailto:shaw@sparklie.net'>Email</a></p>
+						<a href='mailto:sparklie3@gmail.com'>Email</a></p>
 						
 					 </div>
 				</div>
@@ -222,7 +222,7 @@
 						<div class="row">
 							<div class="col-sm-12" >
 								<div style="text-align:center;">
-								<i class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Schedule an Appointment</h2>
+								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Schedule an Appointment</h2>
 								</div>
 							</div>
 						</div>
@@ -313,11 +313,12 @@
 				<div class="modal-content">
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
-							<div class="col-sm-12" >
+							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-								<div style="text-align:center;">
-								<h2 style="display:inline;">Thank you. We're also testing a recommendation algorithm so here are a few recommendations.</h2>
-								</div>
+								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie.</h2>
+							</div>
+							<div class="modal-body" style="padding-top:10px;">
+								We're also testing (beta) a recommendation engine so look below to see if any of these interest you. 
 							</div>
 						</div>
 					 </div>
@@ -331,13 +332,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h4 class="modal-title" style="text-align:center;">Sorry</h4>
+						<h2 class="modal-title" style="text-align:center;">Sorry</h2>
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
 							<div class="col-sm-12" >
 								<div style="text-align:center;">
-								We couldn't find what you needed. How about changing your preferences?
+								Our recommendation engine couldn't find a right ring for you. How about contacting us at sparklie3@gmail.com?
 								</div>
 							</div>
 						</div>
@@ -347,25 +348,16 @@
 		</div><!-- /.modal for welcome message-->  	  
 		
 		<!-- Modal for contacting us -->
-		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
-					<div class="modal-body" style="padding-top:10px;">
+					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
+					</div>
+					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
-							<div class="col-sm-12" >
-								<div style="text-align:center;">
-								<h2 style="display:inline;">Last Step: Your Info</h2>
-								</div>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-sm-8">
-								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;"></div>						
-								
-							
-							
+							<div class="col-sm-8"  style="padding-left:0;padding-right:0;">
 								<form role="form" id="send_email2">
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
@@ -376,23 +368,23 @@
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name (optional)"  style="border-radius:0px">
+										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
 										</div>
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="Enter email"  style="border-radius:0px" required>
+										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX (optional)" style="border-radius:0px">
+										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
 										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me find what I need" style="border-radius:0px" required>
+										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
 									  </div>
 						  
 									  <div class="form-group col-sm-12">
@@ -401,17 +393,14 @@
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
-										<button type="submit" class="btn btn-clear btn-default">Send</button>
+										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
 										</div>
 								</form>
 									<div class="col-sm-4"></div>
 							
 							</div>
 						
-							<div class="col-sm-4">
-								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
-									<div class="col-sm-12" >
-									</div>
+							<div class="col-sm-4" style="padding-left:0;">								
 								<label>Map</label>
 								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
 									<div style="padding-top:15px;">
@@ -1036,7 +1025,7 @@
 						<div class="col-sm-3">
 							<div style="min-height:450px;">
 								<img src="/images/color.png" alt="color"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
-								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparent</h3>		
+								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparency</h3>		
 								<p style="text-align:center;font-weight:100;padding:0 30px;">Minimize internal flaws that causes the diamond to look hazy or yellow.</p>
 							</div>
 
@@ -1089,8 +1078,8 @@
 			<div class="row">
 				<div class="col-sm-2 "></div>
 				<div class="col-sm-6">
-					<h2>Your Perfect Diamond Engagement Ring</h2>
-					<h5>Our Recommendations</h5>
+					<h2>Your Diamond Engagement Ring Recommendations</h2>
+					
 				</div>
 				<div class="col-sm-4"></div>
 			</div>
@@ -1197,6 +1186,10 @@
 
 	$(document).ready(function(){
 	
+/*		$('#myModal_contact_us').modal({
+			  keyboard: false
+			})
+*/	
 		//$("#1,#2, #3, #4").click(function(){
 			//$("#1,#2,#3,#4").val("")});
 		
@@ -1226,12 +1219,12 @@
 					$("#myModal_schedule").modal('hide');
 					$("#myModal_thanks").modal('show');	
 				}).error(function(){
-					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.net to let us know? Error #1AX')
+					alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1AX')
 				});
 			}	
 			else
 			{
-				alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.net to let us know? Error #1BX')
+				alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1BX')
 			}
 		});
 		
@@ -1255,12 +1248,12 @@
 					});			
 					$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');					
 				}).error(function(){
-					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.net to let us know? Error #1AT')
+					alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1AT')
 				});
 			}	
 			else
 			{
-				alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.net to let us know? Error #1BT')
+				alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1BT')
 			}
 		});
 				
@@ -1532,16 +1525,16 @@
 				if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
 				{
 					//$("#sum").removeClass(has-error);
-					//console.log('final2');
+					console.log((parseInt($("#1").text().charAt(0))*10).toString());
 					$.post('/step6',{
 						/*selection_size: 40,
 						selection_sparklie: 20,
 						selection_purity: 20,
 						selection_transparency: 20*/
-						selection_size: 25,
-						selection_sparklie: 25,
-						selection_purity: 25,
-						selection_transparency:25
+						selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
+						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
+						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
+						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
 					}).done(function(data){
 						//console.log('done');
 						//console.log(JSON.parse(data));
