@@ -1065,7 +1065,7 @@
 		</div>
 		
 		<!-- RESULTS -->
-		<div id="section_result" style="display:show;">				
+		<div id="section_result" style="display:none;">				
 			<div class="row">
 					<div class="col-sm-12">	
 						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">OUR RECOMMENDATIONS
@@ -1147,7 +1147,7 @@
 	
 	
 		<!-- Foot note container starts here -->	
-		 <div style="background-color:rgb(23,27,38); width:100%; margin-top: 25px; padding: 20px; min-height:60px; bottom:0px;">
+		 <div style="background-color:rgb(23,27,38); width:100%; padding: 20px; min-height:60px; bottom:0px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12" style="padding-top:10px;color:white;">
@@ -1192,6 +1192,7 @@
 			startDate: Date()
 		});		
 		
+		//Send email for scheduling appointment with jeweler
 		$("#send_email").submit(function(event){
 			if ($("#first_name").val() !=	"" &&  $("#email").val() != "" && $("#date_show").val() != "")
 			{
@@ -1221,6 +1222,7 @@
 			}
 		});
 		
+		//Send email for contacting us
 		$("#send_email2").submit(function(event){
 			if ($("#first_name2").val() !=	"" &&  $("#email2").val() != "")
 			{
@@ -1236,9 +1238,10 @@
 				}).done(function(){
 					$("#myModal_contact_us").modal('hide');
 					$("#myModal_thanks").modal('show');	
-					$("#section_result").slideDown(10,'linear',function(){
+					//Hiding the section that shows the results/recommendation engine
+					/*&$("#section_result").slideDown(10,'linear',function(){
 						$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-					});			
+					});*/	
 					$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');					
 				}).error(function(){
 					alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1AT')
@@ -1250,7 +1253,7 @@
 			}
 		});
 				
-				
+		//Voting for favorite ring		
 		$("#vote").click(function(){
 			//console.log($("#main_ring_ringname").attr('data'));
 			var value = parseInt($("#ring_votes").text())
@@ -1259,9 +1262,6 @@
 				main_ring_id: $("#main_ring_ringname").attr('data')
 			});
 		});			
-				
-		
-
 		
 		$("#main_ring_image_url2").click(function(){
 			var image1 = $("#main_ring_image_url1").attr('src');
@@ -1279,11 +1279,11 @@
 		});
 
 		$("#start,#start2").on('click', function(){
-		$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');		
-		$("#section_city").slideDown(3,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');		
+			$("#section_city").slideDown(3,'linear',function(){
+					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+				});
 			});
-		});
 		
 		$("#city1,#city2,#city3").on('click', function(){
 			$("#city1_show,#city2_show,#city3_show").removeClass("show").addClass('hide');
@@ -1298,8 +1298,6 @@
 			});
 		});
 
-		
-				
 		$("#setting1,#setting2,#setting3").on('click', function(){
 			$("#setting1_show,#setting2_show,#setting3_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
@@ -1323,8 +1321,6 @@
 				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
 			});
 		});						
-				
-			
 				
 		$("#shape1,#shape2,#shape3").on('click', function(){
 			$("#shape1_show,#shape2_show,#shape3_show").removeClass("show").addClass('hide');
@@ -1366,8 +1362,6 @@
 				});		
 			});				
 			
-
-				
 		$("#submit").on('click', function(){		
 			var basicValues = $("#slider").rangeSlider("values");
 			if ((basicValues.max-basicValues.min) >2500)
@@ -1391,6 +1385,7 @@
 					});
 				};	
 		});		
+		
 		/*
 		var sum = 0;
 		$("input[name=preference]").keyup(function(event){
@@ -1417,12 +1412,9 @@
 		});		
 		*/	
 		
-				
 		$(".contentBox").hover(function(){
 			//console.log('fire'),
-			$(this).toggleClass('content-shadow');
-			
-				
+			$(this).toggleClass('content-shadow');	
 		});
 		
 		function calculator(){
@@ -1451,31 +1443,26 @@
 			calculator(data)
 		});	
 				
-		$("#share_facebook").hover(
-		function(){
+		$("#share_facebook").hover(function(){
 			$(this).css('background-position','0 -16px');
 			}, function(){
 			$(this).css('background-position','0 0px');
 			}
 		);
 			
-		
-		$("#share_twitter").hover(
-		function(){
+		$("#share_twitter").hover(function(){
 			$(this).css('background-position','0 -176px');
 			}, function(){
 			$(this).css('background-position','0 -160px');
 			}
 		);
 			
-		
-		$("#share_pinterest").hover(
-		function(){
-			$(this).css('background-position','0 -96px');
-			}, function(){
-			$(this).css('background-position','0 -80px');
-			}
-			);
+		$("#share_pinterest").hover(function(){
+				$(this).css('background-position','0 -96px');
+				}, function(){
+				$(this).css('background-position','0 -80px');
+				}
+		);
 		
 		$("#schedule").click(function(){
 			$('#myModal_schedule').modal({
@@ -1484,12 +1471,14 @@
 						});
 		});
 	
+	
+		//JS for kicking of/ terms and conditions
 		$("a[name='terms']").on('click',function(){
 				$('#myModal_terms').modal({
 						keyboard : true,
 						backdrop: true,
 						})})
-		
+		//JS for kicking off privacy terms
 		$("a[name='privacy']").on('click',function(){
 				$('#myModal_privacy').modal({
 						keyboard : true,
@@ -1518,7 +1507,7 @@
 				if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
 				{
 					//$("#sum").removeClass(has-error);
-					console.log((parseInt($("#1").text().charAt(0))*10).toString());
+					//console.log((parseInt($("#1").text().charAt(0))*10).toString());
 					$.post('/step6',{
 						/*selection_size: 40,
 						selection_sparklie: 20,
@@ -1794,8 +1783,7 @@
 					}
 			}
 		});*/
-		
-		
+			
 		$('#next').click(function(){
 			if (insideCounter == 1)
 				{
@@ -1996,9 +1984,7 @@
 
 		});		
 			
-		
-		
-		
+
 	});
 	
 	
