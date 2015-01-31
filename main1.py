@@ -62,7 +62,7 @@ class new_inventory(ndb.Model):
     votes = ndb.IntegerProperty(indexed=True)
     local_merchant_flag = ndb.IntegerProperty(indexed=True)
     priority_score = ndb.IntegerProperty(indexed=True)
-    merchant_city = ndb.StringProperty(indexed=True)
+    merchant_city = ndb.IntegerProperty(indexed=True)
     
 class user_input_db(ndb.Model):
     #sessionID = ndb.StringProperty(indexed=True)
@@ -111,7 +111,7 @@ class Step_city(webapp2.RequestHandler):
         session = get_current_session()
         internalCounter = self.request.get('internalCounter')
         user_city = self.request.get('city')
-        #user_city = str(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
+        user_city = int(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'User City'
@@ -187,6 +187,7 @@ class Step6(webapp2.RequestHandler):
         user_setting_list = []
         user_metal_list = []
         user_price_lower = session.get('user_price_lower')
+        print user_price_lower 
         user_price_lower = float(user_price_lower)	
         user_price_upper = session.get('user_price_upper')
         user_price_upper = float(user_price_upper)	
@@ -235,7 +236,7 @@ class Step6(webapp2.RequestHandler):
         influence_purity = user_selection_purity / 100   
         influence_transparency = user_selection_transparency / 100   
 
-        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==str(user_city)).fetch()
+        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==int(user_city)).fetch()
 
         inventory_size={}
         inventory_sparkle = {}
