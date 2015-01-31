@@ -1298,7 +1298,7 @@
 			$(title).addClass('show').css('display','block');
 			console.log(parseInt($(this).data('value_id')));
 			$.post("/Step_city", {
-				city: 	$(this).data('value_id')
+				city: 	parseInt($(this).data('value_id'))
 				});
 			$("#section_setting").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
