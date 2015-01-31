@@ -315,10 +315,10 @@
 						<div class="row">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie.</h2>
+								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie</h2>
 							</div>
 							<div class="modal-body" style="padding-top:10px;">
-								We're also testing (beta) a recommendation engine so look below to see if any of these interest you. 
+								We're also testing some ring recommendations so take a quick look. 
 							</div>
 						</div>
 					 </div>
@@ -357,7 +357,7 @@
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
-							<div class="col-sm-8"  style="padding-left:0;padding-right:0;">
+							
 								<form role="form" id="send_email2">
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
@@ -396,11 +396,11 @@
 										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
 										</div>
 								</form>
-									<div class="col-sm-4"></div>
+									
 							
-							</div>
+							
 						
-							<div class="col-sm-4" style="padding-left:0;">								
+							<!--	<div class="col-sm-4" style="padding-left:0;">								
 								<label>Map</label>
 								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
 									<div style="padding-top:15px;">
@@ -408,8 +408,8 @@
 									<p>2120 Mason St.</p>
 									<p>San Francisco, CA 94133</p>
 									</div>
-								</div>
-							</div>
+								</div>-->
+							
 						</div>
 					 </div>
 				</div><!-- /.modal-content -->
@@ -546,7 +546,7 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="col-sm-4">
 							<div class="col-sm-12">
-								<img src="/images/chicago.jpg" alt="Chicago"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<img src="/images/chicago.jpg" alt="Chicago Photo by Andrew Langdal CC BY-NC 2.0" class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Chicago</h3>
 							</div>
 								
@@ -566,7 +566,7 @@
 						
 						<div class="col-sm-4">
 							<div class="col-sm-12">
-								<img src="/images/sf.jpg" alt="San Francisco"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>
+								<img src="/images/sf.jpg" alt="Golden Gate photo by hn79 CC BY-SA 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>
 								<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
 							</div>
 
@@ -585,7 +585,7 @@
 						
 						<div class="col-sm-4">
 							<div class="col-sm-12">
-								<img src="/images/nyc.jpg" alt="NYC"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<img src="/images/nyc.jpg" alt="Chrysler Building at Sunset, Midtown NYC by Chris Ford CC BY-NC 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">New York</h3>
 							</div>
 							
@@ -763,11 +763,11 @@
 							<div style="min-height:400px;">
 								<img src="/images/platinum.jpg" alt="platinum"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Platinum</h3>
-								<p style="text-align:center;font-weight:100;padding:0px 30px">Extremely rare and naturally hypoallergenic metal, platinum latests forever.</p>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Extremely rare and naturally hypoallergenic metal, platinum last forever.</p>
 							</div>
 							
 							<div class="col-sm-8 col-sm-offset-2">
-								<div style="text-align:center;margin-bottom:50px;">
+								<div style="text-align:center;margin-bottom:50px;">s
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal3" name="metal" data-value_id="platinum">Select</a>
 								</div>
 							</div>		
@@ -1065,28 +1065,21 @@
 		</div>
 		
 		<!-- RESULTS -->
-		<div id="section_result" style="display:none;">		
+		<div id="section_result" style="display:show;">				
 			<div class="row">
-				<div class="col-sm-12">
-					<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
-					<div style="text-align:center;margin-top:-45px">
-						<i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i>
-					</div>
-				</div>
-			</div>
-		
-			<div class="row">
-				<div class="col-sm-2 "></div>
-				<div class="col-sm-6">
-					<h2>Your Diamond Engagement Ring Recommendations</h2>
-					
-				</div>
-				<div class="col-sm-4"></div>
+					<div class="col-sm-12">	
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">OUR RECOMMENDATIONS
+						<!--<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-diamond fa-stack-1x"></i>
+						</span>-->
+						</h2>
+					</div>		
 			</div>
 			
 			<div class="row">
 				<div class="col-sm-12">
-						<div style="margin:30px auto; width:100%; height:1px; background:grey;"></div>
+						<div style="margin:30px auto; width:100%; height:0px; background:grey;"></div>
 				</div>
 			</div>				
 				
@@ -1515,7 +1508,7 @@
 			//console.log('final');
 			$("#back").css('visibility','visible');
 			$('#myModal_contact_us').modal({
-				keyboard : true,
+				keyboard : true,	
 				backdrop: true,
 			});
 
