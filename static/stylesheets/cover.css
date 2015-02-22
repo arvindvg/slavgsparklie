@@ -1,0 +1,269 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+.btn-clear {
+  color: #ffffff;
+  background-color: rgba(148,166,39,1);
+  width:100px;
+  border-radius: 0px;
+}
+
+.btn-clear:hover,
+.btn-clear:focus,
+.btn-clear:active,
+.btn-clear.active,
+.open .dropdown-toggle.btn-default {
+  color: #000000;
+  background-color: rgba(148,166,39,1);
+
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  font-family: 'Fira Sans';
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+
+	  display: table;
+	  width: 100%;
+	  height: 100%; /* For at least Firefox */
+	min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,0.4);
+          box-shadow: inset 0 0 100px rgba(0,0,0,0.4);
+	background-image: url(/images/launch_1024.jpg);
+	background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;	
+	
+	
+	 	
+}
+
+.image {
+	height:600px;
+	background-image: url(/images/DeathtoStock_Medium5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position:50% 0%;
+
+}
+
+
+/*
+#introAnimation{
+ /* For Safari 3.1 to 6.0 *//*
+	-webkit-animation-name:introAnimation2 
+	-webkit-animation-delay: 15s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration:1s;
+	-webkit-animation-fill-mode: forwards;
+
+    /* Standard syntax *//*
+	animation:introAnimation2;
+	animation-delay: 15s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+	 	
+}
+
+@-webkit-keyframes introAnimation2{
+  0%   { position: absolute;}
+  
+  100% { visibility: hidden;}
+}
+
+@keyframes introAnimation2{
+  0%   { position: absolute;}
+  
+  100% { visibility: hidden;}
+}
+*/
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+  
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top:50px;
+  padding-bottom:50px;
+  background-color:rgba(0,0,0,.4);
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+.introAnimation{
+	background-color: rgb(243,243,245);
+/* For Safari 3.1 to 6.0 */
+	
+	-webkit-animation-name:introAnimation 
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration:5s;
+	-webkit-animation-fill-mode: forwards;
+
+    /* Standard syntax */
+	animation:introAnimation;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration:5s;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes introAnimation{
+  0%   { opacity: 0;}
+  
+  100% { opacity: 1;}
+}
+
+@keyframes introAnimation {
+  0%   { opacity: 0;}
+  
+  100% { opacity: 1;}
+}
+  
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}

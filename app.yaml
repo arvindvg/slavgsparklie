@@ -1,5 +1,5 @@
 application: s~slavgsparklie
-version: 2
+version: 3
 runtime: python27
 api_version: 1
 threadsafe: no
@@ -15,6 +15,17 @@ handlers:
 - url: /bootstrap
   static_dir: static/bootstrap
   
+- url: /bootstrap
+  static_files: static/bootstrap
+  upload: static/bootstrap/(.*)   
+  
+- url: /bootstrap-magnify-master
+  static_dir: static/bootstrap-magnify-master
+ 
+- url: /bootstrap-magnify-master
+  static_files: static/bootstrap-magnify-master
+  upload: static/bootstrap-magnify-master/(.*)   
+  
 - url: /jquery-ui-1.11.1
   static_dir: static/jquery-ui-1.11.1
   
@@ -23,41 +34,37 @@ handlers:
 
 - url: /jqrangeslider-5.7.0
   static_dir: static/jqrangeslider-5.7.0  
+
+- url: /jqrangeslider-5.7.0/css
+  static_files: static/jqrangeslider-5.7.0/css
+  upload: static/jqrangeslider-5.7.0/css/(.*)
   
 - url: /eternicode-bootstrap-datepicker-37db99f
   static_dir: static/eternicode-bootstrap-datepicker-37db99f
   mime_type: application/javascript
+
+- url: /eternicode-bootstrap-datepicker-37db99f/css
+  static_files: static/eternicode-bootstrap-datepicker-37db99f/css
+  upload: static/eternicode-bootstrap-datepicker-37db99f/css/(.*)    
   
 - url: /bootstrap-datetimepicker-0.0.11
   static_dir: static/bootstrap-datetimepicker-0.0.11
   mime_type: application/javascript
   
+- url: /bootstrap-datetimepicker-0.0.11/css
+  static_files: static/bootstrap-datetimepicker-0.0.11/css
+  upload: static/bootstrap-datetimepicker-0.0.11/css/(.*)  
+  
 - url: /jquery-cookie-master/src
   static_dir: static/jquery-cookie-master/src
   
-- url: /bootstrap
-  static_files: static/bootstrap
-  upload: static/bootstrap/(.*)   
-
 - url: /stylesheets
   static_dir: static/stylesheets
 
 - url: /stylesheets
   static_files: static/stylesheets
   upload: static/stylesheets/(.*)   
-
-- url: /jqrangeslider-5.7.0/css
-  static_files: static/jqrangeslider-5.7.0/css
-  upload: static/jqrangeslider-5.7.0/css/(.*)
-  
-- url: /bootstrap-datetimepicker-0.0.11/css
-  static_files: static/bootstrap-datetimepicker-0.0.11/css
-  upload: static/bootstrap-datetimepicker-0.0.11/css/(.*)  
-  
-- url: /eternicode-bootstrap-datepicker-37db99f/css
-  static_files: static/eternicode-bootstrap-datepicker-37db99f/css
-  upload: static/eternicode-bootstrap-datepicker-37db99f/css/(.*)    
-  
+      
 - url: /javascript
   static_dir: static/javascript
 
@@ -68,13 +75,13 @@ handlers:
 - url: /images
   static_dir: static/images
  
-- url: /favicon\.ico
-  static_files: static/images/favicon.ico
-  upload: static/images/favicon\.ico
-  
 - url: /images/(.*)
   static_files: static/images/\1
   upload: static/images/(.*)  
+ 
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
   
 - url: /html
   static_dir: static/html

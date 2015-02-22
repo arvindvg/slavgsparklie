@@ -24,6 +24,10 @@ user_city_code = {1 : 'San Francisco',2 : 'Chicago',3:'New York'}
 jinja_environment = jinja2.Environment(autoescape=True,
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__),'html')))  #editing the path location of the template files
 
+class email2_db(ndb.Model):
+	unique_id=ndb.StringProperty(indexed=True)
+	email = ndb.StringProperty(indexed=True)
+	
 class event_db(ndb.Model):
     unique_id=ndb.StringProperty(indexed=True)
     event_type =  ndb.StringProperty(indexed=True)
@@ -941,6 +945,21 @@ class CreateTransaction(webapp2.RequestHandler):
             return "<h1>Error: {0}</h1>".format(result.message)
     if __name__ == '__main__':
         app.run(debug=True)
+		
+		
+class MainPage(webapp2.RequestHandler):
+
+    def get(self):
+        template = jinja_environment.get_template('launch.html')
+        self.response.out.write(template.render())
+		
+class launch(webapp2.RequestHandler):
+    def post(self):
+        user_email = self.request.get('email')
+        input = email2_db(email=user_email)
+        input.put()
+ 
+
 
             
 application = webapp2.WSGIApplication([
@@ -959,6 +978,7 @@ application = webapp2.WSGIApplication([
 ('/create_transaction', CreateTransaction),
 ('/email_message', email_message),
 ('/email_message2', email_message2),
+('/launch', launch),
 ('/Step_city', Step_city),
 ], debug=True)
 #important to write a 404 page response, to have it push to the blog with a contact info about something that went wrong
