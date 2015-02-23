@@ -121,7 +121,7 @@ class Step_city(webapp2.RequestHandler):
         event_type = 'User City'
         session['user_city'] = user_city
         session['internalCounter'] = internalCounter
-        input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_city)
+        input = event_db(unique_id=unique_id,event_type=event_type,event_value=str(user_city))
         input.put()
 
 class Step2(webapp2.RequestHandler):
@@ -478,7 +478,11 @@ class Step7(webapp2.RequestHandler):
                 local_merchant_flag[result.count] = result.local_merchant_flag
                 inventory_merchant_id[result.count] = result.Merchant_id
         total_products = len(best_overall)
+        print "total product"
+        print total_products
         pagination_number = self.request.get("pagination_counter")
+        print "pagination_number"
+        print pagination_number
         pagination_number = int(pagination_number)
         ring_selection = best_overall[pagination_number]
         event_type = "Ring impression"        
