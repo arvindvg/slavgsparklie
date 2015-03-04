@@ -42,7 +42,7 @@
   <body>
   
 		<!-- Fixed navbar to top-->
-		<nav class="navbar navbar-default navbar-static-top " style="background-color:rgb(23,27,38);border:0px;">
+		<nav class="navbar navbar-default navbar-static-top" style="background-color:rgb(23,27,38);border:0px;">
 		  <div class="container">
 			<div class="navbar-header" >
 			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -57,7 +57,8 @@
 			  <ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="#">HOME</a></li>-->
 				<li><a href="#howitworks">HOW IT WORKS</a></li>
-				<li><a href="#aboutus">ABOUT US</a></li>
+				<li><a href="#aboutus">OUR STORY</a></li>
+				<li><a href="#aboutus">FAQ</a></li>
 				<!--<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				  <ul class="dropdown-menu" role="menu">
@@ -358,6 +359,8 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
+						
+						We ask for this information so that we can contact you personally to showcase our hand-picked rings. We won't ever sell your information. 
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
@@ -420,7 +423,76 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 
-
+		<!-- Modal for inviting family -->
+		<div class="modal fade" id="myModal_family" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
+						
+						We ask for this information so that we can contact you personally to showcase our hand-picked rings.
+					</div>
+					<div class="modal-body" style="padding-top:10px;">
+						<div class="row">
+							
+								<form role="form" id="send_email2">
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="First">First Name</label>
+										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
+										</div>
+									</div>
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="Last">Last Name</label>
+										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
+										</div>
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="Email">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="Phone">Phone</label>
+										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="subject">Subject</label>
+										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
+									  </div>
+						  
+									  <div class="form-group col-sm-12">
+										<label for="textarea">Message</label>
+										<textarea class="form-control" id="message2" placeholder="Optional, anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
+									  </div>
+									  
+									  <div class="form-group col-sm-12">
+										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
+										</div>
+								</form>
+									
+							
+							
+						
+							<!--	<div class="col-sm-4" style="padding-left:0;">								
+								<label>Map</label>
+								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
+									<div style="padding-top:15px;">
+									<h5>Sparklie, Inc.</h5>
+									<p>2120 Mason St.</p>
+									<p>San Francisco, CA 94133</p>
+									</div>
+								</div>-->
+							
+						</div>
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
 
 
 
@@ -432,13 +504,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-lg-offset-3">	
-						<div style="margin-top:42%;"><!-- This might need to by dynamic to the screen size -->
-							<h1 style="text-align:center;line-height:1.4;font-size:250%;font-weight:900;">We believe every couple deserves to find their perfect engagement ring</h1><br/>
+						<div style="margin-top:35%;"><!-- This might need to by dynamic to the screen size -->
+							<h1 style="text-align:center;line-height:1.4;font-size:280%;font-weight:900;">We help guys discover and buy the perfect engagement ring.</h1><br/>
+							<p style="text-align:center;font-size:1.5em;margin-top:5px;font-weight:900;">Being in love feels great, buying a ring should too!</p><br/>
 							<!--<p style="text-align:center;line-height:1.4;font-style:italic;font-size:130%;">Let us help you</p><br/>-->
 							
 							<div class="col-xs-8 col-xs-offset-2">
 								<div style="text-align:center;">
-									<a style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="start">TRY US!</a>
+									<a style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="start">TRY US! IT'S FREE</a>
 								</div>
 							</div>
 						</div>
@@ -447,8 +520,123 @@
 			</div>
 		</div>
 		
+		
+
+		<!-- DISCOVER YOUR STYLE -->
+		<div class="container-fluid">
+			<div class="row" >
+				<div class="col-sm-10 col-sm-offset-1" style="padding-top:0px;text-align:center;">
+					<h3 style="font-weight:900;">DISCOVER THE STYLE</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="imageLove">
+					</div>
+				</div>
+			
+				<div class="col-lg-4" style="height:75vh;display:table-cell;vertical-align:middle;float:none;border:0px solid gray;padding-left:0px;">
+					<div style="text-align:center;"><!-- This might need to by dynamic to the screen size -->
+						<div class="col-sm-12">
+							<p style="text-align:center;font-weight:100;font-size:120%;">We understanding finding a ring can be hard. You're overwhelmed with information, options, and decisions. So, we've created a style guide that helps uncover the right ring from cool brands for you. It's simple and free</p>
+						</div>
+					</div>
+					
+					<div class="row">
+							<div class="col-sm-12">
+								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/pollywales_logo.png" alt="Polly Wales" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/JudeFrances_logo.png" alt="Jude Frances" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:43px 0px;"><img src="/images/single_stone_logo.png" alt="Single Stone" class="center-block img-responsive" /></div>
+							</div>
+						</div>
+					<div class="row">
+							<div class="col-sm-12">						
+								<div class="col-sm-4" style="margin:30px 0px;"><img src="/images/toddredd_logo.png" alt="Todd Redd" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:34px 0px;"><img src="/images/meganthorne_logo.png" alt="Megan Thorne" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:33px 0px;"><img src="/images/paulmorelli_logo.png" alt="Paul Morelli" class="center-block img-responsive" /></div>
+							</div>
+					</div>			
+					
+				</div>
+			</div>
+
+			
+		</div>
+		
+		
+		<!-- HELP ALONG THE WAY -->
+		<div class="container-fluid" style="background-color:rgb(243,243,245);">
+			<div class="row">
+				<div class="col-lg-6" >
+					<div style="padding-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
+						<h3 style="font-weight:900;">HELP ALONG THE WAY</h3><br/>
+						
+						
+						<div class="col-sm-10 col-sm-offset-1">
+							<!--<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:0%; border:3px solid rgb(214,140,137);padding: 5px 11px;">X</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">A real person to answer your questions</h3><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our Ambassadors have curated and compared rings from unique brands and retailers just for you. Let a real person help answer all your questions so you don't have to do the work.</p>-->
+							<p style="text-align:center;font-weight:100;font-size:120%;">After reviewing different rings, you might need some help narrowing down your choices. That's why our jewelry experts can help. Each of our experts is trained by the Gemological Institute of America, the world's foremost authority on gems. They'll answering all your questions and guide you along the way. They aren't compensated by comission so they won't try to upsell you.</p>
+						</div>
+						
+					</div>
+				</div>
+				
+				<div class="col-lg-6" style="margin:0;padding:0;">
+					<div class="image">
+						
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			
+		</div>	
+	
+		
+		<!-- UNIQUE BRANDS -->
+		<div class="container-fluid" style="background-color:rgb(243,243,245);"><!-- style="margin-top:0px;border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);" -->
+			<div class="row">
+			
+			<div class="col-lg-6" style="margin:0;padding:0;">
+					<div class="imageFulton">
+						
+					</div>
+				
+				</div>
+			
+			
+				<div class="col-lg-6" >
+					<div style="padding-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
+						<h3 style="font-weight:900;">VIEW IN STORES</h3><br/>
+						
+						
+						<div class="col-sm-10 col-sm-offset-1">
+							<!--<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:0%; border:3px solid rgb(214,140,137);padding: 5px 11px;">X</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">A real person to answer your questions</h3><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our Ambassadors have curated and compared rings from unique brands and retailers just for you. Let a real person help answer all your questions so you don't have to do the work.</p>-->
+							<p style="text-align:center;font-weight:100;font-size:120%;">Sure, we can ship it to your doorsteps. But we know you want to see the ring first. That's why we've partnered with select, local retailers. We'll help schedule your appointment and handle all your needs so you'll have a great experience.</p>
+						</div>
+						
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>	
+		
+
 		<!-- How it works -->
-		<div class="container-fluid" style="background-color:rgb(243,243,245);margin-top:-30px;">
+		<div class="container-fluid" style="border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);">
 			<!--<div class="row">
 			
 				<div class="col-sm-12">
@@ -460,7 +648,7 @@
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
 					<div style="margin-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
-						<h3 style="font-weight:900;">Buying an engagement ring is now easier</h3><br/>
+						<h3 style="font-weight:900;">HOW IT WORKS</h3><br/>
 						
 						<div class="col-sm-4" style="padding-bottom:15px;">
 							<div style="text-align:center;margin-top:45px">
@@ -475,15 +663,15 @@
 								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">2</span>
 							</div>
 							<h3 style="text-align:center;font-weight:700;">Help Along the Way</h3>
-							<p style="text-align:center;font-weight:100;font-size:120%;">We've hand-picked unique rings made by unique jewelers for your. In addition, our experienced ambassadors will contact you to review styles, and preferences, answering all your questions.</p>
+							<p style="text-align:center;font-weight:100;font-size:120%;">We've hand-picked a selection of rings from unique jewelers for your convenience. Our jewelry experts are available to review styles and preferences, answering all your questions along the way.</p>
 						</div>
 					
 						<div class="col-sm-4" style="padding-bottom:15px;">
 							<div style="text-align:center;margin-top:45px">
 								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">3</span>
 							</div>
-							<h3 style="text-align:center;font-weight:700;">Buy From Local Stores</h3>
-							<p style="text-align:center;font-weight:100;font-size:120%;">Before you pay, visit any of our local retailers to see the ring in-person. Our jewelers can even go shopping with you.</p>
+							<h3 style="text-align:center;font-weight:700;">View in Stores</h3>
+							<p style="text-align:center;font-weight:100;font-size:120%;">No matter how hard we try, jewelry is best viewed in person. That's why we've partnered with select, local retailers so you can always walk-in.</p>
 						</div>
 					</div>
 				</div>
@@ -524,63 +712,12 @@
 			</div>
 			
 		</div>	
-	
-		
-		<!-- Our Jewelers -->
-		<div class="container-fluid" style="margin-top:-30px;">
-			<div class="row">
-			
-				<div class="col-lg-6" style="margin:0;padding:0;">
-					<div class="image">
-						
-					</div>
-				
-				</div>
-			
-			
-				<div class="col-lg-6" style="border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);">
-					<div style="margin-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
-						<h3 style="font-weight:900;">Your Personal Jeweler</h3><br/>
-						
-						
-						<div class="col-sm-10 col-sm-offset-1">
-							<div style="text-align:center;margin-top:45px">
-								<span style="color:rgb(214,140,137);font-size:18px;border-radius:0%; border:3px solid rgb(214,140,137);padding: 5px 11px;">X</span>
-							</div>
-							<h3 style="text-align:center;font-weight:700;">A real person to answer your questions</h3><br/>
-							<p style="text-align:center;font-weight:100;font-size:120%;">Our Ambassadors have curated and compared rings from unique brands and retailers just for you. Let a real person help answer all your questions so you don't have to do the work.</p>
-						</div>
-						<div class="row">
-							<div class="col-sm-10 col-sm-offset-1">
-								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/pollywales_logo.png" alt="Polly Wales" class="center-block img-responsive" /></div>
-								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/JudeFrances_logo.png" alt="Jude Frances" class="center-block img-responsive" /></div>
-								<div class="col-sm-4" style="margin:43px 0px;"><img src="/images/single_stone_logo.png" alt="Single Stone" class="center-block img-responsive" /></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-10 col-sm-offset-1">						
-								<div class="col-sm-4" style="margin:30px 0px;"><img src="/images/toddredd_logo.png" alt="Todd Redd" class="center-block img-responsive" /></div>
-								<div class="col-sm-4" style="margin:34px 0px;"><img src="/images/meganthorne_logo.png" alt="Megan Thorne" class="center-block img-responsive" /></div>
-								<div class="col-sm-4" style="margin:33px 0px;"><img src="/images/paulmorelli_logo.png" alt="Paul Morelli" class="center-block img-responsive" /></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-
-			</div>
-			
-			
-			
-		</div>	
-	
 		
 		<!-- Our Curation -->
 		<div class="container-fluid" style="background-color:rgb(243,243,245);">
-		
 			<div class="row">
 				<div class="col-lg-12" style="border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);">
-					<div style="margin-top:50px;text-align:center;">
+					<div style="margin-top:0;text-align:center;">
 						
 						
 						<div class="col-sm-4 col-sm-offset-4">
@@ -592,7 +729,7 @@
 							
 								<h3 style="font-weight:900;">Discover Your Ring</h3><br/>
 						
-								<p style="text-align:center;font-weight:100;font-size:120%;padding:0 100px;">Find your style, discover your rings, and let us start showing you a world of possibilities.</p>
+								<p style="text-align:center;font-weight:100;font-size:120%;padding:0 100px;">Find your style, discover your favorite rings, and let us start showing you a world of possibilities.</p>
 						
 							<div style="text-align:center;margin-top:45px;color:rgb(214,140,137);">
 								<i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i>
@@ -640,21 +777,41 @@
 				
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">Sparklie is currently only available in three cities</p>
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">Sparklie is currently only available in NYC, but we're working on launching in SF and Chicago cities</p>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
+						
 						<div class="col-sm-4">
 							<div class="col-sm-12">
-								<img src="/images/chicago.jpg" alt="Chicago Photo by Andrew Langdal CC BY-NC 2.0" class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<img src="/images/nyc.jpg" alt="Chrysler Building at Sunset, Midtown NYC by Chris Ford CC BY-NC 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">New York</h3>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city2" name="city" data-value_id="3">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="city2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/chicago.jpg" alt="Chicago Photo by Andrew Langdal CC BY-NC 2.0" class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;opacity:0.5;"/>		
 								<h3 style="text-align:center;font-weight:900;">Chicago</h3>
 							</div>
 								
 							<div class="col-sm-8 col-sm-offset-2">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city1" name="city" data-value_id="2">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified " role="button" id="city1" name="city" data-value_id="2">Select</a>
 								</div>
 							</div>
 						
@@ -668,13 +825,13 @@
 						
 						<div class="col-sm-4">
 							<div class="col-sm-12">
-								<img src="/images/sf.jpg" alt="Golden Gate photo by hn79 CC BY-SA 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>
+								<img src="/images/sf.jpg" alt="Golden Gate photo by hn79 CC BY-SA 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;opacity:0.5;"/>
 								<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
 							</div>
 
 							<div class="col-sm-8 col-sm-offset-2">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city3" name="city" data-value_id="1">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city3" name="city" data-value_id="1">Select</a>
 								</div>
 							</div>
 							
@@ -685,24 +842,7 @@
 							</div>
 						</div>	
 						
-						<div class="col-sm-4">
-							<div class="col-sm-12">
-								<img src="/images/nyc.jpg" alt="Chrysler Building at Sunset, Midtown NYC by Chris Ford CC BY-NC 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
-								<h3 style="text-align:center;font-weight:900;">New York</h3>
-							</div>
-							
-							<div class="col-sm-8 col-sm-offset-2">
-								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified" role="button" id="city2" name="city" data-value_id="3">Select</a>
-								</div>
-							</div>
-							
-							<div class="col-sm-8 col-sm-offset-2">
-								<div id="city2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
-									<i class="fa fa-check-circle-o"></i>
-								</div>
-							</div>
-						</div>	
+
 					</div>	
 				</div>
 			
@@ -1167,7 +1307,7 @@
 		</div>
 		
 		<!-- RESULTS -->
-		<div id="section_result" style="display:show;">				
+		<div id="section_result" style="display:none;">				
 			<div class="row">
 				<div class="col-sm-12">	
 					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
@@ -1176,7 +1316,7 @@
 					
 				
 			<div class="row">
-				<div class="col-sm-12" style="padding-bottom:400px;">		
+				<div class="col-sm-12" style="padding-bottom:200px;">		
 					
 						<div class="col-sm-3 col-sm-offset-2">
 							<div id="myCarousel" class="carousel slide">
@@ -1187,7 +1327,105 @@
 										
 									</div>
 									<div class="item">
-										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="margin-bottom:10px;padding:0px 0px;border:0;" id="main_ring_image_url2">
+										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
+									</div>
+								</div>
+								
+								<!-- Controls -->
+									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
+											<span class="glyphicon glyphicon-chevron-left"></span>
+									</a>
+
+									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right"></span>
+									</a>
+							</div>
+
+
+
+							
+						</div>
+						
+						
+						
+						<div class="col-sm-5 col-sm-offset-1">
+						
+							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"><!--SIGNATURE PAVE CROWN--></p>
+							<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p>
+							<h1>$ <!--3,500*--><span id="main_ring_price"></span></h1>
+							<div>
+								<h4>Description</h4>
+									<p id="main_ring_ringdesc">
+										<!--Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. -->
+									</p>
+							</div>
+							<!-- <a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
+							<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> -->
+							<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
+							<i class="fa fa-heart-o"></i> Love It 
+							<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
+							</button>-->
+							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
+							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> 
+							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="share" target="_blank">Invite Family/Friend to Help</a> <br/><br/>
+								<hr style="margin-top:0px;margin-bottom:13px;"/>
+								
+								<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
+								<!--<a href="#" class="btn btn-default btn-lg disabled">
+									<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
+									Wish List - Coming Soon
+								</a><br/>-->
+								
+								<div style="padding-top:5px;">	
+									<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
+									
+									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
+									
+									<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">less<i class="fa fa-angle-double-left"></i></div>
+								
+									<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;"> <i class="fa fa-angle-double-right"></i>more</div>
+								
+									
+									<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
+									This needs to pull the current page your as assign to url,
+									It needs to pull the image file url
+									and to write a description for the file
+									http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
+									-->
+								</div>
+								
+								
+						</div>
+					</div>	
+
+					
+				
+			</div>
+		</div>
+	
+	
+	<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
+		<div id="section_resultTemp" style="display:none;">				
+			<div class="row">
+				<div class="col-sm-12">	
+					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
+				</div>		
+			</div>
+					
+				
+			<div class="row">
+				<div class="col-sm-12" style="padding-bottom:200px;">		
+					
+						<div class="col-sm-3 col-sm-offset-2">
+							<div id="myCarousel" class="carousel slide">
+								<div class="carousel-inner">
+									<div class="item active">
+										
+										<img data-toggle="magnify" src="/images/Estenza/s08122w_front.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >
+										
+									</div>
+									<div class="item">
+										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
 									</div>
 								</div>
 								
@@ -1219,14 +1457,15 @@
 										Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. 
 									</p>
 							</div>
-							<a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
-							<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> 
+							<!-- <a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
+							<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> -->
 							<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
 							<i class="fa fa-heart-o"></i> Love It 
 							<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
 							</button>-->
-							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">Schedule  an appointment</a> 
-							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Purchase</a> <br/><br/>
+							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
+							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> 
+							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="share" target="_blank">Invite Family/Friend to Help</a> <br/><br/>
 								<hr style="margin-top:0px;margin-bottom:13px;"/>
 								
 								<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
@@ -1238,8 +1477,13 @@
 								<div style="padding-top:5px;">	
 									<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
 									
-									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping men find and buy the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
-
+									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
+									
+									<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">less<i class="fa fa-angle-double-left"></i></div>
+								
+									<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;"> <i class="fa fa-angle-double-right"></i>more</div>
+								
+									
 									<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
 									This needs to pull the current page your as assign to url,
 									It needs to pull the image file url
@@ -1247,20 +1491,15 @@
 									http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
 									-->
 								</div>
+								
+								
 						</div>
 					</div>	
-					<!--<div class="col-sm-2 col-sm-pull-8" style="Border:0px solid grey;padding:25px 25px;margin:0;">
-						<div id="back" style="display:block;"><span class="glyphicon glyphicon-chevron-left"></span></div>
-					</div>
-					<div class="col-sm-push-2" style="Border:0px solid grey;padding:25px 25px;margin:0;">
-						<div id="next"><span class="glyphicon glyphicon-chevron-right"></span></div>
-					</div>-->
+
+					
 				
 			</div>
 		</div>
-	
-	
-	
 	
 	
 		<!-- Foot note container starts here -->	
@@ -1297,10 +1536,10 @@
 
 	$(document).ready(function(){
 	
-/*		$('#myModal_contact_us').modal({
-			  keyboard: false
-			})
-*/	
+		//$('#myModal_contact_us').modal({
+			 // keyboard: false
+			//})
+	
 		//$("#1,#2, #3, #4").click(function(){
 			//$("#1,#2,#3,#4").val("")});
 		
@@ -1357,9 +1596,9 @@
 					$("#myModal_contact_us").modal('hide');
 					$("#myModal_thanks").modal('show');	
 					//Hiding the section that shows the results/recommendation engine
-					/*&$("#section_result").slideDown(10,'linear',function(){
+					$("#section_result").slideDown(10,'linear',function(){
 						$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-					});*/	
+					});
 					$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');					
 				}).error(function(){
 					alert('Opps, something went wrong. Mind sending an email to sparklie3@gmail.com to let us know? Error #1AT')
@@ -1615,10 +1854,10 @@
 			$("#start,#start2").empty().append("Change your Answers");
 			//console.log('final');
 			$("#back").css('visibility','visible');
-			/*$('#myModal_contact_us').modal({
+			$('#myModal_contact_us').modal({
 				keyboard : true,	
 				backdrop: true,
-			});*/
+			});
 
 			//sum = Number($("#1").val()) + Number($("#2").val()) + Number($("#3").val()) + Number($("#4").val());
 			//console.log(sum);
@@ -1708,23 +1947,21 @@
 								}
 							$("#section_result").slideDown(10,'linear',function(){
 								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-							});	
+							});		
 							}).error(function(){
-								//$('#myModal_sorry').modal({
-								//keyboard : true,
-								//backdrop: true,
-								//});
-								
 								//We can implement an email functionality for the case when we don't have the product
+								$('#myModal_sorry').modal({
+								keyboard : true,
+								backdrop: true,
+								});
 								
-								//$('#myModal_sorry_email').modal({
-								//keyboard : true,
-								//backdrop: true,
-								//});
+								
+								
+								
 								
 								
 							});	
-							//$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
+							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
 					});
 				}
 				else
@@ -1740,7 +1977,7 @@
 		$("#back").click(function(){$.fn.back()})
 		
 		$.fn.back = function(){
-		$("#next").css('display','block');
+		//$("#next").css('display','block');
 		window.insideCounter = insideCounter -1;
 				if (insideCounter >=2)
 					{			
@@ -1909,7 +2146,7 @@
 					window.insideCounter = insideCounter + 1;
 					console.log(insideCounter);
 					$("#back").css('visibility','visible');
-					var json = JSON.parse($.cookie('pagination_counter1'));
+					var json = JSON.parse($.cookie('pagination_counter1')); //Issue here
 					if ($.cookie('pagination') <= 2)
 					{
 						$("#next").css('display','none');

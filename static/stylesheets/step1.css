@@ -6,12 +6,19 @@ html,body {
 
 .jumbotron {
 	color:#ffffff;
-	height: 600px;
-	background-image: url(/images/background4.jpg);
-	background-position: 50% 5%;
+	height: 80vh;
+	min-height: 640px;
+	background-image: url(/images/background5.jpg);
+	background-position: 50% 0%;
 	margin-top:-20px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
 }
 
 
@@ -34,13 +41,37 @@ html,body {
 
 
 .image {
-	height:600px;
+	min-height:50vh;
 	background-image: url(/images/DeathtoStock_Medium5.jpg);
     background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-	background-position:50% 0%;
+	background-position:0% 0%;
 
 }
+
+.imageLove {
+	min-height:75vh;
+	background-image: url(/images/laptopRecommendation.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+	background-position:50% 50%;
+
+}
+
+
+
+.imageFulton {
+	height:50vh;
+	background-image: url(/images/jewelryStore.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position:50% 50%;
+
+}
+
+
+
 
 .rotate {
 
@@ -172,4 +203,6 @@ border-radius:0px;
 {
 	padding: 550px 50px;
 }
+
+
 }
