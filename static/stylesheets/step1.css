@@ -7,8 +7,7 @@ html,body {
 .jumbotron {
 	color:#ffffff;
 	height: 80vh;
-	min-height: 640px;
-	background-image: url(/images/background5.jpg);
+	background-image: url(/images/background6.jpg);
 	background-position: 50% 0%;
 	margin-top:-20px;
     background-size: cover;
@@ -39,36 +38,129 @@ html,body {
   border-color: #ffffff;
 }
 
+.imageLove {
+	min-height:400px;
+	background-image: url(/images/laptopRecommendation.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+	background-position:100% 0%;
+
+}
+
 
 .image {
-	min-height:50vh;
+	min-height: 400px;
 	background-image: url(/images/DeathtoStock_Medium5.jpg);
-    background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 	background-position:0% 0%;
 
 }
 
-.imageLove {
-	min-height:75vh;
-	background-image: url(/images/laptopRecommendation.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-	background-position:50% 50%;
 
-}
 
 
 
 .imageFulton {
-	height:50vh;
+	min-height:400px;
 	background-image: url(/images/jewelryStore.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+	background-position:100% 50%;
+	
+}
+
+@media (max-width: 767px) {
+
+.xsSpacing{
+
+padding-top:170px;
+}
+
+.imageLove {
+	background-position:50% 0%;
+	background-size: contain;
+}
+
+.image {
 	background-position:50% 50%;
+}
+
+.imageFulton {
+
+	background-position:50% 50%;
+	background-size:cover;
+}
+
+.textCenter{
+	text-align: center;
 
 }
+
+}
+
+
+@media (min-width: 768px) {
+
+.smSpacing{
+
+padding-top:100px;
+}
+
+.imageLove {
+	background-position:50% 0%;
+	background-size: contain;
+}
+
+.image {
+	background-position:50% 50%;
+}
+
+.imageFulton {
+
+	background-position:50% 80%;
+	background-size:cover;
+}
+
+.textCenter{
+	text-align: center;
+
+}
+}
+
+
+@media (min-width: 992px) {
+
+.mdSpacing{
+
+padding-top:100px;
+}
+}
+
+
+
+@media (min-width: 1200px) {
+.center1200{
+	
+	display: flex; 
+	align-items: center;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.textLeft{
+	text-align: left;
+
+}
+
+.lgSpacing{
+
+padding-top:150px;
+}
+}
+
 
 
 
