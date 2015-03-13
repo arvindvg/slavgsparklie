@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--user-scalable=no disables zooming on mobile devices-->
-    <meta name="description" content="Sparklie helps remove the stress when buying an engagement ring.">
+    <meta name="description" content="We know being in love feels great and that's why we believe buying a ring should too. At Sparklie, we help guys discover and buy the perfect engagement ring curated from unique local jewelers. Let us help you discover a world of possibilities. ">
     <meta name="author" content="Arvind & Shaw">
     <link rel="shortcut icon" href="/images/diamond-icon.png">
 
-    <title>Sparklie - Helping you find the perfect engagement ring.</title>
+    <title>Sparklie, helpings guys discover and buy the perfect engagement ring.</title>
 
 	<!-- Google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -21,12 +21,6 @@
     <link href="/stylesheets/step1.css" rel="stylesheet">
 	<!-- Slider stylesheet -->
 	<link href="/jqrangeslider-5.7.0/css/iThing.css" rel="stylesheet">
-	<!--<link href="/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" rel="stylesheet">-->
-	<!-- Datepicker stylesheet -->
-	<link href="/eternicode-bootstrap-datepicker-37db99f/css/datepicker3.css" rel="stylesheet">
-	<!-- Magnify image -->
-	<link rel="stylesheet" href="/bootstrap-magnify-master/css/bootstrap-magnify.min.css">
-	
 	
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -50,7 +44,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a href="/" class="navbar-brand" style="color:white;font-size:200%;font-weight:900;">SPARKLIE</a>
+			  <span class="navbar-brand" style="color:white;font-size:200%;font-weight:900;">SPARKLIE</span>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav navbar-right">
@@ -220,286 +214,239 @@
 			</div>
 		</div>
 		
-		<!-- Schedule an appointment Modal-->
-		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-body" style="padding-top:10px;">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<div class="row">
-							<div class="col-sm-12" >
-								<div style="text-align:center;">
-								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Schedule an Appointment</h2>
-								</div>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-sm-8">
-								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;"></div>						
-								
-							
-							
-								<form role="form" id="send_email">
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name" placeholder="First Name"  style="border-radius:0px" required>
-										</div>
-									</div>
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name" placeholder="Last Name (optional)"  style="border-radius:0px">
-										</div>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email" placeholder="Enter email"  style="border-radius:0px" required>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number" placeholder="XXX-XXX-XXXX (optional)" style="border-radius:0px">
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject" value="I'd like to schedule time for a viewing" style="border-radius:0px" required>
-									  </div>
-								  
-									<div class="form-group col-sm-12" style="padding:0px;">
-										<div class="col-sm-6">
-											<label for="date">Visit Date</label>
-												<div class="input-group">
-												<div class="input-group-addon"  style="border-radius:0px;"><span id="date"><span  class="glyphicon glyphicon-calendar" style="cursor:pointer;"></span></span></div>
-												<input id="date_show" class="form-control" type="date" style="border-radius:0px" placeholder="MM/DD/YY" required>
-												</div>	
-										</div>
-									 </div>						  
-						  
-									  <div class="form-group col-sm-12">
-										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message" placeholder="Optional, anything you'd like to tell the merchant" value="test" style="border-radius:0px"></textarea>
-									  </div>
-									  
-									  <div class="form-group col-sm-12">
-										<button type="submit" class="btn btn-clear btn-default">Send</button>
-										</div>
-								</form>
-									<div class="col-sm-4"></div>
-							
-							</div>
-						
-							<div class="col-sm-4">
-								<div class="col-sm-12">
-							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
-							
-							</div>
-							
-							<label>Map</label>
-							<img src="https://maps.googleapis.com/maps/api/staticmap?center=41.8818751,-87.6258066&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|41.8818751,-87.6258066" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
-							
-							<div style="padding-top:15px;">
-							<h5>Hakimi Gem Import’s</h5>
-							<p>5 South Wabash Suite 307</p>
-							<p>Chicago, IL 60603</p>
-							</div>
-							</div>
-							</div>
-						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
-	  
-		<!-- Thank you modal after contact or schedule appointment-->
-		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie</h2>
-							</div>
-							<div class="modal-body" style="padding-top:10px;">
-								We'll have a jeweler reviewing your information and contact you within 1 business day. 
-							</div>
-						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
 		
-		<!-- Modal for when we can't find anything -->
-		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Sorry</h2>
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row" >
+					<div class="col-lg-6 col-lg-offset-3 lgSpacing mdSpacing smSpacing xsSpacing" style="text-align:center;">	
+							<h1 style="line-height:1.4;font-size:280%;font-weight:900;">We help guys discover and buy the perfect engagement ring.</h1><br/>
+							<p style="font-size:1.5em;margin-top:5px;font-weight:900;">Being in love feels great, and buying a ring should too!</p><br/>
+							<!--<p style="text-align:center;line-height:1.4;font-style:italic;font-size:130%;">Let us help you</p><br/>-->
+							<div class="col-xs-6">
+								<a href="#howitworks" style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button">LEARN MORE</a>
+							</div>
+							<div class="col-xs-6">
+								<a style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="start">GET STARTED</a>
+							</div>
 					</div>
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
-							<div class="col-sm-12" >
-								<div style="text-align:center;">
-								Our recommendation engine couldn't find a right ring for you. How about contacting us at sparklie3@gmail.com?
-								</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	<!-- How it works -->
+		<div class="container-fluid" style="border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);background-color:rgb(243,243,245);margin-top:-30px;">
+			<!--<div class="row">
+			
+				<div class="col-sm-12">
+					<div style="margin:0 auto; width:100%; height:1px; background:grey;"></div>
+					<div style="text-align:center;margin-top:-15px;"><i class="fa fa-chevron-circle-down" style="font-size:20px;color:#46DBC2;border-radius:100%; border:1px solid grey;padding: 5px 5px;background:white;"></i></div>
+				</div>
+			</div>-->
+			<a name="howitworks"></a>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div style="margin-top:50px;text-align:center;"><!-- This might need to by dynamic to the screen size -->
+						<h3 style="font-weight:900;">HOW IT WORKS</h3><br/>
+						
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">1</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">Discover Your Style</h3>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our engagement ring style guide helps uncover the right ring for you. It's simple and free.</p>
+						</div>
+					
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">2</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">Help Along the Way</h3>
+							<p style="text-align:center;font-weight:100;font-size:120%;">We've hand-picked a selection of rings from unique jewelers for your convenience. Our jewelry experts are available to review styles and preferences, answering all your questions along the way.</p>
+						</div>
+					
+						<div class="col-sm-4" style="padding-bottom:15px;">
+							<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:100%; border:3px solid rgb(214,140,137);padding: 5px 11px;">3</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">View in Stores</h3>
+							<p style="text-align:center;font-weight:100;font-size:120%;">No matter how hard we try, jewelry is best viewed in person. That's why we've partnered with select, local retailers so you can always walk-in.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">	
+					<div style="margin:5% 0%;"><!-- This might need to by dynamic to the screen size -->
+						<div class="col-sm-8 col-sm-offset-2">
+							<!--<div style="margin-bottom:50px;text-align:center;">
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg btn-group-justified" role="button" id="start2">Get Started</a>
+							</div>-->
+						</div>
+					</div>	
+				</div>	
+			</div>
+			
+		</div>	
+		
+		<!-- DISCOVER YOUR STYLE -->
+		<div class="container-fluid" style="margin-top:50px;">
+			<div class="row center1200"><!--this is the way to use flex to align center-->
+				<div class="col-md-5 col-md-offset-1">
+					<div class="imageLove">
+					</div>
+				</div>
+			
+				<div class="col-md-4 col-md-offset-0 textCenter textLeft">
+					<h3 style="font-weight:900;">DISCOVER THE STYLE</h3></br>
+						
+							<p style="font-weight:100;font-size:120%;">We understand finding a ring can be hard. You're overwhelmed with information, options, and decisions. So, we've created a style guide that helps uncover the right ring from cool brands. It's simple and free.</p>
+						
+						
+					<!--
+					<div class="row">
+							<div class="col-sm-12">
+								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/pollywales_logo.png" alt="Polly Wales" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:40px 0px;"><img src="/images/JudeFrances_logo.png" alt="Jude Frances" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:43px 0px;"><img src="/images/single_stone_logo.png" alt="Single Stone" class="center-block img-responsive" /></div>
 							</div>
 						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
+					<div class="row">
+							<div class="col-sm-12">						
+								<div class="col-sm-4" style="margin:30px 0px;"><img src="/images/toddredd_logo.png" alt="Todd Redd" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:34px 0px;"><img src="/images/meganthorne_logo.png" alt="Megan Thorne" class="center-block img-responsive" /></div>
+								<div class="col-sm-4" style="margin:33px 0px;"><img src="/images/paulmorelli_logo.png" alt="Paul Morelli" class="center-block img-responsive" /></div>
+							</div>
+					</div>			
+					-->
+				</div>
+			</div>
+
+			
+		</div>
 		
-		<!-- Modal for contacting us -->
-		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
-						
-						We ask for this information so that we can contact you personally to showcase our hand-picked rings. We won't ever sell your information. 
+		
+		<!-- HELP ALONG THE WAY -->
+		<div class="container-fluid" style="margin-top:50px;">
+			<div class="row center1200"><!--this is the way to use flex to align center-->
+				
+				<div class="col-md-5 col-md-push-6"> 
+					<div class="image">
 					</div>
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
-							
-								<form role="form" id="send_email2">
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
-										</div>
-									</div>
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
-										</div>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
-									  </div>
-						  
-									  <div class="form-group col-sm-12">
-										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message2" placeholder="Optional, anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
-									  </div>
-									  
-									  <div class="form-group col-sm-12">
-										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
-										</div>
-								</form>
-									
-							
-							
+				</div>
+				
+				<div class="col-md-5 col-md-pull-4 textCenter textRight">
+					
+						<h3 style="font-weight:900;">HELP ALONG THE WAY</h3><br/>
 						
-							<!--	<div class="col-sm-4" style="padding-left:0;">								
-								<label>Map</label>
-								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
-									<div style="padding-top:15px;">
-									<h5>Sparklie, Inc.</h5>
-									<p>2120 Mason St.</p>
-									<p>San Francisco, CA 94133</p>
-									</div>
-								</div>-->
-							
-						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
-
-		<!-- Modal for inviting family -->
-		<div class="modal fade" id="myModal_family" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
 						
-						We ask for this information so that we can contact you personally to showcase our hand-picked rings.
+							<!--<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:0%; border:3px solid rgb(214,140,137);padding: 5px 11px;">X</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">A real person to answer your questions</h3><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our Ambassadors have curated and compared rings from unique brands and retailers just for you. Let a real person help answer all your questions so you don't have to do the work.</p>-->
+							<p style="font-weight:100;font-size:120%;">After reviewing different rings, you might need some help narrowing down your choices. That's why our jewelry experts can help. Each of our experts is trained by the Gemological Institute of America, the world's foremost authority on gems. They'll answer all your questions and guide you along the way. They aren't compensated by comission so they won't try to upsell you.</p>
+						
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>	
+	
+		
+		<!-- UNIQUE BRANDS -->
+		<div class="container-fluid" style="margin-top:50px;"><!-- style="margin-top:0px;border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);" -->
+			<div class="row center1200" ><!--this is the way to use flex to align center-->
+			<div class="col-md-5 col-md-offset-1">
+					<div class="imageFulton">
+						
 					</div>
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
-							
-								<form role="form" id="send_email2">
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
-										</div>
-									</div>
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
-										</div>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
-									  </div>
-						  
-									  <div class="form-group col-sm-12">
-										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message2" placeholder="Optional, anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
-									  </div>
-									  
-									  <div class="form-group col-sm-12">
-										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
-										</div>
-								</form>
-									
-							
-							
+				
+				</div>
+			
+			
+				<div class="col-md-4 col-md-offset-0 textCenter textLeft">
+						<h3 style="font-weight:900;">VIEW IN STORES</h3><br/>
+
+							<!--<div style="text-align:center;margin-top:45px">
+								<span style="color:rgb(214,140,137);font-size:18px;border-radius:0%; border:3px solid rgb(214,140,137);padding: 5px 11px;">X</span>
+							</div>
+							<h3 style="text-align:center;font-weight:700;">A real person to answer your questions</h3><br/>
+							<p style="text-align:center;font-weight:100;font-size:120%;">Our Ambassadors have curated and compared rings from unique brands and retailers just for you. Let a real person help answer all your questions so you don't have to do the work.</p>-->
+							<p style="font-weight:100;font-size:120%;">Sure, we can ship it to your doorstep. But we know you want to see the ring first. That's why we've partnered with select, local retailers. We'll help schedule your appointment and handle all your needs so you'll have a great experience.</p>
+												
+
+				</div>
+
+			</div>			
+		</div>	
+		
+
+		
+		<!-- Our Curation -->
+		<div class="container-fluid" style="background-color:rgb(243,243,245);margin-top:50px;border-top:1px;border-top-style:solid;border-top-color:rgb(215,215,215);text-align:center;">
+			<div class="row">
+				<div class="col-lg-12" style="padding-top:75px;">
+				<!--<h3 style="font-weight:900;">DISCOVER YOUR RING</h3>-->
+						<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"">
+							<div style="color:rgb(214,140,137);">
+								<i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i>
+							</div></br>
+								<div style="text-align:center;font-weight:100;font-size:120%;padding:0 100px;">Find your style, discover your ring, and let us help you discover the possibilities.</div></br>
+							<span style="text-align:center;margin-top:45px;color:rgb(214,140,137);">
+								<i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i> &nbsp &nbsp <i class="fa fa-diamond"></i>
+							</span>
 						
-							<!--	<div class="col-sm-4" style="padding-left:0;">								
-								<label>Map</label>
-								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
-									<div style="padding-top:15px;">
-									<h5>Sparklie, Inc.</h5>
-									<p>2120 Mason St.</p>
-									<p>San Francisco, CA 94133</p>
-									</div>
-								</div>-->
+					</div>
+				</div>
+				
+				
+	
+			</div>
+		
+			<!--<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div style="text-align:center;">
+						<div class="col-lg-8 col-lg-offset-2" style="border:1px solid grey;margin-top:35px;padding: 25px 25px;border-left:0px;border-right: 0px;"> 
+							<div class="col-sm-4"style="padding:0;">
+								<i class="fa fa-check"></i> STRESS FREE 
+							</div>
 							
+							<div class="col-sm-4"style="padding:0;">
+								<i class="fa fa-check"></i> NO MINIMUM PURCHASE 
+							</div>
+							
+							<div class="col-sm-4"style="padding:0;">
+							
+								<i class="fa fa-check"></i> LOCAL STORES
+							</div>
 						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  
-
-
-
-
-
+					</div>
+				</div>	
+			</div>	-->
+			
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">	
+					<div style="margin:25px; 0%;"><!-- This might need to by dynamic to the screen size -->
+						<div class="col-sm-4 col-sm-offset-4">
+							<div style="margin-bottom:75px;text-align:center;">
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg btn-group-justified" role="button" id="start2">GET STARTED</a>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			</div>
+			
+			
+			
+		</div>	
 		
 		<!-- NAME HELLO -->
 		<div id="sectionName" style="display:SHOW;">	

@@ -298,3 +298,54 @@ border-radius:0px;
 
 
 }
+
+
+#info{
+
+font-size:3.5em;
+	text-align:center;
+	
+	}
+	
+#helloAnimation{
+	
+	/* Chrome, Safari, Opera */
+    -webkit-animation-name: helloAnimation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+
+    /* Standard syntax */
+    animation-name: helloAnimation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+
+}
+
+@-webkit-keyframes helloAnimation {
+    0%  {opacity:0}
+	100% {opacity:1.0}
+}
+
+@keyframes helloAnimation {
+    0%  {opacity:0}
+	100% {opacity:1.0}
+}
+
+.style-4 input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+.style-4 input[type="text"]:focus,
+.style-4 input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}

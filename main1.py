@@ -109,6 +109,16 @@ class Step1(webapp2.RequestHandler):
         self.response.out.write(template.render())
         session['unique_id'] = unique_id
 
+class Style (webapp2.RequestHandler):
+
+	def get(self):
+	    session = get_current_session()
+	    unique_id = session.get('unique_id')
+	    unique_id = str(unique_id)
+	    template = jinja_environment.get_template('style.html')
+	    self.response.out.write(template.render())
+
+		
 class Step_city(webapp2.RequestHandler):
 
     def post(self):
@@ -968,7 +978,7 @@ class launch(webapp2.RequestHandler):
             
 application = webapp2.WSGIApplication([
 ('/', Step1),
-('/step1', Step1),
+('/style', Style),
 ('/step2', Step2),
 ('/step3', Step3),
 ('/step4', Step4),
@@ -983,6 +993,6 @@ application = webapp2.WSGIApplication([
 ('/email_message', email_message),
 ('/email_message2', email_message2),
 ('/launch', launch),
-('/Step_city', Step_city),
+('/Step_city', Step_city)
 ], debug=True)
 #important to write a 404 page response, to have it push to the blog with a contact info about something that went wrong

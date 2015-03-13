@@ -52,13 +52,16 @@
 			  </button>
 			  <a href="/" class="navbar-brand" style="color:white;font-size:200%;font-weight:900;">SPARKLIE</a>
 			</div>
+			
 			<div id="navbar" class="collapse navbar-collapse">
-			  <ul class="nav navbar-nav navbar-right">
-				<!--<li><a href="#">HOME</a></li>-->
-				<li><a href="#howitworks">HOW IT WORKS</a></li>
-				<li><a href="#aboutus">FAQ</a></li>
-				<li><a href="#aboutus">FOR HER</a></li>
-				<li><a href="#aboutus">OUR STORY</a></li>
+				<ul class="nav navbar-nav navbar-right">
+				 <li><a href="#howitworks">NAME</a></li>
+				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> LINK</a></li>
+				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> STYLE</a></li>
+				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> BUDGET</a></li>
+			
+			
+
 				
 				
 				<!--<li class="dropdown">
@@ -496,78 +499,83 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  
 
+	<!-- Modal for pinterest wait -->
+		<div class="modal fade" id="modalPinterestWait" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Looking through Pinterest...</h2>
+					</div>
+					<div class="modal-body" style="padding: 20px 20px;padding-bottom:10px;">
+						
+							
+							<div class="progress" >
+							  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
 
-
+							  </div>
+							
+						</div>
+					 </div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
 
 
 		
 		<!-- NAME HELLO -->
-		<div id="sectionName" style="display:SHOW;">	
-	
-			<div class="container-fluid"><!-- This might need to by dynamic to the screen size -->
+		<div id="sectionName" style="display:show;">	
+			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					
 					<div class="col-md-12" id="info" style="padding-top:5%;">
-						
 						hello, welcome to Sparklie. <br/>
-						what's your name?  
+						what's your name?
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input type="text" placeholder="type name here">?
+							  <input id="userName" style="text-align:center;" type="text" placeholder="your name here">
 							</li>
 						</ul>
-						
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-					
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button">NEXT</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="sectionNameButtonPressed">NEXT</a>
 					</div>
-				
-				
 				</div>
-			
 			</div>	
 		</div>
 		
 		<!-- PINTEREST -->
-		<div id="sectionName" style="display:SHOW;">	
-	
-			<div class="container-fluid"><!-- This might need to by dynamic to the screen size -->
+		<div id="sectionPinterest" style="display:none;">	
+			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" id="info">
-						Thanks (name) </br>
-						Do she have a Pinterest board or do you have a board you like? We can use the pictures to help you discover the right style. Don't worry, no one will be notified. 
-						<ul class="list-unstyled style-4" style="display:inline-block;">
-							<li>
-							  <input type="text" placeholder="Pinterest Acccount">
-							</li>
-						</ul>
-						
+					<div class="col-md-12" style="padding-top:5%;">
+						<p id="info" >Thanks <span id="insertUserName"></span> </p>
+						<p style="font-size:1.5em;text-align:center;">Does she have a Pinterest board or do you have a board you like? We can use the pictures to help you discover the right style. Don't worry, no one will be notified.
+							<ul class="list-unstyled style-4" style="display:inline;text-align:center;">
+								<li>
+								  <input id="pintrestUserName" style="text-align:center;width:400px;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h>
+								</li>
+							</ul>
+						</p> 	
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						<a style="background:rgb(215,215,215);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button">SKIP</a>
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button">NEXT</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">SKIP</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="pinterestButtonPressed">NEXT</a>
 					</div>
 				</div>
-			
 			</div>	
 		</div>
 		
-		<!-- Are these your results -->
-		<div id="sectionNameHelp" style="display:SHOW;">
-			<div class="container-fluid"><!-- This might need to by dynamic to the screen size -->
-	
-				
+		<!-- STYLES AFTER PINTEREST -->
+		<div id="sectionStyles" style="display:none;">
+			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">Her Styles</p>
-						
+					<div class="col-sm-10 col-sm-offset-1"  style="padding-top:5%;">
+						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">The Style Broken Down</p>
 					</div>
 				</div>
 				
@@ -579,7 +587,7 @@
 								<h3 style="text-align:center;font-weight:900;">Setting Style</h3>
 								<img src="/images/solitaire_education.jpg" alt="prong setting"   style="margin-top:20px;padding: 10px 10px;height:140px;" class="center-block img-responsive" />		
 								<h5 style="text-align:center;font-weight:900;">Solitaire</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="setting" style="text-decoration:none;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="settingEdit" style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 							
 						</div>	
@@ -589,7 +597,7 @@
 							<h3 style="text-align:center;font-weight:900;">Metal Style</h3>
 								<img src="/images/whitegold.jpg" alt="white gold"  style="margin-top:20px;padding: 10px 10px;height:140px;"  class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">White Gold</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="metal"  style="text-decoration:none;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="metalEdit"  style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 								
 						</div>
@@ -600,17 +608,17 @@
 								<h3 style="text-align:center;font-weight:900;">Gem Style</h3>
 								<img src="/images/cushion-170x170.jpg" alt="prong setting"  style="margin-top:20px;padding: 10px 10px;height:140px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Cushion Diamond</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shape" style="text-decoration:none;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shapeEdit" style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 
 						</div>	
 						
 						<div class="col-sm-3">
 							<div class="col-sm-12">
-							<h3 style="text-align:center;font-weight:900;">Most Important Characteristic</h3>
+							<h3 style="text-align:center;font-weight:900;">Most Important</br>Characteristic</h3>
 								<img src="/images/carat.png" alt="carat"  style="margin-top:-50px;margin-bottom:-5px;height:180px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Size</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="rank"  style="text-decoration:none;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="preferenceEdit"  style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 
 						</div>	
@@ -621,7 +629,7 @@
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
 						
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button">NEXT</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="styleConfirmedButtonPressed">NEXT</a>
 					</div>
 				</div>
 			
@@ -629,8 +637,8 @@
 		</div>
 		
 		
-		<!-- BUDGET -->
-		<div id="sectionBudget" style="display:show;">	
+		<!-- BUDGET BASIC-->
+		<div id="sectionBudget" style="display:none;">	
 			<div class="container-fluid">	
 			
 				<div class="row">
@@ -638,7 +646,7 @@
 						Final question, what is your maximum budget? In the U.S. most people spend between $3K - $8K.
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input type="text" placeholder="Maximum budget">
+							  <input style="text-align:center;" type="text" placeholder="Maximum budget">
 							</li>
 						</ul>
 						
@@ -647,7 +655,7 @@
 				
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button">NEXT</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="budgetButtonPressed">NEXT</a>
 					</div>
 				</div>
 			
@@ -750,7 +758,7 @@
 			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:600px;">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">RING TYPE
+						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">SETTING STYLE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-gift fa-stack-1x"></i>
@@ -767,9 +775,9 @@
 			
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px">
-								<img src="/images/solitaire_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/solitaire_education.jpg" alt="solitaire setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Solitaire</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The classic single diamond set in the center, usually with four or six prongs.</p>
 							</div>
@@ -788,9 +796,9 @@
 						</div>
 						
 						
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px">
-								<img src="/images/halo_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/halo_education.jpg" alt="halo setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Halo</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">A single diamond encircled by smaller diamonds, which visually expands the appearance of the center stone.</p>
 							</div>
@@ -809,9 +817,9 @@
 								
 						</div>
 						
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px">
-								<img src="/images/threestone_education.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/threestone_education.jpg" alt="threestone setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Three Stone</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Three diamonds placed adjacent to each other offering a bold, modern look. </p>
 							</div>
@@ -828,6 +836,27 @@
 								</div>
 							</div>	
 						</div>	
+						
+						<div class="col-md-3">
+							<div style="min-height:450px">
+								
+								<img src="/images/blank.jpg" alt="unknown"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Relax and we'll pick a popular style. You can always come back and change your mind.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting4" name="setting" data-value_id="solitaire">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="setting4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>	
+						</div>	
 					</div>
 				</div>
 				
@@ -840,7 +869,7 @@
 			
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">RING METAL
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">METAL STYLE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-eye fa-stack-1x"></i>
@@ -857,7 +886,7 @@
 				
 				<div class="row">				
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:400px;">
 								<img src="/images/gold.jpg" alt="yellow gold" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
 								<h3 style="text-align:center;font-weight:900;">Yellow Gold</h3>
@@ -877,7 +906,7 @@
 							</div>
 						</div>	
 
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:400px;">
 								<img src="/images/whitegold.jpg" alt="white gold"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
 								<h3 style="text-align:center;font-weight:900;">White Gold</h3>
@@ -897,7 +926,7 @@
 							</div>
 						</div>	
 
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:400px;">
 								<img src="/images/platinum.jpg" alt="platinum"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Platinum</h3>
@@ -915,14 +944,143 @@
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
-						</div>	
+						</div>
+
+						<div class="col-md-3">
+							<div style="min-height:400px;">
+								<img src="/images/blank2.jpg" alt="unknown"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Can't decide? Relax and we'll pick a popular style.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal4" name="metal" data-value_id="platinum">Select</a>
+								</div>
+							</div>		
+						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="metal4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>							
 					</div>
 				</div>
 				
 			</div>
 		</div>
 		
-		<!-- SHAPE -->
+		<!-- GEM -->
+		<div id="section_gem" style="display:none;">	
+			<div class="container-fluid">
+			
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">GEM STYLE
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-eye fa-stack-1x"></i>
+						</span>
+						</h2>
+					</div>		
+				</div>
+				
+				<div class="row">						
+					<div class="col-sm-8 col-sm-offset-2">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Alternatives to diamonds can look just as good and be less expensive.</p>
+					</div>
+				</div>
+				
+				<div class="row">				
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="col-md-3">
+							<div style="min-height:400px;">
+								<img src="/images/diamond.png" alt="diamond" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
+								<h3 style="text-align:center;font-weight:900;">Diamond</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Hardest gem of them all. You've probably heard about it and it is the most common gem used in engagement rings.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem1" name="gem" data-value_id="diamond">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="gem1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+
+						<div class="col-md-3">
+							<div style="min-height:400px;">
+								<img src="/images/ruby.png" alt="ruby"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Ruby</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">In Sanskrit, ruby is called ratnaraj, or “king of precious stones.”</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem2" name="gem" data-value_id="white gold">Select</a>
+								</div>
+							</div>
+						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="gem2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>						
+							</div>
+						</div>	
+
+						<div class="col-md-3">
+							<div style="min-height:400px;">
+								<img src="/images/sapphire.png" alt="saphhire"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Sapphire</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Blue in color that can often change throughout the day, sapphires are a great alternative.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem3" name="gem" data-value_id="platinum">Select</a>
+								</div>
+							</div>		
+						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="gem3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div style="min-height:400px;">
+								<img src="/images/blank2.jpg" alt="unknown"  class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>		
+								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Can't decide? Relax and we'll pick a popular style.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem4" name="gem" data-value_id="platinum">Select</a>
+								</div>
+							</div>		
+						
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="gem4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!-- DIAMOND SHAPE -->
 		<div id="section_shape" style="display:none;">
 			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
 		
@@ -946,7 +1104,7 @@
 			
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px;">
 								<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Round</h3>
@@ -966,7 +1124,7 @@
 							</div>
 						</div>	
 						
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px;">
 								<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Cushion</h3>
@@ -986,7 +1144,7 @@
 							</div>
 						</div>	
 						
-						<div class="col-sm-4">
+						<div class="col-md-3">
 							<div style="min-height:450px;">
 								<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Princess</h3>		
@@ -1004,7 +1162,27 @@
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
-						</div>				
+						</div>
+
+						<div class="col-md-3">
+							<div style="min-height:450px;">
+								<img src="/images/blank2.jpg" alt="unknow"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>		
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
+							</div>
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape4" name="shape" data-value_id="round">Select</a>
+								</div>
+							</div>		
+							
+							<div class="col-sm-8 col-sm-offset-2">
+								<div id="shape4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>							
 					</div>	
 				</div>
 				
@@ -1057,7 +1235,7 @@
 			</div>	
 		</div>	
 		
-		<!-- RANKING -->
+		<!-- DIAMOND RANKING -->
 		<div id="section_preference" style="display:none;">	
 			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
 				
@@ -1192,7 +1370,7 @@
 					<div class="form-group">
 						<div style="margin-top:50px;"><!-- This might need to by dynamic to the screen size -->
 							<div class="col-sm-2 col-sm-offset-5"> 
-								<button id="final" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Last Step</button>
+								<button id="final" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Next</button>
 							</div>				
 						</div>
 					</div>
@@ -1431,9 +1609,148 @@
 	<script>
 
 	$(document).ready(function(){
-	
-	
-		$("#slider2").rangeSlider({
+		
+		$("#userName").click(function(){
+			$("#sectionNameButtonPressed").removeClass('disabled')
+		});
+		
+		$("#sectionNameButtonPressed").on('click', function(){
+//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+			$("#sectionName").addClass('hide');
+			$("#insertUserName").empty().append($("#userName").val());
+			$("#sectionPinterest").slideDown(3,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+			});
+		});
+			
+		$("#pintrestUserName").click(function(){
+			$("#pinterestButtonPressed").removeClass('disabled');
+		});	
+		
+		var timeoutID;
+
+		function delayedAlert() {
+		  timeoutID = window.setTimeout(slowAlert, 2000);
+		}
+
+		
+		$("#pinterestSkipButtonPressed").on('click', function(){
+//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+//			$("#insertUserName").empty().append($("#userName").val());
+			$("#sectionPinterest").addClass('hide'); 
+			$("#section_setting").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
+				});
+			});
+		
+		
+		$("#pinterestButtonPressed").on('click', function(){
+//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+//			$("#insertUserName").empty().append($("#userName").val());
+			$("#modalPinterestWait").modal({
+						keyboard : false,
+						backdrop: false,
+						});
+			window.setTimeout(function() {
+				$("#modalPinterestWait").modal('hide'); 
+				$("#sectionPinterest").addClass('hide');
+				$("#sectionStyles").slideDown(3,'linear',function(){
+					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+				});
+				}, 5000);
+			});
+		
+		$("#settingEdit").click(function(){
+			$("#section_setting").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
+			});
+		});
+			
+		$("#shapeEdit").click(function(){
+			$("#section_shape").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)	
+			});
+		});
+		
+		$("#metalEdit").click(function(){
+			$("#section_metal").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
+			});
+		});
+		
+		$("#preferenceEdit").click(function(){
+			$("#section_preference").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_preference").offset().top}, 300)	
+			});
+		});
+		
+		$("#styleConfirmedButtonPressed").click(function(){
+			$("#sectionStyles").addClass('hide');
+			$("#sectionBudget").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+			});
+		});
+		
+		$("#budgetButtonPressed").click(function(){
+			$("#sectionBudget").addClass('hide');
+			$("#section_resultTemp").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
+			});
+		});
+		
+		
+		$("#setting1,#setting2,#setting3,#setting4").on('click', function(){
+			$("#setting1_show,#setting2_show,#setting3_show,#setting4_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+			$.post("/step2", {
+				setting: 	$(this).data('value_id')
+				});
+			$("#section_metal").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
+			});
+		});
+		
+		
+		$("#metal1,#metal2,#metal3,#metal4").on('click', function(){
+			$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step3", {
+				ring: $(this).data('value_id')
+				});	
+			$("#section_gem").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
+			});
+		});				
+		
+		
+		$("#gem1").on('click', function(){
+			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step3", {
+				ring: $(this).data('value_id')
+				});		
+			$("#section_shape").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
+			});
+		});	
+		
+		$("#gem2,#gem3,#gem4").on('click', function(){
+			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step3", {
+				ring: $(this).data('value_id')
+				});		
+				$("#sectionBudget").slideDown(10,'linear',function(){
+					$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+				});
+				
+				
+			/*$("#section_budget").slideDown(10,'linear',function(){
+				$("#slider").rangeSlider({
 					arrows: true,
 					step:1000,
 					bounds: {
@@ -1459,21 +1776,51 @@
 						},
 						stop: function(val){ return false; },
 						label: function(){ return null; }
-						}*/
-					
-		
-		
-		
+						}
+					});
+				$('html,body').animate({ scrollTop: $("#section_budget").offset().top}, 300)				
+				});		*/
 		});
-		//$('#myModal_contact_us').modal({
-			 // keyboard: false
-			//})
-	
-		//$("#1,#2, #3, #4").click(function(){
-			//$("#1,#2,#3,#4").val("")});
 		
-	
+			
+		
+		$("#shape1,#shape2,#shape3,#shape4").on('click', function(){
+			$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").removeClass("show").addClass('hide');
+			var title = "#"+($(this).attr('id')) + "_show";
+			$(title).addClass('show').css('display','block');
+				$.post("/step4", {
+				shape: $(this).data('value_id')
+				});
+				
+				$("#sectionBudget").slideDown(10,'linear',function(){
+					$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+				});
+			});	
 
+		$("#submit").on('click', function(){		
+			var basicValues = $("#slider").rangeSlider("values");
+			if ((basicValues.max-basicValues.min) >3000)
+				{
+				$("#formAlert_danger").slideDown('slow');
+				}
+			else  if (basicValues.max == basicValues.min)
+				{
+					$("#formAlert_warning").slideDown('slow');
+				}
+			else		
+				{
+					$("#formAlert_danger").slideUp('slow');
+					$("#formAlert_warning").slideUp('slow');
+					$.post('/step5', {
+						price: Math.round(basicValues.min).toString()  + "," + Math.round(basicValues.max).toString()
+					});
+					$("#section_preference").slideDown(10,'linear',function(){
+						$('html,body').animate({ scrollTop: $("#section_preference").offset().top}, 300)
+						
+					});
+				};	
+		});		
+		
 		
 		$("#date_show").datepicker({
 			autoclose: true,
@@ -1566,14 +1913,8 @@
 			$("#main_ring_image_url3").attr('src', image1)
 		});
 
-		$("#start,#start2").on('click', function(){
-			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');		
-			$("#section_city").slideDown(3,'linear',function(){
-					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
-				});
-			});
 		
-		$("#city1,#city2,#city3").on('click', function(){
+		$("@city,#city1,#city2,#city3").on('click', function(){
 			$("#city1_show,#city2_show,#city3_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
@@ -1586,94 +1927,13 @@
 			});
 		});
 
-		$("#setting,#setting1,#setting2,#setting3").on('click', function(){
-			$("#setting1_show,#setting2_show,#setting3_show").removeClass("show").addClass('hide');
-			var title = "#"+($(this).attr('id')) + "_show";
-			$(title).addClass('show').css('display','block');
-			$.post("/step2", {
-				setting: 	$(this).data('value_id')
-				});
-			$("#section_metal").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
-			});
-		});
+
 		
-		$("#metal,#metal1,#metal2,#metal3").on('click', function(){
-			$("#metal1_show,#metal2_show,#metal3_show").removeClass("show").addClass('hide');
-			var title = "#"+($(this).attr('id')) + "_show";
-			$(title).addClass('show').css('display','block');
-				$.post("/step3", {
-				ring: $(this).data('value_id')
-				});	
-			$("#section_shape").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
-			});
-		});						
 				
-		$("#shape,#shape1,#shape2,#shape3").on('click', function(){
-			$("#shape1_show,#shape2_show,#shape3_show").removeClass("show").addClass('hide');
-			var title = "#"+($(this).attr('id')) + "_show";
-			$(title).addClass('show').css('display','block');
-				$.post("/step4", {
-				shape: $(this).data('value_id')
-				});
 				
-			$("#section_budget").slideDown(10,'linear',function(){
-				$("#slider").rangeSlider({
-					arrows: true,
-					step:1000,
-					bounds: {
-						min:0,
-						max: 50000
-						},
-					defaultValues: {
-						min:3000,
-						max:6000
-						},
-					formatter:function(val){
-						var value = Math.round(val);
-						return "$" + value.toString();
-						},
-						// Secondary scale
-						/*{
-						first: function(val){ return val; },
-						next: function(val){
-						if (val % 100 === 99){
-						return val + 2;
-						}
-						return val + 1;
-						},
-						stop: function(val){ return false; },
-						label: function(){ return null; }
-						}*/
-					});
-				$('html,body').animate({ scrollTop: $("#section_budget").offset().top}, 300)				
-				});		
-			});				
+				
 			
-		$("#submit").on('click', function(){		
-			var basicValues = $("#slider").rangeSlider("values");
-			if ((basicValues.max-basicValues.min) >3000)
-				{
-				$("#formAlert_danger").slideDown('slow');
-				}
-			else  if (basicValues.max == basicValues.min)
-				{
-					$("#formAlert_warning").slideDown('slow');
-				}
-			else		
-				{
-					$("#formAlert_danger").slideUp('slow');
-					$("#formAlert_warning").slideUp('slow');
-					$.post('/step5', {
-						price: Math.round(basicValues.min).toString()  + "," + Math.round(basicValues.max).toString()
-					});
-					$("#section_preference").slideDown(10,'linear',function(){
-						$('html,body').animate({ scrollTop: $("#section_preference").offset().top}, 300)
-						
-					});
-				};	
-		});		
+
 		
 		/*
 		var sum = 0;
