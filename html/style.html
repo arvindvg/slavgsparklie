@@ -41,7 +41,7 @@
   <body>
   
 		<!-- Fixed navbar to top-->
-		<nav class="navbar navbar-default navbar-static-top" style="background-color:rgb(23,27,38);border:0px;">
+		<nav class="navbar navbar-default navbar-static-top" style="background-color:rgb(23,27,38);border:0px;margin-bottom:0;">
 		  <div class="container">
 			<div class="navbar-header" >
 			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,12 +53,11 @@
 			  <a href="/" class="navbar-brand" style="color:white;font-size:200%;font-weight:900;">SPARKLIE</a>
 			</div>
 			
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-				 <li><a href="#howitworks">NAME</a></li>
-				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> LINK</a></li>
-				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> STYLE</a></li>
-				<li><a href="#aboutus"><i class="fa fa-caret-right"></i> BUDGET</a></li>
+			<!--<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right ">
+				<li><a id="nameThumbButtonbPressed" style="color:#ffffff">NAME</a></li>
+				<li><a id="pinterestThumbButtonbPressed" style="color:inherit"><i class="fa fa-caret-right"></i> STYLE</a></li>
+				<li><a id="budgetThumbButtonbPressed" style="color:inherit"><i class="fa fa-caret-right"></i> BUDGET</a></li>
 			
 			
 
@@ -75,9 +74,9 @@
 					<li><a href="#">Separated link</a></li>
 					<li><a href="#">One more separated link</a></li>
 				  </ul>
-				</li>-->
+				</li>
 			  </ul>
-			</div><!--/.nav-collapse -->
+			</div>-->
 		  </div>
 		</nav>
 
@@ -522,16 +521,24 @@
 
 
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- NAME HELLO -->
 		<div id="sectionName" style="display:show;">	
-			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-md-12" id="info" style="padding-top:5%;">
-						hello, welcome to Sparklie. <br/>
-						what's your name?
+						hello, what's your name?<br/>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input id="userName" style="text-align:center;" type="text" placeholder="your name here">
+							  <input id="userName" style="text-align:center;width:75%;" type="text" placeholder="enter name here">
 							</li>
 						</ul>
 					</div>
@@ -547,14 +554,14 @@
 		
 		<!-- PINTEREST -->
 		<div id="sectionPinterest" style="display:none;">	
-			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;">
-						<p id="info" >Thanks <span id="insertUserName"></span> </p>
-						<p style="font-size:1.5em;text-align:center;">Does she have a Pinterest board or do you have a board you like? We can use the pictures to help you discover the right style. Don't worry, no one will be notified.
+						<p id="info" >hi <span id="insertUserName"></span> </p>
+						<p style="font-size:1.5em;text-align:center;">Does she have a Pinterest board or do you have a board you like? If you enter the Pinterest username, we can help you discover the right style. Don't worry, no one will be notified.
 							<ul class="list-unstyled style-4" style="display:inline;text-align:center;">
 								<li>
-								  <input id="pintrestUserName" style="text-align:center;width:400px;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h>
+								  <input id="pintrestUserName" style="text-align:center;width:75%;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h>
 								</li>
 							</ul>
 						</p> 	
@@ -572,7 +579,7 @@
 		
 		<!-- STYLES AFTER PINTEREST -->
 		<div id="sectionStyles" style="display:none;">
-			<div class="container-fluid" style="height:80vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1"  style="padding-top:5%;">
 						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">The Style Broken Down</p>
@@ -729,7 +736,7 @@
 			
 		<!-- SETTING -->
 		<div id="section_setting" style="display:none;">	
-			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:600px;">
+			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:100vh;">
 				<div class="row">
 					<div class="col-sm-12">
 						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">SETTING STYLE
@@ -839,7 +846,7 @@
 		
 		<!-- METAL -->
 		<div id="section_metal" style="display:none;">	
-			<div class="container-fluid">
+				<div class="container-fluid" style="min-height:100vh;">
 			
 				<div class="row">
 					<div class="col-sm-12">
@@ -947,7 +954,7 @@
 		
 		<!-- GEM -->
 		<div id="section_gem" style="display:none;">	
-			<div class="container-fluid">
+				<div class="container-fluid" style="min-height:100vh;">
 			
 				<div class="row">
 					<div class="col-sm-12">
@@ -997,7 +1004,7 @@
 							
 							<div class="col-sm-8 col-sm-offset-2">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem2" name="gem" data-value_id="white gold">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem2" name="gem" data-value_id="ruby">Select</a>
 								</div>
 							</div>
 						
@@ -1017,7 +1024,7 @@
 							
 							<div class="col-sm-8 col-sm-offset-2">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem3" name="gem" data-value_id="platinum">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem3" name="gem" data-value_id="saphhire">Select</a>
 								</div>
 							</div>		
 						
@@ -1037,7 +1044,7 @@
 							
 							<div class="col-sm-8 col-sm-offset-2">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem4" name="gem" data-value_id="platinum">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem4" name="gem" data-value_id="diamond">Select</a>
 								</div>
 							</div>		
 						
@@ -1056,7 +1063,7 @@
 		
 		<!-- DIAMOND SHAPE -->
 		<div id="section_shape" style="display:none;">
-			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
+				<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:100vh;">
 		
 				<div class="row">
 					<div class="col-sm-12">
@@ -1309,15 +1316,15 @@
 		</div>
 		
 		<!-- BUDGET BASIC-->
-		<div id="sectionBudget" style="display:none;">	
-			<div class="container-fluid">	
-			
+		<div id="sectionBudget" style="display:show;">	
+			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" id="info">
-						Final question, what is your maximum budget? In the U.S. most people spend between $3K - $8K.
+					<div class="col-md-12" id="info" style="padding-top:5%;">
+						last question</br>
+						what is your maximum budget? </br>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input style="text-align:center;" type="text" placeholder="Maximum budget">
+							  <input id="userBudget" style="text-align:center;width:50%" type="number" value="5000" min="1000" step="1000">
 							</li>
 						</ul>
 						
@@ -1335,7 +1342,8 @@
 		
 		
 		<!-- RESULTS -->
-		<div id="section_result" style="display:none;">				
+		<div id="section_result" style="display:none;">		
+		<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 			<div class="row">
 				<div class="col-sm-12">	
 					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
@@ -1430,118 +1438,17 @@
 				
 			</div>
 		</div>
-	
-	
-	<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
-		<div id="section_resultTemp" style="display:none;">				
-			<div class="row">
-				<div class="col-sm-12">	
-					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
-				</div>		
-			</div>
-					
-				
-			<div class="row">
-				<div class="col-sm-12" style="padding-bottom:200px;">		
-					
-						<div class="col-sm-3 col-sm-offset-2">
-							<div id="myCarousel" class="carousel slide">
-								<div class="carousel-inner">
-									<div class="item active">
-										
-										<img data-toggle="magnify" src="/images/Estenza/s08122w_front.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >
-										
-									</div>
-									<div class="item">
-										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
-									</div>
-								</div>
-								
-								<!-- Controls -->
-									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
-											<span class="glyphicon glyphicon-chevron-left"></span>
-									</a>
-
-									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-									</a>
-							</div>
-
-
-
-							
-						</div>
-						
-						
-						
-						<div class="col-sm-5 col-sm-offset-1">
-						
-							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname">SIGNATURE PAVE CROWN</p>
-							<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant">Vijay Kedia</span></em></p>
-							<h1>$ 3,500*<span id="main_ring_price"></span></h1>
-							<div>
-								<h4>Description</h4>
-									<p id="main_ring_ringdesc">
-										Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. 
-									</p>
-							</div>
-							<!-- <a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
-							<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> -->
-							<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
-							<i class="fa fa-heart-o"></i> Love It 
-							<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
-							</button>-->
-							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
-							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> 
-							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="share" target="_blank">Invite Family/Friend to Help</a> <br/><br/>
-								<hr style="margin-top:0px;margin-bottom:13px;"/>
-								
-								<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
-								<!--<a href="#" class="btn btn-default btn-lg disabled">
-									<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
-									Wish List - Coming Soon
-								</a><br/>-->
-								
-								<div style="padding-top:5px;">	
-									<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
-									
-									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
-									
-									<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">less<i class="fa fa-angle-double-left"></i></div>
-								
-									<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;"> <i class="fa fa-angle-double-right"></i>more</div>
-								
-									
-									<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
-									This needs to pull the current page your as assign to url,
-									It needs to pull the image file url
-									and to write a description for the file
-									http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
-									-->
-								</div>
-								
-								
-						</div>
-					</div>	
-
-					
-				
-			</div>
 		</div>
-	
-	
+
 		<!-- Foot note container starts here -->	
-		 <div style="background-color:rgb(23,27,38); width:100%; padding: 20px; min-height:60px; bottom:0px;">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12" style="padding-top:10px;color:white;">
-						<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
-					</div>
+		<div class="container-fluid" style="background-color:rgb(23,27,38); width:100%; text-align:center; padding: 20px; min-height:60px; bottom:0px;">
+			<div class="row">
+				<div class="col-sm-12" style="padding-top:10px;color:white;">
+					<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
 				</div>
 			</div>
-		 </div>
+		</div>
 	 
-    
 
 
     <!-- Bootstrap core JavaScript
@@ -1569,12 +1476,18 @@
 		});
 		
 		$("#sectionNameButtonPressed").on('click', function(){
-//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
-			$("#sectionName").addClass('hide');
-			$("#insertUserName").empty().append($("#userName").val());
-			$("#sectionPinterest").slideDown(3,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
-			});
+			if ($("#userName").val() != ""){
+//				$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+				$("#sectionName").addClass('hide');
+				$("#insertUserName").empty().append($("#userName").val());
+				$("#sectionPinterest").slideDown(3,'linear',function(){
+					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+				});
+				}
+			else {
+				$("#userName").attr('placeholder','your name??');
+				$("#userName").focus();
+			}			
 		});
 			
 		$("#pintrestUserName").click(function(){
@@ -1587,18 +1500,8 @@
 		  timeoutID = window.setTimeout(slowAlert, 2000);
 		}
 
-		
-		$("#pinterestSkipButtonPressed").on('click', function(){
-//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
-//			$("#insertUserName").empty().append($("#userName").val());
-			$("#sectionPinterest").addClass('hide'); 
-			$("#section_setting").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
-				});
-			});
-		
-		
 		$("#pinterestButtonPressed").on('click', function(){
+			if ($("#pintrestUserName").val() != ""){
 //			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 //			$("#insertUserName").empty().append($("#userName").val());
 			$("#modalPinterestWait").modal({
@@ -1612,6 +1515,21 @@
 					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
 				});
 				}, 5000);
+			}	
+			else {
+				$("#pintrestUserName").attr('placeholder','did you mean to click on skip?');
+				$("#pintrestUserName").focus();
+			}			
+			});		
+		
+		
+		$("#pinterestSkipButtonPressed").on('click', function(){
+//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+//			$("#insertUserName").empty().append($("#userName").val());
+			$("#sectionPinterest").addClass('hide'); 
+			$("#section_setting").slideDown(10,'linear',function(){
+				//$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
+				});
 			});
 		
 		$("#settingEdit").click(function(){
@@ -1646,10 +1564,24 @@
 		});
 		
 		$("#budgetButtonPressed").click(function(){
+			if ($("#userBudget").val() == "" || $("#userBudget").val() == 0){
+			$("#userBudget").val(5000);
+			}
+			else {
+		    var lower = ($("#userBudget").val()) - 3000;
+			console.log (lower + "," + $("#userBudget").val());
+				$.post('/chooseBudget', {
+						price: lower + "," + $("#userBudget").val()
+					});
 			$("#sectionBudget").addClass('hide');
-			$("#section_resultTemp").slideDown(10,'linear',function(){
+			/*$("#section_resultTemp").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
+			});*/
+			$("#section_result").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
 			});
+			}
+			
 		});
 		
 		
@@ -1657,11 +1589,12 @@
 			$("#setting1_show,#setting2_show,#setting3_show,#setting4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			$.post("/step2", {
+			$.post("/chooseSetting", { //passing setting value 
 				setting: 	$(this).data('value_id')
 				});
+			$("#section_setting").removeClass("show").addClass('hide');
 			$("#section_metal").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
+				//$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
 			});
 		});
 		
@@ -1670,11 +1603,12 @@
 			$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-				$.post("/step3", {
+				$.post("/chooseMetal", { //passing metal value
 				ring: $(this).data('value_id')
 				});	
+			$("#section_metal").removeClass("show").addClass('hide');
 			$("#section_gem").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
+				//$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
 			});
 		});				
 		
@@ -1683,11 +1617,12 @@
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-				$.post("/step3", {
-				ring: $(this).data('value_id')
+				$.post("/chooseGem", { //passing gem value, need new function
+				gem: $(this).data('value_id')
 				});		
+			$("#section_gem").removeClass("show").addClass('hide');
 			$("#section_shape").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
+				//$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
 			});
 		});	
 		
@@ -1695,12 +1630,13 @@
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-				$.post("/step3", {
-				ring: $(this).data('value_id')
-				});		
-				$("#sectionBudget").slideDown(10,'linear',function(){
-					$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
-				});
+				$.post("/chooseGem", { //passing gem value, need new function
+				gem: $(this).data('value_id')
+				});	
+			$("#section_gem").removeClass("show").addClass('hide');	
+			$("#sectionBudget").slideDown(10,'linear',function(){
+				//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+			});
 				
 				
 			/*$("#section_budget").slideDown(10,'linear',function(){
@@ -1742,15 +1678,19 @@
 			$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-				$.post("/step4", {
+				$.post("/chooseShape", {
 				shape: $(this).data('value_id')
 				});
-				
+				$("#section_shape").removeClass("show").addClass('hide');
 				$("#sectionBudget").slideDown(10,'linear',function(){
-					$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+					//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
 				});
 			});	
-
+		
+		
+		
+		/*
+		
 		$("#submit").on('click', function(){		
 			var basicValues = $("#slider").rangeSlider("values");
 			if ((basicValues.max-basicValues.min) >3000)
@@ -1773,7 +1713,7 @@
 						
 					});
 				};	
-		});		
+		});		/*
 		
 		
 		$("#date_show").datepicker({
@@ -1914,7 +1854,7 @@
 			}	
 		});		
 		*/	
-		
+		/*
 		$(".contentBox").hover(function(){
 			//console.log('fire'),
 			$(this).toggleClass('content-shadow');	
@@ -1933,14 +1873,14 @@
 			/*else  if (rangeMax == rangeMin)
 				{
 					$("#formAlert_warning").slideDown('slow');
-				}*/
+				}
 			else		
 				{
 					$("#formAlert_danger").slideUp('slow');
 					//$("#formAlert_warning").slideUp('slow');
 				};		
 		};
-		
+		*/
 		$('#slider').on("valuesChanging", function(data){
 			//console.log('slider')
 			calculator(data)

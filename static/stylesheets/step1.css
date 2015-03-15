@@ -1,12 +1,12 @@
 html,body {
 	font-family: 'Fira Sans';
-}
 
+}
 
 
 .jumbotron {
 	color:#ffffff;
-	height: 80vh;
+	height: 100vh;
 	background-image: url(/images/background6.jpg);
 	background-position: 50% 0%;
 	margin-top:-20px;
@@ -19,6 +19,8 @@ html,body {
   color: #fff;
   background-color: transparent;
 }
+
+
 
 
 .btn-clear {
@@ -349,3 +351,16 @@ font-size:3.5em;
 .style-4 input[type="text"].focus {
   border-bottom: solid 2px #969696;
 }
+
+.style-4 input[type="number"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  
+}
+.style-4 input[type="number"]:focus,
+.style-4 input[type="number"].focus {
+  border-bottom: solid 2px #969696;
+}
+

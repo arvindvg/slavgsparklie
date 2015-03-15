@@ -98,7 +98,7 @@ class merchant(ndb.Model):
     merchant_address = ndb.StringProperty(indexed=True) 
     merchant_phone = ndb.StringProperty(indexed=True) 
 
-class Step1(webapp2.RequestHandler):
+class HomePage(webapp2.RequestHandler):
 
     def get(self):
         session = get_current_session()
@@ -134,7 +134,7 @@ class Step_city(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=str(user_city))
         input.put()
 
-class Step2(webapp2.RequestHandler):
+class Setting(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -148,7 +148,7 @@ class Step2(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_setting)
         input.put()
 
-class Step3(webapp2.RequestHandler):
+class Metal(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -160,7 +160,20 @@ class Step3(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_metal)
         input.put()
 
-class Step4(webapp2.RequestHandler):
+class Gem(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        user_gem = self.request.get('gem')
+        unique_id = session.get('unique_id')
+        unique_id = str(unique_id)
+        event_type = 'Ring Gem'
+        session['user_gem'] = user_gem
+        input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
+        input.put()
+
+
+class Shape(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -172,7 +185,7 @@ class Step4(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_shape)
         input.put()
 
-class Step5(webapp2.RequestHandler):
+class Budget(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -180,6 +193,7 @@ class Step5(webapp2.RequestHandler):
         user_price_lower,user_price_upper = user_price.split(",") 
         user_price_lower = int(user_price_lower)
         user_price_upper = int(user_price_upper)
+        print user_price
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'Budget'
@@ -977,12 +991,13 @@ class launch(webapp2.RequestHandler):
 
             
 application = webapp2.WSGIApplication([
-('/', Step1),
+('/', HomePage),
 ('/style', Style),
-('/step2', Step2),
-('/step3', Step3),
-('/step4', Step4),
-('/step5', Step5),
+('/chooseSetting', Setting),
+('/chooseMetal', Metal),
+('/chooseGem', Gem),
+('/chooseShape', Shape),
+('/chooseBudget', Budget),
 ('/step6', Step6),
 ('/step7', Step7),
 ('/search', Search),
