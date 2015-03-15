@@ -179,7 +179,7 @@ class UserName(webapp2.RequestHandler):
         user_name = self.request.get('userName')
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
-        event_type = 'Ring Gem'
+        event_type = 'Name'
         session['user_name'] = user_name
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_name) # i don't think i have to createa new db above when we had this user?
         input.put()
