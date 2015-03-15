@@ -172,6 +172,18 @@ class Gem(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
         input.put()
 
+class UserName(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        user_name = self.request.get('userName')
+        unique_id = session.get('unique_id')
+        unique_id = str(unique_id)
+        event_type = 'Ring Gem'
+        session['user_name'] = user_name
+        input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_name) # i don't think i have to createa new db above when we had this user?
+        input.put()
+
 
 class Shape(webapp2.RequestHandler):
 
@@ -204,7 +216,7 @@ class Budget(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_price)
         input.put()
 
-class Step6(webapp2.RequestHandler):
+class Calculation(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -430,7 +442,7 @@ class Step6(webapp2.RequestHandler):
         session['inventory_query'] = inventory_query
         self.response.out.write(best_overall)           
 
-class Step7(webapp2.RequestHandler):
+class Recommendation(webapp2.RequestHandler):
 
     def get(self):
         session = get_current_session()
@@ -992,14 +1004,15 @@ class launch(webapp2.RequestHandler):
             
 application = webapp2.WSGIApplication([
 ('/', HomePage),
+('/userName', UserName),
 ('/style', Style),
 ('/chooseSetting', Setting),
 ('/chooseMetal', Metal),
 ('/chooseGem', Gem),
 ('/chooseShape', Shape),
 ('/chooseBudget', Budget),
-('/step6', Step6),
-('/step7', Step7),
+('/step6', Calculation),
+('/recommendation', Recommendation),
 ('/search', Search),
 ('/data', Data),
 ('/upvotes', upvotes),

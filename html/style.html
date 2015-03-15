@@ -1305,7 +1305,7 @@
 					<div class="form-group">
 						<div style="margin-top:50px;"><!-- This might need to by dynamic to the screen size -->
 							<div class="col-sm-2 col-sm-offset-5"> 
-								<button id="final" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Next</button>
+								<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Next</button>
 							</div>				
 						</div>
 					</div>
@@ -1577,12 +1577,134 @@
 			/*$("#section_resultTemp").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
 			});*/
-			$("#section_result").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-			});
+			
+			if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
+				{
+					//$("#sum").removeClass(has-error);
+					console.log((parseInt($("#1").text().charAt(0))*10).toString());
+					$.post('/step6',{
+						/*selection_size: 40,
+						selection_sparklie: 20,
+						selection_purity: 20,
+						selection_transparency: 20*/
+						selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
+						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
+						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
+						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
+					}).done(function(data){
+						//console.log('done');
+						//console.log(JSON.parse(data));
+						$.ajax({
+							type: "GET",
+							url: "/recommendation", 
+							data: {pagination_counter: 0},
+							dataType: "html"		
+						}).done(function(data){
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 1},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter1', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 2},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter2', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 3},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter3', data, { expires: 7 });console.log('done')});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 4},
+								dataType: "html"		
+							}).done(function(data){$.cookie('pagination_counter4', data, { expires: 7 });console.log('done')});
+							var json = JSON.parse(data);
+							console.log(json);
+							$.cookie('pagination_counter0', data, { expires: 7 });
+							$.cookie('pagination', json.total_products, { expires: 7 });		
+							$("#ring_votes").empty().append(json.ring_votes);									
+							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+							$("#main_ring_price").empty().append(json.main_ring_price);
+							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+							$("#schedule").val(json.merchant_id);
+							
+							if (json.local_merchant_flag == 1)
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+							if (json.image_count == 3)
+								{
+									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+									$("#main_ring_image_url3").css('visibility','visible')
+									
+								}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
+							$("#section_result").slideDown(10,'linear',function(){
+								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
+							});		
+							}).error(function(){
+								//We can implement an email functionality for the case when we don't have the product
+								$('#myModal_sorry').modal({
+								keyboard : true,
+								backdrop: true,
+								});
+								
+								
+								
+								
+								
+								
+							});	
+							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
+					});
+				}
+				else
+				{
+					//$("#sum").addClass(has-error);
+					console.log('error');
+				}
 			}
 			
 		});
+		
+		/*
+		$("#final").click(function(){
+			$("#start,#start2").empty().append("Change your Answers");
+			//console.log('final');
+			$("#back").css('visibility','visible');
+			$('#myModal_contact_us').modal({
+				keyboard : true,	
+				backdrop: true,
+			});
+
+			//sum = Number($("#1").val()) + Number($("#2").val()) + Number($("#3").val()) + Number($("#4").val());
+			//console.log(sum);
+				
+				
+
+		});			*/
 		
 		
 		$("#setting1,#setting2,#setting3,#setting4").on('click', function(){
@@ -1933,129 +2055,6 @@
 		//var backRunning = false;
 		//var nextRunning = false;
 		
-
-		
-		$("#final").click(function(){
-			$("#start,#start2").empty().append("Change your Answers");
-			//console.log('final');
-			$("#back").css('visibility','visible');
-			$('#myModal_contact_us').modal({
-				keyboard : true,	
-				backdrop: true,
-			});
-
-			//sum = Number($("#1").val()) + Number($("#2").val()) + Number($("#3").val()) + Number($("#4").val());
-			//console.log(sum);
-				
-				if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
-				{
-					//$("#sum").removeClass(has-error);
-					console.log((parseInt($("#1").text().charAt(0))*10).toString());
-					$.post('/step6',{
-						/*selection_size: 40,
-						selection_sparklie: 20,
-						selection_purity: 20,
-						selection_transparency: 20*/
-						selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
-					}).done(function(data){
-						//console.log('done');
-						//console.log(JSON.parse(data));
-						$.ajax({
-							type: "GET",
-							url: "/step7", 
-							data: {pagination_counter: 0},
-							dataType: "html"		
-						}).done(function(data){
-							$.ajax({
-								type: "GET",
-								url: "/step7", 
-								data: {pagination_counter: 1},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter1', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/step7", 
-								data: {pagination_counter: 2},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter2', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/step7", 
-								data: {pagination_counter: 3},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter3', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/step7", 
-								data: {pagination_counter: 4},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter4', data, { expires: 7 });console.log('done')});
-							var json = JSON.parse(data);
-							console.log(json);
-							$.cookie('pagination_counter0', data, { expires: 7 });
-							$.cookie('pagination', json.total_products, { expires: 7 });		
-							$("#ring_votes").empty().append(json.ring_votes);									
-							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-							$("#main_ring_price").empty().append(json.main_ring_price);
-							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-							$("#schedule").val(json.merchant_id);
-							
-							if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-								}
-							if (json.image_count == 3)
-								{
-									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-									$("#main_ring_image_url3").css('visibility','visible')
-									
-								}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-							$("#section_result").slideDown(10,'linear',function(){
-								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-							});		
-							}).error(function(){
-								//We can implement an email functionality for the case when we don't have the product
-								$('#myModal_sorry').modal({
-								keyboard : true,
-								backdrop: true,
-								});
-								
-								
-								
-								
-								
-								
-							});	
-							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
-					});
-				}
-				else
-				{
-					//$("#sum").addClass(has-error);
-					console.log('error');
-				}
-
-		});			
 		
 		
 		
