@@ -119,18 +119,17 @@ class Style (webapp2.RequestHandler):
 	    self.response.out.write(template.render())
 
 		
-class Step_city(webapp2.RequestHandler):
+class userCity(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
-        internalCounter = self.request.get('internalCounter')
         user_city = self.request.get('city')
-        user_city = int(user_city) # Arvind, note I changed this back to str because I think the database is expecting a string, not an int, when you made this change.
+        print user_city
+        #user_city = int(user_city) 
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'User City'
         session['user_city'] = user_city
-        session['internalCounter'] = internalCounter
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=str(user_city))
         input.put()
 
@@ -138,13 +137,11 @@ class Setting(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
-        internalCounter = self.request.get('internalCounter')
         user_setting = self.request.get('setting')
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'Ring setting'
         session['user_setting'] = user_setting
-        session['internalCounter'] = internalCounter
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_setting)
         input.put()
 
@@ -155,6 +152,7 @@ class Metal(webapp2.RequestHandler):
         user_metal = self.request.get('ring')
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
+        event_type = 'Ring Metal'
         event_type = 'Ring Metal'
         session['user_metal'] = user_metal
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_metal)
@@ -172,7 +170,7 @@ class Gem(webapp2.RequestHandler):
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
         input.put()
 
-class UserName(webapp2.RequestHandler):
+class userName(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
@@ -205,7 +203,6 @@ class Budget(webapp2.RequestHandler):
         user_price_lower,user_price_upper = user_price.split(",") 
         user_price_lower = int(user_price_lower)
         user_price_upper = int(user_price_upper)
-        print user_price
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'Budget'
@@ -1004,7 +1001,7 @@ class launch(webapp2.RequestHandler):
             
 application = webapp2.WSGIApplication([
 ('/', HomePage),
-('/userName', UserName),
+('/userName', userName),
 ('/style', Style),
 ('/chooseSetting', Setting),
 ('/chooseMetal', Metal),
@@ -1021,6 +1018,6 @@ application = webapp2.WSGIApplication([
 ('/email_message', email_message),
 ('/email_message2', email_message2),
 ('/launch', launch),
-('/Step_city', Step_city)
+('/userCity', userCity)
 ], debug=True)
 #important to write a 404 page response, to have it push to the blog with a contact info about something that went wrong

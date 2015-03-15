@@ -1480,6 +1480,9 @@
 //				$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 				$("#sectionName").addClass('hide');
 				$("#insertUserName").empty().append($("#userName").val());
+				$.post('/userName', {
+						userName: $("#userName").val()
+					});
 				$("#sectionPinterest").slideDown(3,'linear',function(){
 					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
 				});
@@ -1573,10 +1576,15 @@
 				$.post('/chooseBudget', {
 						price: lower + "," + $("#userBudget").val()
 					});
+				$.post('/userCity',{
+						city: 3
+					});
 			$("#sectionBudget").addClass('hide');
 			/*$("#section_resultTemp").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
 			});*/
+			
+			
 			
 			if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
 				{
