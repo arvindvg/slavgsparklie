@@ -142,6 +142,7 @@ class Setting(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Ring setting'
         session['user_setting'] = user_setting
+        #print user_setting
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_setting)
         input.put()
 
@@ -155,6 +156,7 @@ class Metal(webapp2.RequestHandler):
         event_type = 'Ring Metal'
         event_type = 'Ring Metal'
         session['user_metal'] = user_metal
+        #print user_metal
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_metal)
         input.put()
 
@@ -167,6 +169,7 @@ class Gem(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Ring Gem'
         session['user_gem'] = user_gem
+        #print user_gem
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
         input.put()
 
@@ -179,6 +182,7 @@ class userName(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Name'
         session['user_name'] = user_name
+        #print user_name
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_name) # i don't think i have to createa new db above when we had this user?
         input.put()
 
@@ -192,6 +196,7 @@ class Shape(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Diamond Shape'
         session['user_shape'] = user_shape
+        #print user_shape
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_shape)
         input.put()
 
@@ -200,16 +205,11 @@ class Budget(webapp2.RequestHandler):
     def post(self):
         session = get_current_session()
         user_price = self.request.get('price')
-        user_price_lower,user_price_upper = user_price.split(",") 
-        user_price_lower = int(user_price_lower)
-        user_price_upper = int(user_price_upper)
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
         event_type = 'Budget'
-        range = user_price_upper - user_price_lower 
-        session['user_price_lower'] = user_price_lower
-        session['user_price_upper'] = user_price_upper
-        session['range'] = range
+        session['user_price'] = user_price
+        #print user_price
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_price)
         input.put()
 
@@ -223,12 +223,20 @@ class Calculation(webapp2.RequestHandler):
         user_shape_list = []
         user_setting_list = []
         user_metal_list = []
-        user_price_lower = session.get('user_price_lower')
-        print user_price_lower 
-        user_price_lower = float(user_price_lower)	
-        user_price_upper = session.get('user_price_upper')
-        user_price_upper = float(user_price_upper)	
+        user_price = session.get('user_price')
+        #print "user_price"  
+        #print user_price
+        user_price_lower,user_price_upper = user_price.split(",") 
+        user_price_lower = int(user_price_lower)
+        #print "user_price_lower"
+        #print user_price_lower 
+        user_price_upper = int(user_price_upper)
+        #print "user_price_upper"
+        #print user_price_upper 
+        #print "user_price_lower"
+        #print user_price_lower 
         user_setting = session.get('user_setting')
+        #print user_setting
         user_setting = user_setting.upper()
         user_setting_list.append(user_setting)
         user_shape = session.get('user_shape')
@@ -242,7 +250,7 @@ class Calculation(webapp2.RequestHandler):
         event_type3 = 'Selection purity'
         event_type4 = 'Selection transparency'
         user_city = session.get('user_city')
-        user_city = int(user_city)
+        #user_city = int(user_city)
         
         user_selection_size = self.request.get('selection_size')
         user_selection_sparkle = self.request.get('selection_sparklie')
@@ -272,9 +280,9 @@ class Calculation(webapp2.RequestHandler):
         influence_sparkle = user_selection_sparkle / 100    
         influence_purity = user_selection_purity / 100   
         influence_transparency = user_selection_transparency / 100   
-
         inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==int(user_city)).fetch()
-
+        #print "inventory_query"
+        #print inventory_query
         inventory_size={}
         inventory_sparkle = {}
         inventory_transparency = {}
