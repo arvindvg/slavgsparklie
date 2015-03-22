@@ -224,26 +224,41 @@
 		
 		<!-- Schedule an appointment Modal-->
 		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
+			<div class="modal-dialog modal-dialog-temp modal-lg">
 				<div class="modal-content">
 					<div class="modal-body" style="padding-top:10px;">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 						<div class="row">
 							<div class="col-sm-12" >
 								<div style="text-align:center;">
-								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;">Schedule an Appointment</h2>
+								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;"> View in Store</h2>
 								</div>
 							</div>
 						</div>
 						
 						<div class="row">
-							<div class="col-sm-8">
-								<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;"></div>						
+							<div class="col-sm-4" style="padding-top:3%;">
+							
+							Why Schedule A Visit?
+							
+							Benefits include:
+							<ul>
+							<li>A</li>
+							
+							<li>B</li>
+							
+							
+							</ul>
+							
+							</div>
+						
+							<div class="col-sm-8" style="padding-top:3%;">
+							
 								
 							
 							
 								<form role="form" id="send_email">
-									<div class="form-group col-lg-6" style="padding:0px;">
+									<!--<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
 										<input type="text" class="form-control" id="first_name" placeholder="First Name"  style="border-radius:0px" required>
@@ -254,19 +269,19 @@
 										<label for="Last">Last Name</label>
 										<input type="text" class="form-control" id="last_name" placeholder="Last Name (optional)"  style="border-radius:0px">
 										</div>
-									  </div>
+									  </div>-->
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Email">Email address</label>
 										<input type="email" class="form-control" id="email" placeholder="Enter email"  style="border-radius:0px" required>
 									  </div>
 								  
-									  <div class="form-group col-sm-12">
+									  <!--<div class="form-group col-sm-12">
 										<label for="Phone">Phone</label>
 										<input type="tel" class="form-control" id="phone_number" placeholder="XXX-XXX-XXXX (optional)" style="border-radius:0px">
-									  </div>
+									  </div>-->
 								  
-									  <div class="form-group col-sm-12">
+									  <!--<div class="form-group col-sm-12">
 										<label for="subject">Subject</label>
 										<input type="text" class="form-control" id="subject" value="I'd like to schedule time for a viewing" style="border-radius:0px" required>
 									  </div>
@@ -279,7 +294,40 @@
 												<input id="date_show" class="form-control" type="date" style="border-radius:0px" placeholder="MM/DD/YY" required>
 												</div>	
 										</div>
-									 </div>						  
+									 </div>		-->				  
+						  
+									<div class="form-group col-sm-12">
+										<label for="Date">Date</label>
+											<div class="dropdown">
+											  <button style="background:rgb(256,256,256);color:#000000;border-radius:0px;border:1px solid grey;text-align:left;font-size:.9em;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dateDropDown" data-toggle="dropdown" aria-expanded="true" >
+												<span class="selection" id="date1">Saturday</span>
+												<span class="caret"></span>
+											  </button>
+											  <ul class="dropdown-menu date" role="menu" aria-labelledby="dateDropDown" style="width:100%;">
+												<li role="presentation"><a role="menuitem" >Saturday </a></li>
+												<li role="presentation"><a role="menuitem" >Sunday  </a></li>
+												<li role="presentation"><a role="menuitem" >Friday  </a></li>
+												<li role="presentation"><a role="menuitem" >Thursday </a></li>
+											  </ul>
+											</div>
+									  </div>
+						  
+									  <div class="form-group col-sm-12">
+										<label for="Time">Preferred Visit Time</label>
+											<div class="dropdown">
+											  <button style="background:rgb(256,256,256);color:#000000;border-radius:0px;border:1px solid grey;text-align:left;font-size:.9em;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dateDropDown" data-toggle="dropdown" aria-expanded="true" >
+												<span class="selection" id="time1">Mid-Mornings (10 - 12 am)</span>
+												<span class="caret"></span>
+											  </button>
+											  <ul class="dropdown-menu date" role="menu" aria-labelledby="dateDropDown" style="width:100%;">
+												<li role="presentation"><a role="menuitem" >Early Mornings (8 - 10 am)</a></li>
+												<li role="presentation"><a role="menuitem" >Mid-Mornings (10 - 12 am)  </a></li>
+												<li role="presentation"><a role="menuitem" >Early Afternoons (12 - 2pm)  </a></li>
+												<li role="presentation"><a role="menuitem" >Late Afternoons (2 - 5pm) </a></li>
+												<li role="presentation"><a role="menuitem" >Evenings (After 5pm) </a></li>
+											  </ul>
+											</div>
+									  </div>
 						  
 									  <div class="form-group col-sm-12">
 										<label for="textarea">Message</label>
@@ -287,14 +335,14 @@
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
-										<button type="submit" class="btn btn-clear btn-default">Send</button>
+										<button type="submit" class="btn btn-clear btn-default" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;">Confirm</button>
 										</div>
 								</form>
-									<div class="col-sm-4"></div>
+									
 							
 							</div>
 						
-							<div class="col-sm-4">
+							<!--<div class="col-sm-4">
 								<div class="col-sm-12">
 							<div class="col-sm-12" style="padding-top:20px;padding-bottom:20px;line-height:1.5em;">
 							
@@ -309,7 +357,7 @@
 							<p>Chicago, IL 60603</p>
 							</div>
 							</div>
-							</div>
+							</div>-->
 						</div>
 					 </div>
 				</div><!-- /.modal-content -->
@@ -427,15 +475,15 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 
-		<!-- Modal for inviting family -->
-		<div class="modal fade" id="myModal_family" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+		<!-- Modal for inviting family/friends -->
+		<div class="modal fade" id="myModal_invite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
+						<h2 class="modal-title" style="text-align:center;">Invite your close family/friend to help</h2>
 						
-						We ask for this information so that we can contact you personally to showcase our hand-picked rings.
+						Need an opinion about a ring? Invite your family or friend to help you decide. We'll send them an email that only they can view. 
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
@@ -444,7 +492,7 @@
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
+										<input type="text" class="form-control" id="first_name2" placeholder="Friend/Family Firs Name"  style="border-radius:0px" required>
 										</div>
 									</div>
 									<div class="form-group col-lg-6" style="padding:0px;">
@@ -460,18 +508,8 @@
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
-										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
-									  </div>
-						  
-									  <div class="form-group col-sm-12">
-										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message2" placeholder="Optional, anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
+										<label for="textarea">Additional Message</label>
+										<textarea class="form-control" id="message2" placeholder="Optional. Anything you'd like to add to their email?" value="test" style="border-radius:0px"></textarea>
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
@@ -525,11 +563,24 @@
 		
 		
 		
+		<!-- INDICATORS -->
+		<div id="indicatorSection" style="display:show;">
+			<div class="container-fluid"><!-- This might need to by dynamic to the screen size -->
+					<div class="row">
+						<div class="col-md-12" style="padding-top:1%;">
+							<ol class="new-indicators">
+								<li class="active"></li>
+								<li class="" ></li>
+								<li class="" ></li>
+								<li class=""></li>
+							</ol>
+						</div>
+					</div>
+			</div>
+		</div>
 		
 		
-		
-		
-		
+	
 		<!-- NAME HELLO -->
 		<div id="sectionName" style="display:show;">	
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
@@ -585,26 +636,26 @@
 						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">The Style Broken Down</p>
 					</div>
 				</div>
-				
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
 						
 						<div class="col-sm-3">
 							<div class="col-sm-12">
 								<h3 style="text-align:center;font-weight:900;">Setting Style</h3>
-								<img src="/images/solitaire_education.jpg" alt="prong setting"   style="margin-top:20px;padding: 10px 10px;height:140px;" class="center-block img-responsive" />		
+								<img src="/images/solitaire_education.jpg" alt="prong setting"   style="margin-top:20px;padding: 10px 10px;height:200px;" class="center-block img-responsive" />		
 								<h5 style="text-align:center;font-weight:900;">Solitaire</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="settingEdit" style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="settingEdit" style="text-decoration:none;cursor: pointer;" data-value_id="solitaire">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								
 							</div>
 							
 						</div>	
 						
 						<div class="col-sm-3">
 							<div class="col-sm-12">
-							<h3 style="text-align:center;font-weight:900;">Metal Style</h3>
-								<img src="/images/whitegold.jpg" alt="white gold"  style="margin-top:20px;padding: 10px 10px;height:140px;"  class="center-block img-responsive"/>		
+							<h3 style="text-align:center;font-weight:900;">Metal Type</h3>
+								<img src="/images/whitegold.jpg" alt="white gold"  style="margin-top:20px;padding: 20px 10px;height:200px;"  class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">White Gold</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="metalEdit"  style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="metalEdit"  style="text-decoration:none;cursor: pointer;" data-value_id="white gold">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 								
 						</div>
@@ -612,23 +663,34 @@
 						
 						<div class="col-sm-3">
 							<div class="col-sm-12">
-								<h3 style="text-align:center;font-weight:900;">Gem Style</h3>
-								<img src="/images/cushion-170x170.jpg" alt="prong setting"  style="margin-top:20px;padding: 10px 10px;height:140px;" class="center-block img-responsive"/>		
-								<h5 style="text-align:center;font-weight:900;">Cushion Diamond</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shapeEdit" style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+								<h3 style="text-align:center;font-weight:900;">Gem Type</h3>
+								<img src="/images/diamond.png" alt="diamond"  style="margin-top:20px;padding: 0px 10px;height:200px;" class="center-block img-responsive"/>		
+								<h5 style="text-align:center;font-weight:900;">Diamond</h5>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="gemEdit" style="text-decoration:none;cursor: pointer;" data-value_id="diamond">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 							</div>
 
 						</div>	
 						
+						
 						<div class="col-sm-3">
+							<div class="col-sm-12">
+								<h3 style="text-align:center;font-weight:900;">Gem Style</h3>
+								<img src="/images/cushion-170x170.jpg" alt="cushion cut"  style="margin-top:20px;padding: 20px 10px;height:200px;" class="center-block img-responsive"/>		
+								<h5 style="text-align:center;font-weight:900;">Cushion Shape</h5>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shapeEdit" style="text-decoration:none;cursor: pointer;" data-value_id="round">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+							</div>
+
+						</div>	
+						
+						<!--<div class="col-sm-3">
 							<div class="col-sm-12">
 							<h3 style="text-align:center;font-weight:900;">Most Important</br>Characteristic</h3>
 								<img src="/images/carat.png" alt="carat"  style="margin-top:-50px;margin-bottom:-5px;height:180px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Size</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="preferenceEdit"  style="text-decoration:none;cursor: pointer;">Edit <i class="fa fa-pencil-square-o"></i></a></p>
-							</div>
+								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="preferenceEdit"  style="text-decoration:none;cursor: pointer;" data-value_id="1">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+							</div>	
 
-						</div>	
+						</div>-->
 						
 					</div>	
 				</div>
@@ -1320,7 +1382,6 @@
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-md-12" id="info" style="padding-top:5%;">
-						last question</br>
 						what is your maximum budget? </br>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
@@ -1343,101 +1404,102 @@
 		
 		<!-- RESULTS -->
 		<div id="section_result" style="display:none;">		
-		<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
-			<div class="row">
-				<div class="col-sm-12">	
-					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
-				</div>		
-			</div>
+			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
+				<div class="row">
+					<div class="col-sm-12">	
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
+					</div>		
+				</div>
+						
 					
-				
-			<div class="row">
-				<div class="col-sm-12" style="padding-bottom:200px;">		
-					
-						<div class="col-sm-3 col-sm-offset-2">
-							<div id="myCarousel" class="carousel slide">
-								<div class="carousel-inner">
-									<div class="item active">
-										
-										<img data-toggle="magnify" src="/images/Estenza/s08122w_front.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >
-										
+				<div class="row">
+					<div class="col-sm-12" style="padding-bottom:200px;">		
+						
+							<div class="col-sm-3 col-sm-offset-2">
+								<div id="myCarousel" class="carousel slide">
+									<div class="carousel-inner">
+										<div class="item active">
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" />
+											<!--<img data-toggle="magnify" src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >-->
+											
+										</div>
+										<div class="item">
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url2"/>
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url3"/>
+										</div>
 									</div>
-									<div class="item">
-										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
-									</div>
+									
+									<!-- Controls -->
+										<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
+												<span class="glyphicon glyphicon-chevron-left"></span>
+										</a>
+
+										<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+												<span class="glyphicon glyphicon-chevron-right"></span>
+										</a>
 								</div>
+
+
+
 								
-								<!-- Controls -->
-									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
-											<span class="glyphicon glyphicon-chevron-left"></span>
-									</a>
-
-									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-									</a>
 							</div>
-
-
-
 							
-						</div>
-						
-						
-						
-						<div class="col-sm-5 col-sm-offset-1">
-						
-							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"><!--SIGNATURE PAVE CROWN--></p>
-							<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p>
-							<h1>$ <!--3,500*--><span id="main_ring_price"></span></h1>
-							<div>
-								<h4>Description</h4>
-									<p id="main_ring_ringdesc">
-										<!--Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. -->
-									</p>
-							</div>
-							<!-- <a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
-							<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> -->
-							<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
-							<i class="fa fa-heart-o"></i> Love It 
-							<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
-							</button>-->
-							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
-							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> 
-							<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="share" target="_blank">Invite Family/Friend to Help</a> <br/><br/>
-								<hr style="margin-top:0px;margin-bottom:13px;"/>
-								
-								<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
-								<!--<a href="#" class="btn btn-default btn-lg disabled">
-									<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
-									Wish List - Coming Soon
-								</a><br/>-->
-								
-								<div style="padding-top:5px;">	
-									<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
-									
-									<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>
-									
-									<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">less<i class="fa fa-angle-double-left"></i></div>
-								
-									<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;"> <i class="fa fa-angle-double-right"></i>more</div>
-								
-									
-									<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
-									This needs to pull the current page your as assign to url,
-									It needs to pull the image file url
-									and to write a description for the file
-									http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
-									-->
+							
+							
+							<div class="col-sm-5 col-sm-offset-1">
+							
+								<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"><!--SIGNATURE PAVE CROWN--></p>
+								<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p>
+								<h1>$ <!--3,500*--><span id="main_ring_price"></span></h1>
+								<div>
+									<h4>Description</h4>
+										<p id="main_ring_ringdesc">
+											<!--Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. -->
+										</p>
 								</div>
-								
-								
-						</div>
-					</div>	
+								<a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
+								<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> 
+								<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
+								<i class="fa fa-heart-o"></i> Love It
+								<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
+								</button>-->
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
+								<!--<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> -->
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite Family/Friend to Help</a> <br/><br/>
+									<hr style="margin-top:0px;margin-bottom:13px;"/>
+									
+									<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
+									<!--<a href="#" class="btn btn-default btn-lg disabled">
+										<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
+										Wish List - Coming Soon
+									</a><br/>-->
+									
+									<div style="padding-top:5px;">	
+										<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
+										
+										<!--<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>-->
+										
+										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div>
+									
+										<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;float:right;"> see more</div>
+									
+										
+										<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
+										This needs to pull the current page your as assign to url,
+										It needs to pull the image file url
+										and to write a description for the file
+										http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
+										-->
+									</div>
+									
+									
+							</div>
+						</div>	
 
+						
 					
-				
+					</div>
 			</div>
-		</div>
 		</div>
 
 		<!-- Foot note container starts here -->	
@@ -1470,6 +1532,8 @@
 	<script>
 
 	$(document).ready(function(){
+	
+
 		
 		$("#userName").click(function(){
 			$("#sectionNameButtonPressed").removeClass('disabled')
@@ -1477,6 +1541,7 @@
 		
 		$("#sectionNameButtonPressed").on('click', function(){
 			if ($("#userName").val() != ""){
+				$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 //				$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 				$("#sectionName").addClass('hide');
 				$("#insertUserName").empty().append($("#userName").val());
@@ -1505,6 +1570,7 @@
 
 		$("#pinterestButtonPressed").on('click', function(){
 			if ($("#pintrestUserName").val() != ""){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 //			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 //			$("#insertUserName").empty().append($("#userName").val());
 			$("#modalPinterestWait").modal({
@@ -1515,9 +1581,9 @@
 				$("#modalPinterestWait").modal('hide'); 
 				$("#sectionPinterest").addClass('hide');
 				$("#sectionStyles").slideDown(3,'linear',function(){
-					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
+					//$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
 				});
-				}, 5000);
+				}, 1000); //change this to 5000 for 5 secs
 			}	
 			else {
 				$("#pintrestUserName").attr('placeholder','did you mean to click on skip?');
@@ -1527,6 +1593,7 @@
 		
 		
 		$("#pinterestSkipButtonPressed").on('click', function(){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 //			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 //			$("#insertUserName").empty().append($("#userName").val());
 			$("#sectionPinterest").addClass('hide'); 
@@ -1540,6 +1607,12 @@
 				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
 			});
 		});
+			
+		$("#gemEdit").click(function(){
+			$("#section_gem").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)	
+			});
+		});	
 			
 		$("#shapeEdit").click(function(){
 			$("#section_shape").slideDown(10,'linear',function(){
@@ -1560,9 +1633,26 @@
 		});
 		
 		$("#styleConfirmedButtonPressed").click(function(){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#sectionStyles").addClass('hide');
+			console.log($("#settingEdit").data('value_id'))
+			console.log($("#metalEdit").data('value_id'))
+			console.log($("#gemEdit").data('value_id'))
+			console.log($("#shapeEdit").data('value_id'))
+			$.post("/chooseSetting", { //passing setting value 
+				setting: $("#settingEdit").data('value_id')
+				});
+			$.post("/chooseMetal", { //passing metal value
+				ring: $("#metalEdit").data('value_id')
+				});	
+			$.post("/chooseGem", { //passing gem value, need new function
+				gem: $("#gemEdit").data('value_id')
+				});	
+			$.post("/chooseShape", {
+				shape: $("#shapeEdit").data('value_id')
+				});				
 			$("#sectionBudget").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
+				//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
 			});
 		});
 		
@@ -1572,7 +1662,8 @@
 			}
 			else {
 		    var lower = ($("#userBudget").val()) - 3000;
-			console.log (lower + "," + $("#userBudget").val());
+				console.log(lower + "," + $("#userBudget").val());
+				$("#indicatorSection").addClass('hide');
 				$.post('/chooseBudget', {
 						price: lower + "," + $("#userBudget").val()
 					});
@@ -1645,7 +1736,7 @@
 							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
 							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
 							$("#schedule").val(json.merchant_id);
-							
+							/* This part of the code determines if the ring is flagged for a local merchant
 							if (json.local_merchant_flag == 1)
 								{
 									$("#schedule").removeClass('hide')
@@ -1653,7 +1744,7 @@
 							else
 								{
 									$("#schedule").addClass('hide')
-								}
+								}*/
 							if (json.image_count == 3)
 								{
 									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
@@ -1670,7 +1761,7 @@
 									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
 								}
 							$("#section_result").slideDown(10,'linear',function(){
-								$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
+								//$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
 							});		
 							}).error(function(){
 								//We can implement an email functionality for the case when we don't have the product
@@ -1719,6 +1810,7 @@
 			$("#setting1_show,#setting2_show,#setting3_show,#setting4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
+			console.log($(this).data('value_id'))			
 			$.post("/chooseSetting", { //passing setting value 
 				setting: 	$(this).data('value_id')
 				});
@@ -1733,6 +1825,7 @@
 			$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
+			console.log($(this).data('value_id'))			
 				$.post("/chooseMetal", { //passing metal value
 				ring: $(this).data('value_id')
 				});	
@@ -1747,6 +1840,7 @@
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
+			console.log($(this).data('value_id'))			
 				$.post("/chooseGem", { //passing gem value, need new function
 				gem: $(this).data('value_id')
 				});		
@@ -1757,9 +1851,11 @@
 		});	
 		
 		$("#gem2,#gem3,#gem4").on('click', function(){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
+			console.log($(this).data('value_id'))			
 				$.post("/chooseGem", { //passing gem value, need new function
 				gem: $(this).data('value_id')
 				});	
@@ -1805,9 +1901,11 @@
 			
 		
 		$("#shape1,#shape2,#shape3,#shape4").on('click', function(){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
+			console.log($(this).data('value_id'))			
 				$.post("/chooseShape", {
 				shape: $(this).data('value_id')
 				});
@@ -1912,15 +2010,7 @@
 			}
 		});
 				
-		//Voting for favorite ring		
-		$("#vote").click(function(){
-			//console.log($("#main_ring_ringname").attr('data'));
-			var value = parseInt($("#ring_votes").text())
-			$("#ring_votes").empty().append(value + 1);							
-			$.post('/upvotes',{
-				main_ring_id: $("#main_ring_ringname").attr('data')
-			});
-		});			
+		
 		
 		$("#main_ring_image_url2").click(function(){
 			var image1 = $("#main_ring_image_url1").attr('src');
@@ -2010,7 +2100,7 @@
 					//$("#formAlert_warning").slideUp('slow');
 				};		
 		};
-		*/
+		
 		$('#slider').on("valuesChanging", function(data){
 			//console.log('slider')
 			calculator(data)
@@ -2022,7 +2112,25 @@
 			$(this).css('background-position','0 0px');
 			}
 		);
+		
+		$("#share_pinterest").hover(function(){
+		$(this).css('background-position','0 -96px');
+		}, function(){
+		$(this).css('background-position','0 -80px');
+		}
+		);
+			*/	
 			
+		//Voting for favorite ring		
+		$("#vote").click(function(){
+			//console.log($("#main_ring_ringname").attr('data'));
+			var value = parseInt($("#ring_votes").text())
+			$("#ring_votes").empty().append(value + 1);							
+			$.post('/upvotes',{
+				main_ring_id: $("#main_ring_ringname").attr('data')
+			});
+		});			
+		
 		$("#share_twitter").hover(function(){
 			$(this).css('background-position','0 -176px');
 			}, function(){
@@ -2030,12 +2138,7 @@
 			}
 		);
 			
-		$("#share_pinterest").hover(function(){
-				$(this).css('background-position','0 -96px');
-				}, function(){
-				$(this).css('background-position','0 -80px');
-				}
-		);
+
 		
 		$("#schedule").click(function(){
 			$('#myModal_schedule').modal({
@@ -2045,6 +2148,13 @@
 		});
 	
 	
+		$("#invite").click(function(){
+			$('#myModal_invite').modal({
+						keyboard : true,
+						backdrop: true,
+						});
+		});	
+
 		//JS for kicking of/ terms and conditions
 		$("a[name='terms']").on('click',function(){
 				$('#myModal_terms').modal({
@@ -2064,13 +2174,186 @@
 		//var nextRunning = false;
 		
 		
-		
+		$('#next').click(function(){
+			if (insideCounter == 1)
+				{
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					$("#back").css('visibility','visible');
+					console.log(JSON.parse($.cookie('pagination_counter1')));
+					var json = JSON.parse($.cookie('pagination_counter1')); //Issue here
+					if ($.cookie('pagination') <= 2)
+					{
+						$("#next").css('display','none');
+					}
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					$("#schedule").val(json.merchant_id);
+					if (json.local_merchant_flag == 1)
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+									console.log('else')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
+				}		
+			else if (insideCounter == 2)
+				{		
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					console.log(JSON.parse($.cookie('pagination_counter2')));
+					var json = JSON.parse($.cookie('pagination_counter2'));
+					if ($.cookie('pagination') <= 3)
+					{
+						$("#next").css('display','none');
+					}							
+					$("#ring_votes").empty().append(json.ring_votes);
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					$("#schedule").val(json.merchant_id);
+					if (json.local_merchant_flag == 1)
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
+					
+				}
+			else if (insideCounter == 3)
+				{
+					window.insideCounter = insideCounter + 1;
+					console.log(insideCounter);
+					console.log(JSON.parse($.cookie('pagination_counter3')));
+					var json = JSON.parse($.cookie('pagination_counter3'));
+					if ($.cookie('pagination') <= 4)
+					{
+						$("#next").css('display','none');
+					}							
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					$("#schedule").val(json.merchant_id);
+					if (json.local_merchant_flag == 1)
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
+				}
+			else if (insideCounter == 4)	
+				{
+					window.insideCounter = insideCounter + 1;
+					console.log(JSON.parse($.cookie('pagination_counter4')));
+					var json = JSON.parse($.cookie('pagination_counter4'));
+					console.log(insideCounter);
+					$("#next").css('visibility','hidden');
+					$("#ring_votes").empty().append(json.ring_votes);							
+					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+					$("#main_ring_price").empty().append(json.main_ring_price);
+					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+					$("#schedule").val(json.merchant_id);
+					if (json.local_merchant_flag == 1)
+								{
+									$("#schedule").removeClass('hide')
+								}
+							else
+								{
+									$("#schedule").addClass('hide')
+								}
+					if (json.image_count == 3)
+					{
+						$("#main_ring_image_url3").css('visibility','visible')
+						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+					}
+							else if (json.image_count == 2)
+								{
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#main_ring_image_url2").css('visibility','visible')
+								}
+							else
+								{
+									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
+								}
+				}
+			});
 		
 		$("#back").click(function(){$.fn.back()})
 		
 		$.fn.back = function(){
 		//$("#next").css('display','block');
 		window.insideCounter = insideCounter -1;
+				if ($("#next").css('visibility') == "hidden"){
+					$("#next").css('visibility','visible');
+					console.log('hello');
+				};
 				if (insideCounter >=2)
 					{			
 						
@@ -2232,172 +2515,11 @@
 			}
 		});*/
 			
-		$('#next').click(function(){
-			if (insideCounter == 1)
-				{
-					window.insideCounter = insideCounter + 1;
-					console.log(insideCounter);
-					$("#back").css('visibility','visible');
-					var json = JSON.parse($.cookie('pagination_counter1')); //Issue here
-					if ($.cookie('pagination') <= 2)
-					{
-						$("#next").css('display','none');
-					}
-					$("#ring_votes").empty().append(json.ring_votes);							
-					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-					$("#main_ring_price").empty().append(json.main_ring_price);
-					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					$("#schedule").val(json.merchant_id);
-					if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-									console.log('else')
-								}
-					if (json.image_count == 3)
-					{
-						$("#main_ring_image_url3").css('visibility','visible')
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-					}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-				}		
-			else if (insideCounter == 2)
-				{		
-					window.insideCounter = insideCounter + 1;
-					console.log(insideCounter);
-					var json = JSON.parse($.cookie('pagination_counter2'));
-					if ($.cookie('pagination') <= 3)
-					{
-						$("#next").css('display','none');
-					}							
-					$("#ring_votes").empty().append(json.ring_votes);
-					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-					$("#main_ring_price").empty().append(json.main_ring_price);
-					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					$("#schedule").val(json.merchant_id);
-					if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-								}
-					if (json.image_count == 3)
-					{
-						$("#main_ring_image_url3").css('visibility','visible')
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-					}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-					
-				}
-			else if (insideCounter == 3)
-				{
-					window.insideCounter = insideCounter + 1;
-					console.log(insideCounter);
-					var json = JSON.parse($.cookie('pagination_counter3'));
-					if ($.cookie('pagination') <= 4)
-					{
-						$("#next").css('display','none');
-					}							
-					$("#ring_votes").empty().append(json.ring_votes);							
-					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-					$("#main_ring_price").empty().append(json.main_ring_price);
-					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					$("#schedule").val(json.merchant_id);
-					if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-								}
-					if (json.image_count == 3)
-					{
-						$("#main_ring_image_url3").css('visibility','visible')
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-					}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-				}
-			else if (insideCounter == 4)	
-				{
-					window.insideCounter = insideCounter + 1;
-					var json = JSON.parse($.cookie('pagination_counter3'));
-					console.log(insideCounter);
-					$("#next").css('display','none');
-					$("#ring_votes").empty().append(json.ring_votes);							
-					$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-					$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-					$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-					$("#main_ring_price").empty().append(json.main_ring_price);
-					$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-					$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-					$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-					$("#schedule").val(json.merchant_id);
-					if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-								}
-					if (json.image_count == 3)
-					{
-						$("#main_ring_image_url3").css('visibility','visible')
-						$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-					}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-				}
-			});
+			
+	$(".dropdown-menu date li a").click(function(){
+		$(this).parents(".dropdown").find('.selection').text($(this).text());
+		$(this).parents(".dropdown").find('.selection').val($(this).text());
+	});
 			
 	$(".dropdown-menu li a").click(function(){
 		var one = parseInt($("#1").text().charAt(0));

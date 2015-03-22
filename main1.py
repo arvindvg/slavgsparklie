@@ -251,7 +251,8 @@ class Calculation(webapp2.RequestHandler):
         event_type4 = 'Selection transparency'
         user_city = session.get('user_city')
         #user_city = int(user_city)
-        
+        session['user_price_lower'] = user_price_lower
+	session['user_price_upper'] = user_price_upper
         user_selection_size = self.request.get('selection_size')
         user_selection_sparkle = self.request.get('selection_sparklie')
         user_selection_purity = self.request.get('selection_purity')
@@ -485,9 +486,9 @@ class Recommendation(webapp2.RequestHandler):
         user_metal = user_metal.upper()
         user_ring_list.append(user_metal)
         user_price_lower = session.get('user_price_lower')
-        user_price_lower = float(user_price_lower)	
+        user_price_lower = int(user_price_lower)	
         user_price_upper = session.get('user_price_upper')
-        user_price_upper = float(user_price_upper)	
+        user_price_upper = int(user_price_upper)	
 
         inventory_query = session.get('inventory_query')
 

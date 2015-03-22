@@ -50,9 +50,9 @@
 			  <ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="#">HOME</a></li>-->
 				<li><a href="#howitworks">HOW IT WORKS</a></li>
-				<li><a href="#aboutus">FAQ</a></li>
-				<li><a href="#aboutus">FOR HER</a></li>
-				<li><a href="#aboutus">OUR STORY</a></li>
+				<li><a id="faq">FAQ</a></li>
+				<!--<li><a href="#aboutus">FOR HER</a></li>-->
+				<li><a id="aboutUS">ABOUT SPARKLIE</a></li>
 				
 				
 				<!--<li class="dropdown">
@@ -208,6 +208,65 @@
 			</div>
 		</div>
 		
+		<!-- FAQ -->
+		<div class="modal fade" id="myModal_faq" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Frequently Asked Questions</h4>
+				    </div>
+				    <div class="modal-body" style="padding-top:10px;">
+					Under Development
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
+		
+		<!-- ABOUT US -->
+		<div class="modal fade" id="myModal_aboutUs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+						<h4 class="modal-title" style="text-align:center;">Our Story</h4>
+				    </div>
+				    <div class="modal-body" style="padding-top:10px;">
+					
+					<p>Sparklie traces its origin to the fall of 2012, when a friend took his first step towards marriage and started searching online for that perfect diamond engagement ring. What he found was an avalanche of information, but nothing directly helped him find the ideal ring given his budget. Hearing his fustrations start Sparklie, an online tool to help you find that perfect ring.
+					One year later and lots of pizza, coffee, and late night drinks, the idea behind Sparklie is finally coming together.</p>
+						<div class="row">
+							<div class="col-sm-3">
+								<img src="/images/arvind.jpg" alt="Arvind VG" class="center-block img-circle" style="height:100px;"/>
+							</div>
+							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
+							blah blah blah
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-3">
+								<img src="/images/anna2.jpg" alt="Anna Browne" class="center-block img-circle" style="height:100px;"/>
+							</div>
+							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
+								blah blah blah
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-3">
+								<img src="/images/shaw2.jpg" alt="Shaw Li" class="center-block img-circle" style="height:100px;"/>
+							</div>
+							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
+								blah blah blah
+							</div>							
+						</div>
+					
+					
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  
 		
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
@@ -462,6 +521,19 @@
 						backdrop: true,
 						})})	
 
+						
+						
+		$("#faq").on('click',function(){
+				$('#myModal_faq').modal({
+						keyboard : true,
+						backdrop: true,
+						})})
+		
+		$("#aboutUS").on('click',function(){
+				$('#myModal_aboutUs').modal({
+						keyboard : true,
+						backdrop: true,
+						})})	
 		
 		});
 		
