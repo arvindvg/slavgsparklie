@@ -209,7 +209,7 @@ class Budget(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Budget'
         session['user_price'] = user_price
-        #print user_price
+        print user_price
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_price)
         input.put()
 
@@ -224,8 +224,8 @@ class Calculation(webapp2.RequestHandler):
         user_setting_list = []
         user_metal_list = []
         user_price = session.get('user_price')
-        #print "user_price"  
-        #print user_price
+        print "user_price"  
+        print user_price
         user_price_lower,user_price_upper = user_price.split(",") 
         user_price_lower = int(user_price_lower)
         #print "user_price_lower"
@@ -236,13 +236,15 @@ class Calculation(webapp2.RequestHandler):
         #print "user_price_lower"
         #print user_price_lower 
         user_setting = session.get('user_setting')
-        #print user_setting
+        print user_setting
         user_setting = user_setting.upper()
         user_setting_list.append(user_setting)
         user_shape = session.get('user_shape')
+        print user_shape
         user_shape = user_shape.upper()
         user_shape_list.append(user_shape)
         user_metal = session.get('user_metal')
+        print user_metal
         user_metal = user_metal.upper()
         user_metal_list.append(user_metal)
         event_type1 = 'Selection size'
@@ -252,7 +254,7 @@ class Calculation(webapp2.RequestHandler):
         user_city = session.get('user_city')
         #user_city = int(user_city)
         session['user_price_lower'] = user_price_lower
-	session['user_price_upper'] = user_price_upper
+        session['user_price_upper'] = user_price_upper
         user_selection_size = self.request.get('selection_size')
         user_selection_sparkle = self.request.get('selection_sparklie')
         user_selection_purity = self.request.get('selection_purity')
@@ -334,7 +336,37 @@ class Calculation(webapp2.RequestHandler):
                 priority_score[result.count] = result.priority_score
                 inventory_merchant_id[result.count] = result.Merchant_id
 
-        print priority_score
+        for k,v in inventory_shape.items():
+            if v.upper() not in user_shape_list[0]:
+                del inventory_shape[k]
+ 
+        shape_list = inventory_shape.keys()
+
+        for k,v in inventory_setting.items():
+            if v.upper() not in user_setting_list[0]:
+                del inventory_setting[k]
+ 
+        setting_list = inventory_setting.keys()
+
+        for k,v in inventory_metal.items():
+            if v.upper() not in user_metal_list[0]:
+                del inventory_metal[k]
+ 
+        metal_list = inventory_metal.keys()
+        
+        for k, v in inventory_price_actual.items():
+            if k not in shape_list:
+                del inventory_price_actual[k]
+
+        for k, v in inventory_price_actual.items():
+            if k not in setting_list:
+                del inventory_price_actual[k]
+
+        for k, v in inventory_price_actual.items():
+            if k not in metal_list:
+                del inventory_price_actual[k]
+
+        #print priority_score
             # Prediction and optimization variable creation
         for key in inventory_price_actual:
             #Parameter estimates implementation
@@ -408,44 +440,14 @@ class Calculation(webapp2.RequestHandler):
         print "composite score"
         print composite_score
         #Scoring System Implementation
-        for k,v in inventory_shape.items():
-            if v not in user_shape_list[0]:
-                del inventory_shape[k]
- 
-        shape_list = inventory_shape.keys()
-
-        for k,v in inventory_setting.items():
-            if v not in user_setting_list[0]:
-                del inventory_setting[k]
- 
-        setting_list = inventory_setting.keys()
-
-        for k,v in inventory_metal.items():
-            if v not in user_metal_list[0]:
-                del inventory_metal[k]
- 
-        metal_list = inventory_metal.keys()
-        
-        for k, v in composite_score.items():
-            if k not in shape_list:
-                del composite_score[k]
-
-        for k, v in composite_score.items():
-            if k not in setting_list:
-                del composite_score[k]
-
-        for k, v in composite_score.items():
-            if k not in metal_list:
-                del composite_score[k]
-
         #Sort dictionary and keep top n - Change here is more options are needed - Preserves descending order in the output dictionary
-        n = len(composite_score)
+        n = 5 
         best_overall = heapq.nsmallest(n,composite_score.items(), key=operator.itemgetter(1))
         best_overall = map(operator.itemgetter(0),best_overall)
 
 
         session['best_overall'] = best_overall 
-        session['inventory_query'] = inventory_query
+        #session['inventory_query'] = inventory_query
         self.response.out.write(best_overall)           
 
 class Recommendation(webapp2.RequestHandler):
@@ -499,6 +501,8 @@ class Recommendation(webapp2.RequestHandler):
 
         # Best rings - Is a list containing top n ring ID's	
         best_overall = session.get('best_overall')
+        user_city = session.get('user_city')
+        inventory_query = new_inventory.query(new_inventory.Price >= user_price_lower,new_inventory.Price <= user_price_upper,new_inventory.merchant_city==int(user_city)).fetch()
 
         for result in inventory_query:
                 inventory_size[result.count] = result.Size
