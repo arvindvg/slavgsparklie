@@ -257,7 +257,7 @@
 								
 							
 							
-								<form role="form" id="send_email">
+								<form role="form" id="scheduleAppointment">
 									<!--<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
@@ -273,7 +273,7 @@
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email" placeholder="Enter email"  style="border-radius:0px" required>
+										<input type="email" class="form-control" id="userEmail" placeholder="Enter email"  style="border-radius:0px" required>
 									  </div>
 								  
 									  <!--<div class="form-group col-sm-12">
@@ -297,23 +297,23 @@
 									 </div>		-->				  
 						  
 									<div class="form-group col-sm-12">
-										<label for="Date">Date</label>
+										<label for="Date">Preferred Day of the Week</label>
 											<div class="dropdown">
 											  <button style="background:rgb(256,256,256);color:#000000;border-radius:0px;border:1px solid grey;text-align:left;font-size:.9em;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dateDropDown" data-toggle="dropdown" aria-expanded="true" >
 												<span class="selection" id="date1">Saturday</span>
 												<span class="caret"></span>
 											  </button>
 											  <ul class="dropdown-menu date" role="menu" aria-labelledby="dateDropDown" style="width:100%;">
-												<li role="presentation"><a role="menuitem" >Saturday </a></li>
-												<li role="presentation"><a role="menuitem" >Sunday  </a></li>
-												<li role="presentation"><a role="menuitem" >Friday  </a></li>
-												<li role="presentation"><a role="menuitem" >Thursday </a></li>
+												<li role="presentation"><a role="menuitem" >Saturday</a></li>
+												<li role="presentation"><a role="menuitem" >Sunday</a></li>
+												<li role="presentation"><a role="menuitem" >Friday</a></li>
+												<li role="presentation"><a role="menuitem" >Thursday</a></li>
 											  </ul>
 											</div>
 									  </div>
 						  
 									  <div class="form-group col-sm-12">
-										<label for="Time">Preferred Visit Time</label>
+										<label for="Time">Preferred Appointment Time</label>
 											<div class="dropdown">
 											  <button style="background:rgb(256,256,256);color:#000000;border-radius:0px;border:1px solid grey;text-align:left;font-size:.9em;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dateDropDown" data-toggle="dropdown" aria-expanded="true" >
 												<span class="selection" id="time1">Mid-Mornings (10 - 12 am)</span>
@@ -331,7 +331,7 @@
 						  
 									  <div class="form-group col-sm-12">
 										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message" placeholder="Optional, anything you'd like to tell the merchant" value="test" style="border-radius:0px"></textarea>
+										<textarea class="form-control" id="userMessage" placeholder="Optional, anything you'd like to tell the merchant" style="border-radius:0px"></textarea>
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
@@ -368,17 +368,13 @@
 		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie</h2>
 							</div>
 							<div class="modal-body" style="padding-top:10px;">
-								We'll have a jeweler reviewing your information and contact you within 1 business day. 
+								We'll confirm your appointment time shortly by email. 
 							</div>
-						</div>
-					 </div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
@@ -404,76 +400,6 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 		
-		<!-- Modal for contacting us -->
-		<div class="modal fade" id="myModal_contact_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-			<div class="modal-dialog modal-dialog-temp">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Your Contact Info</h2>
-						
-						We ask for this information so that we can contact you personally to showcase our hand-picked rings. We won't ever sell your information. 
-					</div>
-					<div class="modal-body" style="padding-top:10px;">
-						<div class="row">
-							
-								<form role="form" id="send_email2">
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
-										</div>
-									</div>
-									<div class="form-group col-lg-6" style="padding:0px;">
-										<div class="col-lg-12">
-										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
-										</div>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="Phone">Phone</label>
-										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
-									  </div>
-								  
-									  <div class="form-group col-sm-12">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me find what I want" style="border-radius:0px" required>
-									  </div>
-						  
-									  <div class="form-group col-sm-12">
-										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message2" placeholder="Optional, anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
-									  </div>
-									  
-									  <div class="form-group col-sm-12">
-										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
-										</div>
-								</form>
-									
-							
-							
-						
-							<!--	<div class="col-sm-4" style="padding-left:0;">								
-								<label>Map</label>
-								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
-									<div style="padding-top:15px;">
-									<h5>Sparklie, Inc.</h5>
-									<p>2120 Mason St.</p>
-									<p>San Francisco, CA 94133</p>
-									</div>
-								</div>-->
-							
-						</div>
-					 </div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
 
 		<!-- Modal for inviting family/friends -->
 		<div class="modal fade" id="myModal_invite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
@@ -488,29 +414,45 @@
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
 							
-								<form role="form" id="send_email2">
+								<form role="form" id="inviteFriend">
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="Friend/Family Firs Name"  style="border-radius:0px" required>
+										<input type="text" class="form-control" id="friendFirstName" placeholder="Friend/Family Firs Name"  style="border-radius:0px" required>
 										</div>
 									</div>
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
-										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
+										<label for="Last">Last Name</label><!--put a star next to what they must fill out-->
+										<input type="text" class="form-control" id="friendLastName" placeholder="Last Name"  style="border-radius:0px">
 										</div>
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
-										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
+										<label for="Email">Friend's Email Address</label>
+										<input type="email" class="form-control" id="friendEmail" placeholder="Friend@email.com"  style="border-radius:0px" required>
 									  </div>
 								  
+								  
 									  <div class="form-group col-sm-12">
-										<label for="textarea">Additional Message</label>
-										<textarea class="form-control" id="message2" placeholder="Optional. Anything you'd like to add to their email?" value="test" style="border-radius:0px"></textarea>
+										<label for="textarea">Message</label>
+										<textarea class="form-control" id="friendMessage" placeholder="I'm making a surprise purchase. Give me your thought about this ring." style="border-radius:0px"></textarea>
 									  </div>
+									  
+									  <div class="form-group col-sm-12">
+										<label for="Email">Your Email address</label>
+										<input type="email" class="form-control" id="userEmail" placeholder="You@email.com"  style="border-radius:0px" required>
+									  </div>
+									  
+									   <div class="form-group col-sm-12">
+										      <div class="checkbox">
+												<label>
+												  <input type="checkbox" id="checkSparklie" checked> Invite a Sparklie jeweler expert to give you her opinion.
+												</label>
+											  </div>
+										</div>
+									  
+									  <!-- Get the opinion of a Sparklie expert curator -->
 									  
 									  <div class="form-group col-sm-12">
 										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
@@ -583,10 +525,10 @@
 	
 		<!-- NAME HELLO -->
 		<div id="sectionName" style="display:show;">	
-			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" id="info" style="padding-top:5%;">
-						hello, what's your name?<br/>
+					<div class="col-md-12" id="info" style="padding-top:10%;">
+						<p style="color:white;">hello, what's your name?</p>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
 							  <input id="userName" style="text-align:center;width:75%;" type="text" placeholder="enter name here">
@@ -605,14 +547,15 @@
 		
 		<!-- PINTEREST -->
 		<div id="sectionPinterest" style="display:none;">	
-			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" style="padding-top:5%;">
-						<p id="info" >hi <span id="insertUserName"></span> </p>
-						<p style="font-size:1.5em;text-align:center;">Does she have a Pinterest board or do you have a board you like? If you enter the Pinterest username, we can help you discover the right style. Don't worry, no one will be notified.
+					<div class="col-md-12" style="padding-top:10%;color:white;">
+						<p id="info" >welcome <span id="insertUserName"></span> </p>
+						<p style="font-size:1.5em;text-align:center;"">To help you discover the right ring for her, we could analyze her Pinterest board.
 							<ul class="list-unstyled style-4" style="display:inline;text-align:center;">
 								<li>
-								  <input id="pintrestUserName" style="text-align:center;width:75%;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h>
+								  <input id="pintrestUserName" style="text-align:center;width:55%;color:black;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h><br/><br/>
+								  *Not to worry if you don't have a board in mind. We will still guide along the way. 
 								</li>
 							</ul>
 						</p> 	
@@ -621,19 +564,20 @@
 				
 				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">SKIP</a>
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="pinterestButtonPressed">NEXT</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">SKIP*</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="pinterestButtonPressed">NEXT</a></br>
+						
 					</div>
 				</div>
 			</div>	
 		</div>
 		
 		<!-- STYLES AFTER PINTEREST -->
-		<div id="sectionStyles" style="display:none;">
-			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
+		<div id="sectionStyles" style="display:none;"><!-- style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"-->
+			<div class="container" style="min-height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1"  style="padding-top:5%;">
-						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">The Style Broken Down</p>
+						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">Suggested Ring Styles</p>
 					</div>
 				</div>
 				<div class="row">
@@ -707,8 +651,8 @@
 		
 		
 		
-		<!-- CITY -->
-		<div id="section_city" style="display:none;">	
+		<!-- CITY --> <!-- it would be great if the transitions in detail selection are horizontal versus vertical-->
+		<div id="section_city" style="display:none;position:relative;">	
 	
 			<div class="container-fluid" style="min-height:600px;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
@@ -797,8 +741,8 @@
 		</div>
 			
 		<!-- SETTING -->
-		<div id="section_setting" style="display:none;">	
-			<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:100vh;">
+		<div id="section_setting" style="display:none;position:relative;">	
+			<div class="container-fluid" style="min-height:100vh;">
 				<div class="row">
 					<div class="col-sm-12">
 						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">SETTING STYLE
@@ -812,7 +756,7 @@
 	
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Solitaire ring type is a classic. It lets in the most light, maximizing the diamond's sparkle</p>
+						<!--<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Solitaire ring type is a classic. It lets in the most light, maximizing the diamond's sparkle</p>-->
 					</div>
 				</div>
 			
@@ -907,7 +851,7 @@
 		</div>
 		
 		<!-- METAL -->
-		<div id="section_metal" style="display:none;">	
+		<div id="section_metal" style="display:none;position:relative;left:100%;">	
 				<div class="container-fluid" style="min-height:100vh;">
 			
 				<div class="row">
@@ -1015,7 +959,7 @@
 		</div>
 		
 		<!-- GEM -->
-		<div id="section_gem" style="display:none;">	
+		<div id="section_gem" style="display:none;position:relative;left:100%;">	
 				<div class="container-fluid" style="min-height:100vh;">
 			
 				<div class="row">
@@ -1124,8 +1068,8 @@
 		
 		
 		<!-- DIAMOND SHAPE -->
-		<div id="section_shape" style="display:none;">
-				<div class="container-fluid" style="background-color:rgb(243,243,245);min-height:100vh;">
+		<div id="section_shape" style="display:none;position:relative;left:100%;">
+				<div class="container-fluid" style="min-height:100vh;">
 		
 				<div class="row">
 					<div class="col-sm-12">
@@ -1211,7 +1155,7 @@
 							<div style="min-height:450px;">
 								<img src="/images/blank2.jpg" alt="unknow"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>		
-								<p style="text-align:center;font-weight:100;padding:0px 30px">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
+								<p style="text-align:center;font-weight:100;padding:0px 30px">Relax. We'll pick a popular shape for your.</p>
 							</div>
 							
 							<div class="col-sm-8 col-sm-offset-2">
@@ -1233,8 +1177,8 @@
 		</div>
 		
 		<!-- DIAMOND RANKING -->
-		<div id="section_preference" style="display:none;">	
-			<div class="container-fluid" style="background-color:rgb(243,243,245);">	
+		<div id="section_preference" style="display:none;position:relative;left:100%;">	
+			<div class="container-fluid" style="min-height:100vh;">	
 				
 				<div class="row">
 					<div class="col-sm-12">	
@@ -1367,7 +1311,7 @@
 					<div class="form-group">
 						<div style="margin-top:50px;"><!-- This might need to by dynamic to the screen size -->
 							<div class="col-sm-2 col-sm-offset-5"> 
-								<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit">Next</button>
+								<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit" id="diamondPreferenceButtonPressed">Next</button>
 							</div>				
 						</div>
 					</div>
@@ -1378,14 +1322,14 @@
 		</div>
 		
 		<!-- BUDGET BASIC-->
-		<div id="sectionBudget" style="display:none;">	
+		<div id="sectionBudget" style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;">
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" id="info" style="padding-top:5%;">
-						what is your maximum budget? </br>
+					<div class="col-md-10 col-md-offset-1" id="info" style="padding-top:10%;color:white;">
+						your maximum budget? we keep this in mind when making our recommendation.</br>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input id="userBudget" style="text-align:center;width:50%" type="number" value="5000" min="1000" step="1000">
+							  <input id="userBudget" style="text-align:center;width:50%;color:black;" type="number" value="5000" min="1000" step="1000">
 							</li>
 						</ul>
 						
@@ -1401,13 +1345,109 @@
 			</div>	
 		</div>			
 		
-		
+	<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
+		<div id="section_resultTemp" style="display:none;">				
+			<div class="row">
+				<div class="col-sm-12">	
+					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
+				</div>		
+			</div>
+					
+				
+			<div class="row">
+				<div class="col-sm-12" style="padding-bottom:200px;">		
+					
+						<div class="col-sm-3 col-sm-offset-2">
+							<div id="myCarousel" class="carousel slide">
+								<div class="carousel-inner">
+									<div class="item active">
+										
+										<img data-toggle="magnify" src="/images/Estenza/s08122w_front.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >
+										
+									</div>
+									<div class="item">
+										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
+									</div>
+								</div>
+								
+								<!-- Controls -->
+									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
+											<span class="glyphicon glyphicon-chevron-left"></span>
+									</a>
+
+									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right"></span>
+									</a>
+							</div>
+
+
+
+							
+						</div>
+						
+						
+						
+						<div class="col-sm-5 col-sm-offset-1">
+						
+							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname">SIGNATURE PAVE CROWN</p>
+							<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant">Vijay Kedia</span></em></p>
+							<h1>$ 3,500*<span id="main_ring_price"></span></h1>
+							<div>
+								<h4>Description</h4>
+									<p id="main_ring_ringdesc">
+										Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. 
+									</p>
+							</div>
+								<a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
+								<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> 
+								<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
+								<i class="fa fa-heart-o"></i> Love It
+								<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
+								</button>-->
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
+								<!--<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> -->
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite Family/Friend to Help</a> <br/><br/>
+									<hr style="margin-top:0px;margin-bottom:13px;"/>
+									
+									<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
+									<!--<a href="#" class="btn btn-default btn-lg disabled">
+										<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
+										Wish List - Coming Soon
+									</a><br/>-->
+									
+									<div style="padding-top:5px;">	
+										<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
+										
+										<!--<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>-->
+										
+										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div> <!-- not obvious that there are more products. 
+									
+										<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;float:right;"> see more</div>
+									
+										
+										<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
+										This needs to pull the current page your as assign to url,
+										It needs to pull the image file url
+										and to write a description for the file
+										http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
+										-->
+									</div>
+								
+						</div>
+				</div>	
+				
+					
+				
+			</div>
+		</div>
+	
+	
 		<!-- RESULTS -->
 		<div id="section_result" style="display:none;">		
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-sm-12">	
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR FIVE RECOMMENDATIONS
 					</div>		
 				</div>
 						
@@ -1449,7 +1489,7 @@
 							<div class="col-sm-5 col-sm-offset-1">
 							
 								<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"><!--SIGNATURE PAVE CROWN--></p>
-								<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p>
+								<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p><!-- be important to list the actual store info rather than designer -->
 								<h1>$ <!--3,500*--><span id="main_ring_price"></span></h1>
 								<div>
 									<h4>Description</h4>
@@ -1479,7 +1519,7 @@
 										
 										<!--<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>-->
 										
-										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div>
+										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div> <!-- not obvious that there are more products. 
 									
 										<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;float:right;"> see more</div>
 									
@@ -1503,7 +1543,7 @@
 		</div>
 
 		<!-- Foot note container starts here -->	
-		<div class="container-fluid" style="background-color:rgb(23,27,38); width:100%; text-align:center; padding: 20px; min-height:60px; bottom:0px;">
+		<div class="container-fluid" style="background-color:rgb(23,27,38); text-align:center; padding: 20px; min-height:60px; bottom:0px;">
 			<div class="row">
 				<div class="col-sm-12" style="padding-top:10px;color:white;">
 					<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;">Privacy Policy.</a></p>
@@ -1532,8 +1572,29 @@
 	<script>
 
 	$(document).ready(function(){
-	
-
+	console.log($("#pintrestUserName").hasClass('hide'));
+		$(document).keypress(function(e) {
+			if(e.which == 13 && $("#sectionName").hasClass('hide') == false) {
+				$("#sectionNameButtonPressed").click();
+				console.log($("#sectionName").hasClass('hide'));
+				
+				}
+			else if(e.which == 13 && $("#sectionPinterest").hasClass('hide') == false) {
+				$("#pinterestButtonPressed").click();
+				
+				
+				}
+			else if(e.which == 13 && $("#sectionStyles").hasClass('hide') == false) {
+				$("#styleConfirmedButtonPressed").click();
+				
+				
+				}
+			else if(e.which == 13 && $("#sectionBudget").hasClass('hide') == false) {
+				$("#budgetButtonPressed").click();
+				
+				
+				}
+		});
 		
 		$("#userName").click(function(){
 			$("#sectionNameButtonPressed").removeClass('disabled')
@@ -1553,6 +1614,7 @@
 				});
 				}
 			else {
+				//$("#sectionNameButtonPressed").removeClass('disabled')
 				$("#userName").attr('placeholder','your name??');
 				$("#userName").focus();
 			}			
@@ -1586,6 +1648,7 @@
 				}, 1000); //change this to 5000 for 5 secs
 			}	
 			else {
+				//$("#pinterestButtonPressed").removeClass('disabled');
 				$("#pintrestUserName").attr('placeholder','did you mean to click on skip?');
 				$("#pintrestUserName").focus();
 			}			
@@ -1603,36 +1666,41 @@
 			});
 		
 		$("#settingEdit").click(function(){
+			$("#sectionStyles").addClass('hide');
 			$("#section_setting").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
+				//$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
 			});
 		});
 			
 		$("#gemEdit").click(function(){
+			$("#sectionStyles").addClass('hide');
 			$("#section_gem").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)	
+				//$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)	
 			});
 		});	
 			
 		$("#shapeEdit").click(function(){
+			$("#sectionStyles").addClass('hide');
 			$("#section_shape").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)	
+				//$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)	
 			});
 		});
 		
 		$("#metalEdit").click(function(){
+			$("#sectionStyles").addClass('hide');
 			$("#section_metal").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
+				//$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
 			});
 		});
 		
 		$("#preferenceEdit").click(function(){
+			$("#sectionStyles").addClass('hide');
 			$("#section_preference").slideDown(10,'linear',function(){
 				$('html,body').animate({ scrollTop: $("#section_preference").offset().top}, 300)	
 			});
 		});
 		
-		$("#styleConfirmedButtonPressed").click(function(){
+		$("#styleConfirmedButtonPressed").on('click',function(){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#sectionStyles").addClass('hide');
 			console.log($("#settingEdit").data('value_id'))
@@ -1656,7 +1724,23 @@
 			});
 		});
 		
-		$("#budgetButtonPressed").click(function(){
+		
+		
+		$("#budgetButtonPressed").on('click',function(){
+		if (1 == 1){
+		$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
+		$("#modalPinterestWait").modal({
+						keyboard : false,
+						backdrop: false,
+						});	
+		window.setTimeout(function() {
+				$("#modalPinterestWait").modal('hide');	
+				$("#sectionBudget").addClass('hide');
+				$("#section_resultTemp").slideDown(10,'linear')
+				}, 2000); //change this to 5000 for 5 secs
+		}
+		else {
+		
 			if ($("#userBudget").val() == "" || $("#userBudget").val() == 0){
 			$("#userBudget").val(5000);
 			}
@@ -1670,10 +1754,15 @@
 				$.post('/userCity',{
 						city: 3
 					});
-			$("#sectionBudget").addClass('hide');
-			/*$("#section_resultTemp").slideDown(10,'linear',function(){
-				$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
-			});*/
+					console.log($("#modalPinterestWait").find(".modal-title").text());
+			$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
+			$("#modalPinterestWait").modal({
+						keyboard : false,
+						backdrop: false,
+						});		
+			//$("#section_resultTemp").slideDown(10,'linear',function(){
+			//	$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
+			//});
 			
 			
 			
@@ -1777,6 +1866,12 @@
 								
 							});	
 							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
+							window.setTimeout(function() {
+								$("#sectionBudget").addClass('hide');
+								$("#modalPinterestWait").modal('hide');
+								}, 5000);
+							
+						
 					});
 				}
 				else
@@ -1785,7 +1880,7 @@
 					console.log('error');
 				}
 			}
-			
+		}	
 		});
 		
 		/*
@@ -1814,10 +1909,23 @@
 			$.post("/chooseSetting", { //passing setting value 
 				setting: 	$(this).data('value_id')
 				});
-			$("#section_setting").removeClass("show").addClass('hide');
-			$("#section_metal").slideDown(10,'linear',function(){
+			
+			$('#section_setting').animate({
+				  left: parseInt($("#section_setting").css('left'), 10) == 0 ?
+				  -$("#section_setting").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_setting").removeClass("show").addClass('hide');
+					
+					$("#section_metal").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+					});
+			//$("#section_setting").removeClass("show").addClass('hide');
+			//$("#section_metal").slideDown(10,'linear',function(){
 				//$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
-			});
+			//});
 		});
 		
 		
@@ -1829,10 +1937,23 @@
 				$.post("/chooseMetal", { //passing metal value
 				ring: $(this).data('value_id')
 				});	
-			$("#section_metal").removeClass("show").addClass('hide');
-			$("#section_gem").slideDown(10,'linear',function(){
-				//$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
+
+			$('#section_metal').animate({
+				  left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+				  -$("#section_metal").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_metal").removeClass("show").addClass('hide');
+					
+					$("#section_gem").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
 			});
+			//$("#section_metal").removeClass("show").addClass('hide');
+			//$("#section_gem").slideDown(10,'linear',function(){
+				//$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
+			//});
 		});				
 		
 		
@@ -1844,10 +1965,23 @@
 				$.post("/chooseGem", { //passing gem value, need new function
 				gem: $(this).data('value_id')
 				});		
-			$("#section_gem").removeClass("show").addClass('hide');
-			$("#section_shape").slideDown(10,'linear',function(){
+
+			$('#section_gem').animate({
+				  left: parseInt($("#section_gem").css('left'), 10) == 0 ?
+				  -$("#section_gem").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_gem").removeClass("show").addClass('hide');
+					
+					$("#section_shape").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+			});			
+			//$("#section_gem").removeClass("show").addClass('hide');
+			//$("#section_shape").slideDown(10,'linear',function(){
 				//$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
-			});
+			//});
 		});	
 		
 		$("#gem2,#gem3,#gem4").on('click', function(){
@@ -1909,12 +2043,96 @@
 				$.post("/chooseShape", {
 				shape: $(this).data('value_id')
 				});
+
+			$('#section_shape').animate({
+				  left: parseInt($("#section_shape").css('left'), 10) == 0 ?
+				  -$("#section_shape").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_shape").removeClass("show").addClass('hide');
+					
+					$("#section_preference").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+			});				
+			/*	
 				$("#section_shape").removeClass("show").addClass('hide');
-				$("#sectionBudget").slideDown(10,'linear',function(){
+				$("#section_preference").slideDown(10,'linear',function(){
 					//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
-				});
+				});*/
 			});	
 		
+		$("#diamondPreferenceButtonPressed").on('click',function(){
+			$("#section_preference").removeClass("show").addClass('hide');
+			$("#sectionBudget").slideDown(10,'linear');		
+		});
+		
+		
+		//Send email for scheduling appointment 
+		$("#scheduleAppointment").submit(function(event){
+			if ($("#email").val() != "")
+			{
+				event.preventDefault();
+				console.log(
+				$("#userEmail").val(),
+				$("#userMessage").val(),
+				$("#date1").text(),
+				$("#time1").text());
+				//console.log(parseInt(json.merchant_id));
+				$.post('/emailScheduleAppointment', {
+					email: $("#userEmail").val(),
+					message: $("#userMessage").val(),
+					appointmentDay: $("#date1").text(),
+					appointmentTime: $("#time1").text()
+					//product_url: $("#purchase").attr("href"),
+					//image: $("#main_ring_image_url1").attr("src"),
+					//merchant_id: $("#schedule").val()
+				}).done(function(){
+					$("#myModal_schedule").modal('hide');
+					$("#myModal_thanks").modal('show');	
+				}).error(function(){
+					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.co to let us know? Error #Email Error 1X')
+				});
+			}	
+		});
+		
+		
+		$("#inviteFriend").submit(function(event){
+			if ($("#friendEmail").val() != "")
+			{
+				event.preventDefault();
+				if ($("#checkSparklie").is(':checked')){
+					var check = 1
+					}
+					else {
+					var check = 0
+					}
+				//console.log(parseInt(json.merchant_id));
+				$.post('/emailScheduleAppointment', {
+					friendEmail: $("#friendEmail").val(),
+					friendMessage: $("#friendMessage").val(),
+					friendFirstName: $("#friendFirstName").val(),
+					friendLastName: $("#friendLastName").val(),
+					userEmail: $("userEmail").val(),
+					checks: check
+					
+					//product_url: $("#purchase").attr("href"),
+					//image: $("#main_ring_image_url1").attr("src"),
+					//merchant_id: $("#schedule").val()
+				}).done(function(){
+					$("#myModal_invite").modal('hide');
+					//$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
+					$("#myModal_thanks").find(".modal-body").text("We've sent out an email to " + $("#friendFirstName").val());
+					$("#myModal_thanks").modal('show');	
+				}).error(function(){
+					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.co to let us know? Error #Email Error 1Y')
+				});
+			}	
+		});
+		
+		
+
 		
 		
 		/*
@@ -2124,7 +2342,7 @@
 		//Voting for favorite ring		
 		$("#vote").click(function(){
 			//console.log($("#main_ring_ringname").attr('data'));
-			var value = parseInt($("#ring_votes").text())
+			var value = parseInt($("#ring_votes").text());
 			$("#ring_votes").empty().append(value + 1);							
 			$.post('/upvotes',{
 				main_ring_id: $("#main_ring_ringname").attr('data')

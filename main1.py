@@ -782,6 +782,133 @@ class email_message2(webapp2.RequestHandler):
         message.send()
         input = appointment_db(email=email_user,first_name=first_name,last_name=last_name,message_body=message_body,phone_number=phone_number,appointment_time="01/01/2001")
         input.put()
+		
+class scheduleAppointment(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        user_name = session.get('user_name')
+        user_setting = session.get('user_setting').title()
+        user_shape = session.get('user_shape').title()
+        user_metal = session.get('user_metal').title()
+        user_price_lower = session.get('user_price_lower')
+        user_price_upper = session.get('user_price_upper')
+        user_selection_size = session.get('user_selection_size')
+        user_selection_sparkle = session.get('user_selection_sparkle')
+        user_selection_purity = session.get('user_selection_purity')
+        user_selection_transparency = session.get('user_selection_transparency')
+        user_selection = [user_selection_size,user_selection_sparkle,user_selection_purity,user_selection_transparency]
+        most_important_feature = user_selection.index(max(user_selection))
+        if most_important_feature==0:
+            user_preference = "You indicated that the weight of the diamond is the most important feature"
+        elif most_important_feature==1:
+            user_preference = "You indicated that the sparkle of the diamond is the most important feature"
+        elif most_important_feature==2:
+            user_preference = "You indicated that the purity of the diamond is the most important feature"
+        elif most_important_feature==3:
+            user_preference = "You indicated that the transparency of the diamond is the most important feature"
+        first_name = user_name
+        message_body = self.request.get("message")
+        email_user = self.request.get("email")
+        appointment_date = self.request.get("appointmentDay")
+        appointment_time = self.request.get("appointmentTime")
+       
+        template_values = {}
+
+        if message_body == "":
+            message_body = "(user didn't write a message)"
+
+        template_values['first_name'] = first_name
+        template_values['email_user'] = email_user
+        template_values['message'] = message_body
+        template_values['appointmentDay'] = appointment_date
+        template_values['appointmentTime'] = appointment_time
+        template_values['upper'] =  "{:,}".format(int(user_price_upper))
+        template_values['type'] = user_setting
+        template_values['metal'] = user_metal
+        template_values['shape'] = user_shape
+        template_values['preference'] = user_preference
+        template_values['user_selection'] = user_selection
+        
+
+        #Message to Sparklie
+        message_subject_merchant = "Customer want to schedule an appointment"
+        message = mail.EmailMessage()
+        message.sender = "<sparklie3@gmail.com>"
+        message.to = "<shaw@sparklie.net>"
+        merchant_template = jinja_environment.get_template('emailScheduleAppointment.html')
+        message.html = merchant_template.render(template_values)
+        message.subject = message_subject_merchant
+        message.send()
+
+        #Message to Consumer
+        message_subject_consumer = "Thank you for using Sparklie"
+        message.to = "<" + email_user + ">"
+        consumer_template = jinja_environment.get_template('emailUserAppointmentRequest.html')
+        message.html = consumer_template.render(template_values)
+        message.subject = message_subject_consumer
+        message.send()
+        input = appointment_db(email=email_user,first_name=first_name,message_body=message_body,appointment_time="01/01/2001")
+        input.put()
+		
+class inviteFriend(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        user_name = session.get('user_name')
+        user_setting = session.get('user_setting').title()
+        user_shape = session.get('user_shape').title()
+        user_metal = session.get('user_metal').title()
+        user_price_lower = session.get('user_price_lower')
+        user_price_upper = session.get('user_price_upper')
+        user_selection_size = session.get('user_selection_size')
+        user_selection_sparkle = session.get('user_selection_sparkle')
+        user_selection_purity = session.get('user_selection_purity')
+        user_selection_transparency = session.get('user_selection_transparency')
+        user_selection = [user_selection_size,user_selection_sparkle,user_selection_purity,user_selection_transparency]
+        most_important_feature = user_selection.index(max(user_selection))
+        if most_important_feature==0:
+            user_preference = "You indicated that the weight of the diamond is the most important feature"
+        elif most_important_feature==1:
+            user_preference = "You indicated that the sparkle of the diamond is the most important feature"
+        elif most_important_feature==2:
+            user_preference = "You indicated that the purity of the diamond is the most important feature"
+        elif most_important_feature==3:
+            user_preference = "You indicated that the transparency of the diamond is the most important feature"
+        friend_first_name = self.request.get("friendFirstName")
+        friend_last_name = self.request.get("friendLastName")
+        message_body = self.request.get("friendMessage")
+        friend_email = self.request.get("friendEmail")
+
+       
+        template_values = {}
+
+        template_values['send_name'] = user_name
+        template_values['friend_first_name'] = friend_first_name
+        template_values['message'] = message_body
+        template_values['friend_last_name'] = friend_last_name
+        template_values['friend_email'] = friend_email
+        template_values['uniqueURL'] = "This is where the special url goes"
+
+        #Message to Sparklie
+        message_subject_merchant = "Customer want us to comment on a ring"
+        message = mail.EmailMessage()
+        message.sender = "<sparklie3@gmail.com>"
+        message.to = "<shaw@sparklie.net>"
+        merchant_template = jinja_environment.get_template('emailInviteSparklie.html')
+        message.html = merchant_template.render(template_values)
+        message.subject = message_subject_merchant
+        message.send()
+
+        #Message to Friend
+        message_subject_consumer = friend_first_name + " needs your help"
+        message.to = "<" + friend_email + ">"
+        consumer_template = jinja_environment.get_template('emailFriend.html')
+        message.html = consumer_template.render(template_values)
+        message.subject = message_subject_consumer
+        message.send()
+##        input = appointment_db(email=email_user,first_name=first_name,message_body=message_body,appointment_time="01/01/2001")
+##        input.put()		
 
 class Search(webapp2.RequestHandler):
 
@@ -1030,6 +1157,8 @@ application = webapp2.WSGIApplication([
 ('/create_transaction', CreateTransaction),
 ('/email_message', email_message),
 ('/email_message2', email_message2),
+('/emailScheduleAppointment', scheduleAppointment),
+('/emailInviteFriend', inviteFriend),
 ('/launch', launch),
 ('/userCity', userCity)
 ], debug=True)
