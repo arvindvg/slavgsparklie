@@ -231,7 +231,7 @@
 						<div class="row">
 							<div class="col-sm-12" >
 								<div style="text-align:center;">
-								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;"> View in Store</h2>
+								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;"> Make an Appointment to View in Store</h2>
 								</div>
 							</div>
 						</div>
@@ -239,13 +239,16 @@
 						<div class="row">
 							<div class="col-sm-4" style="padding-top:3%;">
 							
-							Why Schedule A Visit?
+							<img src="/images/visitStore.jpg" alt="Store Image"   style="padding: 25px 0px;height:200px;" class="center-block img-rounded" />		
 							
-							Benefits include:
+							
+							<h5> Benefits of scheduling an appointment</h5>
 							<ul>
-							<li>A</li>
+							<li>Warm welcome when you walk in</li>
 							
-							<li>B</li>
+							<li>Tailored in-store experience</li>
+							
+							<li>Viewing rings that match your preferences</li>
 							
 							
 							</ul>
@@ -407,7 +410,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Invite your close family/friend to help</h2>
+						<h2 class="modal-title" style="text-align:center;">Invite your close family or friend to help</h2>
 						
 						Need an opinion about a ring? Invite your family or friend to help you decide. We'll send them an email that only they can view. 
 					</div>
@@ -418,13 +421,13 @@
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="friendFirstName" placeholder="Friend/Family Firs Name"  style="border-radius:0px" required>
+										<input type="text" class="form-control" id="friendFirstName" placeholder="Friend's First Name"  style="border-radius:0px" required>
 										</div>
 									</div>
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="Last">Last Name</label><!--put a star next to what they must fill out-->
-										<input type="text" class="form-control" id="friendLastName" placeholder="Last Name"  style="border-radius:0px">
+										<input type="text" class="form-control" id="friendLastName" placeholder="Friend's Last Name"  style="border-radius:0px">
 										</div>
 									  </div>
 								  
@@ -447,7 +450,7 @@
 									   <div class="form-group col-sm-12">
 										      <div class="checkbox">
 												<label>
-												  <input type="checkbox" id="checkSparklie" checked> Invite a Sparklie jeweler expert to give you her opinion.
+												  <input type="checkbox" id="checkSparklie" checked> Invite a Sparklie jewelery expert to give you our opinion.
 												</label>
 											  </div>
 										</div>
@@ -551,11 +554,11 @@
 				<div class="row">
 					<div class="col-md-12" style="padding-top:10%;color:white;">
 						<p id="info" >welcome <span id="insertUserName"></span> </p>
-						<p style="font-size:1.5em;text-align:center;"">To help you discover the right ring for her, we could analyze her Pinterest board.
+						<p style="font-size:1.5em;text-align:center;">To help you discover the right ring for her, we can analyze her Pinterest board
 							<ul class="list-unstyled style-4" style="display:inline;text-align:center;">
 								<li>
 								  <input id="pintrestUserName" style="text-align:center;width:55%;color:black;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h><br/><br/>
-								  *Not to worry if you don't have a board in mind. We will still guide along the way. 
+								  *Not to worry if you don’t have a board in mind. We will still guide you along the way
 								</li>
 							</ul>
 						</p> 	
@@ -618,7 +621,7 @@
 						
 						<div class="col-sm-3">
 							<div class="col-sm-12">
-								<h3 style="text-align:center;font-weight:900;">Gem Style</h3>
+								<h3 style="text-align:center;font-weight:900;">Gem Shape</h3>
 								<img src="/images/cushion-170x170.jpg" alt="cushion cut"  style="margin-top:20px;padding: 20px 10px;height:200px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Cushion Shape</h5>
 								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shapeEdit" style="text-decoration:none;cursor: pointer;" data-value_id="round">Edit <i class="fa fa-pencil-square-o"></i></a></p>
@@ -1326,7 +1329,7 @@
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1" id="info" style="padding-top:10%;color:white;">
-						your maximum budget? we keep this in mind when making our recommendation.</br>
+						What is your maximum budget? We’ll keep this in mind when making our recommendation.</br>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
 							  <input id="userBudget" style="text-align:center;width:50%;color:black;" type="number" value="5000" min="1000" step="1000">
@@ -1346,7 +1349,7 @@
 		</div>			
 		
 	<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
-		<div id="section_resultTemp" style="display:none;">				
+		<div id="section_resultTemp" style="display:none;min-height:100vh;">				
 			<div class="row">
 				<div class="col-sm-12">	
 					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
@@ -1404,9 +1407,9 @@
 								<i class="fa fa-heart-o"></i> Love It
 								<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
 								</button>-->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">Make an appointment in store</a> 
 								<!--<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> -->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite Family/Friend to Help</a> <br/><br/>
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite family/friends to check it out</a> <br/><br/>
 									<hr style="margin-top:0px;margin-bottom:13px;"/>
 									
 									<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
