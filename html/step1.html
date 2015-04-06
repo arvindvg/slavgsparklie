@@ -49,7 +49,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="#">HOME</a></li>-->
-				<li><a id="learnMore">HOW IT WORKS</a></li>
+				<li><a class="learnMore">HOW IT WORKS</a></li>
 				<li><a class="faq">FAQ</a></li>
 				<li><a class="contactUs">EMAIL US</a></li>
 				<li><a id="aboutUs">ABOUT SPARKLIE</a></li>
@@ -385,10 +385,10 @@
 							<h1 style="line-height:1.4;font-size:280%;font-weight:900;">We help guys discover and buy the perfect engagement ring.</h1><br/>
 							<p style="font-size:1.5em;margin-top:5px;font-weight:900;">Being in love feels great, and buying a ring should too!</p><br/>
 							<!--<p style="text-align:center;line-height:1.4;font-style:italic;font-size:130%;">Let us help you</p><br/>-->
-							<div class="col-xs-6">
-								<a  style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="learnMore">LEARN MORE</a>
+							<div class="col-sm-6">
+								<a  style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified learnMore" role="button">LEARN MORE</a><br/>
 							</div>
-							<div class="col-xs-6">
+							<div class="col-sm-6">
 								<a style="background:rgba(23,27,38,.8);color:#FFFFFF;border-width:2px;" class="btn btn-clear btn-lg btn-group-justified" href="/style">GET STARTED</a>
 							</div>
 					</div>
@@ -630,7 +630,7 @@
 						backdrop: true,
 						})})	
 
-		$("#learnMore").click(function(){
+		$(".learnMore").click(function(){
 			   $('html, body').animate({
 				scrollTop: $("a[name='howitworks']").offset().top
 			}, 500);

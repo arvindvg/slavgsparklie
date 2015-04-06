@@ -156,7 +156,7 @@ class Metal(webapp2.RequestHandler):
         event_type = 'Ring Metal'
         event_type = 'Ring Metal'
         session['user_metal'] = user_metal
-        #print user_metal
+        print user_metal
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_metal)
         input.put()
 
@@ -169,7 +169,7 @@ class Gem(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Ring Gem'
         session['user_gem'] = user_gem
-        #print user_gem
+        print user_gem
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
         input.put()
 
@@ -196,7 +196,7 @@ class Shape(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Diamond Shape'
         session['user_shape'] = user_shape
-        #print user_shape
+        print user_shape
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_shape)
         input.put()
 
@@ -224,8 +224,8 @@ class Calculation(webapp2.RequestHandler):
         user_setting_list = []
         user_metal_list = []
         user_price = session.get('user_price')
-        print "user_price"  
-        print user_price
+        #print "user_price"  
+        #print user_price
         user_price_lower,user_price_upper = user_price.split(",") 
         user_price_lower = int(user_price_lower)
         #print "user_price_lower"

@@ -88,11 +88,11 @@
 		
 		<!-- Terms and conditions modal -->
 		<div class="modal fade" id="myModal_terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
+			<div class="modal-dialog  modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h4 class="modal-title" style="text-align:center;">Sparklie Terms and Conditions ("Agreement")</h4>
+						<h4 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Sparklie Terms and Conditions ("Agreement")</h4>
 				    </div>
 				    <div class="modal-body" style="padding-top:10px;">
 						<p>This Agreement was last modified on Jan. 23, 2015.</p>
@@ -145,11 +145,11 @@
 		
 		<!-- Privacy policy modal -->
 		<div class="modal fade" id="myModal_privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h4 class="modal-title" style="text-align:center;">Sparklie Privacy Policy ("Policy")</h4>
+						<h4 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Sparklie Privacy Policy ("Policy")</h4>
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<p>This Policy was last modified on Jan 23, 2015.</p>
@@ -226,22 +226,19 @@
 		<div class="modal fade" id="myModal_schedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-temp modal-lg">
 				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="close">&times;</button>
+						<h2 class="modal-title" style="text-align:center;color:rgb(214,140,137);">
+						<i class="fa fa-envelope fa-1x"></i> Make an Appointment to View in Store</h2>
+					</div>
+					
+				
 					<div class="modal-body" style="padding-top:10px;">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<div class="row">
-							<div class="col-sm-12" >
-								<div style="text-align:center;">
-								<h2 class="fa fa-envelope fa-3x"></i> <h2 style="display:inline;"> Make an Appointment to View in Store</h2>
-								</div>
-							</div>
-						</div>
+
 						
 						<div class="row">
 							<div class="col-sm-4" style="padding-top:3%;">
-							
-							<img src="/images/visitStore.jpg" alt="Store Image"   style="padding: 25px 0px;height:200px;" class="center-block img-rounded" />		
-							
-							
+							<img src="/images/visitStore.jpg" alt="Store Image"   style=";height:200px;" class="center-block img-rounded" />		
 							<h5> Benefits of scheduling an appointment</h5>
 							<ul>
 							<li>Warm welcome when you walk in</li>
@@ -334,7 +331,7 @@
 						  
 									  <div class="form-group col-sm-12">
 										<label for="textarea">Message</label>
-										<textarea class="form-control" id="userMessage" placeholder="Optional, anything you'd like to tell the merchant" style="border-radius:0px"></textarea>
+										<textarea class="form-control" id="userMessage" placeholder="Optional, anything you'd like to tell the jeweler" style="border-radius:0px"></textarea>
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
@@ -409,10 +406,9 @@
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Invite your close family or friend to help</h2>
-						
-						Need an opinion about a ring? Invite your family or friend to help you decide. We'll send them an email that only they can view. 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="close">&times;</button>
+						<h2 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Invite your friend or family to help</h2>
+						Need another opinion? Invite your family or friend to help you decide. We'll send them an email that only they can view. 
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
@@ -532,7 +528,7 @@
 						<p style="color:white;">hello, what's your name?</p>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input id="userName" style="text-align:center;width:100%;" type="text" placeholder="enter name here">
+							  <input id="userName" style="text-align:center;width:100%;" type="text" placeholder="enter name">
 							</li>
 						</ul>
 					</div>
@@ -589,7 +585,7 @@
 		
 		<!-- STYLES AFTER PINTEREST -->
 		<div id="sectionStyles" style="display:none;"><!-- style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"-->
-			<div class="container" style="min-height:100vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="min-height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2 style="text-align:center;">SUGGESTED RING STYLE</h2>
@@ -598,7 +594,6 @@
 				
 				<div class="row">
 					<div class="col-sm-12">
-						
 						<div class="col-sm-3">
 								<h3 style="text-align:center;font-weight:900;">Setting Style</h3>
 								<img src="/images/solitaire_education.jpg" alt="prong setting"   style="margin-top:20px;padding: 10px 10px;height:200px;" class="center-block img-responsive" />		
@@ -606,7 +601,7 @@
 								
 							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="settingEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="settingEdit" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
 								</div>
 							</div>
 						
@@ -623,7 +618,7 @@
 							
 							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metalEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metalEdit" data-value_id="white gold"><i class="fa fa-pencil-square-o"></i> Change </a>
 								</div>
 							</div>
 							
@@ -639,7 +634,7 @@
 								
 							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gemEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gemEdit" data-value_id="diamond"><i class="fa fa-pencil-square-o"></i> Change </a>
 								</div>
 							</div>
 							
@@ -650,12 +645,12 @@
 						<div class="col-sm-3">
 							
 								<h3 style="text-align:center;font-weight:900;">Gem Shape</h3>
-								<img src="/images/cushion-170x170.jpg" alt="cushion cut"  style="margin-top:20px;padding: 20px 10px;height:200px;" class="center-block img-responsive"/>		
-								<h5 style="text-align:center;font-weight:900;">Cushion Shape</h5>
+								<img src="/images/detail_secondary_round.jpg" alt="round shape"  style="margin-top:20px;padding: 20px 10px;height:200px;" class="center-block img-responsive"/>		
+								<h5 style="text-align:center;font-weight:900;">Round Shape</h5>
 							
 							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shapeEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shapeEdit" data-value_id="round"><i class="fa fa-pencil-square-o"></i> Change </a>
 								</div>
 							</div>
 						</div>	
@@ -1126,7 +1121,7 @@
 					<div class="col-sm-12">
 						<div class="col-md-3">
 							<div style="min-height:400px;">
-								<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<img src="/images/detail_secondary_round.jpg" alt="round shape"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Round</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The most popular shape. Round diamonds are cut to maximize the sparkle.</p>
 							</div>
@@ -1146,7 +1141,7 @@
 						
 						<div class="col-md-3">
 							<div style="min-height:400px;">
-								<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<img src="/images/cushion-170x170.jpg" alt="cushion shape"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Cushion</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The cushion shape blends vintage culture with modern design.</p>
 							</div>
@@ -1166,7 +1161,7 @@
 						
 						<div class="col-md-3">
 							<div style="min-height:400px;">
-								<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+								<img src="/images/detail_secondary_princess.jpg" alt="princess shape"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Princess</h3>		
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
 							</div>
@@ -1340,8 +1335,12 @@
 				</div>
 				
 				<div class="row">	
-						<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="diamondPreferenceButtonPressed">Confirm</a>
+						<div class="col-sm-12">
+						<div class="col-sm-3 col-sm-push-9">
+						<div style="position:relative;margin-left:15px;margin-right:15px;">
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:0px;border-color:#ffffff;" class="btn btn-lg btn-group-justified" role="button" id="diamondPreferenceButtonPressed">Confirm</a>
+						</div>
+						</div>
 						</div>				
 					</div>
 				</div>
@@ -1374,200 +1373,86 @@
 			</div>	
 		</div>			
 		
-		<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
-		<div id="section_resultTemp" style="display:none;min-height:100vh;">				
-			<div class="row">
-				<div class="col-sm-12">	
-					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATIONS
-				</div>		
-			</div>
-					
-				
-			<div class="row">
-				<div class="col-sm-12" style="padding-bottom:200px;">		
-					
-						<div class="col-sm-3 col-sm-offset-2">
-							<div id="myCarousel" class="carousel slide">
-								<div class="carousel-inner">
-									<div class="item active">
-										
-										<img data-toggle="magnify" src="/images/Estenza/s08122w_front.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >
-										
-									</div>
-									<div class="item">
-										<img src="/images/Estenza/s08122w_side.jpg" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url2">
-									</div>
-								</div>
-								
-								<!-- Controls -->
-									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
-											<span class="glyphicon glyphicon-chevron-left"></span>
-									</a>
 
-									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-									</a>
-							</div>
-
-
-
-							
-						</div>
-						
-						
-						
-						<div class="col-sm-5 col-sm-offset-1">
-						
-							<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname">SIGNATURE PAVE CROWN</p>
-							<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant">Vijay Kedia</span></em></p>
-							<h1>$ 3,500*<span id="main_ring_price"></span></h1>
-							<div>
-								<h4>Description</h4>
-									<p id="main_ring_ringdesc">
-										Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. 
-									</p>
-							</div>
-								<a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
-								<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> 
-								<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
-								<i class="fa fa-heart-o"></i> Love It
-								<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
-								</button>-->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">Make an appointment in store</a> 
-								<!--<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> -->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite family/friends to check it out</a> <br/><br/>
-									<hr style="margin-top:0px;margin-bottom:13px;"/>
-									
-									<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
-									<!--<a href="#" class="btn btn-default btn-lg disabled">
-										<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
-										Wish List - Coming Soon
-									</a><br/>-->
-									
-									<div style="padding-top:5px;">	
-										<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
-										
-										<!--<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>-->
-										
-										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div> <!-- not obvious that there are more products. 
-									
-										<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;float:right;"> see more</div>
-									
-										
-										<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
-										This needs to pull the current page your as assign to url,
-										It needs to pull the image file url
-										and to write a description for the file
-										http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
-										-->
-									</div>
-								
-						</div>
-				</div>	
-				
-					
-				
-			</div>
-		</div>
 	
 	
 		<!-- RESULTS -->
 		<div id="section_result" style="display:none;">		
-			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
+			<div class="container-fluid" style="min-height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
 					<div class="col-sm-12">	
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR FIVE RECOMMENDATIONS
+						<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OUR RECOMMENDATION
 					</div>		
 				</div>
 						
 					
 				<div class="row">
-					<div class="col-sm-12" style="padding-bottom:200px;">		
-						
+					<div class="col-sm-12">		
 							<div class="col-sm-3 col-sm-offset-2">
 								<div id="myCarousel" class="carousel slide">
 									<div class="carousel-inner">
 										<div class="item active">
-											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" />
-											<!--<img data-toggle="magnify" src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;" id="main_ring_image_url1" >-->
-											
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image1" style="padding:0px 0px;border:0;" id="main_ring_image_url1" />
 										</div>
 										<div class="item">
-											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url2"/>
-											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url3"/>
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image2" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url2"/>
+										</div>
+										<div class="item">
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image3" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url3"/>
 										</div>
 									</div>
 									
 									<!-- Controls -->
 										<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color:white;">
-												<span class="glyphicon glyphicon-chevron-left"></span>
+											<span class="glyphicon glyphicon-chevron-left"></span>
 										</a>
 
 										<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right"></span>
+											<span class="glyphicon glyphicon-chevron-right"></span>
 										</a>
 								</div>
-
-
-
-								
 							</div>
-							
-							
 							
 							<div class="col-sm-5 col-sm-offset-1">
-							
-								<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"><!--SIGNATURE PAVE CROWN--></p>
-								<p>designed by <em><span style="font-weight:bold;" id="main_ring_merchant"><!--Vijay Kedia--></span></em></p><!-- be important to list the actual store info rather than designer -->
-								<h1>$ <!--3,500*--><span id="main_ring_price"></span></h1>
+								<p style="font-size:30px;font-weight:bold;margin-bottom:5px;line-height:30px;margin-left:-2px;padding-left:0px;" id="main_ring_ringname"></p>
+								<p>jewelery: <em><span style="font-weight:bold;" id="main_ring_merchant"></span></em></p>
+								<h1>$<span id="main_ring_price"></span></h1>
 								<div>
 									<h4>Description</h4>
-										<p id="main_ring_ringdesc">
-											<!--Wear this beautiful piece of beauty. The center diamond is highlighted by the pave-set halo and a split shank set with diamonds on either side. This ring is a true modern classic. -->
-										</p>
+										<p id="main_ring_ringdesc">	</p>
 								</div>
-								<a id="vote" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule"><i class="fa fa-heart-o"></i> Love It 
-								<div style="display:inline;background-color:none;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 5px;" id="ring_votes"></div></a> 
-								<!--<button type="button" id="vote" style="border-color:#adadad;font-size:15px;" class="btn btn-clear btn-sm">
-								<i class="fa fa-heart-o"></i> Love It
-								<div style="display:inline;background-color:#00BA9B;border-left:1px solid #adadad;padding:8px 10px;margin:0px -10px 1px 0px;" id="ring_votes"></div>
-								</button>-->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 
-								<!--<a href="#" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="purchase" target="_blank">Save to Later</a> -->
-								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Invite Family/Friend to Help</a> <br/><br/>
-									<hr style="margin-top:0px;margin-bottom:13px;"/>
-									
-									<!--<a href="#" class="btn btn-primary btn-lg" value="{{main_ring_id}}" id="purchase">Purchase</a> -->
-									<!--<a href="#" class="btn btn-default btn-lg disabled">
-										<span class="glyphicon glyphicon-bookmark" style="top:3px;left:-5px;"></span> 
-										Wish List - Coming Soon
-									</a><br/>-->
-									
-									<div style="padding-top:5px;">	
-										<!--<a href=""" class="share share-facebook" title="Share on Facebook" id="share_facebook"></a>-->
-										
-										<!--<a href="https://twitter.com/intent/tweet?text=Check this Out!  http://www.sparklie.net%0DHelping guys discover the perfect diamond engagement ring. %23Sparklie" class="share share-twitter" title="Share on Twitter"  id="share_twitter" data-text="Testing" data-count="none" data-hashtags="sparklie"></a>-->
-										
-										<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">back one</div> <!-- not obvious that there are more products. 
-									
-										<div id="next" style="display:inline-block;visibility:visible;font-size:1.5em;float:right;"> see more</div>
-									
-										
-										<!-- The way to Pin anything, I have to write JS to generate the hreft for Pinterest.  Below is a sample:
-										This needs to pull the current page your as assign to url,
-										It needs to pull the image file url
-										and to write a description for the file
-										http://www.pinterest.com/pin/create/button/?url=http://www.sparklie.net/&media=http://upload.wikimedia.org/wikipedia/commons/f/ff/Bonsai_IMG_6404.jpg&description=This is a description"
-										-->
-									</div>
-									
-									
-							</div>
-						</div>	
 
-						
-					
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md " value="" id="schedule">View in Store</a> 								
+								<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-clear btn-md" value="" id="invite">Ask Friend for Opinion</a> 
+
+								<br/><br/>
+								<hr style="margin-top:0px;margin-bottom:13px;"/>
+								<div style="padding-top:5px;">	
+									<div id="back" style="display:inline-block;visibility:hidden;font-size:1.5em;">go back</div>
+									<div id="next" style="display:inline-block;font-size:1.5em;">see more</div>
+								</div>
+							</div>
+					</div>	
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-10 col-sm-push-1" style="padding-bottom:200px;">
+					<hr style="margin-top:0px;margin-bottom:13px;"/>
+					<h3 style="text-align:center;">OTHER OPTIONS</h3><br/><br/>
+						<div class="col-sm-3" >
+							<a id="option1ButtonPressed"><img src="" class="center-block img-thumbnail" alt="Responsive image1" style="max-height:200px;" id="option1"/></a>
+						</div>
+						<div class="col-sm-3">
+							<a id="option2ButtonPressed"><img src="" class="center-block img-thumbnail" alt="Responsive image2" style="max-height:200px;"id="option2"/></a>
+						</div>
+						<div class="col-sm-3">
+							<a id="option3ButtonPressed"><img src="" class="center-block img-thumbnail" alt="Responsive image3" style="max-height:200px;" id="option3"/></a>
+						</div>
+						<div class="col-sm-3">
+							<a id="option4ButtonPressed"><img src="" class="center-block img-thumbnail" alt="Responsive image4" style="max-height:200px;" id="option4"/></a>
+						</div>
 					</div>
+				</div>
 			</div>
 		</div>
 
@@ -1603,7 +1488,7 @@
 	$(document).ready(function(){
 	
 	
-	
+	// this section is all about the back button
 	window.addEventListener("popstate", function(e) {
 		if (window.counter == 2) {
 		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
@@ -1623,16 +1508,14 @@
 		$("#sectionBudget").removeClass('show').addClass('hide');
 		}
 		else if  (window.counter == 5) {
-		window.counter = 4;
-		$("#indicatorSection").addClass('show').removeClass('hide');
-		$("#sectionBudget").removeClass('hide').addClass('show');
-		$("#section_resultTemp").removeClass('show').addClass('hide');
+			location.reload();
 		}		
 		else if  (window.counter == 10) {
 		window.counter = 2;
 		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
 		$("#sectionPinterest").removeClass('hide').addClass('show');
 		$("#sectionStyles").removeClass('show').addClass('hide');
+		$("#section_setting").removeClass("show").addClass('hide');
 		}
 		else if  (window.counter == 12) {
 		window.counter = 10;
@@ -1714,8 +1597,6 @@
 		});
 	
 	
-	console.log($("#pintrestUserName").hasClass('hide'));
-	
 	//this section below use detects the enter key
 		$(document).keypress(function(e) {
 			if(e.which == 13 && $("#sectionName").hasClass('hide') == false) {
@@ -1764,7 +1645,7 @@
 				}
 			else {
 				//$("#sectionNameButtonPressed").removeClass('disabled')
-				$("#userName").attr('placeholder','your name??');
+				$("#userName").attr('placeholder','your name?');
 				$("#userName").focus();
 			}			
 		});
@@ -1802,7 +1683,7 @@
 			else {
 				//$("#pinterestButtonPressed").removeClass('disabled');
 				$("#pintrestUserName").attr('placeholder','skip?');
-				$("#pintrestUserName").focus();
+				//$("#pintrestUserName").focus();
 			}			
 			});		
 		
@@ -1886,7 +1767,7 @@
 		
 		
 		$("#budgetButtonPressed").on('click',function(){
-		if (1 == 1){  //this section is temporary since I'm not actually calling the database in the back-end
+		if (0 == 1){  //this section is temporary since I'm not actually calling the database in the back-end
 		history.pushState(null, null, '/styleRecommendation');
 		window.counter = 5 // 5 is when the back button no longer works
 		$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
@@ -1902,21 +1783,25 @@
 				}, 2000); //change this to 5000 for 5 secs
 		}
 		else {
-		
 			if ($("#userBudget").val() == "" || $("#userBudget").val() == 0){
 			$("#userBudget").val(5000);
 			}
 			else {
-		    var lower = ($("#userBudget").val()) - 3000;
+				if ($("#userBudget").val() <= 3000){
+					var lower = 0;
+				}
+				else {
+					var lower = ($("#userBudget").val()) - 3000;
+				}
+				$("#indicatorSection").addClass('hide').removeClass('show');
 				console.log(lower + "," + $("#userBudget").val());
-				$("#indicatorSection").addClass('hide');
 				$.post('/chooseBudget', {
-						price: lower + "," + $("#userBudget").val()
+						price:(lower + "," + $("#userBudget").val())
 					});
 				$.post('/userCity',{
 						city: 3
 					});
-					console.log($("#modalPinterestWait").find(".modal-title").text());
+					//console.log($("#modalPinterestWait").find(".modal-title").text());
 			$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
 			$("#modalPinterestWait").modal({
 						keyboard : false,
@@ -1926,10 +1811,8 @@
 			//	$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
 			//});
 			
-			
-			
-			if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
-				{
+			//if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
+				//{
 					//$("#sum").removeClass(has-error);
 					console.log((parseInt($("#1").text().charAt(0))*10).toString());
 					$.post('/step6',{
@@ -1950,35 +1833,11 @@
 							data: {pagination_counter: 0},
 							dataType: "html"		
 						}).done(function(data){
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 1},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter1', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 2},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter2', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 3},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter3', data, { expires: 7 });console.log('done')});
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 4},
-								dataType: "html"		
-							}).done(function(data){$.cookie('pagination_counter4', data, { expires: 7 });console.log('done')});
 							var json = JSON.parse(data);
-							console.log(json);
+							//console.log(json);
 							$.cookie('pagination_counter0', data, { expires: 7 });
 							$.cookie('pagination', json.total_products, { expires: 7 });		
-							$("#ring_votes").empty().append(json.ring_votes);									
+							$("#ring_votes").empty().append(json.ring_votes);
 							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
 							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
 							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
@@ -2007,40 +1866,68 @@
 									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
 									$("#main_ring_image_url2").css('visibility','visible')
 								}
-							else
+							/*else
 								{
 									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
 								}
+								*/
 							$("#section_result").slideDown(10,'linear',function(){
 								//$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-							});		
+							});	
+							$("#sectionBudget").addClass('hide').removeClass('show');
+							$("#modalPinterestWait").modal('hide');
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 1},
+								dataType: "html"		
+							}).done(function(data){
+								$.cookie('pagination_counter1', data, { expires: 7 });console.log('done');
+								var json = JSON.parse(data);
+								$("#option1").attr("src", json.main_ring_image_url1)
+								});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 2},
+								dataType: "html"		
+							}).done(function(data){
+								$.cookie('pagination_counter2', data, { expires: 7 });console.log('done');
+								var json = JSON.parse(data);
+								$("#option2").attr("src", json.main_ring_image_url1)
+								});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 3},
+								dataType: "html"		
+							}).done(function(data){
+								$.cookie('pagination_counter3', data, { expires: 7 });console.log('done');
+								var json = JSON.parse(data);
+								$("#option3").attr("src", json.main_ring_image_url1)
+								});
+							$.ajax({
+								type: "GET",
+								url: "/recommendation", 
+								data: {pagination_counter: 4},
+								dataType: "html"		
+							}).done(function(data){
+								$.cookie('pagination_counter4', data, { expires: 7 });console.log('done');
+								var json = JSON.parse(data);
+								$("#option4").attr("src", json.main_ring_image_url1)
+								});
 							}).error(function(){
 								//We can implement an email functionality for the case when we don't have the product
 								$('#myModal_sorry').modal({
 								keyboard : true,
 								backdrop: true,
 								});
-								
-								
-								
-								
-								
-								
 							});	
 							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
-							window.setTimeout(function() {
-								$("#sectionBudget").addClass('hide').removeClass('show');
-								$("#modalPinterestWait").modal('hide');
-								}, 5000);
-							
-						
+							//window.setTimeout(function() {}, 5000);
+
 					});
-				}
-				else
-				{
-					//$("#sum").addClass(has-error);
-					console.log('error');
-				}
+				//}
 			}
 		}	
 		});
@@ -2087,10 +1974,11 @@
 						-$("#section_metal").outerWidth() : 0
 					});
 					});
+			
 			//$("#section_setting").removeClass("show").addClass('hide');
-			//$("#section_metal").slideDown(10,'linear',function(){
-				//$('html,body').animate({ scrollTop: $("#section_metal").offset().top}, 300)	
-			//});
+			$("#section_metal").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
 		});
 		
 		
@@ -2119,9 +2007,9 @@
 					});
 			});
 			//$("#section_metal").removeClass("show").addClass('hide');
-			//$("#section_gem").slideDown(10,'linear',function(){
-				//$('html,body').animate({ scrollTop: $("#section_gem").offset().top}, 300)
-			//});
+			$("#section_gem").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
 		});				
 		
 		
@@ -2150,9 +2038,9 @@
 					});
 			});			
 			//$("#section_gem").removeClass("show").addClass('hide');
-			//$("#section_shape").slideDown(10,'linear',function(){
-				//$('html,body').animate({ scrollTop: $("#section_shape").offset().top}, 300)
-			//});
+			$("#section_shape").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
 		});	
 		
 		$("#gem2,#gem3,#gem4").on('click', function(){
@@ -2225,18 +2113,17 @@
 				}, 500, function(){
 					
 					$("#section_shape").removeClass("show").addClass('hide');
-					$("#section_preference").removeClass("hide").addClass('show');
-					
+					$("#section_preference").removeClass("hide").addClass('show');					
 					$("#section_preference").css('display','block').animate({
 						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
 						-$("#section_metal").outerWidth() : 0
 					});
 			});				
-			/*	
-				$("#section_shape").removeClass("show").addClass('hide');
+			
+			//	$("#section_shape").removeClass("show").addClass('hide');
 				$("#section_preference").slideDown(10,'linear',function(){
-					//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
-				});*/
+					$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+				});
 			});	
 		
 		$("#diamondPreferenceButtonPressed").on('click',function(){
