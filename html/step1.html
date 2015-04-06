@@ -49,10 +49,10 @@
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="#">HOME</a></li>-->
-				<li><a href="#howitworks">HOW IT WORKS</a></li>
+				<li><a id="learnMore">HOW IT WORKS</a></li>
 				<li><a class="faq">FAQ</a></li>
-				<li><a class="contactUS">EMAIL US</a></li>-->
-				<li><a id="aboutUS">ABOUT SPARKLIE</a></li>
+				<li><a class="contactUs">EMAIL US</a></li>
+				<li><a id="aboutUs">ABOUT SPARKLIE</a></li>
 				
 				
 				<!--<li class="dropdown">
@@ -74,7 +74,7 @@
 
 		<!-- Terms and conditions modal -->
 		<div class="modal fade" id="myModal_terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
@@ -118,7 +118,7 @@
 						2120 Mason Street<br/>
 						San Francisco, CA, 94133<br/>
 						Phone: 415-409-9683<br/>
-						<a href='mailto:sparklie3@gmail.com'>Email</a></p>
+						<a class="contactUs">Email</a></p>
 						
 
 						<!--<p class="pull-right" style="font-size:14px;">Thanks for reading,<br/>
@@ -131,7 +131,7 @@
 		
 		<!-- Privacy policy modal -->
 		<div class="modal fade" id="myModal_privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-temp">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
@@ -201,7 +201,7 @@
 						2120 Mason Street<br/>
 						San Francisco, CA, 94133<br/>
 						Phone: 415-409-9683<br/>
-						<a href='mailto:sparklie3@gmail.com'>Email</a></p>
+						<a class="contactUs">Email</a></p>
 						
 					 </div>
 				</div>
@@ -215,27 +215,30 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 						<h3 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Contact Us</h3>
-						Have a question or comment? Fill out the form below and we'll respond as soon as possible. 
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
-								<form role="form" id="send_email2">
+								<div class="col-lg-12">
+								Have a question or comment? Fill out the form below and we'll respond as soon as possible. <br/><br/>
+								</div>
+						
+								<form role="form" id="emailContactUs">
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="First">First Name</label>
-										<input type="text" class="form-control" id="first_name2" placeholder="First Name"  style="border-radius:0px" required>
+										<input type="text" class="form-control" id="firstName" placeholder="First Name"  style="border-radius:0px" required>
 										</div>
 									</div>
 									<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
 										<label for="Last">Last Name</label>
-										<input type="text" class="form-control" id="last_name2" placeholder="Last Name"  style="border-radius:0px">
+										<input type="text" class="form-control" id="lastName" placeholder="Last Name"  style="border-radius:0px">
 										</div>
 									  </div>
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="John@email.com"  style="border-radius:0px" required>
+										<input type="email" class="form-control" id="email" placeholder="John@email.com"  style="border-radius:0px" required>
 									  </div>
 								  
 									  <!--<div class="form-group col-sm-12">
@@ -245,12 +248,12 @@
 								  
 									  <div class="form-group col-sm-12">
 										<label for="subject">Subject</label>
-										<input type="text" class="form-control" id="subject2" value="Help me with..." style="border-radius:0px" required>
+										<input type="text" class="form-control" id="subject" placeholder="I want to tell you..." style="border-radius:0px" required>
 									  </div>
 						  
 									  <div class="form-group col-sm-12">
 										<label for="textarea">Message</label>
-										<textarea class="form-control" id="message2" placeholder="Anything you'd like to tell us" value="test" style="border-radius:0px"></textarea>
+										<textarea class="form-control" id="message" placeholder="Anything you'd like to tell us" style="border-radius:0px" required></textarea>
 									  </div>
 									  
 									  <div class="form-group col-sm-12">
@@ -277,6 +280,21 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
 		
+		<!-- Modal for thanking you-->
+		<div class="modal fade" id="myModal_thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-temp">
+				<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+								<h2 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Thank You</h2>
+							</div>
+							<div class="modal-body" style="padding-top:10px;">
+								Thank you for contacting Sparklie. Give us a few days to digest what you've written so we can respond with something worthy of your time. 
+							</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal for welcome message-->  	
+		
 		<!-- FAQ -->
 		<div class="modal fade" id="myModal_faq" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-temp">
@@ -296,7 +314,7 @@
 					
 					<h4 style="font-weight:900;">Is this service available everywhere?</h4>
 					
-					<p>Only available in NYC for now. Let us know the next we should launch in.</p>
+					<p>Only available in NYC for now. Let us know the next city we should launch in.</p>
 					
 					<h4 style="font-weight:900;">Can I buy a ring I saw and have it shipped to me directly?</h4>
 					
@@ -304,7 +322,7 @@
 					
 					<h4 style="font-weight:900;">I have a question that isn't listed.</h4>
 					
-					<p>Email us.</p>
+					<p><a class="contactUs">Email us.</a></p>
 					
 					
 					
@@ -324,32 +342,32 @@
 				    </div>
 				    <div class="modal-body" style="padding-top:10px;">
 					
-					<div style="padding:10px 10px;">Sparklie traces its origin to the fall of 2012, when a close friend took his first step towards marriage and started searching his perfect engagement ring. What he found was an avalanche of information, but nothing directly helped him find. Hearing his fustrations, we started Sparklie. Our mission is to help guys discover the perfect engagement ring.
+					<div style="padding:10px 10px;margin-bottom:25px;">Sparklie traces its origin to the fall of 2012, when a close friend took his first step towards marriage and started searching for his perfect engagement ring. What he found was an avalanche of information and lots of frustration. We started Sparklie to help him and every guy discover the perfect engagement ring.
 					</div>
-						<div class="row">
-							<div class="col-sm-3">
+						<div class="row" style="margin-bottom:25px;">
+							<div class="col-sm-2 col-sm-push-1" >
 								<img src="/images/arvind.jpg" alt="Arvind VG" class="center-block img-circle" style="height:100px;"/>
 							</div>
-							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
-							A data scientist by day, 
+							<div class="col-sm-9 col-sm-push-1" style="padding:10px 30px;">
+							A data scientist by day, an foodie at night. Arvind earned his engineering degree from the University of Urbana-Champaign. He now loves warmer climates and calls San Francisco home. 
 							</div>
 						</div>
 						
-						<div class="row">
-							<div class="col-sm-3">
+						<div class="row" style="margin-bottom:25px;">
+							<div class="col-sm-2 col-sm-push-1" >
 								<img src="/images/anna2.jpg" alt="Anna Browne" class="center-block img-circle" style="height:100px;"/>
 							</div>
-							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
-								blah blah blah
+							<div class="col-sm-9 col-sm-push-1" style="padding:10px 30px;">
+							A curator by day, an artist at night. Anna studied at UC Berkeley and obtained her MBA from Johnson/Cornell Tech. 
 							</div>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-3">
+						<div class="row" style="margin-bottom:25px;">
+							<div class="col-sm-2 col-sm-push-1" >
 								<img src="/images/shaw2.jpg" alt="Shaw Li" class="center-block img-circle" style="height:100px;"/>
 							</div>
-							<div class="col-sm-9" style="padding:2% 0px;margin:5% 0%;">
-							A 
+							<div class="col-sm-9 col-sm-push-1" style="padding:10px 30px;">
+							A front-end developer by day, an theater lover at night.  Shaw graduated from UC Berkeley and obtained his MBA from Johnson/Cornell Tech in NYC. 
 							</div>							
 						</div>
 					
@@ -624,18 +642,47 @@
 						backdrop: true,
 						})})
 		
-		$("#aboutUS").on('click',function(){
+		$("#aboutUs").on('click',function(){
 				$('#myModal_aboutUs').modal({
 						keyboard : true,
 						backdrop: true,
 						})})	
 						
-		$(".contactUS").on('click',function(){
+		$(".contactUs").on('click',function(){
+				$("#myModal_faq").modal('hide');
+				$("#myModal_terms").modal('hide');
+				$("#myModal_privacy").modal('hide');
 				$('#myModal_contactUs').modal({
 						keyboard : true,
 						backdrop: true,
 						})})	
-									
+		
+		//Send email to us for comment
+		$("#emailContactUs").submit(function(event){
+			if ($("#email").val() != "")
+			{
+				event.preventDefault();
+				console.log(
+				$("#firstName").val(),
+				$("#lastName").val(),
+				$("#email").val(),
+				$("#subject").val(),
+				$("#message").val());
+				$.post('/emailContactUs', {
+					email: $("#email").val(),
+					message: $("#message").val(),
+					subject: $("#subject").val(),
+					firstName: $("#firstName").val(),
+					lastName: $("#lastName").val()
+				}).done(function(){
+					$("#myModal_contactUs").modal('hide');
+					$("#myModal_thanks").modal('show');	
+				}).error(function(){
+					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.co to let us know? Error #Email Error frontpage contact us')
+				});
+			}	
+		});
+		
 		
 		});
 		

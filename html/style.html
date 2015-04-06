@@ -486,11 +486,9 @@
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2 class="modal-title">Looking through Pinterest...</h2>
+						<h2 class="modal-title" style="text-align:center;color:rgb(23,27,38);">Looking through Pinterest...</h2>
 					</div>
 					<div class="modal-body" style="padding: 20px 20px;padding-bottom:10px;">
-						
-							
 							<div class="progress" >
 							  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
 
@@ -511,16 +509,16 @@
 		<!-- INDICATORS -->
 		<div id="indicatorSection" style="display:show;">
 			<div class="container-fluid"><!-- This might need to by dynamic to the screen size -->
-					<div class="row">
-						<div class="col-md-12" style="padding-top:1%;">
-							<ol class="new-indicators">
-								<li class="active"></li>
-								<li class="" ></li>
-								<li class="" ></li>
-								<li class=""></li>
-							</ol>
-						</div>
+				<div class="row">
+					<div class="col-md-12" style="padding-top:1%;left:-15px;">
+						<ol class="new-indicators">
+							<li class="active"></li>
+							<li class="" ></li>
+							<li class="" ></li>
+							<li class=""></li>
+						</ol>
 					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -534,7 +532,7 @@
 						<p style="color:white;">hello, what's your name?</p>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input id="userName" style="text-align:center;width:75%;" type="text" placeholder="enter name here">
+							  <input id="userName" style="text-align:center;width:100%;" type="text" placeholder="enter name here">
 							</li>
 						</ul>
 					</div>
@@ -552,22 +550,36 @@
 		<div id="sectionPinterest" style="display:none;">	
 			<div class="container-fluid" style="min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-12" style="padding-top:10%;color:white;">
-						<p id="info" >welcome <span id="insertUserName"></span> </p>
-						<p style="font-size:1.5em;text-align:center;">To help you discover the right ring for her, we can analyze her Pinterest board
-							<ul class="list-unstyled style-4" style="display:inline;text-align:center;">
+					<div class="col-md-12" id="info" style="padding-top:10%;">
+						<p style="color:white;">welcome <span id="insertUserName"></span></p>
+							<ul class="list-unstyled style-4" style="display:inline-block;">
 								<li>
-								  <input id="pintrestUserName" style="text-align:center;width:55%;color:black;" type="text" placeholder="Pinterest UserName (example: mary, mary/rings)" h><br/><br/>
-								  *Not to worry if you don’t have a board in mind. We will still guide you along the way
+									<input id="pintrestUserName" style="text-align:center;width:100%;" type="text" placeholder="Pinterest UserName">
 								</li>
 							</ul>
+							
+						</div>
+					<!--<div class="col-md-12" style="padding-top:10%;color:white;text-align:center;">
+						<p id="info" >welcome <span id="insertUserName"></span> </p>
+						<ul class="list-unstyled style-4" id="info" style="display:inline-block;">
+							<li>
+							  <input id="pintrestUserName" style="text-align:center;width:100%;color:black;" type="text" placeholder="Pinterest UserName">
+							  <p style="font-size:0.5em;text-align:center;">To help you discover the right ring for her, we can analyze her Pinterest board *Not to worry if you don’t have a board in mind. We will still guide you along the way</p>
+							</li>
+						</ul>
 						</p> 	
-					</div>
+					</div>-->
 				</div>
 				
 				<div class="row">
+				<div class="col-md-6 col-md-push-3">
+				<p style="font-size:1.5em;text-align:center;color:white;">To help discover her ring style, we can analyze her Pinterest board. Otherwise, skip. </p>
+				
+				</div>
+				</div>
+				<div class="row">
 					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">SKIP*</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">SKIP</a>
 						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="pinterestButtonPressed">NEXT</a></br>
 						
 					</div>
@@ -579,54 +591,73 @@
 		<div id="sectionStyles" style="display:none;"><!-- style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;"-->
 			<div class="container" style="min-height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1"  style="padding-top:5%;">
-						<p style="text-align:center;font-size:3.5em;padding-bottom:15px;">Suggested Ring Styles</p>
+					<div class="col-sm-10 col-sm-offset-1">
+						<h2 style="text-align:center;">SUGGESTED RING STYLE</h2>
 					</div>
 				</div>
+				
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						
 						<div class="col-sm-3">
-							<div class="col-sm-12">
 								<h3 style="text-align:center;font-weight:900;">Setting Style</h3>
 								<img src="/images/solitaire_education.jpg" alt="prong setting"   style="margin-top:20px;padding: 10px 10px;height:200px;" class="center-block img-responsive" />		
 								<h5 style="text-align:center;font-weight:900;">Solitaire</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="settingEdit" style="text-decoration:none;cursor: pointer;" data-value_id="solitaire">Edit <i class="fa fa-pencil-square-o"></i></a></p>
 								
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="settingEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+								</div>
 							</div>
-							
+						
 						</div>	
 						
+						
+						
 						<div class="col-sm-3">
-							<div class="col-sm-12">
+
 							<h3 style="text-align:center;font-weight:900;">Metal Type</h3>
 								<img src="/images/whitegold.jpg" alt="white gold"  style="margin-top:20px;padding: 20px 10px;height:200px;"  class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">White Gold</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a role="button" id="metalEdit"  style="text-decoration:none;cursor: pointer;" data-value_id="white gold">Edit <i class="fa fa-pencil-square-o"></i></a></p>
-							</div>
 								
+							
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metalEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+								</div>
+							</div>
+							
 						</div>
 						
 						
 						<div class="col-sm-3">
-							<div class="col-sm-12">
+							
 								<h3 style="text-align:center;font-weight:900;">Gem Type</h3>
 								<img src="/images/diamond.png" alt="diamond"  style="margin-top:20px;padding: 0px 10px;height:200px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Diamond</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="gemEdit" style="text-decoration:none;cursor: pointer;" data-value_id="diamond">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+
+								
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gemEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+								</div>
 							</div>
+							
 
 						</div>	
 						
 						
 						<div class="col-sm-3">
-							<div class="col-sm-12">
+							
 								<h3 style="text-align:center;font-weight:900;">Gem Shape</h3>
 								<img src="/images/cushion-170x170.jpg" alt="cushion cut"  style="margin-top:20px;padding: 20px 10px;height:200px;" class="center-block img-responsive"/>		
 								<h5 style="text-align:center;font-weight:900;">Cushion Shape</h5>
-								<p style="text-align:center;font-size:1em;padding-bottom:15px;"><a hrole="button" id="shapeEdit" style="text-decoration:none;cursor: pointer;" data-value_id="round">Edit <i class="fa fa-pencil-square-o"></i></a></p>
+							
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shapeEdit" name="setting" data-value_id="solitaire"><i class="fa fa-pencil-square-o"></i> Change </a>
+								</div>
 							</div>
-
 						</div>	
 						
 						<!--<div class="col-sm-3">
@@ -643,8 +674,7 @@
 				</div>
 			
 				<div class="row">
-					<div class="col-md-12" style="padding-top:5%;text-align:right;">
-						
+					<div class="col-md-12" style="text-align:right;">
 						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="styleConfirmedButtonPressed">NEXT</a>
 					</div>
 				</div>
@@ -684,13 +714,13 @@
 								<h3 style="text-align:center;font-weight:900;">New York</h3>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city2" name="city" data-value_id="3">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="city2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -703,13 +733,13 @@
 								<h3 style="text-align:center;font-weight:900;">Chicago</h3>
 							</div>
 								
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified " role="button" id="city1" name="city" data-value_id="2">Select</a>
 								</div>
 							</div>
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="city1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -723,13 +753,13 @@
 								<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
 							</div>
 
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city3" name="city" data-value_id="1">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="city3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -748,7 +778,7 @@
 			<div class="container-fluid" style="min-height:100vh;">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">SETTING STYLE
+						<h2 style="text-align:center;">SETTING STYLE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-gift fa-stack-1x"></i>
@@ -757,28 +787,28 @@
 					</div>
 				</div>			
 	
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<!--<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Solitaire ring type is a classic. It lets in the most light, maximizing the diamond's sparkle</p>-->
+				<!--<div class="row">
+					<div class="col-sm-12">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Solitaire ring type is a classic. It lets in the most light, maximizing the diamond's sparkle</p>
 					</div>
-				</div>
+				</div>-->
 			
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						<div class="col-md-3">
-							<div style="min-height:450px">
-								<img src="/images/solitaire_education.jpg" alt="solitaire setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/solitaire_education.jpg" alt="solitaire setting"  class="center-block img-responsive" style="padding:20px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Solitaire</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The classic single diamond set in the center, usually with four or six prongs.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting1" name="setting" data-value_id="solitaire">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="setting1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -787,19 +817,19 @@
 						
 						
 						<div class="col-md-3">
-							<div style="min-height:450px">
-								<img src="/images/halo_education.jpg" alt="halo setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/halo_education.jpg" alt="halo setting"  class="center-block img-responsive" style="padding:22px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Halo</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">A single diamond encircled by smaller diamonds, which visually expands the appearance of the center stone.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting2" name="setting" data-value_id="halo">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="setting2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -808,19 +838,19 @@
 						</div>
 						
 						<div class="col-md-3">
-							<div style="min-height:450px">
-								<img src="/images/threestone_education.jpg" alt="threestone setting"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/threestone_education.jpg" alt="threestone setting"  class="center-block img-responsive" style="padding:22px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Three Stone</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Three diamonds placed adjacent to each other offering a bold, modern look. </p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting3" name="setting" data-value_id="three_stone">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="setting3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -828,20 +858,20 @@
 						</div>	
 						
 						<div class="col-md-3">
-							<div style="min-height:450px">
+							<div style="min-height:400px;">
 								
-								<img src="/images/blank.jpg" alt="unknown"  class="center-block img-responsive" style="padding:72px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/blank.jpg" alt="unknown"  class="center-block img-responsive" style="padding:22px 65px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Relax and we'll pick a popular style. You can always come back and change your mind.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting4" name="setting" data-value_id="solitaire">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="setting4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -859,7 +889,7 @@
 			
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">METAL STYLE
+						<h2 style="text-align:center;">METAL STYLE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-eye fa-stack-1x"></i>
@@ -868,14 +898,14 @@
 					</div>		
 				</div>
 				
-				<div class="row">						
-					<div class="col-sm-8 col-sm-offset-2">
+				<!--<div class="row">						
+					<div class="col-sm-10 col-sm-offset-1">
 						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Platinum and white gold are the two most popular choices</p>
 					</div>
-				</div>
+				</div>-->
 				
 				<div class="row">				
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						<div class="col-md-3">
 							<div style="min-height:400px;">
 								<img src="/images/gold.jpg" alt="yellow gold" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
@@ -883,13 +913,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">A traditional metal used for centuries, gold embodies harmony for life.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal1" name="metal" data-value_id="gold">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="metal1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -903,13 +933,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">A modern twist on the traditional yellow gold, these gold rings are plated with rhodium to give it its white shine.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal2" name="metal" data-value_id="white gold">Select</a>
 								</div>
 							</div>
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="metal2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>						
@@ -923,13 +953,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Extremely rare and naturally hypoallergenic metal, platinum last forever.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal3" name="metal" data-value_id="platinum">Select</a>
 								</div>
 							</div>		
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="metal3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -943,13 +973,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Can't decide? Relax and we'll pick a popular style.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="metal4" name="metal" data-value_id="platinum">Select</a>
 								</div>
 							</div>		
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="metal4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -967,7 +997,7 @@
 			
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">GEM STYLE
+						<h2 style="text-align:center;">GEM STYLE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-eye fa-stack-1x"></i>
@@ -976,14 +1006,14 @@
 					</div>		
 				</div>
 				
-				<div class="row">						
-					<div class="col-sm-8 col-sm-offset-2">
+				<!--<div class="row">						
+					<div class="col-sm-12">
 						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Alternatives to diamonds can look just as good and be less expensive.</p>
 					</div>
-				</div>
+				</div>-->
 				
 				<div class="row">				
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						<div class="col-md-3">
 							<div style="min-height:400px;">
 								<img src="/images/diamond.png" alt="diamond" class="center-block img-responsive" style="padding:20px 20px;background-color:none;margin-bottom:20px;border-radius:25px;"/>								
@@ -991,13 +1021,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Hardest gem of them all. You've probably heard about it and it is the most common gem used in engagement rings.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem1" name="gem" data-value_id="diamond">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="gem1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1011,13 +1041,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">In Sanskrit, ruby is called ratnaraj, or “king of precious stones.”</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem2" name="gem" data-value_id="ruby">Select</a>
 								</div>
 							</div>
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="gem2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>						
@@ -1031,13 +1061,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Blue in color that can often change throughout the day, sapphires are a great alternative.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem3" name="gem" data-value_id="saphhire">Select</a>
 								</div>
 							</div>		
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="gem3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1051,13 +1081,13 @@
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Can't decide? Relax and we'll pick a popular style.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="gem4" name="gem" data-value_id="diamond">Select</a>
 								</div>
 							</div>		
 						
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="gem4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1076,7 +1106,7 @@
 		
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">DIAMOND SHAPE
+						<h2 style="text-align:center;">DIAMOND SHAPE
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-heart fa-stack-1x"></i>
@@ -1085,29 +1115,29 @@
 					</div>
 				</div>
 		
-				<div class="row">	
-					<div class="col-sm-8 col-sm-offset-2">
+				<!--<div class="row">	
+					<div class="col-sm-10 col-sm-offset-1">
 						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Round is the most popular shape. It is cut based on a precise formula to achieve maximum sparkle</p>	
 					</div>
 					
-				</div>
+				</div>-->
 			
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						<div class="col-md-3">
-							<div style="min-height:450px;">
-								<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/detail_secondary_round.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Round</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The most popular shape. Round diamonds are cut to maximize the sparkle.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape1" name="shape" data-value_id="round">Select</a>
 								</div>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="shape1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1115,19 +1145,19 @@
 						</div>	
 						
 						<div class="col-md-3">
-							<div style="min-height:450px;">
-								<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/cushion-170x170.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Cushion</h3>
 								<p style="text-align:center;font-weight:100;padding:0px 30px">The cushion shape blends vintage culture with modern design.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape2" name="shape" data-value_id="square">Select</a>
 								</div>
 							</div>	
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="shape2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1135,19 +1165,19 @@
 						</div>	
 						
 						<div class="col-md-3">
-							<div style="min-height:450px;">
-								<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/detail_secondary_princess.jpg" alt="prong setting"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Princess</h3>		
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Sharp and different. The princess shape is very popular alternative for those that want a little spice.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape3" name="shape" data-value_id="princess">Select</a>
 								</div>
 							</div>		
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="shape3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1155,19 +1185,19 @@
 						</div>
 
 						<div class="col-md-3">
-							<div style="min-height:450px;">
-								<img src="/images/blank2.jpg" alt="unknow"  class="center-block img-responsive" style="padding:65px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
+							<div style="min-height:400px;">
+								<img src="/images/blank2.jpg" alt="unknown"  class="center-block img-responsive" style="padding:25px 65px;background-color:white;margin-bottom:20px;border-radius:0%;"/>		
 								<h3 style="text-align:center;font-weight:900;">Don't Know</h3>		
 								<p style="text-align:center;font-weight:100;padding:0px 30px">Relax. We'll pick a popular shape for your.</p>
 							</div>
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
 									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-lg btn-group-justified" role="button" id="shape4" name="shape" data-value_id="round">Select</a>
 								</div>
 							</div>		
 							
-							<div class="col-sm-8 col-sm-offset-2">
+							<div class="col-sm-10 col-sm-offset-1">
 								<div id="shape4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
@@ -1185,7 +1215,7 @@
 				
 				<div class="row">
 					<div class="col-sm-12">	
-						<h2 style="text-align:center;margin-top:50px;margin-bottom:-5px;">DIAMOND QUALITY RANKING
+						<h2 style="text-align:center;">DIAMOND QUALITY RANKING
 						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 						<i class="fa fa-diamond fa-stack-1x"></i>
@@ -1195,18 +1225,18 @@
 				</div>
 			
 			<div class="form-horizontal" role="search">
-				<div class="row">	
-					<div class="col-sm-8 col-sm-offset-2">
+				<!--<div class="row">	
+					<div class="col-sm-10 col-sm-offset-1">
 						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">SPARKLIE TIP: Size is often the most important characteristic</p>
 					</div>
-				</div>
+				</div>-->
 			
 			
 				<div class="row">				
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-12">
 						<div class="col-sm-3">
 							<div style="min-height:450px;">
-								<img src="/images/carat.png" alt="carat"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/carat.png" alt="carat"  class="center-block img-responsive" style="padding:12.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Size</h3>		
 								<p style="text-align:center;font-weight:100;padding:0 30px;">Maximize the weight or size of the diamond.</p>
 							</div>
@@ -1233,7 +1263,7 @@
 
 						<div class="col-sm-3">
 							<div style="min-height:450px;">
-								<img src="/images/cut.png" alt="cut"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/cut.png" alt="cut"  class="center-block img-responsive" style="padding:12.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="text-align:center;font-weight:900;">Sparkle</h3>				
 								<p style="text-align:center;font-weight:100;padding:0 30px;">Maximize the brilliance of the diamond in reflecting light.</p>
 							</div>
@@ -1258,7 +1288,7 @@
 
 						<div class="col-sm-3">
 							<div style="min-height:450px;">
-								<img src="/images/clarity.png" alt="clarity" class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>								
+								<img src="/images/clarity.png" alt="clarity" class="center-block img-responsive" style="padding:12.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>								
 								<h3 style="text-align:center;font-weight:900;">Purity</h3>
 								<p style="text-align:center;font-weight:100;padding:0 30px;">Minimize internal flaws in the form of tiny impurities.</p>
 							</div>
@@ -1284,7 +1314,7 @@
 					
 						<div class="col-sm-3">
 							<div style="min-height:450px;">
-								<img src="/images/color.png" alt="color"  class="center-block img-responsive" style="padding:22.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
+								<img src="/images/color.png" alt="color"  class="center-block img-responsive" style="padding:12.5px 22.5px;background-color:white;margin-bottom:20px;border-radius:0px;"/>		
 								<h3 style="font-weight:900;text-align:center;padding: 0px 0px;margin: 0 0;">Transparency</h3>		
 								<p style="text-align:center;font-weight:100;padding:0 30px;">Minimize internal flaws that causes the diamond to look hazy or yellow.</p>
 							</div>
@@ -1306,17 +1336,13 @@
 								</div>
 							</div>		
 						</div>
-						
 					</div>
 				</div>
 				
 				<div class="row">	
-					<div class="form-group">
-						<div style="margin-top:50px;"><!-- This might need to by dynamic to the screen size -->
-							<div class="col-sm-2 col-sm-offset-5"> 
-								<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;margin:50px 0px;" class="btn btn-clear btn-lg btn-group-justified" type="submit" id="diamondPreferenceButtonPressed">Next</button>
-							</div>				
-						</div>
+						<div class="col-md-12" style="padding-top:5%;text-align:right;">
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="diamondPreferenceButtonPressed">Confirm</a>
+						</div>				
 					</div>
 				</div>
 				
@@ -1325,14 +1351,14 @@
 		</div>
 		
 		<!-- BUDGET BASIC-->
-		<div id="sectionBudget" style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;">
+		<div id="sectionBudget" style="display:none;min-height:100vh;background-image:url('/images/store2.jpg');background-size: cover;background-position:50% 80%;">
 			<div class="container-fluid" style="height:100vh;"><!-- This might need to by dynamic to the screen size -->
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1" id="info" style="padding-top:10%;color:white;">
-						What is your maximum budget? We’ll keep this in mind when making our recommendation.</br>
+					<div class="col-md-12" id="info" style="padding-top:10%;">
+						<p style="color:white;">set your max budget</br>
 						<ul class="list-unstyled style-4" style="display:inline-block;">
 							<li>
-							  <input id="userBudget" style="text-align:center;width:50%;color:black;" type="number" value="5000" min="1000" step="1000">
+							  <input id="userBudget" style="text-align:center;width:100%;" type="number" value="5000" min="1000" step="1000">
 							</li>
 						</ul>
 						
@@ -1348,7 +1374,7 @@
 			</div>	
 		</div>			
 		
-	<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
+		<!-- RESULTS DUMMY FOR MANUAL TESTING BEFORE TEMPLATE-->
 		<div id="section_resultTemp" style="display:none;min-height:100vh;">				
 			<div class="row">
 				<div class="col-sm-12">	
@@ -1575,28 +1601,145 @@
 	<script>
 
 	$(document).ready(function(){
+	
+	
+	
+	window.addEventListener("popstate", function(e) {
+		if (window.counter == 2) {
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		$("#sectionName").removeClass('hide').addClass('show');
+		$("#sectionPinterest").removeClass('show').addClass('hide');
+		}
+		else if  (window.counter == 3) {
+		window.counter = 2;
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		$("#sectionPinterest").removeClass('hide').addClass('show');
+		$("#sectionStyles").removeClass('show').addClass('hide');
+		}
+		else if  (window.counter == 4) {
+		window.counter = 3;
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		$("#sectionStyles").removeClass('hide').addClass('show');
+		$("#sectionBudget").removeClass('show').addClass('hide');
+		}
+		else if  (window.counter == 5) {
+		window.counter = 4;
+		$("#indicatorSection").addClass('show').removeClass('hide');
+		$("#sectionBudget").removeClass('hide').addClass('show');
+		$("#section_resultTemp").removeClass('show').addClass('hide');
+		}		
+		else if  (window.counter == 10) {
+		window.counter = 2;
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		$("#sectionPinterest").removeClass('hide').addClass('show');
+		$("#sectionStyles").removeClass('show').addClass('hide');
+		}
+		else if  (window.counter == 12) {
+		window.counter = 10;
+				$('#section_metal').animate({
+				  left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+				  +$("#section_metal").outerWidth() : 0
+				}, 500, function(){
+					$("#section_metal").removeClass("show").addClass('hide');
+					
+					$("#section_setting").removeClass("hide").addClass('show');
+					$("#section_setting").css('display','block').animate({
+						left: parseInt($("#section_setting").css('left'), 10) == 0 ?
+						-$("#section_setting").outerWidth() : 0
+					});
+					});
+		}
+		
+		else if  (window.counter == 13) {
+		window.counter = 12;
+				$('#section_gem').animate({
+				  left: parseInt($("#section_gem").css('left'), 10) == 0 ?
+				  +$("#section_gem").outerWidth() : 0
+				}, 500, function(){
+					$("#section_gem").removeClass("show").addClass('hide');
+					$("#section_metal").removeClass("hide").addClass('show');
+					$("#section_metal").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+					});
+		}
+		
+		else if  (window.counter == 14) {
+		window.counter = 13;
+				$('#section_shape').animate({
+				  left: parseInt($("#section_shape").css('left'), 10) == 0 ?
+				  +$("#section_shape").outerWidth() : 0
+				}, 500, function(){
+					$("#section_shape").removeClass("show").addClass('hide');
+					$("#section_gem").removeClass("hide").addClass('show');
+					$("#section_gem").css('display','block').animate({
+						left: parseInt($("#section_gem").css('left'), 10) == 0 ?
+						-$("#section_gem").outerWidth() : 0
+					});
+					});
+		}
+		
+		else if  (window.counter == 15) {
+		window.counter = 14;
+				$('#section_preference').animate({
+				  left: parseInt($("#section_preference").css('left'), 10) == 0 ?
+				  +$("#section_preference").outerWidth() : 0
+				}, 500, function(){
+					$("#section_preference").removeClass("show").addClass('hide');
+					$("#section_shape").removeClass("hide").addClass('show');
+					$("#section_shape").css('display','block').animate({
+						left: parseInt($("#section_shape").css('left'), 10) == 0 ?
+						-$("#section_shape").outerWidth() : 0
+					});
+					});
+		}
+		
+		else if  (window.counter == 16) {
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		window.counter = 15;
+			$("#sectionBudget").removeClass("show").addClass('hide');
+			$("#section_preference").removeClass("hide").addClass('show');
+			
+		}
+		
+		else if  (window.counter == 17) {
+		$(".new-indicators").find("li.active").removeClass('active').prev().addClass('active')
+		window.counter = 13;
+			$("#sectionBudget").removeClass("show").addClass('hide');
+			$("#section_gem").removeClass("hide").addClass('show');
+			
+
+		}
+		});
+	
+	
 	console.log($("#pintrestUserName").hasClass('hide'));
+	
+	//this section below use detects the enter key
 		$(document).keypress(function(e) {
 			if(e.which == 13 && $("#sectionName").hasClass('hide') == false) {
 				$("#sectionNameButtonPressed").click();
 				console.log($("#sectionName").hasClass('hide'));
+				console.log("a")
 				
 				}
 			else if(e.which == 13 && $("#sectionPinterest").hasClass('hide') == false) {
 				$("#pinterestButtonPressed").click();
-				
-				
+				console.log($("#sectionPinterest").hasClass('hide'));
+				console.log("b")
 				}
-			else if(e.which == 13 && $("#sectionStyles").hasClass('hide') == false) {
+			else if(e.which == 13 && $("#sectionStyles").hasClass('hide') == false && window.counter == 3){
 				$("#styleConfirmedButtonPressed").click();
-				
-				
+				console.log($("#sectionStyles").hasClass('hide'));
+				console.log("c")
 				}
-			else if(e.which == 13 && $("#sectionBudget").hasClass('hide') == false) {
+			else if(e.which == 13 && $("#sectionBudget").hasClass('hide') == false && window.counter == 4) {
 				$("#budgetButtonPressed").click();
-				
-				
+				console.log($("#sectionBudget").hasClass('hide'));
+				console.log("d")
 				}
+			else {}	
 		});
 		
 		$("#userName").click(function(){
@@ -1605,16 +1748,19 @@
 		
 		$("#sectionNameButtonPressed").on('click', function(){
 			if ($("#userName").val() != ""){
+				history.pushState(null, null, '/styleStep2');
+				window.counter = 2
 				$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 //				$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
-				$("#sectionName").addClass('hide');
+				$("#sectionName").addClass('hide').removeClass('show');
 				$("#insertUserName").empty().append($("#userName").val());
 				$.post('/userName', {
 						userName: $("#userName").val()
 					});
-				$("#sectionPinterest").slideDown(3,'linear',function(){
+				$("#sectionPinterest").removeClass('hide').addClass('show');
+				/*$("#sectionPinterest").slideDown(3,'linear',function(){
 					$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
-				});
+				});*/
 				}
 			else {
 				//$("#sectionNameButtonPressed").removeClass('disabled')
@@ -1636,6 +1782,8 @@
 		$("#pinterestButtonPressed").on('click', function(){
 			if ($("#pintrestUserName").val() != ""){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
+			history.pushState(null, null, '/styleStep3');
+			window.counter = 3;
 //			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 //			$("#insertUserName").empty().append($("#userName").val());
 			$("#modalPinterestWait").modal({
@@ -1644,15 +1792,16 @@
 						});
 			window.setTimeout(function() {
 				$("#modalPinterestWait").modal('hide'); 
-				$("#sectionPinterest").addClass('hide');
-				$("#sectionStyles").slideDown(3,'linear',function(){
+				$("#sectionPinterest").addClass('hide').removeClass('show');
+				$("#sectionStyles").removeClass('hide').addClass('show');
+				/*$("#sectionStyles").slideDown(3,'linear',function(){
 					//$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
-				});
+				});*/
 				}, 1000); //change this to 5000 for 5 secs
 			}	
 			else {
 				//$("#pinterestButtonPressed").removeClass('disabled');
-				$("#pintrestUserName").attr('placeholder','did you mean to click on skip?');
+				$("#pintrestUserName").attr('placeholder','skip?');
 				$("#pintrestUserName").focus();
 			}			
 			});		
@@ -1662,10 +1811,13 @@
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 //			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
 //			$("#insertUserName").empty().append($("#userName").val());
-			$("#sectionPinterest").addClass('hide'); 
-			$("#section_setting").slideDown(10,'linear',function(){
+			history.pushState(null, null, '/styleStep3Guide');
+			window.counter = 10;
+			$("#sectionPinterest").addClass('hide').removeClass('show');
+			$("#section_setting").removeClass('hide').addClass('show');
+			/*$("#section_setting").slideDown(10,'linear',function(){
 				//$('html,body').animate({ scrollTop: $("#section_setting").offset().top}, 300)	
-				});
+				});*/
 			});
 		
 		$("#settingEdit").click(function(){
@@ -1705,7 +1857,9 @@
 		
 		$("#styleConfirmedButtonPressed").on('click',function(){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
-			$("#sectionStyles").addClass('hide');
+			history.pushState(null, null, '/styleStep4');
+			window.counter = 4;
+			$("#sectionStyles").addClass('hide').removeClass('show');
 			console.log($("#settingEdit").data('value_id'))
 			console.log($("#metalEdit").data('value_id'))
 			console.log($("#gemEdit").data('value_id'))
@@ -1722,15 +1876,19 @@
 			$.post("/chooseShape", {
 				shape: $("#shapeEdit").data('value_id')
 				});				
-			$("#sectionBudget").slideDown(10,'linear',function(){
+			$("#sectionBudget").removeClass('hide').addClass('show');
+			
+			/*$("#sectionBudget").slideDown(10,'linear',function(){
 				//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
-			});
+			});*/
 		});
 		
 		
 		
 		$("#budgetButtonPressed").on('click',function(){
-		if (1 == 1){
+		if (1 == 1){  //this section is temporary since I'm not actually calling the database in the back-end
+		history.pushState(null, null, '/styleRecommendation');
+		window.counter = 5 // 5 is when the back button no longer works
 		$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
 		$("#modalPinterestWait").modal({
 						keyboard : false,
@@ -1738,8 +1896,9 @@
 						});	
 		window.setTimeout(function() {
 				$("#modalPinterestWait").modal('hide');	
-				$("#sectionBudget").addClass('hide');
-				$("#section_resultTemp").slideDown(10,'linear')
+				$("#indicatorSection").addClass('hide').removeClass('show');
+				$("#sectionBudget").addClass('hide').removeClass('show');
+				$("#section_resultTemp").addClass('show').removeClass('hide');
 				}, 2000); //change this to 5000 for 5 secs
 		}
 		else {
@@ -1870,7 +2029,7 @@
 							});	
 							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
 							window.setTimeout(function() {
-								$("#sectionBudget").addClass('hide');
+								$("#sectionBudget").addClass('hide').removeClass('show');
 								$("#modalPinterestWait").modal('hide');
 								}, 5000);
 							
@@ -1908,7 +2067,9 @@
 			$("#setting1_show,#setting2_show,#setting3_show,#setting4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			console.log($(this).data('value_id'))			
+			console.log($(this).data('value_id'))
+			history.pushState(null, null, '/styleStep3Guide2');
+			window.counter = 12;			
 			$.post("/chooseSetting", { //passing setting value 
 				setting: 	$(this).data('value_id')
 				});
@@ -1919,6 +2080,7 @@
 				}, 500, function(){
 					
 					$("#section_setting").removeClass("show").addClass('hide');
+					$("#section_metal").removeClass("hide").addClass('show');
 					
 					$("#section_metal").css('display','block').animate({
 						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
@@ -1936,7 +2098,9 @@
 			$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			console.log($(this).data('value_id'))			
+			console.log($(this).data('value_id'))		
+			history.pushState(null, null, '/styleStep3Guide3');
+			window.counter = 13;			
 				$.post("/chooseMetal", { //passing metal value
 				ring: $(this).data('value_id')
 				});	
@@ -1947,6 +2111,7 @@
 				}, 500, function(){
 					
 					$("#section_metal").removeClass("show").addClass('hide');
+					$("#section_gem").removeClass("hide").addClass('show');
 					
 					$("#section_gem").css('display','block').animate({
 						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
@@ -1964,7 +2129,9 @@
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			console.log($(this).data('value_id'))			
+			console.log($(this).data('value_id'));		
+			history.pushState(null, null, '/styleStep3Guide4');
+			window.counter = 14;				
 				$.post("/chooseGem", { //passing gem value, need new function
 				gem: $(this).data('value_id')
 				});		
@@ -1975,6 +2142,7 @@
 				}, 500, function(){
 					
 					$("#section_gem").removeClass("show").addClass('hide');
+					$("#section_shape").removeClass("hide").addClass('show');
 					
 					$("#section_shape").css('display','block').animate({
 						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
@@ -1992,14 +2160,17 @@
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			console.log($(this).data('value_id'))			
+			console.log($(this).data('value_id'));
+			history.pushState(null, null, '/styleStep4');
+			window.counter = 17;
 				$.post("/chooseGem", { //passing gem value, need new function
 				gem: $(this).data('value_id')
 				});	
 			$("#section_gem").removeClass("show").addClass('hide');	
-			$("#sectionBudget").slideDown(10,'linear',function(){
+			$("#sectionBudget").removeClass("hide").addClass('show');
+			/*$("#sectionBudget").slideDown(10,'linear',function(){
 				//$('html,body').animate({ scrollTop: $("#sectionBudget").offset().top}, 300)
-			});
+			});*/
 				
 				
 			/*$("#section_budget").slideDown(10,'linear',function(){
@@ -2038,11 +2209,12 @@
 			
 		
 		$("#shape1,#shape2,#shape3,#shape4").on('click', function(){
-			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
-			console.log($(this).data('value_id'))			
+			console.log($(this).data('value_id'))
+			history.pushState(null, null, '/styleStep3Guide5');
+			window.counter = 15;				
 				$.post("/chooseShape", {
 				shape: $(this).data('value_id')
 				});
@@ -2053,6 +2225,7 @@
 				}, 500, function(){
 					
 					$("#section_shape").removeClass("show").addClass('hide');
+					$("#section_preference").removeClass("hide").addClass('show');
 					
 					$("#section_preference").css('display','block').animate({
 						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
@@ -2067,8 +2240,11 @@
 			});	
 		
 		$("#diamondPreferenceButtonPressed").on('click',function(){
+			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#section_preference").removeClass("show").addClass('hide');
-			$("#sectionBudget").slideDown(10,'linear');		
+			history.pushState(null, null, '/styleStep4');
+			window.counter = 16;	
+			$("#sectionBudget").removeClass("hide").addClass('show');
 		});
 		
 		

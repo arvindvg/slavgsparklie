@@ -782,7 +782,31 @@ class email_message2(webapp2.RequestHandler):
         message.send()
         input = appointment_db(email=email_user,first_name=first_name,last_name=last_name,message_body=message_body,phone_number=phone_number,appointment_time="01/01/2001")
         input.put()
-		
+
+
+class contactUs(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        first_name = self.request.get("firstName")
+        last_name = self.request.get("lastName")
+        message_body = self.request.get("message")
+        email_user = self.request.get("email")
+        subject = self.request.get("subject")
+       
+        template_values = {}
+        
+        if last_name == "":
+            last_name = "(user didn't provide a last name)"
+
+        #Message to Sparklie
+        message = mail.EmailMessage()
+        message.sender = "<sparklie3@gmail.com>"
+        message.to = "<shaw@sparklie.net>"
+        message.body = message_body + email_user
+        message.subject = subject
+        message.send()
+
 class scheduleAppointment(webapp2.RequestHandler):
 
     def post(self):
@@ -1143,6 +1167,15 @@ application = webapp2.WSGIApplication([
 ('/', HomePage),
 ('/userName', userName),
 ('/style', Style),
+('/styleStep2', Style),
+('/styleStep3', Style),
+('/styleStep3Guide', Style),
+('/styleStep3Guide2', Style),
+('/styleStep3Guide3', Style),
+('/styleStep3Guide4', Style),
+('/styleStep3Guide5', Style),
+('/styleStep4', Style),
+('/styleRecommendation', Style),
 ('/chooseSetting', Setting),
 ('/chooseMetal', Metal),
 ('/chooseGem', Gem),
@@ -1157,6 +1190,7 @@ application = webapp2.WSGIApplication([
 ('/create_transaction', CreateTransaction),
 ('/email_message', email_message),
 ('/email_message2', email_message2),
+('/emailContactUs', contactUs),
 ('/emailScheduleAppointment', scheduleAppointment),
 ('/emailInviteFriend', inviteFriend),
 ('/launch', launch),
