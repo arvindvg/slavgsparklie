@@ -209,7 +209,11 @@ class Budget(webapp2.RequestHandler):
         unique_id = str(unique_id)
         event_type = 'Budget'
         session['user_price'] = user_price
-        #print user_price
+        print "user_price"  
+        print user_price
+        user_price_2 = session.get('user_price')
+        print "user_price2"  
+        print user_price_2
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_price)
         input.put()
 
@@ -224,7 +228,7 @@ class Calculation(webapp2.RequestHandler):
         user_setting_list = []
         user_metal_list = []
         user_price = session.get('user_price')
-        #print "user_price"  
+        print "user_price"  
         print user_price
         user_price_lower,user_price_upper = user_price.split(",") 
         user_price_lower = int(user_price_lower)
