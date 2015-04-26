@@ -1745,7 +1745,6 @@
 			console.log($("#metalEdit").data('value_id'))
 			console.log($("#gemEdit").data('value_id'))
 			console.log($("#shapeEdit").data('value_id'))
-			console.log($("#preferenceEdit").data('value_id'))
 			$.post("/chooseSetting", { //passing setting value 
 				setting: $("#settingEdit").data('value_id')
 				});
@@ -1757,14 +1756,7 @@
 				});	
 			$.post("/chooseShape", {
 				shape: $("#shapeEdit").data('value_id')
-				});
-			$.post("/choosePref", {
-				selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-				selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-				selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-				selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
-
-				});	
+				});				
 			$("#sectionBudget").removeClass('hide').addClass('show');
 			
 			/*$("#sectionBudget").slideDown(10,'linear',function(){
@@ -1805,7 +1797,7 @@
 				console.log(lower + "," + $("#userBudget").val());
 				$.post('/chooseBudget', {
 						price:(lower + "," + $("#userBudget").val())
-					});				
+					});
 				$.post('/userCity',{
 						city: 3
 					});
@@ -1823,18 +1815,16 @@
 				//{
 					//$("#sum").removeClass(has-error);
 					console.log((parseInt($("#1").text().charAt(0))*10).toString());
-					setTimeout(function() {
 					$.post('/step6',{
 						/*selection_size: 40,
 						selection_sparklie: 20,
 						selection_purity: 20,
-						selection_transparency: 20
+						selection_transparency: 20*/
 						selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
 						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
 						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()*/
-					})
-					},2000).done(function(data){
+						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
+					}).done(function(data){
 						//console.log('done');
 						//console.log(JSON.parse(data));
 						$.ajax({
@@ -2140,15 +2130,10 @@
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#section_preference").removeClass("show").addClass('hide');
 			history.pushState(null, null, '/styleStep4');
-			window.counter = 16;
-				$.post("/choosePref", {
-				selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-				selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-				selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-				selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
-				});			
+			window.counter = 16;	
 			$("#sectionBudget").removeClass("hide").addClass('show');
 		});
+		
 		
 		//Send email for scheduling appointment 
 		$("#scheduleAppointment").submit(function(event){

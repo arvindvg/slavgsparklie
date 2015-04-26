@@ -18,6 +18,7 @@ import json
 from collections import defaultdict
 import braintree
 from google.appengine.api import mail
+import time 
 
 user_city_code = {1 : 'San Francisco',2 : 'Chicago',3:'New York'}
 
@@ -108,6 +109,8 @@ class HomePage(webapp2.RequestHandler):
         template = jinja_environment.get_template('step1.html')
         self.response.out.write(template.render())
         session['unique_id'] = unique_id
+        print "HomePage"
+        print session
 
 class Style (webapp2.RequestHandler):
 
@@ -124,7 +127,6 @@ class userCity(webapp2.RequestHandler):
     def post(self):
         session = get_current_session()
         user_city = self.request.get('city')
-        print user_city
         #user_city = int(user_city) 
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
@@ -132,6 +134,8 @@ class userCity(webapp2.RequestHandler):
         session['user_city'] = user_city
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=str(user_city))
         input.put()
+        print "userCity"
+        print session
 
 class Setting(webapp2.RequestHandler):
 
@@ -145,6 +149,8 @@ class Setting(webapp2.RequestHandler):
         #print user_setting
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_setting)
         input.put()
+        print "Setting"
+        print session
 
 class Metal(webapp2.RequestHandler):
 
@@ -159,6 +165,8 @@ class Metal(webapp2.RequestHandler):
         #print user_metal
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_metal)
         input.put()
+        print "Metal"
+        print session
 
 class Gem(webapp2.RequestHandler):
 
@@ -172,6 +180,8 @@ class Gem(webapp2.RequestHandler):
         #print user_gem
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_gem) # i don't think i have to createa new db above when we had this gem?
         input.put()
+        print "Gem"
+        print session
 
 class userName(webapp2.RequestHandler):
 
@@ -185,6 +195,8 @@ class userName(webapp2.RequestHandler):
         #print user_name
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_name) # i don't think i have to createa new db above when we had this user?
         input.put()
+        print "userName"
+        print session
 
 
 class Shape(webapp2.RequestHandler):
@@ -199,6 +211,37 @@ class Shape(webapp2.RequestHandler):
         #print user_shape
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_shape)
         input.put()
+        print "Shape"
+        print session
+
+class diamond_pref_ranking(webapp2.RequestHandler):
+
+    def post(self):
+        session = get_current_session()
+        unique_id = session.get('unique_id')
+        unique_id = str(unique_id)
+        event_type1 = 'Selection size'
+        event_type2 = 'Selection sparkle'
+        event_type3 = 'Selection purity'
+        event_type4 = 'Selection transparency'
+        user_selection_size = self.request.get('selection_size')
+        user_selection_sparkle = self.request.get('selection_sparklie')
+        user_selection_purity = self.request.get('selection_purity')
+        user_selection_transparency = self.request.get('selection_transparency')
+        session['user_selection_size'] = user_selection_size
+        session['user_selection_sparkle'] = user_selection_sparkle
+        session['user_selection_purity'] = user_selection_purity
+        session['user_selection_transparency'] = user_selection_transparency
+        input = event_db(unique_id=unique_id,event_type=event_type1,event_value=user_selection_size)
+        input.put()
+        input = event_db(unique_id=unique_id,event_type=event_type2,event_value=user_selection_sparkle)
+        input.put()
+        input = event_db(unique_id=unique_id,event_type=event_type3,event_value=user_selection_purity)
+        input.put()
+        input = event_db(unique_id=unique_id,event_type=event_type4,event_value=user_selection_transparency)
+        input.put()
+        print "diamond_pref_ranking"
+        print session
 
 class Budget(webapp2.RequestHandler):
 
@@ -207,23 +250,23 @@ class Budget(webapp2.RequestHandler):
         user_price = self.request.get('price')
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
+        print unique_id
         event_type = 'Budget'
         session['user_price'] = user_price
-        print "user_price"  
-        print user_price
-        user_price_2 = session.get('user_price')
-        print "user_price2"  
-        print user_price_2
         input = event_db(unique_id=unique_id,event_type=event_type,event_value=user_price)
         input.put()
+        print "BUDGET"
+        print session
 
 class Calculation(webapp2.RequestHandler):
 
     def post(self):
         session = get_current_session()
+        print "CALCULATION"
+        print session
         unique_id = session.get('unique_id')
         unique_id = str(unique_id)
-                
+        print unique_id
         user_shape_list = []
         user_setting_list = []
         user_metal_list = []
@@ -251,32 +294,15 @@ class Calculation(webapp2.RequestHandler):
         print user_metal
         user_metal = user_metal.upper()
         user_metal_list.append(user_metal)
-        event_type1 = 'Selection size'
-        event_type2 = 'Selection sparkle'
-        event_type3 = 'Selection purity'
-        event_type4 = 'Selection transparency'
         user_city = session.get('user_city')
-        #user_city = int(user_city)
+        user_city = int(user_city)
         session['user_price_lower'] = user_price_lower
         session['user_price_upper'] = user_price_upper
-        user_selection_size = self.request.get('selection_size')
-        user_selection_sparkle = self.request.get('selection_sparklie')
-        user_selection_purity = self.request.get('selection_purity')
-        user_selection_transparency = self.request.get('selection_transparency')
         
-        input = event_db(unique_id=unique_id,event_type=event_type1,event_value=user_selection_size)
-        input.put()
-        input = event_db(unique_id=unique_id,event_type=event_type2,event_value=user_selection_sparkle)
-        input.put()
-        input = event_db(unique_id=unique_id,event_type=event_type3,event_value=user_selection_purity)
-        input.put()
-        input = event_db(unique_id=unique_id,event_type=event_type4,event_value=user_selection_transparency)
-        input.put()
-        
-        session['user_selection_size'] = user_selection_size
-        session['user_selection_sparkle'] = user_selection_sparkle
-        session['user_selection_purity'] = user_selection_purity
-        session['user_selection_transparency'] = user_selection_transparency
+        user_selection_size = session.get('user_selection_size')
+        user_selection_sparkle = session.get('user_selection_sparkle')
+        user_selection_purity = session.get('user_selection_purity')
+        user_selection_transparency = session.get('user_selection_transparency')
 
         user_selection_size = int(user_selection_size)
         user_selection_sparkle = int(user_selection_sparkle)
@@ -1184,6 +1210,7 @@ application = webapp2.WSGIApplication([
 ('/chooseMetal', Metal),
 ('/chooseGem', Gem),
 ('/chooseShape', Shape),
+('/choosePref', diamond_pref_ranking),
 ('/chooseBudget', Budget),
 ('/step6', Calculation),
 ('/recommendation', Recommendation),
