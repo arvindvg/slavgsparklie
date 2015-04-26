@@ -1805,10 +1805,10 @@
 				console.log(lower + "," + $("#userBudget").val());
 				$.post('/chooseBudget', {
 						price:(lower + "," + $("#userBudget").val())
-					});				
+					}).done(function(data){
 				$.post('/userCity',{
 						city: 3
-					});
+					}).done(function(data){				
 					//console.log($("#modalPinterestWait").find(".modal-title").text());
 			$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
 			$("#modalPinterestWait").modal({
@@ -1823,7 +1823,6 @@
 				//{
 					//$("#sum").removeClass(has-error);
 					console.log((parseInt($("#1").text().charAt(0))*10).toString());
-					setTimeout(function() {
 					$.post('/step6',{
 						/*selection_size: 40,
 						selection_sparklie: 20,
@@ -1833,8 +1832,7 @@
 						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
 						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
 						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()*/
-					})
-					},2000).done(function(data){
+					}).done(function(data){
 						//console.log('done');
 						//console.log(JSON.parse(data));
 						$.ajax({
@@ -1937,6 +1935,8 @@
 							//window.setTimeout(function() {}, 5000);
 
 					});
+				});
+			});
 				//}
 			}
 		}	
