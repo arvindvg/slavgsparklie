@@ -548,11 +548,15 @@
 				<div class="row">
 					<div class="col-md-12" id="info" style="padding-top:10%;">
 						<p style="color:white;">welcome <span id="insertUserName"></span></p>
-							<ul class="list-unstyled style-4" style="display:inline-block;">
+						<p style="font-size:.5em;text-align:center;color:white;">We can use visual guide or analyze her Pinterest board to help you discover ring styles.</p>
+							<!--<ul class="list-unstyled style-4" style="display:inline-block;">
 								<li>
 									<input id="pintrestUserName" style="text-align:center;width:100%;" type="text" placeholder="Pinterest UserName">
 								</li>
-							</ul>
+							</ul>-->
+							
+							<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestSkipButtonPressed">VISUAL GUIDE</a>
+						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg" role="button" id="pinterestButtonPressed">PINTEREST</a></br>
 							
 						</div>
 					<!--<div class="col-md-12" style="padding-top:10%;color:white;text-align:center;">
@@ -567,7 +571,7 @@
 					</div>-->
 				</div>
 				
-				<div class="row">
+				<!--<div class="row">
 				<div class="col-md-6 col-md-push-3">
 				<p style="font-size:1.5em;text-align:center;color:white;">To help discover her ring style, we can analyze her Pinterest board. Otherwise, skip. </p>
 				
@@ -579,7 +583,7 @@
 						<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;" class="btn btn-lg disabled" role="button" id="pinterestButtonPressed">NEXT</a></br>
 						
 					</div>
-				</div>
+				</div>-->
 			</div>	
 		</div>
 		
@@ -804,7 +808,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="setting1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="setting1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -825,7 +829,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="setting2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="setting2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -841,12 +845,12 @@
 							
 							<div class="col-sm-10 col-sm-offset-1">
 								<div style="text-align:center;margin-bottom:50px;">
-									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting3" name="setting" data-value_id="three_stone">Select</a>
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;"  class="btn btn-clear btn-lg btn-group-justified" role="button" id="setting3" name="setting" data-value_id="3 stone">Select</a>
 								</div>
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="setting3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="setting3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>	
@@ -867,7 +871,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="setting4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="setting4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>	
@@ -915,7 +919,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="metal1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="metal1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -935,7 +939,7 @@
 							</div>
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="metal2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="metal2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>						
 							</div>
@@ -955,7 +959,7 @@
 							</div>		
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="metal3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="metal3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -975,7 +979,7 @@
 							</div>		
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="metal4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="metal4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1023,7 +1027,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="gem1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="gem1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1043,7 +1047,7 @@
 							</div>
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="gem2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="gem2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>						
 							</div>
@@ -1063,7 +1067,7 @@
 							</div>		
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="gem3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="gem3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1083,7 +1087,7 @@
 							</div>		
 						
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="gem4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="gem4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1133,7 +1137,7 @@
 							</div>
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="shape1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="shape1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1153,7 +1157,7 @@
 							</div>	
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="shape2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="shape2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1173,7 +1177,7 @@
 							</div>		
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="shape3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="shape3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1193,7 +1197,7 @@
 							</div>		
 							
 							<div class="col-sm-10 col-sm-offset-1">
-								<div id="shape4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+								<div id="shape4_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;cursor: pointer;" class="btn-lg btn-group-justified hide">
 									<i class="fa fa-check-circle-o"></i>
 								</div>
 							</div>
@@ -1395,11 +1399,9 @@
 											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image1" style="padding:0px 0px;border:0;" id="main_ring_image_url1" />
 										</div>
 										<div class="item">
-											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image2" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url2"/>
+											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image2" style="padding:0px 0px;border:0;" id="main_ring_image_url2"/>
 										</div>
-										<div class="item">
-											<img src="" class="img-thumbnail center-block img-responsive" alt="Responsive image3" style="padding:0px 0px;border:0;visibility:hidden;" id="main_ring_image_url3"/>
-										</div>
+										
 									</div>
 									
 									<!-- Controls -->
@@ -1438,7 +1440,7 @@
 				<div class="row">
 					<div class="col-sm-10 col-sm-push-1" style="padding-bottom:200px;">
 					<hr style="margin-top:0px;margin-bottom:13px;"/>
-					<h3 style="text-align:center;">OTHER OPTIONS</h3><br/><br/>
+					<h2 style="text-align:center;margin-top:50px;margin-bottom:50px;">OTHER OPTIONS</h2>
 						<div class="col-sm-3" >
 							<a id="option1ButtonPressed"><img src="" class="center-block img-thumbnail" alt="Responsive image1" style="max-height:200px;" id="option1"/></a>
 						</div>
@@ -1650,9 +1652,9 @@
 			}			
 		});
 			
-		$("#pintrestUserName").click(function(){
+		/*$("#pintrestUserName").click(function(){
 			$("#pinterestButtonPressed").removeClass('disabled');
-		});	
+		});*/	
 		
 		var timeoutID;
 
@@ -1661,12 +1663,13 @@
 		}
 
 		$("#pinterestButtonPressed").on('click', function(){
-			if ($("#pintrestUserName").val() != ""){
+			alert("Sorry, this is still under development. Try our visual guide instead.");
+			/*if ($("#pintrestUserName").val() != ""){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			history.pushState(null, null, '/styleStep3');
 			window.counter = 3;
-//			$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
-//			$("#insertUserName").empty().append($("#userName").val());
+			//$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('hide');
+			//$("#insertUserName").empty().append($("#userName").val());
 			$("#modalPinterestWait").modal({
 						keyboard : false,
 						backdrop: false,
@@ -1675,16 +1678,16 @@
 				$("#modalPinterestWait").modal('hide'); 
 				$("#sectionPinterest").addClass('hide').removeClass('show');
 				$("#sectionStyles").removeClass('hide').addClass('show');
-				/*$("#sectionStyles").slideDown(3,'linear',function(){
+				//$("#sectionStyles").slideDown(3,'linear',function(){
 					//$('html,body').animate({ scrollTop: $("#section_city").offset().top}, 300)
-				});*/
+				//});
 				}, 1000); //change this to 5000 for 5 secs
 			}	
 			else {
 				//$("#pinterestButtonPressed").removeClass('disabled');
 				$("#pintrestUserName").attr('placeholder','skip?');
 				//$("#pintrestUserName").focus();
-			}			
+			}*/			
 			});		
 		
 		
@@ -1775,171 +1778,109 @@
 		
 		
 		$("#budgetButtonPressed").on('click',function(){
-		if (0 == 1){  //this section is temporary since I'm not actually calling the database in the back-end
-		history.pushState(null, null, '/styleRecommendation');
-		window.counter = 5 // 5 is when the back button no longer works
-		$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
-		$("#modalPinterestWait").modal({
-						keyboard : false,
-						backdrop: false,
-						});	
-		window.setTimeout(function() {
-				$("#modalPinterestWait").modal('hide');	
-				$("#indicatorSection").addClass('hide').removeClass('show');
-				$("#sectionBudget").addClass('hide').removeClass('show');
-				$("#section_resultTemp").addClass('show').removeClass('hide');
-				}, 2000); //change this to 5000 for 5 secs
-		}
-		else {
 			if ($("#userBudget").val() == "" || $("#userBudget").val() == 0){
 			$("#userBudget").val(5000);
 			}
 			else {
+				history.pushState(null, null, '/styleRecommendation');
+				window.counter = 5 // 5 is when the back button no longer works
 				if ($("#userBudget").val() <= 3000){
 					var lower = 0;
 				}
 				else {
 					var lower = ($("#userBudget").val()) - 3000;
 				}
-				$("#indicatorSection").addClass('hide').removeClass('show');
-				console.log(lower + "," + $("#userBudget").val());
+				$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
+				$("#modalPinterestWait").modal({
+					keyboard : false,
+					backdrop: false,
+				});		
 				$.post('/chooseBudget', {
 						price:(lower + "," + $("#userBudget").val())
-					}).done(function(data){
-				$.post('/userCity',{
+				}).done(function(){
+					$.post('/userCity',{
 						city: 3
-					}).done(function(data){				
-					//console.log($("#modalPinterestWait").find(".modal-title").text());
-			$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
-			$("#modalPinterestWait").modal({
-						keyboard : false,
-						backdrop: false,
-						});		
-			//$("#section_resultTemp").slideDown(10,'linear',function(){
-			//	$('html,body').animate({ scrollTop: $("#section_resultTemp").offset().top}, 300)
-			//});
-			
-			//if (parseInt($("#1").text().charAt(0)) + parseInt($("#2").text().charAt(0)) + parseInt($("#3").text().charAt(0))+ parseInt($("#4").text().charAt(0)) == 10)
-				//{
-					//$("#sum").removeClass(has-error);
-					console.log((parseInt($("#1").text().charAt(0))*10).toString());
-					$.post('/step6',{
-						/*selection_size: 40,
-						selection_sparklie: 20,
-						selection_purity: 20,
-						selection_transparency: 20
-						selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-						selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-						selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-						selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()*/
-					}).done(function(data){
-						//console.log('done');
-						//console.log(JSON.parse(data));
-						$.ajax({
-							type: "GET",
-							url: "/recommendation", 
-							data: {pagination_counter: 0},
-							dataType: "html"		
-						}).done(function(data){
-							var json = JSON.parse(data);
-							//console.log(json);
-							$.cookie('pagination_counter0', data, { expires: 7 });
-							$.cookie('pagination', json.total_products, { expires: 7 });		
-							$("#ring_votes").empty().append(json.ring_votes);
-							$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-							$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-							$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-							$("#main_ring_price").empty().append(json.main_ring_price);
-							$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-							$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-							$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-							$("#schedule").val(json.merchant_id);
-							/* This part of the code determines if the ring is flagged for a local merchant
-							if (json.local_merchant_flag == 1)
-								{
-									$("#schedule").removeClass('hide')
-								}
-							else
-								{
-									$("#schedule").addClass('hide')
-								}*/
-							if (json.image_count == 3)
-								{
-									$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-									$("#main_ring_image_url3").css('visibility','visible')
-									
-								}
-							else if (json.image_count == 2)
-								{
-									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-									$("#main_ring_image_url2").css('visibility','visible')
-								}
-							/*else
-								{
-									$("#main_ring_image_url3,#main_ring_image_url2").css('visibility','hidden')
-								}
-								*/
-							$("#section_result").slideDown(10,'linear',function(){
-								//$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
-							});	
-							$("#sectionBudget").addClass('hide').removeClass('show');
-							$("#modalPinterestWait").modal('hide');
+					}).done(function(){								
+						$.post('/step6',{
+							selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
+							selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
+							selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
+							selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
+						}).done(function(){
 							$.ajax({
 								type: "GET",
 								url: "/recommendation", 
-								data: {pagination_counter: 1},
+								data: {pagination_counter: 0},
 								dataType: "html"		
 							}).done(function(data){
-								$.cookie('pagination_counter1', data, { expires: 7 });console.log('done');
 								var json = JSON.parse(data);
-								$("#option1").attr("src", json.main_ring_image_url1)
-								});
+								$.cookie('pagination_counter0', data, { expires: 7 });
+								$.cookie('pagination', json.total_products, { expires: 7 });		
+								$("#ring_votes").empty().append(json.ring_votes);
+								$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+								$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+								$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+								$("#main_ring_price").empty().append(json.main_ring_price);
+								$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
+								$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+								$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+								$("#schedule").val(json.merchant_id);
+								if (json.image_count == 3)
+									{
+										$('.carousel-inner').append("<div class='item'><img src='' class='img-thumbnail center-block img-responsive' alt='Responsive image3' style='padding:0px 0px;border:0;' id='main_ring_image_url3'/></div>");
+										$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+									}	
+								$("#indicatorSection").addClass('hide').removeClass('show');
+								$("#sectionBudget").addClass('hide').removeClass('show');
+								$("#section_result").addClass('show').removeClass('hide');
+								$("#modalPinterestWait").modal('hide');
+							});
 							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 2},
-								dataType: "html"		
-							}).done(function(data){
-								$.cookie('pagination_counter2', data, { expires: 7 });console.log('done');
-								var json = JSON.parse(data);
-								$("#option2").attr("src", json.main_ring_image_url1)
-								});
+									type: "GET",
+									url: "/recommendation", 
+									data: {pagination_counter: 1},
+									dataType: "html"		
+								}).done(function(data){
+									$.cookie('pagination_counter1', data, { expires: 7 });console.log('done');
+									var json = JSON.parse(data);
+									$("#option1").attr("src", json.main_ring_image_url1)
+									});
 							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 3},
-								dataType: "html"		
-							}).done(function(data){
-								$.cookie('pagination_counter3', data, { expires: 7 });console.log('done');
-								var json = JSON.parse(data);
-								$("#option3").attr("src", json.main_ring_image_url1)
-								});
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 4},
-								dataType: "html"		
-							}).done(function(data){
-								$.cookie('pagination_counter4', data, { expires: 7 });console.log('done');
-								var json = JSON.parse(data);
-								$("#option4").attr("src", json.main_ring_image_url1)
-								});
-							}).error(function(){
-								//We can implement an email functionality for the case when we don't have the product
-								$('#myModal_sorry').modal({
-								keyboard : true,
-								backdrop: true,
-								});
-							});	
-							$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');
-							//window.setTimeout(function() {}, 5000);
+									type: "GET",
+									url: "/recommendation", 
+									data: {pagination_counter: 2},
+									dataType: "html"		
+								}).done(function(data){
+									$.cookie('pagination_counter2', data, { expires: 7 });console.log('done');
+									var json = JSON.parse(data);
+									$("#option2").attr("src", json.main_ring_image_url1)
+									});
+								$.ajax({
+									type: "GET",
+									url: "/recommendation", 
+									data: {pagination_counter: 3},
+									dataType: "html"		
+								}).done(function(data){
+									$.cookie('pagination_counter3', data, { expires: 7 });console.log('done');
+									var json = JSON.parse(data);
+									$("#option3").attr("src", json.main_ring_image_url1)
+									});
+								$.ajax({
+									type: "GET",
+									url: "/recommendation", 
+									data: {pagination_counter: 4},
+									dataType: "html"		
+								}).done(function(data){
+									$.cookie('pagination_counter4', data, { expires: 7 });console.log('done');
+									var json = JSON.parse(data);
+									$("#option4").attr("src", json.main_ring_image_url1)
+									});
 
+						});
 					});
+				
 				});
-			});
-				//}
 			}
-		}	
 		});
 		
 		/*
@@ -1991,6 +1932,30 @@
 			});
 		});
 		
+		$("#setting1_show,#setting2_show,#setting3_show,#setting4_show").on('click', function(){
+			history.pushState(null, null, '/styleStep3Guide2');
+			window.counter = 12;	
+			$('#section_setting').animate({
+				  left: parseInt($("#section_setting").css('left'), 10) == 0 ?
+				  -$("#section_setting").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_setting").removeClass("show").addClass('hide');
+					$("#section_metal").removeClass("hide").addClass('show');
+					
+					$("#section_metal").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+					});
+			
+			//$("#section_setting").removeClass("show").addClass('hide');
+			$("#section_metal").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
+		});
+		
+		
 		
 		$("#metal1,#metal2,#metal3,#metal4").on('click', function(){
 			$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").removeClass("show").addClass('hide');
@@ -2022,8 +1987,28 @@
 			});
 		});				
 		
+		$("#metal1_show,#metal2_show,#metal3_show,#metal4_show").on('click', function(){
+			history.pushState(null, null, '/styleStep3Guide3');
+			window.counter = 13;
+			$('#section_metal').animate({
+				  left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+				  -$("#section_metal").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_metal").removeClass("show").addClass('hide');
+					$("#section_gem").removeClass("hide").addClass('show');
+					$("#section_gem").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+			});
+			//$("#section_metal").removeClass("show").addClass('hide');
+			$("#section_gem").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
+		});				
 		
-		$("#gem1").on('click', function(){
+		$("#gem1,#gem4").on('click', function(){
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
 			$(title).addClass('show').css('display','block');
@@ -2053,7 +2038,8 @@
 			});
 		});	
 		
-		$("#gem2,#gem3,#gem4").on('click', function(){
+		
+		$("#gem2,#gem3").on('click', function(){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
 			$("#gem1_show,#gem2_show,#gem3_show,#gem4_show").removeClass("show").addClass('hide');
 			var title = "#"+($(this).attr('id')) + "_show";
@@ -2105,6 +2091,34 @@
 		});
 		
 			
+		$("#gem1_show,#gem4_show").on('click', function(){
+			history.pushState(null, null, '/styleStep3Guide4');
+			window.counter = 14;
+			$('#section_gem').animate({
+				  left: parseInt($("#section_gem").css('left'), 10) == 0 ?
+				  -$("#section_gem").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_gem").removeClass("show").addClass('hide');
+					$("#section_shape").removeClass("hide").addClass('show');
+					
+					$("#section_shape").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+			});			
+			//$("#section_gem").removeClass("show").addClass('hide');
+			$("#section_shape").slideDown(10,'linear',function(){
+				$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+			});
+		});	
+		
+		$("#gem2_show,#gem3_show").on('click', function(){
+			history.pushState(null, null, '/styleStep4');
+			window.counter = 17;
+			$("#section_gem").removeClass("show").addClass('hide');	
+			$("#sectionBudget").removeClass("hide").addClass('show');
+		});
 		
 		$("#shape1,#shape2,#shape3,#shape4").on('click', function(){
 			$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").removeClass("show").addClass('hide');
@@ -2135,6 +2149,29 @@
 					$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
 				});
 			});	
+		
+		
+		$("#shape1_show,#shape2_show,#shape3_show,#shape4_show").on('click', function(){
+			history.pushState(null, null, '/styleStep3Guide5');
+			window.counter = 15;	
+			$('#section_shape').animate({
+				  left: parseInt($("#section_shape").css('left'), 10) == 0 ?
+				  -$("#section_shape").outerWidth() : 0
+				}, 500, function(){
+					
+					$("#section_shape").removeClass("show").addClass('hide');
+					$("#section_preference").removeClass("hide").addClass('show');					
+					$("#section_preference").css('display','block').animate({
+						left: parseInt($("#section_metal").css('left'), 10) == 0 ?
+						-$("#section_metal").outerWidth() : 0
+					});
+			});				
+			
+			//	$("#section_shape").removeClass("show").addClass('hide');
+				$("#section_preference").slideDown(10,'linear',function(){
+					$('html,body').animate({ scrollTop: $("body").offset().top}, 300)	
+				});
+			});				
 		
 		$("#diamondPreferenceButtonPressed").on('click',function(){
 			$(".new-indicators").find("li.active").removeClass('active').next().addClass('active')
@@ -2296,7 +2333,8 @@
 					$("#myModal_thanks").modal('show');	
 					//Hiding the section that shows the results/recommendation engine
 					$("#section_result").slideDown(10,'linear',function(){
-						$('html,body').animate({ scrollTop: $("#section_result").offset().top}, 300)
+						$('html,body').animate({ scrollTop: $("#
+						").offset().top}, 300)
 					});
 					$("#section_city,#section_setting,#section_metal,#section_shape,#section_budget,#section_preference").removeClass('show').addClass('hide');					
 				}).error(function(){
