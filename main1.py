@@ -225,7 +225,7 @@ class diamond_pref_ranking(webapp2.RequestHandler):
         event_type3 = 'Selection purity'
         event_type4 = 'Selection transparency'
         user_selection_size = self.request.get('selection_size')
-        user_selection_sparkle = self.request.get('selection_sparklie')
+        user_selection_sparkle = self.request.get('selection_sparkle')
         user_selection_purity = self.request.get('selection_purity')
         user_selection_transparency = self.request.get('selection_transparency')
         session['user_selection_size'] = user_selection_size
@@ -833,7 +833,7 @@ class contactUs(webapp2.RequestHandler):
         message = mail.EmailMessage()
         message.sender = "<sparklie3@gmail.com>"
         message.to = "<shaw@sparklie.net>"
-        message.body = message_body + email_user
+        message.body = "MESSAGE BODY: " + message_body + "|| FIRST NAME: " + first_name + "|| LAST NAME: " + last_name + "|| EMAIL ADDRESS: " + email_user
         message.subject = subject
         message.send()
 
@@ -851,6 +851,7 @@ class scheduleAppointment(webapp2.RequestHandler):
         user_selection_sparkle = session.get('user_selection_sparkle')
         user_selection_purity = session.get('user_selection_purity')
         user_selection_transparency = session.get('user_selection_transparency')
+        merchant_id = session.get('merchant_id')
         user_selection = [user_selection_size,user_selection_sparkle,user_selection_purity,user_selection_transparency]
         most_important_feature = user_selection.index(max(user_selection))
         if most_important_feature==0:
@@ -866,6 +867,8 @@ class scheduleAppointment(webapp2.RequestHandler):
         email_user = self.request.get("email")
         appointment_date = self.request.get("appointmentDay")
         appointment_time = self.request.get("appointmentTime")
+        merchant_id = self.request.get("merchant_id")
+        ring_id = self.request.get("ring_id")
        
         template_values = {}
 
@@ -877,12 +880,14 @@ class scheduleAppointment(webapp2.RequestHandler):
         template_values['message'] = message_body
         template_values['appointmentDay'] = appointment_date
         template_values['appointmentTime'] = appointment_time
-        template_values['upper'] =  "{:,}".format(int(user_price_upper))
+        template_values['upper'] =  format(int(user_price_upper))
         template_values['type'] = user_setting
         template_values['metal'] = user_metal
         template_values['shape'] = user_shape
         template_values['preference'] = user_preference
         template_values['user_selection'] = user_selection
+        template_values['merchant_id'] = merchant_id
+        template_values['ring_id'] = ring_id
         
 
         #Message to Sparklie
@@ -933,7 +938,10 @@ class inviteFriend(webapp2.RequestHandler):
         friend_last_name = self.request.get("friendLastName")
         message_body = self.request.get("friendMessage")
         friend_email = self.request.get("friendEmail")
-
+        check = self.request.get("checks")
+        userEmail = self.request.get("userEmail")
+        image1 = self.request.get("image1")
+        image2 = self.request.get("image2")
        
         template_values = {}
 
@@ -942,27 +950,40 @@ class inviteFriend(webapp2.RequestHandler):
         template_values['message'] = message_body
         template_values['friend_last_name'] = friend_last_name
         template_values['friend_email'] = friend_email
-        template_values['uniqueURL'] = "This is where the special url goes"
-
-        #Message to Sparklie
-        message_subject_merchant = "Customer want us to comment on a ring"
-        message = mail.EmailMessage()
-        message.sender = "<sparklie3@gmail.com>"
-        message.to = "<shaw@sparklie.net>"
-        merchant_template = jinja_environment.get_template('emailInviteSparklie.html')
-        message.html = merchant_template.render(template_values)
-        message.subject = message_subject_merchant
-        message.send()
+        template_values['email_user'] = userEmail
+        print userEmail
+        template_values['upper'] =  format(int(user_price_upper))
+        template_values['type'] = user_setting
+        template_values['metal'] = user_metal
+        template_values['shape'] = user_shape
+        template_values['preference'] = user_preference
+        template_values['user_selection'] = user_selection
+        template_values['image1'] = image1
+        template_values['image2'] = image2
+        print check + "this is the one"
 
         #Message to Friend
         message_subject_consumer = friend_first_name + " needs your help"
+        message = mail.EmailMessage()
+        message.sender = "<sparklie3@gmail.com>"
         message.to = "<" + friend_email + ">"
         consumer_template = jinja_environment.get_template('emailFriend.html')
         message.html = consumer_template.render(template_values)
         message.subject = message_subject_consumer
         message.send()
-##        input = appointment_db(email=email_user,first_name=first_name,message_body=message_body,appointment_time="01/01/2001")
-##        input.put()		
+        if check == "1":
+			print "This check is running"
+			message_subject_merchant = "Customer want us to comment on a ring"
+			message = mail.EmailMessage()
+			message.sender = "<sparklie3@gmail.com>"
+			message.to = "<shaw@sparklie.net>"
+			merchant_template = jinja_environment.get_template('emailInviteSparklie.html')
+			message.html = merchant_template.render(template_values)
+			message.subject = message_subject_merchant
+			message.send()
+
+
+
 
 class Search(webapp2.RequestHandler):
 
@@ -1212,7 +1233,7 @@ application = webapp2.WSGIApplication([
 ('/chooseShape', Shape),
 ('/choosePref', diamond_pref_ranking),
 ('/chooseBudget', Budget),
-('/step6', Calculation),
+('/calculation', Calculation),
 ('/recommendation', Recommendation),
 ('/search', Search),
 ('/data', Data),

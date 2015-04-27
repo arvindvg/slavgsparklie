@@ -234,29 +234,18 @@
 					
 				
 					<div class="modal-body" style="padding-top:10px;">
-
-						
 						<div class="row">
 							<div class="col-sm-4" style="padding-top:3%;">
-							<img src="/images/visitStore.jpg" alt="Store Image"   style=";height:200px;" class="center-block img-rounded" />		
-							<h5> Benefits of scheduling an appointment</h5>
-							<ul>
-							<li>Warm welcome when you walk in</li>
-							
-							<li>Tailored in-store experience</li>
-							
-							<li>Viewing rings that match your preferences</li>
-							
-							
-							</ul>
-							
+								<img src="/images/visitStore.jpg" alt="Store Image"   style=";height:200px;" class="center-block img-rounded" />		
+								<h5> Benefits of scheduling an appointment</h5>
+								<ul>
+									<li>Warm welcome when you walk in</li>
+									<li>Tailored in-store experience</li>
+									<li>Viewing rings that match your preferences</li>
+								</ul>
 							</div>
 						
 							<div class="col-sm-8" style="padding-top:3%;">
-							
-								
-							
-							
 								<form role="form" id="scheduleAppointment">
 									<!--<div class="form-group col-lg-6" style="padding:0px;">
 										<div class="col-lg-12">
@@ -273,7 +262,7 @@
 								  
 									  <div class="form-group col-sm-12">
 										<label for="Email">Email address</label>
-										<input type="email" class="form-control" id="userEmail" placeholder="Enter email"  style="border-radius:0px" required>
+										<input type="email" class="form-control" id="scheduleEmail" placeholder="Enter email"  style="border-radius:0px" required>
 									  </div>
 								  
 									  <!--<div class="form-group col-sm-12">
@@ -310,9 +299,9 @@
 												<li role="presentation"><a role="menuitem" >Thursday</a></li>
 											  </ul>
 											</div>
-									  </div>
+									</div>
 						  
-									  <div class="form-group col-sm-12">
+									<div class="form-group col-sm-12">
 										<label for="Time">Preferred Appointment Time</label>
 											<div class="dropdown">
 											  <button style="background:rgb(256,256,256);color:#000000;border-radius:0px;border:1px solid grey;text-align:left;font-size:.9em;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dateDropDown" data-toggle="dropdown" aria-expanded="true" >
@@ -327,19 +316,17 @@
 												<li role="presentation"><a role="menuitem" >Evenings (After 5pm) </a></li>
 											  </ul>
 											</div>
-									  </div>
+									</div>
 						  
-									  <div class="form-group col-sm-12">
+									<div class="form-group col-sm-12">
 										<label for="textarea">Message</label>
 										<textarea class="form-control" id="userMessage" placeholder="Optional, anything you'd like to tell the jeweler" style="border-radius:0px"></textarea>
-									  </div>
+									</div>
 									  
-									  <div class="form-group col-sm-12">
+									<div class="form-group col-sm-12">
 										<button type="submit" class="btn btn-clear btn-default" style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;border-width:2px;border-color:#ffffff;">Confirm</button>
-										</div>
+									</div>
 								</form>
-									
-							
 							</div>
 						
 							<!--<div class="col-sm-4">
@@ -359,7 +346,7 @@
 							</div>
 							</div>-->
 						</div>
-					 </div>
+					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal for welcome message-->  	  
@@ -370,7 +357,7 @@
 				<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-								<h2 class="modal-title" style="text-align:center;">Thank you for using Sparklie</h2>
+								<h3 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Thank you for using Sparklie</h3>
 							</div>
 							<div class="modal-body" style="padding-top:10px;">
 								We'll confirm your appointment time shortly by email. 
@@ -380,25 +367,76 @@
 		</div><!-- /.modal for welcome message-->  	  
 		
 		<!-- Modal for when we can't find anything -->
-		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myModal_sorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
 			<div class="modal-dialog modal-dialog-temp">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
-						<h2 class="modal-title" style="text-align:center;">Sorry</h2>
+						<h3 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Sorry!</h3>
 					</div>
 					<div class="modal-body" style="padding-top:10px;">
 						<div class="row">
-							<div class="col-sm-12" >
-								<div style="text-align:center;">
-								Our recommendation engine couldn't find a right ring for you. How about contacting us at sparklie3@gmail.com?
+								<div class="col-lg-12">
+								We couldn't find a ring that matches your preferences. If you want to leave your info, we'll search and contact you if we find a good match.<br/><br/>
 								</div>
-							</div>
+						
+								<form role="form" id="emailContactUs">
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="First">First Name</label>
+										<input type="text" class="form-control" id="firstName" placeholder="First Name"  style="border-radius:0px" required>
+										</div>
+									</div>
+									<div class="form-group col-lg-6" style="padding:0px;">
+										<div class="col-lg-12">
+										<label for="Last">Last Name</label>
+										<input type="text" class="form-control" id="lastName" placeholder="Last Name"  style="border-radius:0px">
+										</div>
+									  </div>
+								  
+									  <div class="form-group col-sm-12">
+										<label for="Email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="John@email.com"  style="border-radius:0px" required>
+									  </div>
+								  
+									  <!--<div class="form-group col-sm-12">
+										<label for="Phone">Phone</label>
+										<input type="tel" class="form-control" id="phone_number2" placeholder="XXX-XXX-XXXX" style="border-radius:0px">
+									  </div>-->
+								  
+									  <div class="form-group col-sm-12">
+										<label for="subject">Subject</label>
+										<input type="text" class="form-control" id="subject" value="Help me find this ring" style="border-radius:0px" required>
+									  </div>
+						  
+									  <div class="form-group col-sm-12">
+										<label for="textarea">Message</label>
+										<textarea class="form-control" id="message" placeholder="Anything else you'd like to tell us" style="border-radius:0px" required></textarea>
+									  </div>
+									  
+									  <div class="form-group col-sm-12">
+										<button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-clear btn-default btn-group-justified" type="submit">Send</button>
+										</div>
+								</form>
+									
+							
+							
+						
+							<!--	<div class="col-sm-4" style="padding-left:0;">								
+								<label>Map</label>
+								<img src="https://maps.googleapis.com/maps/api/staticmap?center=2120+Mason+St,+San+Francisco,+CA+94133&zoom=15&size=400x400&maptype=roadmap&markers=color:red|label:Store|37.8032251,-122.4131323" class="center-block img-responsive" style="border:4px solid #F9F9F9;">
+									<div style="padding-top:15px;">
+									<h5>Sparklie, Inc.</h5>
+									<p>2120 Mason St.</p>
+									<p>San Francisco, CA 94133</p>
+									</div>
+								</div>-->
+							
 						</div>
 					 </div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal for welcome message-->  	  
+		</div><!-- /.modal for welcome message-->  	 	  
 		
 
 		<!-- Modal for inviting family/friends -->
@@ -1244,7 +1282,7 @@
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
 									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="1">1 Highest</span>
+										Rank: <span class="selection" id="rankingSize">1 Highest</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1271,7 +1309,7 @@
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
 									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="3">2</span>
+										Rank: <span class="selection" id="rankingSparkle">2</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1296,7 +1334,7 @@
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
 									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="2">3</span>
+										Rank: <span class="selection" id="rankingPurity">3</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1322,7 +1360,7 @@
 								<div class="form-group" style="position: absolute; bottom: 0; margin-bottom: 20px;width:100%;">	
 									<div class="dropdown">
 									  <button style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg dropdown-toggle btn-group btn-group-justified" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
-										Rank: <span class="selection" id="4">4 Lowest</span>
+										Rank: <span class="selection" id="rankingTransparency">4 Lowest</span>
 										<span class="caret"></span>
 									  </button>
 									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:100%;">
@@ -1608,8 +1646,8 @@
 				
 				}
 			else if(e.which == 13 && $("#sectionPinterest").hasClass('hide') == false) {
-				$("#pinterestButtonPressed").click();
-				console.log($("#sectionPinterest").hasClass('hide'));
+				$("#pinterestSkipButtonPressed").click();
+				//console.log($("#sectionPinterest").hasClass('hide'));
 				console.log("b")
 				}
 			else if(e.which == 13 && $("#sectionStyles").hasClass('hide') == false && window.counter == 3){
@@ -1762,11 +1800,10 @@
 				shape: $("#shapeEdit").data('value_id')
 				});
 			$.post("/choosePref", {
-				selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-				selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-				selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-				selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
-
+				selection_size:(parseInt($("#rankingSize").text().charAt(0))*10).toString(),
+				selection_sparkle: (parseInt($("#rankingSparkle").text().charAt(0))*10).toString(),
+				selection_purity: (parseInt($("#rankingPurity").text().charAt(0))*10).toString(),
+				selection_transparency: (parseInt($("#rankingTransparency").text().charAt(0))*10).toString()
 				});	
 			$("#sectionBudget").removeClass('hide').addClass('show');
 			
@@ -1801,81 +1838,89 @@
 					$.post('/userCity',{
 						city: 3
 					}).done(function(){								
-						$.post('/step6',{
-							selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-							selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-							selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-							selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
+						$.post('/choosePref',{
+							selection_size:(parseInt($("#rankingSize").text().charAt(0))*10).toString(),
+							selection_sparkle:(parseInt($("#rankingSparkle").text().charAt(0))*10).toString(),
+							selection_purity:(parseInt($("#rankingPurity").text().charAt(0))*10).toString(),
+							selection_transparency:(parseInt($("#rankingTransparency").text().charAt(0))*10).toString()
 						}).done(function(){
-							$.ajax({
-								type: "GET",
-								url: "/recommendation", 
-								data: {pagination_counter: 0},
-								dataType: "html"		
-							}).done(function(data){
-								var json = JSON.parse(data);
-								$.cookie('pagination_counter0', data, { expires: 7 });
-								$.cookie('pagination', json.total_products, { expires: 7 });		
-								$("#ring_votes").empty().append(json.ring_votes);
-								$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
-								$("#main_ring_merchant").empty().append(json.main_ring_merchant);
-								$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
-								$("#main_ring_price").empty().append(json.main_ring_price);
-								$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url);
-								$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
-								$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
-								$("#schedule").val(json.merchant_id);
-								if (json.image_count == 3)
-									{
-										$('.carousel-inner').append("<div class='item'><img src='' class='img-thumbnail center-block img-responsive' alt='Responsive image3' style='padding:0px 0px;border:0;' id='main_ring_image_url3'/></div>");
-										$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
-									}	
-								$("#indicatorSection").addClass('hide').removeClass('show');
-								$("#sectionBudget").addClass('hide').removeClass('show');
-								$("#section_result").addClass('show').removeClass('hide');
-								$("#modalPinterestWait").modal('hide');
+							$.post('/calculation').done(function(){
+								$.ajax({
+									type: "GET",
+									url: "/recommendation", 
+									data: {pagination_counter: 0},
+									dataType: "html"		
+								}).done(function(data){
+									var json = JSON.parse(data);
+									$.cookie('pagination_counter0', data, { expires: 7 });
+									$.cookie('pagination', json.total_products, { expires: 7 });		
+									$("#ring_votes").empty().append(json.ring_votes);
+									$("#main_ring_ringdesc").empty().append(json.main_ring_ringdesc);
+									$("#main_ring_merchant").empty().append(json.main_ring_merchant);
+									$("#main_ring_ringname").empty().append(json.main_ring_ringname).attr('data',json.main_ring_id);
+									$("#main_ring_price").empty().append(json.main_ring_price);
+									//$("#purchase").val(json.main_ring_id).attr("href", json.main_ring_product_url); Not being used
+									$("#main_ring_image_url1").attr("src", json.main_ring_image_url1);
+									$("#main_ring_image_url2").attr("src", json.main_ring_image_url2);
+									$("#schedule").val(json.merchant_id + ":" + json.main_ring_id);
+									if (json.image_count == 3)
+										{
+											$('.carousel-inner').append("<div class='item'><img src='' class='img-thumbnail center-block img-responsive' alt='Responsive image3' style='padding:0px 0px;border:0;' id='main_ring_image_url3'/></div>");
+											$("#main_ring_image_url3").attr("src", json.main_ring_image_url3);
+										}	
+									$("#indicatorSection").addClass('hide').removeClass('show');
+									$("#sectionBudget").addClass('hide').removeClass('show');
+									$("#section_result").addClass('show').removeClass('hide');
+									$("#modalPinterestWait").modal('hide');
+								}).error(function(){
+										$("#modalPinterestWait").modal('hide');
+										//We can implement an email functionality for the case when we don't have the product
+										$('#myModal_sorry').modal({
+										keyboard : true,
+										backdrop: true,
+									});
+								});
+								$.ajax({
+										type: "GET",
+										url: "/recommendation", 
+										data: {pagination_counter: 1},
+										dataType: "html"		
+									}).done(function(data){
+										$.cookie('pagination_counter1', data, { expires: 7 });console.log('done');
+										var json = JSON.parse(data);
+										$("#option1").attr("src", json.main_ring_image_url1)
+										});
+								$.ajax({
+										type: "GET",
+										url: "/recommendation", 
+										data: {pagination_counter: 2},
+										dataType: "html"		
+									}).done(function(data){
+										$.cookie('pagination_counter2', data, { expires: 7 });console.log('done');
+										var json = JSON.parse(data);
+										$("#option2").attr("src", json.main_ring_image_url1)
+										});
+									$.ajax({
+										type: "GET",
+										url: "/recommendation", 
+										data: {pagination_counter: 3},
+										dataType: "html"		
+									}).done(function(data){
+										$.cookie('pagination_counter3', data, { expires: 7 });console.log('done');
+										var json = JSON.parse(data);
+										$("#option3").attr("src", json.main_ring_image_url1)
+										});
+									$.ajax({
+										type: "GET",
+										url: "/recommendation", 
+										data: {pagination_counter: 4},
+										dataType: "html"		
+									}).done(function(data){
+										$.cookie('pagination_counter4', data, { expires: 7 });console.log('done');
+										var json = JSON.parse(data);
+										$("#option4").attr("src", json.main_ring_image_url1)
+										});
 							});
-							$.ajax({
-									type: "GET",
-									url: "/recommendation", 
-									data: {pagination_counter: 1},
-									dataType: "html"		
-								}).done(function(data){
-									$.cookie('pagination_counter1', data, { expires: 7 });console.log('done');
-									var json = JSON.parse(data);
-									$("#option1").attr("src", json.main_ring_image_url1)
-									});
-							$.ajax({
-									type: "GET",
-									url: "/recommendation", 
-									data: {pagination_counter: 2},
-									dataType: "html"		
-								}).done(function(data){
-									$.cookie('pagination_counter2', data, { expires: 7 });console.log('done');
-									var json = JSON.parse(data);
-									$("#option2").attr("src", json.main_ring_image_url1)
-									});
-								$.ajax({
-									type: "GET",
-									url: "/recommendation", 
-									data: {pagination_counter: 3},
-									dataType: "html"		
-								}).done(function(data){
-									$.cookie('pagination_counter3', data, { expires: 7 });console.log('done');
-									var json = JSON.parse(data);
-									$("#option3").attr("src", json.main_ring_image_url1)
-									});
-								$.ajax({
-									type: "GET",
-									url: "/recommendation", 
-									data: {pagination_counter: 4},
-									dataType: "html"		
-								}).done(function(data){
-									$.cookie('pagination_counter4', data, { expires: 7 });console.log('done');
-									var json = JSON.parse(data);
-									$("#option4").attr("src", json.main_ring_image_url1)
-									});
-
 						});
 					});
 				
@@ -2179,33 +2224,30 @@
 			history.pushState(null, null, '/styleStep4');
 			window.counter = 16;
 				$.post("/choosePref", {
-				selection_size:(parseInt($("#1").text().charAt(0))*10).toString(),
-				selection_sparklie: (parseInt($("#3").text().charAt(0))*10).toString(),
-				selection_purity: (parseInt($("#2").text().charAt(0))*10).toString(),
-				selection_transparency: (parseInt($("#1").text().charAt(0))*10).toString()
+				selection_size:(parseInt($("#rankingSize").text().charAt(0))*10).toString(),
+				selection_sparkle:(parseInt($("#rankingSparkle").text().charAt(0))*10).toString(),
+				selection_purity:(parseInt($("#rankingPurity").text().charAt(0))*10).toString(),
+				selection_transparency:(parseInt($("#rankingTransparency").text().charAt(0))*10).toString()
 				});			
 			$("#sectionBudget").removeClass("hide").addClass('show');
 		});
 		
 		//Send email for scheduling appointment 
 		$("#scheduleAppointment").submit(function(event){
-			if ($("#email").val() != "")
+			if ($("#scheduleEmail").val() != "")
 			{
 				event.preventDefault();
-				console.log(
-				$("#userEmail").val(),
-				$("#userMessage").val(),
-				$("#date1").text(),
-				$("#time1").text());
-				//console.log(parseInt(json.merchant_id));
+				console.log(($("#schedule").val()).split(":")[0]);
+				console.log(($("#schedule").val()).split(":")[1]);
 				$.post('/emailScheduleAppointment', {
-					email: $("#userEmail").val(),
+					email: $("#scheduleEmail").val(),
 					message: $("#userMessage").val(),
 					appointmentDay: $("#date1").text(),
-					appointmentTime: $("#time1").text()
+					appointmentTime: $("#time1").text(),
 					//product_url: $("#purchase").attr("href"),
 					//image: $("#main_ring_image_url1").attr("src"),
-					//merchant_id: $("#schedule").val()
+					merchant_id: ($("#schedule").val()).split(":")[0],
+					ring_id: ($("#schedule").val()).split(":")[1]
 				}).done(function(){
 					$("#myModal_schedule").modal('hide');
 					$("#myModal_thanks").modal('show');	
@@ -2226,18 +2268,19 @@
 					else {
 					var check = 0
 					}
-				//console.log(parseInt(json.merchant_id));
-				$.post('/emailScheduleAppointment', {
+				console.log($("#friendEmail").val());
+				$.post('/emailInviteFriend', {
 					friendEmail: $("#friendEmail").val(),
 					friendMessage: $("#friendMessage").val(),
 					friendFirstName: $("#friendFirstName").val(),
 					friendLastName: $("#friendLastName").val(),
-					userEmail: $("userEmail").val(),
-					checks: check
-					
+					userEmail: $("#userEmail").val(),
+					checks: check,
 					//product_url: $("#purchase").attr("href"),
-					//image: $("#main_ring_image_url1").attr("src"),
-					//merchant_id: $("#schedule").val()
+					image1: $("#main_ring_image_url1").attr("src"),
+					image2: $("#main_ring_image_url2").attr("src"),
+					merchant_id: ($("#schedule").val()).split(":")[0],
+					ring_id: ($("#schedule").val()).split(":")[1]
 				}).done(function(){
 					$("#myModal_invite").modal('hide');
 					//$("#modalPinterestWait").find(".modal-title").text("Searching for your ring");
@@ -2851,7 +2894,34 @@
 					}
 			}
 		});*/
-			
+
+			//Send email to us for comment
+		$("#emailContactUs").submit(function(event){
+			if ($("#email").val() != "")
+			{
+				event.preventDefault();
+				console.log(
+				$("#firstName").val(),
+				$("#lastName").val(),
+				$("#email").val(),
+				$("#subject").val(),
+				$("#message").val());
+				$.post('/emailContactUs', {
+					email: $("#email").val(),
+					message: $("#message").val(),
+					subject: $("#subject").val(),
+					firstName: $("#firstName").val(),
+					lastName: $("#lastName").val()
+				}).done(function(){
+					$("#myModal_sorry").modal('hide');
+					$("#myModal_thanks").find(".modal-body").text("Thanks for visiting Sparklie!");
+					$("#myModal_thanks").modal('show');	
+				}).error(function(){
+					alert('Opps, something went wrong. Mind sending an email to shaw@sparklie.co to let us know? Error #Email Error frontpage contact us')
+				});
+			}	
+		});
+		
 			
 	$(".dropdown-menu date li a").click(function(){
 		$(this).parents(".dropdown").find('.selection').text($(this).text());
@@ -2859,33 +2929,33 @@
 	});
 			
 	$(".dropdown-menu li a").click(function(){
-		var one = parseInt($("#1").text().charAt(0));
-		var two = parseInt($("#2").text().charAt(0));
-		var three = parseInt($("#3").text().charAt(0));	
+		var one = parseInt($("#rankingSize").text().charAt(0));
+		var two = parseInt($("#rankingSparkle").text().charAt(0));
+		var three = parseInt($("#rankingPurity").text().charAt(0));	
 		var original = parseInt($(this).parents(".dropdown").find('.selection').text().charAt(0));
 		console.log(original);
 		$(this).parents(".dropdown").find('.selection').text($(this).text());
 		$(this).parents(".dropdown").find('.selection').val($(this).text());
 		var change = parseInt($(this).parents(".dropdown").find('.selection').text().charAt(0));
 	
-	
+		
 		//int four = parseInt($("#4").text().charAt(0));
 	
 		if (change == one) {
 			console.log("true");
-			$("#1").text(original)
+			$("#rankingSize").text(original)
 		}
 		
 		else if (change == two) {
-			$("#2").text(original)
+			$("#rankingSparkle").text(original)
 		}
 		
 		else if (change == three) {
-			$("#3").text(original)
+			$("#rankingPurity").text(original)
 		}
 		 
 		else {
-			$("#4").text(original)
+			$("#rankingTransparency").text(original)
 		}
 		//  
 
