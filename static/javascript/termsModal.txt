@@ -1,0 +1,55 @@
+document.write(
+'<div class="modal fade" id="myModal_terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'+
+'		<div class="modal-dialog modal-lg">'+
+'			<div class="modal-content">'+
+'				<div class="modal-header">'+
+'					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>'+
+'					<h3 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Sparklie Terms and Conditions ("Agreement")</h3>'+
+'			    </div>'+
+'			    <div class="modal-body" style="padding-top:10px;">'+
+'					<p>This Agreement was last modified on Jan. 23, 2015.</p>'+
+'					<p>Please read these Terms and Conditions ("Agreement", "Terms and Conditions") carefully before using http://www.sparklie.net ("the Site") operated by Sparklie, Inc. ("us", "we", or "our"). This Agreement sets forth the legally binding terms and conditions for your use of the Site at http://www.sparklie.net.</p>'+
+'					<p>By accessing or using the Site in any manner, including, but not limited to, visiting or browsing the Site or contributing content or other materials to the Site, you agree to be bound by these Terms and Conditions. Capitalized terms are defined in this Agreement.</p>'+
+'					<p>Your  access  to  and  use  of  Sparklie, Inc. is  subject exclusively to these Terms and Conditions. You will not use the Site for any purpose that is unlawful or prohibited by these Terms and Conditions. By using  the  Site  you  are  fully  accepting  the  terms,  conditions  and disclaimers contained in this notice. If you do not accept these Terms and Conditions you must immediately stop accessing or using the Site.</p>'+
+
+'					<p><strong>Intellectual Property</strong></p>'+
+'					<p>The Site and its original content, features and functionality are owned by Sparklie, Inc. and are protected by international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.</p>'+
+
+'					<p><strong>Disclaimers and Limitation of Liability </strong></p>'+
+'					<p>The Site is provided on an AS IS and AS AVAILABLE basis without any representation or endorsement made and without warranty of any kind whether express or implied, including but not limited to the implied warranties of satisfactory quality, fitness for a particular purpose, non-infringement, compatibility, security and accuracy. To the extent permitted by law, Sparklie, Inc. will not be liable for any indirect or consequential loss or damage whatever (including without limitation loss of business, opportunity, data, profits) arising out of or in connection with the use of the Site. Sparklie, Inc. makes no warranty that the functionality of the Site will be uninterrupted or error free, that defects will be corrected or that the Site or the server that makes it available are free of viruses or anything else which may be harmful or destructive. </p>'+
+
+'					<p><strong>Indemnity</strong></p>'+
+'					<p>You agree to indemnify and hold Sparklie, Inc. and its directors, officers, employees and agents harmless from and against all liabilities, legal fees, damages, losses, costs and other expenses in relation to any claims or actions brought against Sparklie, Inc. arising out of any breach by you of these Terms and Conditions or other liabilities arising out of your use of this Site.</p>'+
+
+'					<p><strong>Severance</strong></p>'+
+'					<p>If any of these Terms and Conditions should be determined to be invalid, illegal or unenforceable for any reason by any court of competent jurisdiction then such Term or Condition shall be severed and the remaining Terms and Conditions shall survive and remain in full force and effect and continue to be binding and enforceable.</p>'+
+
+'					<p><strong>Governing Law</strong></p>'+
+'					<p>This Agreement (and any further rules, polices, or guidelines incorporated by reference) shall be governed and construed in accordance with the laws of Delaware, United States, without giving effect to any principles of conflicts of law.</p>'+
+
+'					<p><strong>Termination</strong></p>'+
+'					<p>We may terminate your access to the Site, without cause or notice, which may result in the forfeiture and destruction of all information associated with you. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>'+
+
+'					<p><strong>Links To Third Party Websites</strong></p>'+
+'					<p>Our Site may contain links to third-party sites that are not owned or controlled by Sparklie, Inc..</p>'+
+'					<p>Sparklie, Inc. has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party sites or services. Any link to other websites is not an endorsement of such websites and you acknowledge and agree that we are not responsible for the content or availability of any such sites. We strongly advise you to read the terms and conditions and privacy policy of any third-party site that you visit.</p>'+
+
+'					<p><strong>Changes To This Agreement</strong></p>'+
+'					<p>We reserve the right, at our sole discretion, to modify or replace these Terms and Conditions by posting the updated terms on the Site. Your continued use of the Site after any such changes constitutes your acceptance of the new Terms and Conditions.</p>'+
+'					<p>Please review this Agreement periodically for changes. If you do not agree to any of this Agreement or any changes to this Agreement, do not use, access or continue to access the Site or discontinue any use of the Site immediately.</p>'+
+
+'					<p><strong>Contact Us</strong></p>'+
+'					<p>If you have any question about this Agreement, please contact us at <br/>'+
+'					Sparklie, Inc.,<br/>'+
+'					2120 Mason Street<br/>'+
+'					San Francisco, CA, 94133<br/>'+
+'					Phone: 415-409-9683<br/>'+
+'					<a class="contactUs">Email</a></p>'+
+
+'					<!--<p class="pull-right" style="font-size:14px;">Thanks for reading,<br/>'+
+'					<em>Arvind and Shaw</em></p><br/><br/><br/><br/>'+
+'					<button type="type" data-dismiss="modal" aria-hidden="true" class="btn btn-primary" id="okay">Okay</button>-->'+
+'				 </div>'+
+'			</div><!-- /.modal-content -->'+
+'		</div><!-- /.modal-dialog -->'+
+'	</div><!-- /.modal for welcome message-->')

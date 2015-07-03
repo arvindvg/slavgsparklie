@@ -90,8 +90,8 @@ class appointment_db(ndb.Model):
     message_body = ndb.StringProperty(indexed=True) 
     appointment_time = ndb.StringProperty(indexed=True) 
 
-class merchant(ndb.Model):
     merchant_name = ndb.StringProperty(indexed=True)
+class merchant(ndb.Model):
     date = ndb.DateTimeProperty(auto_now_add=True)
     Merchant_id = ndb.IntegerProperty(indexed=True)
     merchant_email = ndb.StringProperty(indexed=True) 
@@ -963,7 +963,7 @@ class inviteFriend(webapp2.RequestHandler):
         print check + "this is the one"
 
         #Message to Friend
-        message_subject_consumer = friend_first_name + " needs your help"
+        message_subject_consumer = "Hi " + friend_first_name + ", " + user_name + " needs your help"
         message = mail.EmailMessage()
         message.sender = "<sparklie3@gmail.com>"
         message.to = "<" + friend_email + ">"

@@ -1,0 +1,21 @@
+document.write(
+'<meta charset="utf-8">'+
+'<meta http-equiv="X-UA-Compatible" content="IE=edge">'+
+'<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"><!--user-scalable=no disables zooming on mobile devices-->'+
+'<meta name="description" content="We know being in love feels great and that\'s why we believe buying a ring should too. At Sparklie, we help guys discover and buy the perfect engagement ring curated from unique local jewelers. Let us help you discover a world of possibilities. ">'+
+'<meta name="author" content="Arvind & Shaw">'+
+'<link rel="shortcut icon" href="/images/diamond-icon.png">'+
+'<title>Sparklie, helpings men discover the perfect engagement ring.</title>'+
+'<!-- Google fonts -->'+
+'<link href="http://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet" type="text/css">'+
+'<!-- Bootstrap core CSS -->'+
+'<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">'+
+'<!-- Font Awesome CSS -->'+
+'<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">'+
+'<!-- Just for debugging purposes. Don\'t actually copy this line! -->'+
+'<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->'+
+'<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->'+
+'<!--[if lt IE 9]>'+
+'<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>'+
+'<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>'+
+'<![endif]-->')

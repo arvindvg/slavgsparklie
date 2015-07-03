@@ -1,0 +1,8 @@
+document.write(
+'		<div class="container-fluid" style="background-color:rgb(23,27,38); text-align:center; padding: 20px; min-height:60px; bottom:0px;">'+
+'			<div class="row">'+
+'				<div class="col-sm-12" style="padding-top:10px;color:white;">'+
+'					<p>&copy; Copyright Sparklie Inc. 2015. All Rights Reserved. <a name="terms" style="text-decoration:none;cursor:pointer;">Terms and Conditions.</a> <a name="privacy" style="text-decoration:none;cursor:pointer;">Privacy Policy.</a> <a name="faq" style="text-decoration:none;cursor:pointer;">FAQ</a></p>'+
+'				</div>'+
+'			</div>'+
+'		</div>')

@@ -1,0 +1,53 @@
+document.write(
+'	<div class="modal fade" id="myModal_privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'+
+'			<div class="modal-dialog modal-lg">'+
+'				<div class="modal-content">'+
+'					<div class="modal-header">'+
+'						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>'+
+'						<h3 class="modal-title" style="text-align:center;color:rgb(214,140,137);">Sparklie Privacy Policy ("Policy")</h3>'+
+'					</div>'+
+'					<div class="modal-body" style="padding-top:10px;">'+
+'						<p>This Policy was last modified on Jan 23, 2015.</p>'+
+'						<p><strong>Definitions and legal references</strong></p>'+
+'						<p><strong>Personal Data (or Data)</strong>: Any information regarding a natural person, a legal person, an institution or an association, which is, or can be, identified, even indirectly, by reference to any other information, including a personal identification number.'+
+'						</p>'+
+'						<p><strong>Usage Data</strong>: Information collected automatically from this Site (or third party services employed in this Site ), which can include: the IP addresses or domain names of the computers utilized by the Users who use this Site, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilized to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server\'s answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilized by the User, the various time details per visit (e.g., the time spent on each page within the Site) and the details about the path followed within the Site with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User\'s IT environment.'+
+'						</p>'+
+'						<p><strong>User</strong>: The individual using this Site, which must coincide with or be authorized by the Data Subject, to whom the Personal Data refer.'+
+'						</p>'+
+'						<p><strong>Data Subject</strong>: The legal or natural person to whom the Personal Data refers to.'+
+'						</p>'+
+'						<p><strong>Data Processor</strong>: The natural person, legal person, public administration or any other body, association or organization authorized by the Data Controller to process the Personal Data in compliance with this privacy policy.'+
+'						</p>'+
+'						<p><strong>Data Controller (or Site Owner, or Owner)</strong>: The natural person, legal person, public administration or any other body, association or organization with the right, also jointly with another Data Controller, to make decisions regarding the purposes, and the methods of processing of Personal Data and the means used, including the security measures concerning the operation and use of this Site. The Data Controller, unless otherwise specified, is Sparklie, Inc.'+
+'						</p>'+
+'						<p><strong>This Site</strong>: http://www.sparklie.net'+
+'						</p>'+
+'						<p><strong>Types of Data collected</strong></p>'+
+'						<p>The Personal Data may be freely provided by the User, or collected automatically when using this Site.'+
+'						Any use of Cookies - or of other tracking tools - by this Site or by the owners of third party services used by this Site, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User.'+
+'						Failure to provide certain Personal Data may make it impossible for this Site to provide its services. The User assumes responsibility for the Personal Data of third parties published or shared through this Site and declares to have the right to communicate or broadcast them, thus relieving the Data Controller of all responsibility.'+
+'						</p>'+
+'						<p><strong>Method of processing</strong>: The Data Controller processes the Data of Users in proper manner and shall take appropriate security measures to prevent unauthorized access, disclosure, modification or unauthorized destruction of the Data.'+
+'						The Data processing is carried out using computers and/or IT enabled tools, following organizational procedures and modes strictly related to the purposes indicated. In addition to the Data Controller, in some cases, the Data may be accessible to certain types of persons in charge, involved with the operation of the site (administration, sales, marketing, legal, system administration) or external parties (such as third party technical service providers, mail carriers, hosting providers, IT companies, communications agencies) appointed, if necessary, as Data Processors by the Owner. The updated list of these parties may be requested from the Data Controller at any time.'+
+'						More details concerning the collection or processing of Personal Data may be requested from the Data Controller at any time at its contact information.'+
+'						</p>'+
+'						<p><strong>Place</strong>: The Data is processed at the Data Controller\'s operating offices and in any other places where the parties involved with the processing are located. For further information, please contact the Data Controller.</p>'+
+'						<p><strong>Conservation Time</strong>: The Data is kept for the time necessary to provide the service requested by the User, or stated by the purposes outlined in this document, and the User can always request the Data Controller for their suspension or removal.</p>'+
+'						<p><strong>Legal Action</strong>: The User\'s Personal Data may be used for legal purposes by the Data Controller, in Court or in the stages leading to possible legal action arising from improper use of this Site or the related services.'+
+'						In addition to the information in this privacy policy, this Site may provide the User with contextual information concerning particular services or the collection and processing of Personal Data.</p>'+
+'						<p><strong>System Logs and Maintenance</strong>: For operation and maintenance purposes, this Site and any third party services may collect files that record interaction with this Site (System Logs) or use for this purpose other Personal Data (such as IP Address)</p>'+
+'						<p><strong>The rights of Users</strong>: Users have the right, at any time, to know whether their Personal Data has been stored and can consult the Data Controller to learn about their contents and origin, to verify their accuracy or to ask for them to be supplemented, cancelled, updated or corrected, or for their transformation into anonymous format or to block any data held in violation of the law, as well as to oppose their treatment for any and all legitimate reasons. Requests should be sent to the Data Controller at the contact information set out above.</p>'+
+'						<p><strong>"Do not track" Requests</strong>: This Site does not support “do not track” requests. To understand if any of the third party services it uses honor the “do not track” requests, please read their privacy policies.</p>'+
+'						<p><strong>Changes to this privacy policy</strong>: The Data Controller reserves the right to make changes to this privacy policy at any time by giving notice to its Users on this page. It is strongly recommended to check this page often, referring to the date of the last modification listed at the bottom. If a User objects to any of the changes to the Policy, the User must cease using this Site and can request the Data Controller to erase the Personal Data. Unless stated otherwise, the then-current privacy policy applies to all Personal Data the Data Controller has about Users.</p>'+
+'						<p><strong>Contact Us</strong></p>'+
+'						<p>If you have any question about this Policy, please contact us at <br/>'+
+'						Sparklie, Inc.,<br/>'+
+'						2120 Mason Street<br/>'+
+'						San Francisco, CA, 94133<br/>'+
+'						Phone: 415-409-9683<br/>'+
+'						<a class="contactUs">Email</a></p>'+
+'					 </div>'+
+'				</div>'+
+'			</div>'+
+'		</div>')
