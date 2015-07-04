@@ -81,7 +81,6 @@ html,body {
 @media (max-width: 767px) {
 
 .xsSpacing{
-
 padding-top:0px;
 }
 
@@ -116,7 +115,7 @@ font-size:.8em;
 
 .smSpacing{
 
-padding-top:100px;
+padding-top:80px;
 }
 
 .imageLove {
@@ -145,7 +144,7 @@ padding-top:100px;
 
 .mdSpacing{
 
-padding-top:100px;
+padding-top:80px;
 }
 }
 
@@ -169,7 +168,7 @@ padding-top:100px;
 
 .lgSpacing{
 
-padding-top:150px;
+padding-top:100px;
 }
 }
 

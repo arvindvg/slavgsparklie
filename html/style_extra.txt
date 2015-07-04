@@ -1,0 +1,89 @@
+<!-- CITY --> <!-- it would be great if the transitions in detail selection are horizontal versus vertical-->
+		<div id="section_city" style="display:none;position:relative;">	
+	
+			<div class="container-fluid" style="min-height:600px;"><!-- This might need to by dynamic to the screen size -->
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 name="start" style="text-align:center;margin-top:50px;margin-bottom:-5px;">CITY
+						<span class="fa-stack fa-lg h1" style="font-size:0.8em;margin-top:0;padding-top:2px;">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-building fa-stack-1x"></i>
+						</span>
+						</h2>
+					</div>
+				</div>			
+				
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<p style="text-align:center;font-size:1.2em;padding-bottom:15px;">Sparklie is currently only available in NYC, but we're working on launching in SF and Chicago cities</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/nyc.jpg" alt="Chrysler Building at Sunset, Midtown NYC by Chris Ford CC BY-NC 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;"/>		
+								<h3 style="text-align:center;font-weight:900;">New York</h3>
+							</div>
+							
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city2" name="city" data-value_id="3">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-10 col-sm-offset-1">
+								<div id="city2_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/chicago.jpg" alt="Chicago Photo by Andrew Langdal CC BY-NC 2.0" class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;opacity:0.5;"/>		
+								<h3 style="text-align:center;font-weight:900;">Chicago</h3>
+							</div>
+								
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified " role="button" id="city1" name="city" data-value_id="2">Select</a>
+								</div>
+							</div>
+						
+							<div class="col-sm-10 col-sm-offset-1">
+								<div id="city1_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="col-sm-4">
+							<div class="col-sm-12">
+								<img src="/images/sf.jpg" alt="Golden Gate photo by hn79 CC BY-SA 2.0"  class="center-block img-responsive" style="padding:0px 0px;background-color:white;margin-top:20px;border-radius:0px;opacity:0.5;"/>
+								<h3 style="text-align:center;font-weight:900;">San Francisco</h3>
+							</div>
+
+							<div class="col-sm-10 col-sm-offset-1">
+								<div style="text-align:center;margin-bottom:50px;">
+									<a style="background:rgb(23,27,38);color:#FFFFFF;border-radius:0px;" class="btn btn-lg btn-group-justified disabled" role="button" id="city3" name="city" data-value_id="1">Select</a>
+								</div>
+							</div>
+							
+							<div class="col-sm-10 col-sm-offset-1">
+								<div id="city3_show" style="color:white;background-color:#F4A460;font-size:30px;padding:4px 0;text-align:center;margin:-96px 0px 25px 0px;border:0px;border-radius:0px;" class="btn-lg btn-group-justified hide">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+						</div>	
+						
+
+					</div>	
+				</div>
+			
+			</div>
+		</div>
+		
