@@ -1,0 +1,52 @@
+.backgroundStoreImage{
+	min-height:90vh;
+	background-image:url('/images/store2.jpg');
+	background-size: cover;
+	background-position:50% 80%;"
+}
+
+.inputName input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  width:85%;
+  font-size:5vh;
+}
+
+.inputName input[type="text"]:focus,
+.inputName input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
+
+.inputName input[type="number"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  width:85%;
+  font-size:5vh;
+  
+}
+.inputName input[type="number"]:focus,
+.inputName input[type="number"].focus {
+  border-bottom: solid 2px #969696;
+}
+
+
+.sectionHidden{
+	display:block;
+	position:relative;
+	left:100%;
+}
+
+.sectionHiddenNormal{
+	display:block;
+	position:relative;
+	left:0%;
+}
+
+.btn-confirmed{
+	background-color:#F4A460;
+	font-size:20px;
+}

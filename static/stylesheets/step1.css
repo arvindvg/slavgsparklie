@@ -1,12 +1,19 @@
 html,body {
 	font-family: 'Fira Sans';
+}
 
+.footer{
+	background-color:rgb(23,27,38); 
+	text-align:center; 
+	padding: 20px; 
+	min-height:60px; 
+	bottom:0px;
 }
 
 
 .jumbotron {
 	color:#ffffff;
-	height: 100vh;
+	height:100vh;
 	/*background-image: url(/images/background6.jpg);*/
 	background-image: url(/images/couple1.png);
 	background-position: 50% 0%;
@@ -15,9 +22,22 @@ html,body {
     background-repeat: no-repeat;
 }
 
-.close{
-	font-size:50px;
+.modal-title{
+	text-align:center;
+	color:rgb(214,140,137);
+}
 
+.modal-body{
+	padding-top:10px;
+}
+
+.form-control{
+	border-radius:0px;
+}
+
+/*button to close the modal*/
+.close{
+	font-size:40px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -26,135 +46,89 @@ html,body {
   background-color: transparent;
 }
 
+.navbar-brand{
+	color:#fff !important;
+	font-size:200%;
+	font-weight:600;
+}
 
 
-
-.btn-clear {
-  color: #ffffff;
-  background-color: #46DBC2;
+.btn-cta {
+  color: #ffffff; /*white*/
+  background:rgba(23,27,38,.8);
   border-color: #ffffff;
   border-radius: 0px;
+  border-width:2px;
 }
 
-.btn-clear:hover,
-.btn-clear:focus,
-.btn-clear:active,
-.btn-clear.active,
-.open .dropdown-toggle.btn-default {
-  color: #000000;
+.btn-cta:hover,
+.btn-cta:focus,
+.btn-cta:active,
+.btn-cta.active,
+.open .dropdown-toggle.btn-cta {
+  color: #ffffff; /*black*/
   background-color: #00BA9B;
+
+}
+
+.btn-ctaOnWhite {
+  color: #ffffff; /*white*/
+  background:rgb(23,27,38);
   border-color: #ffffff;
+  border-radius: 0px;
+  border-width:2px;
 }
 
-.imageLove {
-	min-height:400px;
-	background-image: url(/images/laptopRecommendation.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-	background-position:100% 0%;
-
-}
-
-
-.image {
-	min-height: 400px;
-	background-image: url(/images/DeathtoStock_Medium5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-	background-position:0% 0%;
-
+.btn-ctaOnWhite:hover,
+.btn-ctaOnWhite:focus,
+.btn-ctaOnWhite:active,
+.btn-ctaOnWhite.active,
+.open .dropdown-toggle.ctaOnWhite {
+  color: #ffffff; /*black*/
+  background-color: #00BA9B;
 }
 
 
-
-
-
-.imageFulton {
-	min-height:400px;
-	background-image: url(/images/jewelryStore.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-	background-position:100% 50%;
-	
+.graySection{
+	border-top:1px;
+	border-top-style:solid;
+	border-top-color:rgb(215,215,215);
+	background-color:rgb(243,243,245);
+	margin-top:-30px;
 }
 
-@media (max-width: 767px) {
-
-.xsSpacing{
-padding-top:0px;
+.getStartedSection{
+	margin-top:50px;
+	padding: 50px 0;
+	border-top:1px;
+	border-top-style:solid;
+	border-top-color:rgb(215,215,215);
+	background-color:rgb(243,243,245);
+	text-align:center;
 }
 
-.fontSpacing{
-font-size:.8em;
+
+
+.imageStyle {
+    width:100%;
 }
 
-.imageLove {
-	background-position:50% 0%;
-	background-size: contain;
+
+.imageHelp {
+	width:100%;
 }
 
-.image {
-	background-position:50% 50%;
+.imageStore {
+	width:100%;
 }
 
-.imageFulton {
 
-	background-position:50% 50%;
-	background-size:cover;
+.profilePhoto {
+	max-width:85%;
 }
 
 .textCenter{
 	text-align: center;
-
-}
-
-}
-
-
-@media (min-width: 768px) {
-
-.smSpacing{
-
-padding-top:80px;
-}
-
-.imageLove {
-	background-position:50% 0%;
-	background-size: contain;
-}
-
-.image {
-	background-position:50% 50%;
-}
-
-.imageFulton {
-
-	background-position:50% 80%;
-	background-size:cover;
-}
-
-.textCenter{
-	text-align: center;
-
-}
-}
-
-
-@media (min-width: 992px) {
-
-.mdSpacing{
-
-padding-top:80px;
-}
-}
-
-
-
-@media (min-width: 1200px) {
-.center1200{
-	
-	display: flex; 
-	align-items: center;
 }
 
 .textRight{
@@ -166,10 +140,79 @@ padding-top:80px;
 
 }
 
-.lgSpacing{
+h1{
+	font-size:7vh !important;
+	font-weight:900;
 
-padding-top:100px;
 }
+
+
+h2{
+	font-weight:900;
+}
+
+h3{
+	font-weight:900;
+}
+
+h4{
+	
+	
+}
+
+.textWhite{
+	color:#ffffff;
+}
+
+.circleNumber{
+	color:rgb(214,140,137);
+	font-size:18px;
+	border-radius:100%;
+	border:3px solid rgb(214,140,137);
+	padding: 5px 11px;
+	
+}
+
+/*smallest of the spacing*/
+@media (max-width: 767px) {
+.xsSpacing{
+	padding-top:0px;
+}
+
+
+}
+
+
+@media (min-width: 768px) {
+.smSpacing{
+	padding-top:80px;
+}
+
+
+
+}
+
+
+@media (min-width: 992px) {
+.mdSpacing{
+	padding-top:80px;
+}
+
+}
+
+
+
+@media (min-width: 1200px) {
+.lgSpacing{
+	padding-top:100px;
+}
+
+.center1200{	
+	display: flex; 
+	align-items: center;
+}
+
+
 }
 
 
@@ -312,12 +355,7 @@ border-radius:0px;
 }
 
 
-#info{
 
-font-size:3.5em;
-	text-align:center;
-	
-	}
 	
 #helloAnimation{
 	
@@ -351,28 +389,6 @@ font-size:3.5em;
 	100% {opacity:1.0}
 }
 
-.style-4 input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-bottom: solid 2px #c9c9c9;
-  transition: border 0.3s;
-}
-.style-4 input[type="text"]:focus,
-.style-4 input[type="text"].focus {
-  border-bottom: solid 2px #969696;
-}
-
-.style-4 input[type="number"] {
-  padding: 10px;
-  border: none;
-  border-bottom: solid 2px #c9c9c9;
-  transition: border 0.3s;
-  
-}
-.style-4 input[type="number"]:focus,
-.style-4 input[type="number"].focus {
-  border-bottom: solid 2px #969696;
-}
 
 
 .new-indicators {
